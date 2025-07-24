@@ -1,0 +1,2661 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Serengeti Safari Experience - Luxury Wildlife Adventures</title>
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+            rel="stylesheet">
+        <style>
+        :root {
+            --primary-color: #2d4a35;
+            --secondary-color: #d4af37;
+            --accent-color: #8b4513;
+            --text-dark: #333;
+            --text-light: #f4f1e8;
+            --bg-light: #f8f6f0;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+            --heading-color: #e67e22;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            background: #fff;
+        }
+
+        /* Typography System */
+        h1, h2, h3 {
+            font-family: 'Kalam', cursive;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+        }
+
+        p, li {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* Video Slideshow Styles */
+       .section {
+        padding: 80px 0;
+        position: relative;
+    }
+    
+    .section-title {
+        text-align: center;
+        font-size: 2.8rem;
+        color: #2c4a3a;
+        margin-bottom: 15px;
+    }
+    
+    .section-subtitle {
+        text-align: center;
+        color: #666;
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 50px;
+    }
+    
+    /* Slideshow Container */
+    .video-slideshow {
+        position: relative;
+        max-width: 1400px;
+        margin: 0 auto;
+        height: 700px;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+    }
+    
+    /* Slides */
+    .video-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease, transform 1s ease;
+        transform: scale(0.95);
+    }
+    
+    .video-slide.active {
+        opacity: 1;
+        transform: scale(1);
+        z-index: 1;
+    }
+    
+    .slide-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .slide-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 10s linear;
+    }
+    
+    .video-slide.active .slide-image img {
+        transform: scale(1.1);
+    }
+    
+    /* Overlay Content */
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+        display: flex;
+        align-items: center;
+        padding: 0 100px;
+        z-index: 2;
+    }
+    
+    .slide-content {
+        max-width: 600px;
+        color: white;
+        transform: translateX(-50px);
+        opacity: 0;
+        transition: all 0.8s ease 0.3s;
+    }
+    
+    .video-slide.active .slide-content {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+    .slide-content h3 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .slide-text {
+        margin-bottom: 30px;
+    }
+    
+    .slide-text p {
+        line-height: 1.7;
+        margin-bottom: 15px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+    
+    .slide-text strong {
+        color: #d4a017;
+    }
+    
+    /* CTA Button */
+    .cta-button {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #d4a017;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 2px solid #d4a017;
+    }
+    
+    .cta-button:hover {
+        background: transparent;
+        color: #d4a017;
+    }
+    
+    .cta-button i {
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+    }
+    
+    .cta-button:hover i {
+        transform: translateX(5px);
+    }
+    
+    /* Navigation Controls */
+    .video-controls {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+        z-index: 3;
+    }
+    
+    .dots-container {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .video-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.5);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .video-dot.active {
+        background: #d4a017;
+        transform: scale(1.2);
+    }
+    
+    .slide-prev, .slide-next {
+        background: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .slide-prev:hover, .slide-next:hover {
+        background: #d4a017;
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+        .video-slideshow {
+            height: 600px;
+        }
+        
+        .video-overlay {
+            padding: 0 50px;
+        }
+        
+        .slide-content {
+            max-width: 500px;
+        }
+        
+        .slide-content h3 {
+            font-size: 2rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .video-slideshow {
+            height: 500px;
+        }
+        
+        .video-overlay {
+            padding: 0 30px;
+            background: rgba(0,0,0,0.7);
+        }
+        
+        .slide-content {
+            max-width: 100%;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+        }
+        
+        .video-controls {
+            padding: 0 20px;
+        }
+    }
+
+        /* Parallax Background */
+        .parallax-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        .parallax-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+            animation: backgroundShift 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% { transform: translateX(0) translateY(0); }
+            25% { transform: translateX(-2%) translateY(-1%); }
+            50% { transform: translateX(2%) translateY(1%); }
+            75% { transform: translateX(-1%) translateY(2%); }
+        }
+
+        /* Navigation */
+      .top-bar {
+    background: linear-gradient(135deg, #1a2a3a 0%, #3a4a5a 100%);
+    padding: -10px 0;
+    font-size: 12px;
+    color: #fff;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info span {
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    color: #fff;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: #c19d56;
+}
+
+@media (max-width: 576px) {
+    .top-bar-content {
+        flex-direction: column;
+        padding-bottom: 23rem;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .social-icons {
+        display: none;
+    }
+}
+
+/* Header */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: -9.96em;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+.logos img {
+    height: 49px;
+    margin-right: 1px;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Kalam", cursive;
+    margin-right: 1rem;
+    color: #e67e22;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 12px;
+    position: relative;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.nav-links a:hover {
+    color: #e67e22;
+}
+
+.quotes {
+    background-color: #e67e22;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 8rem;
+}
+
+.quotes:hover {
+    background-color: #d35400;
+}
+
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: #e67e22;
+}
+
+/* Dropdown submenu styles */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-subcontent {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #fff;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown-submenu:hover .dropdown-subcontent {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    content: "▸";
+    float: right;
+    padding-left: 5px;
+}
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                        url('https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 0%, rgba(212, 175, 55, 0.1) 50%, transparent 100%);
+            animation: heroShimmer 8s ease-in-out infinite;
+        }
+
+        @keyframes heroShimmer {
+            0%, 100% { opacity: 0; transform: translateX(-100%); }
+            50% { opacity: 1; transform: translateX(100%); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 0 2rem;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: heroFadeIn 1.5s ease 0.5s forwards;
+            z-index: 1;
+        }
+
+        @keyframes heroFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            from { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
+            to { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.3); }
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            color: var(--text-light);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Arial', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            background: #b8941f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-light);
+            text-align: center;
+            opacity: 0;
+            animation: scrollIndicatorFade 2s ease 2s forwards;
+        }
+
+        @keyframes scrollIndicatorFade {
+            to { opacity: 1; }
+        }
+
+        .scroll-indicator i {
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* Sections */
+        .section {
+            padding: 8rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            background: #fafafa;
+        }
+
+        .section:nth-child(even) {
+            background: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            color: var(--heading-color);
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            font-family: 'Kalam', cursive;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+            opacity: 0;
+            transition: opacity 0.8s ease 0.3s;
+        }
+
+        .section-title.visible::after {
+            opacity: 1;
+        }
+
+        .section-title.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Lodge Cards Grid */
+        /* Lodge Section Styles */
+.lodges-section {
+    padding: 80px 0;
+    background: #f9f5ed;
+    position: relative;
+}
+
+.lodges-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    color: #2c4a3a;
+    text-align: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.section-title .highlight {
+    color: #d4a017;
+    display: inline-block;
+    position: relative;
+}
+
+.section-title .highlight:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #d4a017;
+    bottom: -5px;
+    left: 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+/* Lodge Grid */
+.lodge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.lodge-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.lodge-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.lodge-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Lodge Badges */
+.lodge-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #d4a017;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.lodge-badge.seasonal-offer {
+    background: #e74c3c;
+}
+
+.lodge-badge.premium {
+    background: #2c3e50;
+}
+
+/* Card Content */
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    color: #2c4a3a;
+    margin-bottom: 15px;
+}
+
+.lodge-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.lodge-meta i {
+    margin-right: 5px;
+    color: #d4a017;
+}
+
+.card-content p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Price Tag */
+.price-tag {
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
+
+.price-tag .from {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.price-tag .amount {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2c4a3a;
+    margin: 0 5px;
+}
+
+.price-tag .old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 5px;
+}
+
+.price-tag .per-night {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background: #d4a017;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #d4a017;
+}
+
+.cta-button i {
+    margin-left: 5px;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #c19116;
+    border-color: #c19116;
+    color: white;
+}
+
+.cta-button:hover i {
+    transform: translateX(3px);
+}
+
+/* Trust Badges */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    color: #2c4a3a;
+    font-weight: 600;
+}
+
+.trust-item i {
+    margin-right: 10px;
+    color: #d4a017;
+    font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .lodge-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .trust-badges {
+        gap: 15px;
+    }
+}
+
+        /* Activities Section */
+ .activities {
+        padding: 80px 20px;
+        background: #f8f9fa;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+        color: #2c4a3a;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .section-subtitle {
+        text-align: center;
+        color: #666;
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 40px;
+    }
+    
+    .activity-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .activity-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .activity-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .activity-image-container {
+        position: relative;
+        height: 250px;
+        overflow: hidden;
+    }
+    
+    .activity-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .activity-card:hover .activity-image {
+        transform: scale(1.05);
+    }
+    
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+    }
+    
+    .activity-content {
+        padding: 25px;
+    }
+    
+    .activity-content h3 {
+        font-size: 1.5rem;
+        color: #2c4a3a;
+        margin-bottom: 15px;
+    }
+    
+    .activity-content p {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    .activity-meta {
+        display: flex;
+        justify-content: space-between;
+        color: #777;
+        font-size: 0.9rem;
+    }
+    
+    .activity-meta i {
+        margin-right: 5px;
+        color: #d4a017;
+    }
+
+
+    .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            aspect-ratio: 1/1;
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 0.6s ease;
+        }
+        
+        .gallery-item.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Item Overlay */
+        .item-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .item-overlay {
+            opacity: 1;
+        }
+        
+        .animal-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        
+        .animal-scientific {
+            font-style: italic;
+            margin-bottom: 10px;
+            transform: translateY(20px);
+            transition: transform 0.3s ease 0.1s;
+        }
+        
+        .animal-fact {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            transform: translateY(20px);
+            transition: transform 0.3s ease 0.2s;
+        }
+        
+        .gallery-item:hover .animal-name,
+        .gallery-item:hover .animal-scientific,
+        .gallery-item:hover .animal-fact {
+            transform: translateY(0);
+        }
+        
+        /* Popup Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            overflow: auto;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal-content {
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+        
+        .modal.active {
+            opacity: 1;
+        }
+        
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+        
+        .modal-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        
+        .modal-info {
+            padding: 30px;
+        }
+        
+        .modal-title {
+            font-size: 2.2rem;
+            color: #2c4a3a;
+            margin-bottom: 5px;
+        }
+        
+        .modal-subtitle {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        
+        .modal-description {
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+        
+        .modal-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .stat-item i {
+            font-size: 1.5rem;
+            color: #d4a017;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.8rem;
+            color: white;
+            background: rgba(0,0,0,0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+        
+        .close-btn:hover {
+            background: rgba(0,0,0,0.8);
+            transform: rotate(90deg);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+            
+            .modal-content {
+                margin: 20px auto;
+                width: 95%;
+            }
+            
+            .modal-img {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .modal-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+    
+    @media (max-width: 768px) {
+        .activity-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sticky-cta.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .sticky-cta .cta-button {
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            animation: pulse 2s infinite;
+        }
+         .about-serengeti-section {
+        padding: 60px 20px;
+        background-color: #f9f5ed;
+        text-align: center;
+    }
+    
+   
+  
+    .serengeti-description {
+        max-width: 900px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+    }
+    
+    .experience-highlights {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 40px 0;
+    }
+    
+    .highlight-item {
+        flex: 1 1 200px;
+        min-width: 200px;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease;
+    }
+    
+    .highlight-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .highlight-item i {
+        font-size: 2rem;
+        color: #d4a017;
+        margin-bottom: 15px;
+    }
+    
+    .closing-note {
+        font-style: italic;
+        color: #555;
+        margin-top: 30px;
+    }
+    
+    @media (max-width: 768px) {
+        .section-title {
+            font-size: 2rem;
+        }
+        
+        .experience-highlights {
+            gap: 15px;
+        }
+        
+        .highlight-item {
+            flex: 1 1 150px;
+            min-width: 150px;
+            padding: 15px;
+        }
+    }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: rgba(45, 74, 53, 0.98);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 3rem 0;
+                gap: 1.5rem;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .section {
+                padding: 6rem 5%;
+            }
+
+            .lodge-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .activity-icons {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .sticky-cta {
+                bottom: 1rem;
+                right: 1rem;
+            }
+
+            .hero {
+                background-attachment: scroll;
+            }
+
+            .video-slideshow {
+                height: 400px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading Animation */
+       
+    </style>
+    </head>
+    <body>
+       <header>
+          <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone-alt"></i> +44 (0)20 7471 8780</span>
+                    <span><i class="fas fa-envelope"></i> info@tanzaniaodyssey.com</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="container">
+            <div class="logos">
+                <img src="./logo/true africa 1.png" alt="True Africa Logo">
+            </div>
+            <a href="#" class="logo">True Africa Escape</a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#itineraries">Safari Itineraries <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#3days">3 Days Safari</a>
+                        <a href="#5days">5 Days Safari</a>
+                        <a href="#7days">7+ Days Safari</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#itineraries">Destinations <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-submenu">
+                            <a href="#northern">Northern Zone</a>
+                            <div class="dropdown-subcontent">
+                                <a href="#arusha-national-park">Arusha National Park</a>
+                                <a href="#materuni">Materuni Waterfalls & Coffee Tour</a>
+                                <a href="#kikuletwa">Kikuletwa Hot Springs</a>
+                                <a href="#duluti">Lake Duluti</a>
+                                <a href="#ngorongoro">Ngorongoro Crater</a>
+                                <a href="#tarangire">Tarangire National Park</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="#coastal">Coastal Zone</a>
+                            <div class="dropdown-subcontent">
+                                <a href="#bongoyo">Bongoyo Island Marine Reserve</a>
+                                <a href="#mbudya">Mbudya Island</a>
+                                <a href="#saadani">Saadani National Park</a>
+                                <a href="#bagamoyo">Bagamoyo Historical Town</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="#zanzibar">Zanzibar Islands</a>
+                            <div class="dropdown-subcontent">
+                                <a href="#prison-island">Prison Island</a>
+                                <a href="#jozani">Jozani Forest</a>
+                                <a href="#spice-tour">Spice Farm Tour</a>
+                                <a href="#stone-town">Stone Town Tour</a>
+                                <a href="#safari-blue">Safari Blue Trip</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="#mwanza">Lake Victoria Zone</a>
+                            <div class="dropdown-subcontent">
+                                <a href="#saanane">Saanane Island National Park</a>
+                                <a href="#bismarck">Bismarck Rock & Lake Victoria</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#zanzibar">Zanzibar</a></li>
+                <li><a href="#guide">Travel Guide</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <a href="#quote" class="quotes">Plan Trip</a>
+            
+            <button class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Discover the Serengeti</h1>
+                <p>Chances are that you have dreamt of Africa, and when you did,
+                    you probably dreamt about the Serengeti. This is the home of
+                    the Great Migration and may very well be one of the last
+                    true natural wonders on planet earth.</p>
+                <a href="#lodges" class="cta-button">Plan Your Safari</a>
+            </div>
+            <div class="scroll-indicator">
+                <p>Scroll to explore</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Video Slideshow Section -->
+        <section class="section" id="slideshow">
+            <h2 class="section-title">Experience the Serengeti</h2>
+            <p class="section-subtitle">Discover the wonders of Africa's most
+                iconic wildlife destination</p>
+
+            <div class="video-slideshow">
+                <!-- Slide 1: Endless Plains -->
+                <div class="video-slide active">
+                    <div class="slide-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1549366021-9f761d040a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+                            alt="Serengeti Plains" loading="lazy">
+                    </div>
+                    <div class="video-overlay">
+                        <div class="slide-content">
+                            <h3>Endless Plains</h3>
+                            <div class="slide-text">
+                                <p>Where the earth meets the sky in an unbroken
+                                    golden horizon, the Serengeti's endless
+                                    plains stretch beyond imagination. This vast
+                                    sea of grass, covering nearly 15,000 square
+                                    kilometers, is the stage for Africa's
+                                    greatest wildlife dramas.</p>
+                                <p>The plains are <strong>the beating heart of
+                                        the Serengeti ecosystem</strong> - their
+                                    nutrient-rich soils supporting millions of
+                                    grazing animals and the predators that
+                                    follow them. During the rainy season, they
+                                    transform into lush green carpets that
+                                    disappear into the distant haze.</p>
+                                <p>More than just scenery, these plains offer
+                                    <strong>unmatched wildlife
+                                        visibility</strong>. With few trees
+                                    obstructing views, you can spot hunting
+                                    cheetahs from kilometers away or watch
+                                    wildebeest herds moving like living rivers
+                                    across the landscape.</p>
+                            </div>
+                            <a href="#contact" class="cta-button">Plan Your
+                                Safari <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Great Migration -->
+                <div class="video-slide">
+                    <div class="slide-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+                            alt="Great Migration" loading="lazy">
+                    </div>
+                    <div class="video-overlay">
+                        <div class="slide-content">
+                            <h3>Great Migration</h3>
+                            <div class="slide-text">
+                                <p>Follow the world's greatest wildlife
+                                    spectacle. The Great Migration in Serengeti
+                                    National Park is one of the most spectacular
+                                    wildlife events on Earth. Every year, over
+                                    1.5 million wildebeest, along with hundreds
+                                    of thousands of zebras and gazelles, embark
+                                    on a circular journey of about 1,200 miles
+                                    in search of fresh grazing and water.</p>
+                                <p>The Great Migration is the <strong>largest
+                                        overland mammal migration in the
+                                        world</strong>, following the rains and
+                                    grass growth across the Serengeti-Mara
+                                    ecosystem.</p>
+                                <p>Unlike scheduled events, the migration
+                                    follows nature's
+                                    rhythm—<strong>unpredictable in timing and
+                                        path</strong>. River crossings, calving
+                                    seasons, and predator encounters depend on
+                                    rainfall patterns, making each year's
+                                    migration a unique spectacle.</p>
+                            </div>
+                            <a href="#migration-tours" class="cta-button">View
+                                Migration Packages <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Big Five -->
+                <div class="video-slide">
+                    <div class="slide-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+                            alt="Big Five Safari" loading="lazy">
+                    </div>
+                    <div class="video-overlay">
+                        <div class="slide-content">
+                            <h3>Big Five Safari</h3>
+                            <div class="slide-text">
+                                <p>Witness Africa's most iconic wildlife. The
+                                    Big Five - lion, leopard, elephant, buffalo,
+                                    and rhinoceros - represent the crown jewels
+                                    of Serengeti National Park's incredible
+                                    biodiversity. These magnificent creatures
+                                    roam freely across the endless plains.</p>
+                                <p>The Serengeti is <strong>one of Africa's best
+                                        destinations</strong> to see all Big
+                                    Five animals in their natural habitat. With
+                                    vast savannas, riverine forests, and rocky
+                                    outcrops, the park provides perfect habitats
+                                    for these legendary species throughout the
+                                    year.</p>
+                                <p>Unlike zoos or confined areas, spotting the
+                                    Big Five here is <strong>a true wilderness
+                                        experience</strong>. Each sighting is
+                                    unique, from lions hunting at dawn to
+                                    leopards lounging in acacia trees.</p>
+                            </div>
+                            <a href="#big-five-tours" class="cta-button">Book
+                                Big Five Tour <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Sunset Adventures -->
+                <div class="video-slide">
+                    <div class="slide-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+                            alt="Sunset Safari" loading="lazy">
+                    </div>
+                    <div class="video-overlay">
+                        <div class="slide-content">
+                            <h3>Sunset Adventures</h3>
+                            <div class="slide-text">
+                                <p>As the African sun dips below the horizon,
+                                    the Serengeti transforms into a golden
+                                    paradise. Our sunset adventures offer
+                                    magical moments when predators become
+                                    active, silhouettes stretch across the
+                                    plains, and the sky erupts in fiery
+                                    colors.</p>
+                                <p>Sunset in the Serengeti is <strong>nature's
+                                        daily spectacle</strong> - the perfect
+                                    time for photography, sundowners, and
+                                    witnessing the shift from diurnal to
+                                    nocturnal wildlife. Special evening game
+                                    drives extend your safari beyond normal park
+                                    hours.</p>
+                                <p>Unlike daytime viewing, sunset brings
+                                    <strong>unique animal behaviors</strong> -
+                                    lions beginning their nocturnal hunts,
+                                    hippos emerging from rivers, and the
+                                    haunting calls of hyenas marking their
+                                    territories under the twilight sky.</p>
+                            </div>
+                            <a href="#sunset-tours" class="cta-button">Explore
+                                Sunset Tours <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="video-controls">
+                    <button class="slide-prev"><i
+                            class="fas fa-chevron-left"></i></button>
+                    <div class="dots-container">
+                        <span class="video-dot active" data-slide="0"></span>
+                        <span class="video-dot" data-slide="1"></span>
+                        <span class="video-dot" data-slide="2"></span>
+                        <span class="video-dot" data-slide="3"></span>
+                    </div>
+                    <button class="slide-next"><i
+                            class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="about-serengeti-section">
+                <h2 class="section-title">About the Serengeti</h2>
+                <div class="serengeti-description">
+                    <p>
+                        Serengeti National Park, a UNESCO World Heritage
+                        Site, is nature's grandest stage. This vast
+                        ecosystem teems with incredible biodiversity: over
+                        <strong>2 million ungulates</strong>, <strong>4,000
+                            lions</strong>, <strong>1,000 leopards</strong>,
+                        <strong>550 cheetahs</strong>, and nearly
+                        <strong>500 bird species</strong> roam across its
+                        15,000 square kilometers of pristine wilderness.
+                    </p>
+
+                    <div class="experience-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-binoculars"></i>
+                            <p>Witness the Great Migration's breathtaking
+                                spectacle</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-paw"></i>
+                            <p>Spot majestic lions surveying their kingdom
+                                from granite kopjes</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-tree"></i>
+                            <p>Track elusive leopards in riverine
+                                forests</p>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-hot-air-balloon"></i>
+                            <p>Soar above the plains at sunrise on a hot air
+                                balloon safari</p>
+                        </div>
+                    </div>
+
+                    <p class="closing-note">
+                        With accommodation options for every budget, the
+                        Serengeti offers unforgettable experiences - where
+                        the sound of lions roaring at night comes as your
+                        natural alarm clock.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lodges Section -->
+        <section class="section lodges-section" id="lodges">
+            <div class="container">
+                <h2 class="section-title">Exclusive Safari Lodges <span
+                        class="highlight">Selling Fast</span></h2>
+                <p class="section-subtitle">Sleep where the wild things roam
+                    - our ury lodges put you in the heart of the
+                    action</p>
+
+                <div class="lodge-grid">
+                    <!-- Lodge 1 -->
+                    <div class="lodge-card">
+                        <div class="lodge-badge">Most Popular</div>
+                        <img
+                            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Serengeti Plains Lodge">
+                        <div class="card-content">
+                            <h3>Serengeti Plains Lodge</h3>
+                            <div class="lodge-meta">
+                                <span><i class="fas fa-map-marker-alt"></i>
+                                    Central Serengeti</span>
+                                <span><i class="fas fa-star"></i> 5.0 (247
+                                    reviews)</span>
+                            </div>
+                            <p>Wake up to migrating herds right outside your
+                                luxury suite. Our <strong>guest-favorite
+                                    lodge</strong> offers private decks with
+                                180° plains views where 83% of guests spot
+                                the Big Five before breakfast.</p>
+                            <div class="price-tag">
+                                <span class="from">From</span>
+                                <span class="amount">$1,200</span>
+                                <span class="per-night">/night</span>
+                            </div>
+                            <a href="#contact" class="cta-button">Only 2
+                                Rooms Left <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Lodge 2 -->
+                    <div class="lodge-card">
+                        <div class="lodge-badge seasonal-offer">Seasonal
+                            Special</div>
+                        <img
+                            src="https://images.unsplash.com/photo-1571501679680-de32f1e7aad4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Acacia Tree Camp">
+                        <div class="card-content">
+                            <h3>Acacia Tree Camp</h3>
+                            <div class="lodge-meta">
+                                <span><i class="fas fa-map-marker-alt"></i>
+                                    Western Corridor</span>
+                                <span><i class="fas fa-star"></i> 4.9 (189
+                                    reviews)</span>
+                            </div>
+                            <p><strong>Limited-time 15% discount!</strong>
+                                Fall asleep to lion roars in our luxury
+                                tents. 92% of guests report this is their
+                                <strong>most memorable safari
+                                    experience</strong> with Grumeti River
+                                crossings visible from camp.</p>
+                            <div class="price-tag">
+                                <span class="from">From</span>
+                                <span class="old-price">$1,500</span>
+                                <span class="amount">$1,275</span>
+                                <span class="per-night">/night</span>
+                            </div>
+                            <a href="#contact" class="cta-button">Claim This
+                                Offer <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Lodge 3 -->
+                    <div class="lodge-card">
+                        <div class="lodge-badge premium">Premium</div>
+                        <img
+                            src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Mara River Lodge">
+                        <div class="card-content">
+                            <h3>Mara River Lodge</h3>
+                            <div class="lodge-meta">
+                                <span><i class="fas fa-map-marker-alt"></i>
+                                    Northern Serengeti</span>
+                                <span><i class="fas fa-star"></i> 5.0 (312
+                                    reviews)</span>
+                            </div>
+                            <p>Front-row seats to the <strong>Great
+                                    Migration river crossings</strong>. Our
+                                premium suites feature infinity pools
+                                overlooking crocodile-infested waters where
+                                the action happens.
+                                <em>"Worth every penny"</em> - Recent
+                                Guest</p>
+                            <div class="price-tag">
+                                <span class="from">From</span>
+                                <span class="amount">$2,400</span>
+                                <span class="per-night">/night</span>
+                            </div>
+                            <a href="#contact" class="cta-button">Book
+                                Private Guide <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trust-badges">
+                    <div class="trust-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Best Price Guarantee</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-clock"></i>
+                        <span>24/7 Safari Experts</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-lock"></i>
+                        <span>Secure Booking</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section class="section activities" id="activities">
+            <h2 class="section-title">Safari Activities</h2>
+            <p class="section-subtitle">Experience the Serengeti through
+                these unforgettable adventures</p>
+
+            <div class="activity-grid">
+                <!-- Game Drives -->
+                <div class="activity-card">
+                    <div class="activity-image-container">
+                        <img
+                            src="https://images.unsplash.com/photo-1594292413126-9a5b5c1e6f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Game Drives" class="activity-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Game Drives</h3>
+                        <p>Explore the vast plains in our custom 4x4 safari
+                            vehicles with pop-up roofs. Morning, afternoon
+                            and full-day drives with expert guides who know
+                            where to find the Big Five and other
+                            wildlife.</p>
+                        <div class="activity-meta">
+                            <span><i class="fas fa-clock"></i> 3-8
+                                hours</span>
+                            <span><i class="fas fa-calendar-alt"></i>
+                                Year-round</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hot Air Balloon -->
+                <div class="activity-card">
+                    <div class="activity-image-container">
+                        <img
+                            src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Hot Air Balloon Safari"
+                            class="activity-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Hot Air Balloon Safari</h3>
+                        <p>Float silently above the Serengeti at sunrise
+                            with champagne breakfast afterwards. This
+                            breathtaking aerial perspective reveals wildlife
+                            patterns unseen from the ground.</p>
+                        <div class="activity-meta">
+                            <span><i class="fas fa-clock"></i> 1-2 hours
+                                flight</span>
+                            <span><i class="fas fa-calendar-alt"></i> Best
+                                June-Oct</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Walking Safari -->
+                <div class="activity-card">
+                    <div class="activity-image-container">
+                        <img
+                            src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Walking Safari" class="activity-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Walking Safari</h3>
+                        <p>Experience the bush on foot with our armed
+                            professional guides. Learn about animal tracks,
+                            medicinal plants, insects and the ecosystem at a
+                            intimate, slower pace.</p>
+                        <div class="activity-meta">
+                            <span><i class="fas fa-clock"></i> 2-3
+                                hours</span>
+                            <span><i class="fas fa-calendar-alt"></i> Dry
+                                season only</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Night Game Drive -->
+                <div class="activity-card">
+                    <div class="activity-image-container">
+                        <img
+                            src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Night Game Drive" class="activity-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Night Game Drive</h3>
+                        <p>Discover the Serengeti's nocturnal world with
+                            spotlights. See rarely observed behaviors -
+                            lions hunting, genets, bushbabies, and the
+                            glowing eyes of predators in the dark.</p>
+                        <div class="activity-meta">
+                            <span><i class="fas fa-clock"></i> 2-3
+                                hours</span>
+                            <span><i class="fas fa-calendar-alt"></i> All
+                                year</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bird Watching -->
+                <div class="activity-card">
+                    <div class="activity-image-container">
+                        <img
+                            src="https://images.unsplash.com/photo-1502085671122-2d6ae4a9b4e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Bird Watching" class="activity-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Bird Watching</h3>
+                        <p>With nearly 500 bird species including 34 raptors
+                            and 6 vultures, the Serengeti offers spectacular
+                            birding. Our guides carry field guides and
+                            high-quality binoculars.</p>
+                        <div class="activity-meta">
+                            <span><i class="fas fa-clock"></i>
+                                Flexible</span>
+                            <span><i class="fas fa-calendar-alt"></i>
+                                Nov-Apr best</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cultural Visits -->
+                <div class="activity-card">
+                    <div class="activity-image-container">
+                        <img
+                            src="https://images.unsplash.com/photo-1560820296-38a18e8a3d0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Cultural Visits" class="activity-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="activity-content">
+                        <h3>Cultural Visits</h3>
+                        <p>Visit Maasai villages to learn about this iconic
+                            tribe's traditions, dances, and coexistence with
+                            wildlife. Participate in beadwork and see
+                            traditional homesteads.</p>
+                        <div class="activity-meta">
+                            <span><i class="fas fa-clock"></i>
+                                Half-day</span>
+                            <span><i class="fas fa-calendar-alt"></i>
+                                Year-round</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact"
+            style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); background-size: cover; background-position: center; padding: 100px 20px; color: white; text-align: center;">
+            <h2 class="section-title"
+                style="font-size: 2.8rem; margin-bottom: 20px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Your
+                Dream Safari Awaits</h2>
+
+            <div class="contact-container"
+                style="max-width: 800px; margin: 0 auto;">
+                <p
+                    style="font-size: 1.3rem; line-height: 1.7; margin-bottom: 30px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+                    <strong>Only 12 premium safari spots available this
+                        season!</strong><br>
+                    Imagine waking up to lions roaring as the African sun
+                    rises over endless golden plains - this could be
+                    <em>your</em> reality in just 3 simple steps:
+                </p>
+
+                <div class="steps"
+                    style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-bottom: 40px;">
+                    <div class="step"
+                        style="flex: 1; min-width: 150px; margin: 10px; padding: 20px; background: rgba(212, 160, 23, 0.2); border-radius: 8px; backdrop-filter: blur(5px);">
+                        <div
+                            style="font-size: 2.5rem; color: #d4a017; margin-bottom: 10px;">1</div>
+                        <p style="font-weight: 600;">Tell us your dream</p>
+                    </div>
+                    <div class="step"
+                        style="flex: 1; min-width: 150px; margin: 10px; padding: 20px; background: rgba(212, 160, 23, 0.2); border-radius: 8px; backdrop-filter: blur(5px);">
+                        <div
+                            style="font-size: 2.5rem; color: #d4a017; margin-bottom: 10px;">2</div>
+                        <p style="font-weight: 600;">We craft your perfect
+                            itinerary</p>
+                    </div>
+                    <div class="step"
+                        style="flex: 1; min-width: 150px; margin: 10px; padding: 20px; background: rgba(212, 160, 23, 0.2); border-radius: 8px; backdrop-filter: blur(5px);">
+                        <div
+                            style="font-size: 2.5rem; color: #d4a017; margin-bottom: 10px;">3</div>
+                        <p style="font-weight: 600;">Pack your bags for
+                            adventure!</p>
+                    </div>
+                </div>
+
+                <div
+                    style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); margin-bottom: 30px;">
+                    <p style="font-style: italic; margin-bottom: 20px;">
+                        "Booking with Serengeti Safari was the best decision we ever made! The team created a magical experience we'll cherish forever."
+                        <span
+                            style="display: block; font-weight: 600; margin-top: 10px;">-
+                            The Wilson Family, UK</span>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        <!-- Sticky CTA -->
+        <div class="sticky-cta">
+            <a href="#contact" class="cta-button">Book Now</a>
+        </div>
+
+        <section class="gallery-section">
+            <h2 class="section-title">The Magnificent Big Five of Serengeti</h2>
+            <div class="gallery-grid">
+                <!-- Lion -->
+                <div class="gallery-item" data-animal="lion">
+                    <img
+                        src="https://images.unsplash.com/photo-1534188753412-3e26d0f7183a?ixlib=rgjtrjrjheb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="African Lion">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Lion</h3>
+                        <p class="animal-scientific">Panthera leo</p>
+                        <p class="animal-fact">The apex predator of the
+                            Serengeti, living in prides of up to 30
+                            individuals.</p>
+                    </div>
+                </div>
+
+                <!-- Elephant -->
+                <div class="gallery-item" data-animal="elephant">
+                    <img
+                        src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="African Elephant">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Elephant</h3>
+                        <p class="animal-scientific">Loxodonta africana</p>
+                        <p class="animal-fact">The largest land animal,
+                            consuming up to 300 pounds of vegetation daily.</p>
+                    </div>
+                </div>
+
+                <!-- Leopard -->
+                <div class="gallery-item" data-animal="leopard">
+                    <img
+                        src="https://images.unsplash.com/photo-1561731216-c3f4b7cf0862?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="African Leopard">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Leopard</h3>
+                        <p class="animal-scientific">Panthera pardus</p>
+                        <p class="animal-fact">Solitary and elusive, often
+                            dragging prey up trees to avoid scavengers.</p>
+                    </div>
+                </div>
+
+                <!-- Buffalo -->
+                <div class="gallery-item" data-animal="buffalo">
+                    <img
+                        src="https://images.unsplash.com/photo-1562086786-7e0ca5aae25c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="African Buffalo">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Buffalo</h3>
+                        <p class="animal-scientific">Syncerus caffer</p>
+                        <p class="animal-fact">Considered the most dangerous of
+                            the Big Five due to its unpredictable nature.</p>
+                    </div>
+                </div>
+
+                <!-- Rhino -->
+                <div class="gallery-item" data-animal="rhino">
+                    <img
+                        src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Black Rhino">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Rhino</h3>
+                        <p class="animal-scientific">Diceros bicornis</p>
+                        <p class="animal-fact">Critically endangered, with only
+                            about 5,000 remaining in Africa.</p>
+                    </div>
+                </div>
+
+                <!-- Additional images for the Big Five (repeats with different angles/behaviors) -->
+                <div class="gallery-item" data-animal="lion">
+                    <img
+                        src="https://images.unsplash.com/photo-1550358864-518f202c02ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Lion Pride">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Lion Pride</h3>
+                        <p class="animal-scientific">Panthera leo</p>
+                        <p class="animal-fact">Female lions do 90% of the
+                            hunting for their pride.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-animal="elephant">
+                    <img
+                        src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Elephant Herd">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Elephant Herd</h3>
+                        <p class="animal-scientific">Loxodonta africana</p>
+                        <p class="animal-fact">Led by a matriarch, herds consist
+                            of related females and their young.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-animal="leopard">
+                    <img
+                        src="https://images.unsplash.com/photo-1543946207-39bd91e70ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Leopard in Tree">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Tree-dwelling Leopard</h3>
+                        <p class="animal-scientific">Panthera pardus</p>
+                        <p class="animal-fact">Can carry prey twice their weight
+                            up into trees.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-animal="buffalo">
+                    <img
+                        src="https://images.unsplash.com/photo-1561731216-c3f4b7cf0862?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Buffalo Herd">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Buffalo Herd</h3>
+                        <p class="animal-scientific">Syncerus caffer</p>
+                        <p class="animal-fact">Herds can number in the hundreds
+                            for protection against predators.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-animal="rhino">
+                    <img
+                        src="https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Rhino and Calf">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Rhino and Calf</h3>
+                        <p class="animal-scientific">Diceros bicornis</p>
+                        <p class="animal-fact">Calves stay with their mothers
+                            for 2-4 years.</p>
+                    </div>
+                </div>
+
+                <!-- More images showing behaviors -->
+                <div class="gallery-item" data-animal="lion">
+                    <img
+                        src="https://images.unsplash.com/photo-1543946207-39bd91e70ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Lion Hunting">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Lion on Hunt</h3>
+                        <p class="animal-scientific">Panthera leo</p>
+                        <p class="animal-fact">Hunting success rate is only
+                            about 30%.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-animal="elephant">
+                    <img
+                        src="https://images.unsplash.com/photo-1562086786-7e0ca5aae25c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Elephant at Waterhole">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Elephant Bathing</h3>
+                        <p class="animal-scientific">Loxodonta africana</p>
+                        <p class="animal-fact">Can drink up to 50 gallons of
+                            water per day.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-animal="leopard">
+                    <img
+                        src="https://images.unsplash.com/photo-1550358864-518f202c02ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Leopard Stalking">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Leopard Stalking</h3>
+                        <p class="animal-scientific">Panthera pardus</p>
+                        <p class="animal-fact">Can run up to 58 km/h in short
+                            bursts.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-animal="buffalo">
+                    <img
+                        src="https://images.unsplash.com/photo-1534188753412-3e26d0f7183a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Buffalo Defending">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Buffalo Defense</h3>
+                        <p class="animal-scientific">Syncerus caffer</p>
+                        <p class="animal-fact">Will actively defend members of
+                            their herd from predators.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-animal="rhino">
+                    <img
+                        src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Rhino Charging">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Rhino Charge</h3>
+                        <p class="animal-scientific">Diceros bicornis</p>
+                        <p class="animal-fact">Can reach speeds of 55 km/h
+                            despite their size.</p>
+                    </div>
+                </div>
+
+                <!-- More images -->
+                <div class="gallery-item" data-animal="lion">
+                    <img
+                        src="https://images.unsplash.com/photo-1561731216-c3f4b7cf0862?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Lion Cubs">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Lion Cubs</h3>
+                        <p class="animal-scientific">Panthera leo</p>
+                        <p class="animal-fact">Only about 1 in 8 cubs survive to
+                            adulthood.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-animal="elephant">
+                    <img
+                        src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Elephant Communication">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Elephant Communication</h3>
+                        <p class="animal-scientific">Loxodonta africana</p>
+                        <p class="animal-fact">Use infrasound to communicate
+                            over long distances.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-animal="leopard">
+                    <img
+                        src="https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Leopard Resting">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Leopard Resting</h3>
+                        <p class="animal-scientific">Panthera pardus</p>
+                        <p class="animal-fact">Spend up to 18 hours per day
+                            resting.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-animal="buffalo">
+                    <img
+                        src="https://images.unsplash.com/photo-1543946207-39bd91e70ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Buffalo Grazing">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Buffalo Grazing</h3>
+                        <p class="animal-scientific">Syncerus caffer</p>
+                        <p class="animal-fact">Spend most of their day grazing
+                            on grasses.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-animal="rhino">
+                    <img
+                        src="https://images.unsplash.com/photo-1550358864-518f202c02ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Rhino Territory">
+                    <div class="item-overlay">
+                        <h3 class="animal-name">Rhino Territory</h3>
+                        <p class="animal-scientific">Diceros bicornis</p>
+                        <p class="animal-fact">Males mark territory with dung
+                            piles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Popup -->
+        <div class="modal" id="animalModal">
+            <span class="close-btn">&times;</span>
+            <div class="modal-content">
+                <img class="modal-img" id="modalImage" src alt>
+                <div class="modal-info">
+                    <h2 class="modal-title" id="modalTitle">Animal Name</h2>
+                    <p class="modal-subtitle" id="modalScientific">Scientific
+                        Name</p>
+                    <p class="modal-description" id="modalDescription">Detailed
+                        description about the animal's behavior, habitat, and
+                        significance in the Serengeti ecosystem.</p>
+
+                    <div class="modal-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-weight-hanging"></i>
+                            <div>
+                                <strong>Weight:</strong> <span
+                                    id="statWeight">-</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-ruler-horizontal"></i>
+                            <div>
+                                <strong>Length:</strong> <span
+                                    id="statLength">-</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-hourglass-half"></i>
+                            <div>
+                                <strong>Lifespan:</strong> <span
+                                    id="statLifespan">-</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-baby"></i>
+                            <div>
+                                <strong>Gestation:</strong> <span
+                                    id="statGestation">-</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <div>
+                                <strong>Top Speed:</strong> <span
+                                    id="statSpeed">-</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div>
+                                <strong>Conservation:</strong> <span
+                                    id="statConservation">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer
+            style="background-color: var(--primary-color); color: var(--text-light); padding: 3rem 5%; text-align: center;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div
+                    style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
+                    <a href="#" style="color: var(--text-light);"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="color: var(--text-light);"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: var(--text-light);"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="#" style="color: var(--text-light);"><i
+                            class="fab fa-pinterest"></i></a>
+                </div>
+                <p style="margin-bottom: 1rem;">© 2023 Serengeti Safari
+                    Experience. All rights reserved.</p>
+                <p style="font-size: 0.9rem;">Designed with passion for
+                    wildlife and adventure</p>
+            </div>
+        </footer>
+
+        <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Video slideshow functionality
+          document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.video-slide');
+        const dots = document.querySelectorAll('.video-dot');
+        const prevBtn = document.querySelector('.slide-prev');
+        const nextBtn = document.querySelector('.slide-next');
+        let currentSlide = 0;
+        let slideInterval;
+        
+        // Initialize slideshow
+        function initSlideshow() {
+            slides.forEach((slide, index) => {
+                if (index === 0) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+            
+            dots.forEach((dot, index) => {
+                if (index === 0) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+            
+            startSlideInterval();
+        }
+        
+        // Change slide
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            
+            currentSlide = (index + slides.length) % slides.length;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+            
+            // Reset timer when manually changing slides
+            clearInterval(slideInterval);
+            startSlideInterval();
+        }
+        
+        // Next slide
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+        
+        // Previous slide
+        function prevSlide() {
+            goToSlide(currentSlide - 1);
+        }
+        
+        // Auto-advance slides
+        function startSlideInterval() {
+            slideInterval = setInterval(nextSlide, 8000);
+        }
+        
+        // Event listeners
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const slideIndex = parseInt(this.getAttribute('data-slide'));
+                goToSlide(slideIndex);
+            });
+        });
+        
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        // Pause on hover
+        const slideshow = document.querySelector('.video-slideshow');
+        slideshow.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        slideshow.addEventListener('mouseleave', startSlideInterval);
+        
+        // Initialize
+        initSlideshow();
+    });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-title, .lodge-card, .activity-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Sticky CTA visibility
+        const stickyCTA = document.querySelector('.sticky-cta');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                stickyCTA.classList.add('visible');
+            } else {
+                stickyCTA.classList.remove('visible');
+            }
+        });
+             // Animal data for modal
+        const animalData = {
+            lion: {
+                title: "African Lion",
+                scientific: "Panthera leo",
+                description: "The majestic lion is the apex predator of the Serengeti. Living in prides of up to 30 individuals, these social cats are primarily active at night. Females do most of the hunting while males protect the territory. Lions are the only truly social cats, with prides consisting of related females, their cubs, and a coalition of males.",
+                weight: "120-250 kg (males), 80-160 kg (females)",
+                length: "1.7-2.5 m (body), 0.9-1.1 m (tail)",
+                lifespan: "10-14 years in wild",
+                gestation: "110 days",
+                speed: "80 km/h in short bursts",
+                conservation: "Vulnerable"
+            },
+            elephant: {
+                title: "African Elephant",
+                scientific: "Loxodonta africana",
+                description: "The largest land animal on Earth, African elephants are keystone species in the Serengeti ecosystem. Their matriarchal herds consist of related females and their young. Bulls live solitary lives or in bachelor groups. Elephants are highly intelligent, with complex social structures and communication methods including infrasound.",
+                weight: "2,000-6,000 kg",
+                length: "5.5-7.5 m (including trunk and tail)",
+                lifespan: "60-70 years",
+                gestation: "22 months (longest of any animal)",
+                speed: "40 km/h",
+                conservation: "Vulnerable"
+            },
+            leopard: {
+                title: "African Leopard",
+                scientific: "Panthera pardus",
+                description: "The most elusive of the Big Five, leopards are solitary, nocturnal hunters known for their incredible strength and tree-climbing ability. They often drag prey weighing up to 3 times their own weight into trees to protect it from scavengers. Their spotted coat provides excellent camouflage in dappled light.",
+                weight: "30-90 kg",
+                length: "1-1.9 m (body), 0.6-1.1 m (tail)",
+                lifespan: "12-17 years",
+                gestation: "90-105 days",
+                speed: "58 km/h",
+                conservation: "Vulnerable"
+            },
+            buffalo: {
+                title: "African Buffalo",
+                scientific: "Syncerus caffer",
+                description: "Considered the most dangerous of the Big Five due to their unpredictable nature and tendency to charge when threatened. Buffalo live in large herds that provide protection against predators. Older males often form bachelor groups. They have an excellent memory and will attack lions that have previously hunted members of their herd.",
+                weight: "400-900 kg",
+                length: "1.7-3.4 m (body), 0.7-1.1 m (tail)",
+                lifespan: "15-25 years",
+                gestation: "11.5 months",
+                speed: "57 km/h",
+                conservation: "Near Threatened"
+            },
+            rhino: {
+                title: "Black Rhino",
+                scientific: "Diceros bicornis",
+                description: "The critically endangered black rhino is a solitary browser with a prehensile upper lip for grasping leaves and twigs. Despite their name, they're actually gray in color. Rhinos have poor eyesight but excellent hearing and smell. They're heavily poached for their horns, which are made of keratin (like human hair and nails).",
+                weight: "800-1,400 kg",
+                length: "3-3.8 m (body), 0.6-0.7 m (tail)",
+                lifespan: "35-50 years",
+                gestation: "15-16 months",
+                speed: "55 km/h",
+                conservation: "Critically Endangered"
+            }
+        };
+
+        // Initialize modal functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('animalModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalScientific = document.getElementById('modalScientific');
+            const modalDescription = document.getElementById('modalDescription');
+            const closeBtn = document.querySelector('.close-btn');
+            
+            // Set up gallery item clicks
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const animalType = this.getAttribute('data-animal');
+                    const imgSrc = this.querySelector('img').src;
+                    const animalName = this.querySelector('.animal-name').textContent;
+                    
+                    // Set modal content
+                    modalImg.src = imgSrc;
+                    modalImg.alt = animalName;
+                    modalTitle.textContent = animalName;
+                    
+                    // Get data from animalData object
+                    const data = animalData[animalType];
+                    modalScientific.textContent = data.scientific;
+                    modalDescription.textContent = data.description;
+                    document.getElementById('statWeight').textContent = data.weight;
+                    document.getElementById('statLength').textContent = data.length;
+                    document.getElementById('statLifespan').textContent = data.lifespan;
+                    document.getElementById('statGestation').textContent = data.gestation;
+                    document.getElementById('statSpeed').textContent = data.speed;
+                    document.getElementById('statConservation').textContent = data.conservation;
+                    
+                    // Show modal
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            // Close modal
+            closeBtn.addEventListener('click', function() {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Close when clicking outside modal content
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Scroll animation
+            function checkVisibility() {
+                const items = document.querySelectorAll('.gallery-item');
+                items.forEach(item => {
+                    const itemTop = item.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (itemTop < windowHeight - 100) {
+                        item.classList.add('visible');
+                    }
+                });
+            }
+            
+            // Initial check
+            checkVisibility();
+            
+            // Check on scroll
+            window.addEventListener('scroll', checkVisibility);
+        }); b
+    </script>
+    </body>
+</html>

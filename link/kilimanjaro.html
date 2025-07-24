@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert guided Kilimanjaro climbs with 95% success rate. Choose from 7 routes with KPAP-certified ethical treatment of porters. Book your adventure today.">
+    <title>Kilimanjaro Climbing Experts | Tanzania Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <style>
+        /* Base Styles & Variables */
+        :root {
+            --primary-color: #d2691e;
+            --secondary-color: #8B4513;
+            --accent-color: #FFD700;
+            --dark-green: #2F4F2F;
+            --light-green: #90EE90;
+            --white: #ffffff;
+            --black: #000000;
+            --gray: #666666;
+            --light-gray: #f5f5f5;
+            --primary: #2c6ecb;
+            --secondary: #e67e22;
+            --dark: #333;
+            --light: #f8f9fa;
+            --success: #28a745;
+            --danger: #dc3545;
+            --warning: #fd7e14;
+            --info: #17a2b8;
+            --white: #fff;
+            --gray: #6c757d;
+            --gray-light: #e9ecef;
+            --font-main: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            --font-heading: 'Montserrat', sans-serif;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #1a4d8f;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .mt-4 {
+            margin-top: 1.5rem;
+        }
+
+        .py-4 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow);
+        }
+
+        .header.scrolled .nav-link {
+            color: var(--dark);
+        }
+
+        .header.scrolled .logo img {
+            height: 50px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo img {
+            height: 60px;
+            transition: var(--transition);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .nav-link {
+            color: var(--white);
+            font-weight: 600;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link i {
+            margin-left: 5px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--white);
+            width: 220px;
+            border-radius: 4px;
+            box-shadow: var(--shadow);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 1001;
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 10px 15px;
+            color: var(--dark);
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--gray-light);
+            color: var(--primary);
+        }
+
+        .nav-item:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .language-selector {
+            margin-left: 20px;
+        }
+
+        .language-selector select {
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-size: 24px;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 15px 0;
+            background-color: var(--gray-light);
+        }
+
+        .breadcrumbs-list {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumbs-item {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .breadcrumbs-item:not(:last-child):after {
+            content: '/';
+            margin-left: 10px;
+            color: var(--gray);
+        }
+
+        .breadcrumbs-link {
+            color: var(--gray);
+        }
+
+        .breadcrumbs-link.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Why Choose Us Section */
+        .features {
+            background-color: var(--light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Routes Section */
+        .routes {
+            background-color: var(--white);
+        }
+
+        .route-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .route-tab {
+            padding: 12px 24px;
+            background-color: var(--gray-light);
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .route-tab.active {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .route-tab:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .route-content {
+            display: none;
+        }
+
+        .route-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .route-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            background-color: var(--light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .route-image {
+            position: relative;
+            min-height: 300px;
+        }
+
+        .route-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .route-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .route-details {
+            padding: 30px;
+        }
+
+        .route-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .route-meta-item {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .route-meta-item i {
+            margin-right: 5px;
+            color: var(--primary);
+        }
+
+        .route-description {
+            margin-bottom: 20px;
+        }
+
+        .route-pros-cons {
+            margin-bottom: 20px;
+        }
+
+        .pros-cons-title {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .pros-cons-title i {
+            margin-right: 5px;
+        }
+
+        .pros-cons-list {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+
+        .pros-cons-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 8px;
+        }
+
+        .pros-cons-list li:before {
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+        }
+
+        .pros-list li:before {
+            content: '\f00c';
+            color: var(--success);
+        }
+
+        .cons-list li:before {
+            content: '\f00d';
+            color: var(--danger);
+        }
+
+        .route-cta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Comparison Table */
+        .comparison {
+            background-color: var(--light);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .comparison-table th, 
+        .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid var(--gray-light);
+        }
+
+        .comparison-table th {
+            background-color: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: var(--gray-light);
+        }
+
+        .comparison-feature {
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-best {
+            background-color: rgba(40, 167, 69, 0.1) !important;
+            position: relative;
+        }
+
+        .comparison-best:after {
+            content: 'BEST CHOICE';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background-color: var(--success);
+            color: var(--white);
+            font-size: 10px;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--white);
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin: 0 15px;
+            text-align: center;
+        }
+
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid var(--primary);
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .testimonial-quote:before,
+        .testimonial-quote:after {
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary);
+            opacity: 0.3;
+            font-size: 24px;
+            position: absolute;
+        }
+
+        .testimonial-quote:before {
+            content: '\f10d';
+            top: -10px;
+            left: -10px;
+        }
+
+        .testimonial-quote:after {
+            content: '\f10e';
+            bottom: -20px;
+            right: -10px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-rating {
+            color: var(--warning);
+            margin-bottom: 10px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: var(--light);
+        }
+
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .accordion-header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .accordion-header:after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            transition: var(--transition);
+        }
+
+        .accordion-header.active:after {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            background-color: var(--white);
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content-inner {
+            padding: 20px 0;
+        }
+
+        /* Video Section */
+        .video-section {
+            position: relative;
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1581431886217-8d8e9ab70e0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .video-play-btn {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .video-play-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .video-play-btn i {
+            font-size: 30px;
+            color: var(--white);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .trust-badge {
+            max-width: 150px;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .trust-badge:hover {
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-green);
+            color: white;
+            padding: 2rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-family: 'Kalam', cursive;
+            color: var(--accent-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sticky-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .sticky-btn:hover {
+            transform: translateY(-5px);
+        }
+
+        .sticky-btn.whatsapp {
+            background-color: #25D366;
+        }
+
+        .sticky-btn.phone {
+            background-color: var(--primary);
+        }
+
+        .sticky-btn.chat {
+            background-color: var(--secondary);
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .modal.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-container {
+            background-color: var(--white);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            transform: translateY(50px);
+            transition: var(--transition);
+        }
+
+        .modal.open .modal-container {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .modal-content {
+            padding: 30px;
+            overflow-y: auto;
+            max-height: calc(90vh - 60px);
+        }
+
+        .modal-title {
+            margin-bottom: 20px;
+            padding-right: 30px;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: 4px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(44, 110, 203, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .route-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .route-image {
+                min-height: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 300px;
+                height: 100vh;
+                background-color: var(--white);
+                box-shadow: var(--shadow);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 80px 30px 30px;
+                transition: var(--transition);
+                z-index: 1000;
+            }
+            
+            .nav-menu.open {
+                right: 0;
+            }
+            
+            .nav-list {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .nav-item {
+                margin: 0 0 15px 0;
+                width: 100%;
+            }
+            
+            .nav-link {
+                color: var(--dark);
+                padding: 10px 0;
+                justify-content: space-between;
+            }
+            
+            .dropdown-menu {
+                position: static;
+                width: 100%;
+                box-shadow: none;
+                opacity: 1;
+                visibility: visible;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                background-color: var(--gray-light);
+                margin-top: 10px;
+                border-radius: 4px;
+            }
+            
+            .nav-item.active .dropdown-menu {
+                max-height: 500px;
+            }
+            
+            .dropdown-item {
+                padding: 8px 15px;
+            }
+            
+            .mobile-menu-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 24px;
+                color: var(--dark);
+                cursor: pointer;
+            }
+            
+            .language-selector {
+                margin: 20px 0 0 0;
+                width: 100%;
+            }
+            
+            .language-selector select {
+                width: 100%;
+                background-color: var(--gray-light);
+                color: var(--dark);
+            }
+            
+            .header.scrolled .mobile-menu-btn {
+                color: var(--dark);
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .trust-badges {
+                gap: 20px;
+            }
+            
+            .trust-badge {
+                max-width: 120px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .route-tabs {
+                flex-direction: column;
+            }
+            
+            .route-tab {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+            
+            .route-cta {
+                flex-direction: column;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .trust-badges {
+                gap: 15px;
+            }
+            
+            .trust-badge {
+                max-width: 100px;
+            }
+        }
+
+        /* Animation Classes */
+        .animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-1 {
+            transition-delay: 0.2s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.4s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="https://tanzania-specialist.com/wp-content/uploads/2023/03/logo-tanzania-specialist-white.png" alt="Tanzania Specialist Logo">
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-menu">
+                <button class="mobile-menu-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="destinations.html" class="nav-link">Destinations <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="serengeti.html" class="dropdown-item">Serengeti</a></li>
+                            <li><a href="ngorongoro.html" class="dropdown-item">Ngorongoro</a></li>
+                            <li><a href="zanzibar.html" class="dropdown-item">Zanzibar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="safari.html" class="nav-link">Safari <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="safari-types.html" class="dropdown-item">Safari Types</a></li>
+                            <li><a href="safari-packages.html" class="dropdown-item">Packages</a></li>
+                            <li><a href="safari-guides.html" class="dropdown-item">Guides</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="kilimanjaro.html" class="nav-link active">Kilimanjaro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="language-selector">
+                    <select>
+                        <option value="en">English</option>
+                        <option value="de">Deutsch</option>
+                        <option value="fr">Français</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://tanzania-specialist.com/wp-content/uploads/2023/03/kilimanjaro-hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title animate">Conquer Kilimanjaro</h1>
+            <p class="hero-subtitle animate delay-1">Africa's Highest Peak with 95% Success Rate</p>
+            <div class="hero-cta animate delay-2">
+                <a href="#routes" class="btn btn-primary">Explore Routes</a>
+                <a href="#contact" class="btn btn-outline">Get a Quote</a>
+            </div>
+        </div>
+        
+        <a href="#routes" class="scroll-down animate delay-3">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-item">
+                    <a href="index.html" class="breadcrumbs-link">Home</a>
+                </li>
+                <li class="breadcrumbs-item">
+                    <a href="kilimanjaro.html" class="breadcrumbs-link active">Kilimanjaro</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <section class="section features" id="why-choose-us">
+        <div class="container">
+            <h2 class="section-title animate">Why Climb With Us</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="feature-title">95% Success Rate</h3>
+                    <p>Our proven acclimatization schedules give our clients the highest summit success rate on the mountain.</p>
+                </div>
+                
+                <div class="feature-card animate delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="feature-title">KPAP Certified</h3>
+                    <p>We're proud partners of the Kilimanjaro Porters Assistance Project, ensuring fair treatment of our crew.</p>
+                </div>
+                
+                <div class="feature-card animate delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="feature-title">Safety First</h3>
+                    <p>Comprehensive safety protocols including oxygen systems, first aid kits, and emergency evacuation plans.</p>
+                </div>
+                
+                <div class="feature-card animate delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="feature-title">Premium Meals</h3>
+                    <p>Nutritious, high-energy meals prepared by professional mountain chefs to keep you strong.</p>
+                </div>
+                
+                <div class="feature-card animate delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3 class="feature-title">Expert Guides</h3>
+                    <p>Our guides have 10+ years experience with Wilderness First Responder certification.</p>
+                </div>
+                
+                <div class="feature-card animate delay-3">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="feature-title">5-Star Reviews</h3>
+                    <p>Consistently rated excellent by our clients on TripAdvisor, Google and Trustpilot.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Routes Section -->
+    <section class="section routes" id="routes">
+        <div class="container">
+            <h2 class="section-title animate">Kilimanjaro Climbing Routes</h2>
+            <p class="text-center mb-4 animate delay-1">Choose the perfect route for your adventure. Each offers unique challenges and scenery.</p>
+            
+            <div class="route-tabs animate delay-2">
+                <button class="route-tab active" data-tab="machame">Machame</button>
+                <button class="route-tab" data-tab="lemosho">Lemosho</button>
+                <button class="route-tab" data-tab="rongai">Rongai</button>
+                <button class="route-tab" data-tab="marangu">Marangu</button>
+                <button class="route-tab" data-tab="northern">Northern Circuit</button>
+            </div>
+            
+            <div class="route-content active" id="machame">
+                <div class="route-card">
+                    <div class="route-image">
+                        <img src="https://images.unsplash.com/photo-1609192447198-43d29561a1b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Machame Route">
+                        <span class="route-badge">Most Popular</span>
+                    </div>
+                    <div class="route-details">
+                        <h3>Machame Route - 7 Days</h3>
+                        <div class="route-meta">
+                            <span class="route-meta-item"><i class="fas fa-calendar-alt"></i> 7 Days</span>
+                            <span class="route-meta-item"><i class="fas fa-tent"></i> Camping</span>
+                            <span class="route-meta-item"><i class="fas fa-bolt"></i> Moderate-Strenuous</span>
+                            <span class="route-meta-item"><i class="fas fa-chart-line"></i> 85% Success Rate</span>
+                        </div>
+                        <div class="route-description">
+                            <p>The Machame Route, known as the "Whiskey Route," is our most popular choice offering spectacular scenery and excellent acclimatization. This route approaches from the southwest through lush rainforest, heath, and moorland to alpine desert before summiting from Barafu Camp.</p>
+                        </div>
+                        <div class="route-pros-cons">
+                            <h4 class="pros-cons-title"><i class="fas fa-check-circle"></i> Pros</h4>
+                            <ul class="pros-cons-list pros-list">
+                                <li>Excellent acclimatization profile</li>
+                                <li>Beautiful varied scenery</li>
+                                <li>High success rate</li>
+                                <li>Less crowded than Marangu</li>
+                            </ul>
+                            
+                            <h4 class="pros-cons-title"><i class="fas fa-times-circle"></i> Cons</h4>
+                            <ul class="pros-cons-list cons-list">
+                                <li>More physically demanding</li>
+                                <li>Camping only (no huts)</li>
+                                <li>Steep sections on days 3-4</li>
+                            </ul>
+                        </div>
+                        <div class="route-cta">
+                            <a href="#" class="btn btn-primary" data-route="machame">View Itinerary</a>
+                            <a href="#" class="btn btn-secondary">Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="route-content" id="lemosho">
+                <div class="route-card">
+                    <div class="route-image">
+                        <img src="https://images.unsplash.com/photo-1609192447198-43d29561a1b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Lemosho Route">
+                        <span class="route-badge">Best Scenery</span>
+                    </div>
+                    <div class="route-details">
+                        <h3>Lemosho Route - 8 Days</h3>
+                        <div class="route-meta">
+                            <span class="route-meta-item"><i class="fas fa-calendar-alt"></i> 8 Days</span>
+                            <span class="route-meta-item"><i class="fas fa-tent"></i> Camping</span>
+                            <span class="route-meta-item"><i class="fas fa-bolt"></i> Moderate</span>
+                            <span class="route-meta-item"><i class="fas fa-chart-line"></i> 90% Success Rate</span>
+                        </div>
+                        <div class="route-description">
+                            <p>The Lemosho Route is considered the most beautiful path up Kilimanjaro. Starting from the remote western side, it offers stunning vistas and abundant wildlife sightings in the early days. The route joins the Machame trail at Shira Plateau, providing excellent acclimatization.</p>
+                        </div>
+                        <div class="route-pros-cons">
+                            <h4 class="pros-cons-title"><i class="fas fa-check-circle"></i> Pros</h4>
+                            <ul class="pros-cons-list pros-list">
+                                <li>Most scenic route</li>
+                                <li>Excellent acclimatization</li>
+                                <li>High success rate</li>
+                                <li>Less crowded start</li>
+                            </ul>
+                            
+                            <h4 class="pros-cons-title"><i class="fas fa-times-circle"></i> Cons</h4>
+                            <ul class="pros-cons-list cons-list">
+                                <li>Longer duration required</li>
+                                <li>More expensive</li>
+                                <li>Remote starting point</li>
+                            </ul>
+                        </div>
+                        <div class="route-cta">
+                            <a href="#" class="btn btn-primary" data-route="lemosho">View Itinerary</a>
+                            <a href="#" class="btn btn-secondary">Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other routes would follow the same pattern -->
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section comparison">
+        <div class="container">
+            <h2 class="section-title animate">Route Comparison</h2>
+            <p class="text-center mb-4 animate delay-1">Compare all Kilimanjaro routes at a glance to find your perfect match</p>
+            
+            <div class="animate delay-2">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Machame (7D)</th>
+                            <th class="comparison-best">Lemosho (8D)</th>
+                            <th>Rongai (7D)</th>
+                            <th>Marangu (6D)</th>
+                            <th>Northern (9D)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="comparison-feature">Difficulty</td>
+                            <td>Moderate-Strenuous</td>
+                            <td class="comparison-best">Moderate</td>
+                            <td>Moderate</td>
+                            <td>Moderate</td>
+                            <td>Moderate</td>
+                        </tr>
+                        <tr>
+                            <td class="comparison-feature">Success Rate</td>
+                            <td>85%</td>
+                            <td class="comparison-best">90%</td>
+                            <td>80%</td>
+                            <td>70%</td>
+                            <td>95%</td>
+                        </tr>
+                        <tr>
+                            <td class="comparison-feature">Scenery</td>
+                            <td>Excellent</td>
+                            <td class="comparison-best">Outstanding</td>
+                            <td>Good</td>
+                            <td>Fair</td>
+                            <td>Excellent</td>
+                        </tr>
+                        <tr>
+                            <td class="comparison-feature">Traffic</td>
+                            <td>High</td>
+                            <td>Medium</td>
+                            <td>Low</td>
+                            <td>Very High</td>
+                            <td class="comparison-best">Very Low</td>
+                        </tr>
+                        <tr>
+                            <td class="comparison-feature">Accommodation</td>
+                            <td>Camping</td>
+                            <td>Camping</td>
+                            <td>Camping</td>
+                            <td class="comparison-best">Huts</td>
+                            <td>Camping</td>
+                        </tr>
+                        <tr>
+                            <td class="comparison-feature">Price Range</td>
+                            <td>$$</td>
+                            <td>$$$</td>
+                            <td>$$</td>
+                            <td>$</td>
+                            <td>$$$$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title animate">What Our Climbers Say</h2>
+            
+            <div class="testimonial-slider animate delay-1">
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah J." class="testimonial-avatar">
+                    <p class="testimonial-quote">Summiting Kilimanjaro with Tanzania Specialist was the experience of a lifetime. Our guide made sure we paced ourselves properly and the entire crew was incredibly supportive. The food was amazing considering we were on a mountain!</p>
+                    <h4 class="testimonial-author">Sarah J.</h4>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-route">Machame Route - July 2023</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="testimonial-avatar">
+                    <p class="testimonial-quote">The Lemosho route was breathtakingly beautiful. What impressed me most was how the team treated the porters - you can tell this is a company with strong ethics. Our guide's knowledge of the mountain was incredible.</p>
+                    <h4 class="testimonial-author">Michael T.</h4>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-route">Lemosho Route - January 2023</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma R." class="testimonial-avatar">
+                    <p class="testimonial-quote">As a solo female traveler, I felt completely safe and supported throughout the entire trek. The attention to safety details was impressive - from daily health checks to the emergency oxygen they carried. Made it to Uhuru Peak thanks to their expertise!</p>
+                    <h4 class="testimonial-author">Emma R.</h4>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-route">Northern Circuit - September 2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="section video-section">
+        <div class="container">
+            <div class="video-container animate">
+                <h2 class="section-title">Experience Kilimanjaro</h2>
+                <p class="text-center mb-4">Watch our climbers' journey to the roof of Africa</p>
+                
+                <div class="video-play-btn" id="video-play">
+                    <i class="fas fa-play"></i>
+                </div>
+                
+                <p>Our 8-day Lemosho Route expedition captures the essence of climbing Kilimanjaro - the challenges, the camaraderie, and the ultimate reward of standing at Uhuru Peak.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq">
+        <div class="container">
+            <h2 class="section-title animate">Frequently Asked Questions</h2>
+            
+            <div class="accordion animate delay-1">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What's the best time to climb Kilimanjaro?</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>The best times to climb Kilimanjaro are during the dry seasons: January to mid-March and June to October. These periods offer the clearest skies and most stable weather conditions. January-March tends to be colder with potential snow at the summit, while June-October has cooler temperatures but less precipitation. We generally recommend September as the ideal month with a good balance of weather conditions and fewer crowds.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>How difficult is it to climb Kilimanjaro?</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Kilimanjaro is a challenging but non-technical climb, meaning no special equipment or climbing skills are required. The difficulty comes from the altitude and sustained hiking over multiple days. We rate it as strenuous primarily due to the altitude factors. With proper preparation, pacing, and acclimatization (which our routes are designed for), most healthy individuals can successfully summit. Our guides are experts at setting the right pace and monitoring your condition throughout the climb.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What's included in your Kilimanjaro packages?</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Our all-inclusive packages cover: park fees, camping/hut fees, rescue fees; professional mountain crew (guides, cooks, porters); all meals and drinking water; quality camping equipment (tents, sleeping mats, mess tent); pre- and post-climb accommodation; airport transfers; and KPAP porter support. We also include supplemental oxygen for emergency use, first aid kits, and comprehensive pre-climb briefings. The only things you need to bring are personal gear and tips for the crew.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>How do you handle altitude sickness?</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>We take altitude sickness very seriously and have multiple safeguards in place. Our routes are designed with proper acclimatization profiles (climb high, sleep low). Guides conduct twice-daily health checks monitoring oxygen levels and symptoms. We carry portable oxygen and specialized medications for treatment. In cases where symptoms become severe, we'll descend immediately - our guides are trained in wilderness first response and we have evacuation protocols in place. With our approach, serious cases are rare but we're fully prepared to handle them.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What physical fitness level is required?</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>You should be in good physical condition with the ability to hike 5-7 hours per day over uneven terrain while carrying a daypack (10-15 lbs). We recommend 3-6 months of preparation including regular cardio (hiking, running, cycling) and strength training (especially legs and core). The best training is hiking with elevation gain while wearing your boots and pack. That said, technical fitness isn't as important as mental endurance - pacing and determination are key factors in summiting successfully.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2 class="cta-title animate">Ready for Your Kilimanjaro Adventure?</h2>
+            <p class="text-center mb-4 animate delay-1">Our climbing experts are standing by to help you plan the trip of a lifetime</p>
+            
+            <div class="cta-buttons animate delay-2">
+                <a href="#" class="btn btn-secondary" id="open-quote-form">Get a Free Quote</a>
+                <a href="tel:+255123456789" class="btn btn-outline">Call Our Experts</a>
+            </div>
+            
+            <div class="trust-badges animate delay-3">
+                <img src="https://tanzania-specialist.com/wp-content/uploads/2023/03/kpap-certified.png" alt="KPAP Certified" class="trust-badge">
+                <img src="https://tanzania-specialist.com/wp-content/uploads/2023/03/tanzania-tourism-board.png" alt="Tanzania Tourism Board" class="trust-badge">
+                <img src="https://tanzania-specialist.com/wp-content/uploads/2023/03/tripadvisor-excellence.png" alt="TripAdvisor Excellence" class="trust-badge">
+                <img src="https://tanzania-specialist.com/wp-content/uploads/2023/03/atol-protected.png" alt="ATOL Protected" class="trust-badge">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#tours">Safari Tours</a></li>
+                        <li><a href="#kilimanjaro">Kilimanjaro</a></li>
+                        <li><a href="#zanzibar">Zanzibar</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Safari Packages</h3>
+                    <ul>
+                        <li><a href="#">3-Day Safari</a></li>
+                        <li><a href="#">5-Day Safari</a></li>
+                        <li><a href="#">7-Day Safari</a></li>
+                        <li><a href="#">Custom Safari</a></li>
+                        <li><a href="#">Group Tours</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Destinations</h3>
+                    <ul>
+                        <li><a href="#">Serengeti National Park</a></li>
+                        <li><a href="#">Ngorongoro Crater</a></li>
+                        <li><a href="#">Tarangire National Park</a></li>
+                        <li><a href="#">Lake Manyara</a></li>
+                        <li><a href="#">Mount Kilimanjaro</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">
+                        Subscribe to our newsletter for travel tips and special offers!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 True Africa Escape. All rights reserved. | 
+                <a href="#" style="color: var(--accent-color);">Privacy Policy</a> | 
+                <a href="#" style="color: var(--accent-color);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+ <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <a href="https://wa.me/255123456789" class="sticky-btn whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+255123456789" class="sticky-btn phone">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="#" class="sticky-btn chat" id="open-chat">
+            <i class="fas fa-comment-dots"></i>
+        </a>
+    </div>
+
+    <!-- Quote Modal -->
+    <div class="modal" id="quote-modal">
+        <div class="modal-container">
+            <button class="modal-close" id="close-quote-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content">
+                <h2 class="modal-title">Request a Kilimanjaro Quote</h2>
+                <p>Fill out this form and our climbing experts will send you a personalized quote within 24 hours.</p>
+                
+                <form id="quote-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name*</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email*</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="tel" id="phone" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="route" class="form-label">Preferred Route</label>
+                        <select id="route" class="form-control">
+                            <option value="">-- Select Route --</option>
+                            <option value="machame">Machame Route (7 Days)</option>
+                            <option value="lemosho">Lemosho Route (8 Days)</option>
+                            <option value="rongai">Rongai Route (7 Days)</option>
+                            <option value="marangu">Marangu Route (6 Days)</option>
+                            <option value="northern">Northern Circuit (9 Days)</option>
+                            <option value="unsure">Not Sure - Need Advice</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date" class="form-label">Preferred Month</label>
+                        <select id="date" class="form-control">
+                            <option value="">-- Select Month --</option>
+                            <option value="jan">January</option>
+                            <option value="feb">February</option>
+                            <option value="mar">March</option>
+                            <option value="jun">June</option>
+                            <option value="jul">July</option>
+                            <option value="aug">August</option>
+                            <option value="sep">September</option>
+                            <option value="oct">October</option>
+                            <option value="flexible">Flexible Dates</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="group" class="form-label">Group Size</label>
+                        <select id="group" class="form-control">
+                            <option value="1">Solo (1 person)</option>
+                            <option value="2" selected>2 people</option>
+                            <option value="3-4">3-4 people</option>
+                            <option value="5-6">5-6 people</option>
+                            <option value="7+">7+ people</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Special Requests</label>
+                        <textarea id="message" class="form-control" placeholder="Any specific requirements or questions..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal" id="video-modal">
+        <div class="modal-container">
+            <button class="modal-close" id="close-video-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content">
+                <div class="video-container">
+                    <iframe width="100%" height="450" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Modal -->
+    <div class="modal" id="chat-modal">
+        <div class="modal-container" style="max-width: 400px;">
+            <button class="modal-close" id="close-chat-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content">
+                <h3 class="modal-title">Chat with Our Expert</h3>
+                <p>Have questions about climbing Kilimanjaro? Our team is here to help!</p>
+                
+                <div class="form-group mt-4">
+                    <label for="chat-name" class="form-label">Your Name</label>
+                    <input type="text" id="chat-name" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="chat-email" class="form-label">Email</label>
+                    <input type="email" id="chat-email" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="chat-message" class="form-label">Your Question</label>
+                    <textarea id="chat-message" class="form-control" rows="4"></textarea>
+                </div>
+                
+                <button class="btn btn-primary">Start Chat</button>
+                
+                <div class="text-center mt-3">
+                    <p>Or connect directly via:</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="https://wa.me/255123456789" class="btn btn-success" style="background-color: #25D366;">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.add('open');
+        });
+        
+        mobileMenuClose.addEventListener('click', () => {
+            navMenu.classList.remove('open');
+        });
+        
+        // Dropdown Menu for Mobile
+        const navItems = document.querySelectorAll('.nav-item');
+        
+        navItems.forEach(item => {
+            if (item.querySelector('.dropdown-menu')) {
+                item.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        item.classList.toggle('active');
+                    }
+                });
+            }
+        });
+        
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Route Tabs
+        const routeTabs = document.querySelectorAll('.route-tab');
+        const routeContents = document.querySelectorAll('.route-content');
+        
+        routeTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                routeTabs.forEach(t => t.classList.remove('active'));
+                routeContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // FAQ Accordion
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const accordionItem = header.parentElement;
+                const accordionContent = header.nextElementSibling;
+                
+                header.classList.toggle('active');
+                
+                if (header.classList.contains('active')) {
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                } else {
+                    accordionContent.style.maxHeight = '0';
+                }
+                
+                // Close other open items
+                accordionHeaders.forEach(otherHeader => {
+                    if (otherHeader !== header && otherHeader.classList.contains('active')) {
+                        otherHeader.classList.remove('active');
+                        otherHeader.nextElementSibling.style.maxHeight = '0';
+                    }
+                });
+            });
+        });
+        
+        // Modal Handling
+        const quoteModal = document.getElementById('quote-modal');
+        const videoModal = document.getElementById('video-modal');
+        const chatModal = document.getElementById('chat-modal');
+        
+        const openQuoteBtn = document.getElementById('open-quote-form');
+        const openChatBtn = document.getElementById('open-chat');
+        const videoPlayBtn = document.getElementById('video-play');
+        
+        const closeQuoteBtn = document.getElementById('close-quote-modal');
+        const closeVideoBtn = document.getElementById('close-video-modal');
+        const closeChatBtn = document.getElementById('close-chat-modal');
+        
+        openQuoteBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            quoteModal.classList.add('open');
+        });
+        
+        openChatBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            chatModal.classList.add('open');
+        });
+        
+        videoPlayBtn.addEventListener('click', () => {
+            videoModal.classList.add('open');
+        });
+        
+        closeQuoteBtn.addEventListener('click', () => {
+            quoteModal.classList.remove('open');
+        });
+        
+        closeVideoBtn.addEventListener('click', () => {
+            videoModal.classList.remove('open');
+        });
+        
+        closeChatBtn.addEventListener('click', () => {
+            chatModal.classList.remove('open');
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === quoteModal) {
+                quoteModal.classList.remove('open');
+            }
+            if (e.target === videoModal) {
+                videoModal.classList.remove('open');
+            }
+            if (e.target === chatModal) {
+                chatModal.classList.remove('open');
+            }
+        });
+        
+        // Testimonial Slider
+        if (document.querySelector('.testimonial-slider')) {
+            tns({
+                container: '.testimonial-slider',
+                items: 1,
+                slideBy: 'page',
+                autoplay: true,
+                autoplayButtonOutput: false,
+                controls: false,
+                nav: true,
+                navPosition: 'bottom',
+                mouseDrag: true,
+                responsive: {
+                    768: {
+                        items: 2,
+                        gutter: 20
+                    }
+                }
+            });
+        }
+        
+        // Scroll Animation
+        const animateElements = document.querySelectorAll('.animate');
+        
+        const animateOnScroll = () => {
+            animateElements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight - 100) {
+                    element.classList.add('animated');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('open')) {
+                        navMenu.classList.remove('open');
+                    }
+                }
+            });
+        });
+        
+        // Form Submission
+        const quoteForm = document.getElementById('quote-form');
+        if (quoteForm) {
+            quoteForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Here you would normally send the form data to your server
+                alert('Thank you for your request! Our team will contact you within 24 hours.');
+                quoteModal.classList.remove('open');
+                quoteForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>

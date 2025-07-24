@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zanzibar Paradise | Luxury Beach Holidays & Safaris</title>
+    <meta name="description" content="Experience the ultimate Zanzibar holiday with luxury beach resorts, cultural tours, and unforgettable island adventures.">
+    
+    <!-- Swiper JS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Global Styles */
+        :root {
+               --primary-color: #d2691e;
+            --secondary-color: #8B4513;
+            --accent-color: #FFD700;
+            --dark-green: #2F4F2F;
+            --light-green: #90EE90;
+            --white: #ffffff;
+            --black: #000000;
+            --gray: #666666;
+            --light-gray: #f5f5f5;
+            
+            --text-color: #333;
+            --light-text: #777;
+            --light-bg: #f9f9f9;
+            --dark-bg: #222;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+         font-family: 'Museo Sans', sans-serif;
+             line-height: 1.6;
+             color: var(--black);
+             background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: button;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 15px auto 0;
+        }
+        
+        /* Header Styles */
+       header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 0.8em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.9rem 0;
+        }
+        header .container .logos img{
+            height: 60px;
+            width:60px;
+            border-radius: 60%;
+            background-color: #fafafa;
+            margin-bottom: 5px;
+            font-weight: 600;   
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-family: 'Kalam', cursive;
+
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.3rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 8px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px 12px;
+            color: var(--black);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-content a:hover {
+            background: var(--light-gray);
+        }
+
+        .cta-button {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .cta-button:hover {
+            background: var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Language Dropdown */
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .lang-dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 60px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .lang-dropdown-content a {
+            color: var(--black);
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .lang-dropdown-content a:hover {
+            background-color: var(--light-gray);
+        }
+
+        .language-dropdown:hover .lang-dropdown-content {
+            display: block;
+        }
+
+        
+      
+        
+        
+       
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+        
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        /* Swiper Slider */
+        .swiper-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Why Zanzibar Section */
+        .why-zanzibar {
+            background-color: var(--light-bg);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        /* Itineraries Section */
+        .itineraries {
+            background-color: var(--white);
+        }
+        
+        .itinerary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .itinerary-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .itinerary-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .itinerary-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .itinerary-content {
+            padding: 20px;
+        }
+        
+        .itinerary-content h3 {
+            color: var(--primary-color);
+                font-family: 'Kalam', cursive;
+
+        }
+        
+        .itinerary-duration {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .itinerary-highlights {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .itinerary-highlights li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .itinerary-highlights li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+        
+        /* Activities Section */
+        .activities {
+            background-color: var(--light-bg);
+        }
+        
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .activity-card {
+            position: relative;
+            height: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .activity-img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.5s ease;
+        }
+        
+        .activity-card:hover .activity-img {
+            transform: scale(1.1);
+        }
+        
+        .activity-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: var(--white);
+        }
+        
+        .activity-overlay h3 {
+            margin-bottom: 10px;
+        }
+        
+        /* Best Time Section */
+        .best-time {
+            background-color: var(--white);
+        }
+        
+        .season-calendar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .month {
+            width: calc(100% / 12);
+            text-align: center;
+            padding: 10px 5px;
+            position: relative;
+        }
+        
+        .month span {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .season-indicator {
+            height: 5px;
+            border-radius: 5px;
+        }
+        
+        .dry {
+            background-color: #4CAF50;
+        }
+        
+        .short-rains {
+            background-color: #FFC107;
+        }
+        
+        .long-rains {
+            background-color: #F44336;
+        }
+        
+        .season-descriptions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .season-description {
+            background-color: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .season-description h3 {
+            display: flex;
+            align-items: center;
+        }
+        
+        .season-description h3:before {
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .dry-season h3:before {
+            background-color: #4CAF50;
+        }
+        
+        .short-rains-season h3:before {
+            background-color: #FFC107;
+        }
+        
+        .long-rains-season h3:before {
+            background-color: #F44336;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--light-bg);
+        }
+        
+        .testimonial-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: '\201C';
+            font-size: 5rem;
+            color: rgba(26, 107, 84, 0.1);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .stars {
+            color: var(--secondary-color);
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background-color: var(--white);
+        }
+        
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accordion-header {
+            padding: 15px 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .accordion-header:hover {
+            background-color: #145544;
+        }
+        
+        .accordion-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: var(--light-bg);
+        }
+        
+        .accordion-content-inner {
+            padding: 20px;
+        }
+        
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+        
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-bg);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-green);
+            color: white;
+            padding: 2rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-family: 'Kalam', cursive;
+            color: var(--accent-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background-color: var(--white);
+            z-index: 1100;
+            transition: left 0.3s ease;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mobile-menu.active {
+            left: 0;
+        }
+        
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .close-menu {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+        
+        .mobile-nav-links {
+            list-style: none;
+        }
+        
+        .mobile-nav-links li {
+            margin-bottom: 15px;
+        }
+        
+        .mobile-nav-links a {
+            color: var(--text-color);
+            font-weight: 600;
+            display: block;
+            padding: 10px 0;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1099;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        h1,h2{
+            font-family: 'Kalam', cursive;
+;
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .section-padding {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+                margin: 0 auto;
+            }
+            
+            .section-padding {
+                padding: 50px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .hero {
+                margin-top: 70px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="container">
+            <div class="logos">
+                <img src="./logo/true africa 1.png" alt="">
+            </div>
+            <a href="#" class="logo">True Africa Escape</a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#itineraries">Safari Itineraries <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#3days">3 Days Safari</a>
+                        <a href="#5days">5 Days Safari</a>
+                        <a href="#7days">7+ Days Safari</a>
+                    </div>
+                </li>
+                <li><a href="#kilimanjaro">Kilimanjaro</a></li>
+                <li><a href="#zanzibar">Zanzibar</a></li>
+                <li><a href="#guide">Travel Guide</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <a href="#quote" class="cta-button">Plan Trip</a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="#" class="logo">True Africa Escape</a>
+            <div class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#itineraries">Safari Itineraries</a></li>
+            <li><a href="#kilimanjaro">Kilimanjaro</a></li>
+            <li><a href="#zanzibar">Zanzibar</a></li>
+            <li><a href="#guide">Travel Guide</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1560109947-543149eceb16?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <h1>Discover Zanzibar's Enchanting Beauty</h1>
+                <p>Experience pristine beaches, rich culture, and unforgettable adventures in this tropical paradise.</p>
+                <div class="hero-btns">
+                    <a href="#itineraries" class="btn">Explore Packages</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+  
+
+    <section class="why-zanzibar section-padding" id="why-zanzibar">
+  <div class="container">
+    <h2 class="section-title text-center">Why Choose Zanzibar?</h2>
+    <div class="features">
+      <!-- Pristine Beaches & Crystal Waters -->
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-umbrella-beach"></i>
+        </div>
+        <h3>Pristine Beaches & Crystal Waters</h3>
+        <p>Zanzibar boasts some of the world's most stunning beaches, such as Nungwi and Kendwa, with powder-soft white sands and turquoise waters perfect for swimming, sunbathing, and water sports.</p>
+      </div>
+      <!-- Rich Cultural Heritage -->
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-history"></i>
+        </div>
+        <h3>Rich Cultural Heritage</h3>
+        <p>Explore Stone Town, a UNESCO World Heritage Site, with its labyrinth of narrow streets, historic forts, spice markets, and vibrant markets that reflect centuries of Swahili, Arab, European, and Asian influences.</p>
+      </div>
+      <!-- Vibrant Marine Life & Snorkeling -->
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-fish"></i>
+        </div>
+        <h3>World-Class Snorkeling & Diving</h3>
+        <p>Discover vibrant coral reefs and diverse marine life at Mnemba Atoll, Prison Island, and other prime spots, offering unforgettable underwater experiences for all skill levels.</p>
+      </div>
+      <!-- Spice & Cultural Tours -->
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-pepper-hot"></i>
+        </div>
+        <h3>Spice & Cultural Tours</h3>
+        <p>Visit sprawling spice farms to see, smell, and taste spices like cloves, vanilla, cinnamon, and pepper, learning about Zanzibar’s nickname as the "Spice Island". Engage with local artisans and explore traditional crafts.</p>
+      </div>
+      <!-- Adventure & Nature -->
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-hiking"></i>
+        </div>
+        <h3>Adventure & Nature</h3>
+        <p>Hike through lush Jozani Forest and spot rare red colobus monkeys, or explore the island's waterfalls, mangroves, and marine parks—immersing yourself in Zanzibar's breathtaking natural landscapes.</p>
+      </div>
+      <!-- Wellness & Relaxation -->
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-spa"></i>
+        </div>
+        <h3>Wellness & Spa Retreats</h3>
+        <p>Unwind with luxurious spa treatments, beachfront yoga, and holistic wellness programs in top resorts, designed to rejuvenate body and mind amidst tranquil surroundings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+    
+
+    <section class="zanzibar-details" id="zanzibar-details" style="background-color: #f9f9f9; padding: 60px 20px; font-family: 'Kalam', cursive;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 30px; color: #d2691e;">Discover the Wonders of Zanzibar</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 40px; line-height: 1.6; color: #333;">
+      Zanzibar, often called the “Spice Island,” is a tropical paradise that offers a blend of pristine beaches, rich history, vibrant culture, and incredible natural beauty. From the historic streets of Stone Town to the crystal-clear waters of Mnemba Atoll, Zanzibar promises an unforgettable adventure for every traveler.
+    </p>
+    <div class="zanzibar-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+      
+      <div class="zanzibar-item" style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+        <div class="icon" style="font-size: 2.5rem; color: #d2691e; margin-bottom: 15px;">
+          <i class="fas fa-umbrella-beach"></i>
+        </div>
+        <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Idyllic Beaches</h3>
+        <p style="font-size: 1rem; line-height: 1.5;">Experience endless stretches of white sand beaches like Nungwi and Kendwa, perfect for sunbathing, swimming, and water sports in a serene environment.</p>
+      </div>
+      
+      <div class="zanzibar-item" style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+        <div class="icon" style="font-size: 2.5rem; color: #d2691e; margin-bottom: 15px;">
+          <i class="fas fa-history"></i>
+        </div>
+        <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Historic Stone Town</h3>
+        <p style="font-size: 1rem; line-height: 1.5;">Wander through the UNESCO-listed streets of Stone Town, where ancient Arab, European, and Swahili influences create a captivating maze of markets, mosques, and colonial architecture.</p>
+      </div>
+      
+      <div class="zanzibar-item" style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+        <div class="icon" style="font-size: 2.5rem; color: #d2691e; margin-bottom: 15px;">
+          <i class="fas fa-fish"></i>
+        </div>
+        <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Marine Adventures</h3>
+        <p style="font-size: 1rem; line-height: 1.5;">Discover vibrant coral reefs and marine life with snorkeling and diving trips to Mnemba Atoll, Prison Island, and other marine hotspots teeming with colorful fish, turtles, and dolphins.</p>
+      </div>
+      
+      <div class="zanzibar-item" style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+        <div class="icon" style="font-size: 2.5rem; color: #d2691e; margin-bottom: 15px;">
+          <i class="fas fa-pepper-hot"></i>
+        </div>
+        <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Spice Plantations</h3>
+        <p style="font-size: 1rem; line-height: 1.5;">Tour expansive spice farms where fragrant cloves, vanilla, cinnamon, and pepper are cultivated, giving Zanzibar its “Spice Island” nickname and offering aromatic experiences.</p>
+      </div>
+      
+      <div class="zanzibar-item" style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+        <div class="icon" style="font-size: 2.5rem; color: #d2691e; margin-bottom: 15px;">
+          <i class="fas fa-hiking"></i>
+        </div>
+        <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Natural Wonders</h3>
+        <p style="font-size: 1rem; line-height: 1.5;">Explore lush Jozani Forest, home to rare red colobus monkeys, or visit waterfalls, mangroves, and marine parks that showcase Zanzibar’s incredible biodiversity and scenic landscapes.</p>
+      </div>
+      
+      <div class="zanzibar-item" style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+        <div class="icon" style="font-size: 2.5rem; color: #d2691e; margin-bottom: 15px;">
+          <i class="fas fa-spa"></i>
+        </div>
+        <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Relaxation & Wellness</h3>
+        <p style="font-size: 1rem; line-height: 1.5;">Unwind at luxury resorts with beachfront spas, yoga sessions, and holistic treatments that rejuvenate your body and mind in a tranquil setting.</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="popular-destinations" id="popular-destinations" style="background-color: #fff; padding: 60px 20px; font-family: 'Kalam', cursive;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 3rem; margin-bottom: 20px; color: #d2691e;">Discover Zanzibar's Must-Visit Gems</h2>
+    <p style="font-size: 1.3rem; margin-bottom: 50px; line-height: 1.6; color: #555;">
+      Dive into a world of natural beauty, vibrant culture, and unforgettable experiences. Zanzibar’s top destinations promise moments that will stay with you forever—whether you seek relaxation, adventure, or cultural immersion.
+    </p>
+    <div class="destinations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+      
+      <!-- Nungwi Beach -->
+      <div class="destination-card" style="border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s;">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.4&auto=format&fit=crop&w=1600&q=80" alt="Nungwi Beach" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s;">
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); padding: 10px;">
+            <h3 style="margin: 0; font-size: 1.5rem; color: #fff;">Nungwi Beach</h3>
+          </div>
+        </div>
+        <div style="padding: 15px; background-color: #fff;">
+          <p style="font-size: 1rem; color: #555;">Feel the warm sun and soft sands of Nungwi, a lively beach paradise renowned for stunning sunsets, water sports, and a vibrant nightlife that energizes your evenings.</p>
+        </div>
+      </div>
+      
+      <!-- Stone Town -->
+      <div class="destination-card" style="border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s;">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.4&auto=format&fit=crop&w=1600&q=80" alt="Stone Town" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s;">
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); padding: 10px;">
+            <h3 style="margin: 0; font-size: 1.5rem; color: #fff;">Stone Town</h3>
+          </div>
+        </div>
+        <div style="padding: 15px; background-color: #fff;">
+          <p style="font-size: 1rem; color: #555;">Step back in time through winding alleys, historic markets, and ancient architecture. Immerse yourself in Zanzibar’s rich history and vibrant culture, bursting with stories and colors.</p>
+        </div>
+      </div>
+      
+      <!-- Prison Island -->
+      <div class="destination-card" style="border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s;">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1549887534-7c6808458d0f?ixlib=rb-4.0.4&auto=format&fit=crop&w=1600&q=80" alt="Prison Island" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s;">
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); padding: 10px;">
+            <h3 style="margin: 0; font-size: 1.5rem; color: #fff;">Prison Island</h3>
+          </div>
+        </div>
+        <div style="padding: 15px; background-color: #fff;">
+          <p style="font-size: 1rem; color: #555;">Discover giant tortoises and snorkel in crystal waters. A short boat ride from Stone Town, Prison Island offers a perfect escape into nature and history combined.</p>
+        </div>
+      </div>
+      
+      <!-- Jozani Forest -->
+      <div class="destination-card" style="border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s;">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1566226741343-4b0a3b3a9bfb?ixlib=rb-4.0.4&auto=format&fit=crop&w=1600&q=80" alt="Jozani Forest" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s;">
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); padding: 10px;">
+            <h3 style="margin: 0; font-size: 1.5rem; color: #fff;">Jozani Forest</h3>
+          </div>
+        </div>
+        <div style="padding: 15px; background-color: #fff;">
+          <p style="font-size: 1rem; color: #555;">Experience the lush greenery and rare red colobus monkeys. Jozani Forest is a tranquil haven that invites nature lovers for exploration and tranquility.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+    <!-- Itineraries Section -->
+    <section class="itineraries section-padding" id="itineraries">
+        <div class="container">
+            <h2 class="section-title text-center">Popular Zanzibar Itineraries</h2>
+            
+            <div class="itinerary-cards">
+                <div class="itinerary-card">
+                    <div class="itinerary-img" style="background-image: url('https://images.unsplash.com/photo-1581434682229-19d06818ef59?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="itinerary-content">
+                        <h3>Zanzibar Beach Escape</h3>
+                        <span class="itinerary-duration">7 Days / 6 Nights</span>
+                        <ul class="itinerary-highlights">
+                            <li>Luxury beachfront accommodation</li>
+                            <li>Private sunset dhow cruise</li>
+                            <li>Spice farm tour with local lunch</li>
+                            <li>Snorkeling trip to Mnemba Atoll</li>
+                            <li>Stone Town cultural walking tour</li>
+                        </ul>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="itinerary-card">
+                    <div class="itinerary-img" style="background-image: url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="itinerary-content">
+                        <h3>Safari & Zanzibar Combo</h3>
+                        <span class="itinerary-duration">12 Days / 11 Nights</span>
+                        <ul class="itinerary-highlights">
+                            <li>3-day Serengeti safari</li>
+                            <li>Ngorongoro Crater exploration</li>
+                            <li>5 nights Zanzibar beach stay</li>
+                            <li>All domestic flights included</li>
+                            <li>Private guided tours throughout</li>
+                        </ul>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="itinerary-card">
+                    <div class="itinerary-img" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="itinerary-content">
+                        <h3>Zanzibar Honeymoon Package</h3>
+                        <span class="itinerary-duration">10 Days / 9 Nights</span>
+                        <ul class="itinerary-highlights">
+                            <li>Private beachfront villa</li>
+                            <li>Romantic sunset dinner on the beach</li>
+                            <li>Couple's spa treatments</li>
+                            <li>Prison Island private excursion</li>
+                            <li>Personalized butler service</li>
+                        </ul>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Activities Section -->
+    <section class="activities section-padding" id="activities">
+        <div class="container">
+            <h2 class="section-title text-center">Zanzibar Activities</h2>
+            
+            <div class="activity-grid">
+                <div class="activity-card">
+                    <div class="activity-img" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="activity-overlay">
+                        <h3>Snorkeling & Diving</h3>
+                        <p>Explore vibrant coral reefs and marine life at Mnemba Atoll and other prime locations.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-img" style="background-image: url('https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="activity-overlay">
+                        <h3>Stone Town Tour</h3>
+                        <p>Wander through narrow alleys and discover Zanzibar's rich history and architecture.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-img" style="background-image: url('https://images.unsplash.com/photo-1560109947-543149eceb16?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="activity-overlay">
+                        <h3>Spice Tours</h3>
+                        <p>Visit working spice farms to see how cloves, vanilla, cinnamon and more are grown.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-img" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="activity-overlay">
+                        <h3>Jozani Forest</h3>
+                        <p>Walk among rare red colobus monkeys in Zanzibar's only national park.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-img" style="background-image: url('https://images.unsplash.com/photo-1563941406689-1a83a4a9a0b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="activity-overlay">
+                        <h3>Dhow Sunset Cruise</h3>
+                        <p>Sail on a traditional wooden dhow while watching the spectacular African sunset.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-img" style="background-image: url('https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="activity-overlay">
+                        <h3>Prison Island</h3>
+                        <p>Visit this historic island to see giant tortoises and enjoy excellent snorkeling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Best Time Section -->
+    <section class="best-time section-padding" id="best-time">
+        <div class="container">
+            <h2 class="section-title text-center">Best Time to Visit Zanzibar</h2>
+            
+            <div class="season-calendar">
+                <div class="month">
+                    <span>Jan</span>
+                    <div class="season-indicator dry"></div>
+                </div>
+                <div class="month">
+                    <span>Feb</span>
+                    <div class="season-indicator dry"></div>
+                </div>
+                <div class="month">
+                    <span>Mar</span>
+                    <div class="season-indicator dry"></div>
+                </div>
+                <div class="month">
+                    <span>Apr</span>
+                    <div class="season-indicator long-rains"></div>
+                </div>
+                <div class="month">
+                    <span>May</span>
+                    <div class="season-indicator long-rains"></div>
+                </div>
+                <div class="month">
+                    <span>Jun</span>
+                    <div class="season-indicator dry"></div>
+                </div>
+                <div class="month">
+                    <span>Jul</span>
+                    <div class="season-indicator dry"></div>
+                </div>
+                <div class="month">
+                    <span>Aug</span>
+                    <div class="season-indicator dry"></div>
+                </div>
+                <div class="month">
+                    <span>Sep</span>
+                    <div class="season-indicator dry"></div>
+                </div>
+                <div class="month">
+                    <span>Oct</span>
+                    <div class="season-indicator short-rains"></div>
+                </div>
+                <div class="month">
+                    <span>Nov</span>
+                    <div class="season-indicator short-rains"></div>
+                </div>
+                <div class="month">
+                    <span>Dec</span>
+                    <div class="season-indicator dry"></div>
+                </div>
+            </div>
+            
+            <div class="season-descriptions">
+                <div class="season-description dry-season">
+                    <h3>Dry Season (June - October, December - March)</h3>
+                    <p>The best time to visit Zanzibar with sunny days, low humidity, and minimal rainfall. Perfect for beach activities and water sports.</p>
+                    <p><strong>Average temperature:</strong> 28°C (82°F)</p>
+                </div>
+                
+                <div class="season-description short-rains-season">
+                    <h3>Short Rains (November)</h3>
+                    <p>Brief showers usually in the afternoon, with plenty of sunshine in between. Fewer tourists and lower prices.</p>
+                    <p><strong>Average temperature:</strong> 30°C (86°F)</p>
+                </div>
+                
+                <div class="season-description long-rains-season">
+                    <h3>Long Rains (April - May)</h3>
+                    <p>The wettest period with heavy rainfall. Some resorts close during this time, but you can find great deals.</p>
+                    <p><strong>Average temperature:</strong> 27°C (81°F)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials section-padding">
+        <div class="container">
+            <h2 class="section-title text-center">What Our Guests Say</h2>
+            
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>Our Zanzibar holiday was absolutely perfect! The team at Zanzibar Paradise arranged everything flawlessly - from our luxury beach villa to the most amazing snorkeling trip. We'll definitely be back!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>The combination of safari in Tanzania and beach time in Zanzibar was the trip of a lifetime. The attention to detail and personalized service made all the difference. Highly recommend the spice tour!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Brown">
+                        <div class="author-info">
+                            <h4>Michael Brown</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>We chose Zanzibar for our honeymoon and couldn't have been happier. The private dhow cruise at sunset was magical, and our beachfront villa was paradise. Thank you for creating such special memories!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma & David Wilson">
+                        <div class="author-info">
+                            <h4>Emma & David Wilson</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq section-padding">
+        <div class="container">
+            <h2 class="section-title text-center">Frequently Asked Questions</h2>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Do I need a visa to visit Zanzibar?</h3>
+                        <div class="accordion-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Most visitors to Zanzibar require a visa to enter Tanzania. Many nationalities can obtain a visa on arrival at the airport (cost is approximately $50-$100 depending on nationality) or apply for an e-visa in advance. Your passport should be valid for at least 6 months beyond your date of entry and have at least one blank page.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Is Zanzibar safe for tourists?</h3>
+                        <div class="accordion-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Zanzibar is generally very safe for tourists. The local people are friendly and welcoming. However, as with any travel destination, it's advisable to take normal precautions: don't leave valuables unattended on the beach, avoid walking alone at night in isolated areas, and use registered taxis. Most resorts have good security measures in place.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>What currency is used in Zanzibar?</h3>
+                        <div class="accordion-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>The official currency is the Tanzanian Shilling (TZS). US Dollars are widely accepted, especially in tourist areas, but you'll get better prices paying in shillings for local purchases. ATMs are available in Stone Town and larger villages. Credit cards are accepted at most hotels and larger restaurants, but it's good to carry cash for smaller establishments and markets.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>What vaccinations do I need for Zanzibar?</h3>
+                        <div class="accordion-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>A yellow fever vaccination certificate is required if you're arriving from a country with risk of yellow fever transmission. Recommended vaccinations include Hepatitis A, Typhoid, and routine vaccines. Malaria prophylaxis is also recommended. Consult your doctor or a travel clinic at least 4-6 weeks before your trip for personalized advice.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>What should I pack for Zanzibar?</h3>
+                        <div class="accordion-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Pack light, breathable clothing (cotton or linen), swimwear, sun protection (hat, sunglasses, high SPF sunscreen), comfortable walking shoes for Stone Town, a light sweater for cooler evenings, and a modest outfit for visiting mosques or local villages. Don't forget your camera, waterproof phone case, and any necessary medications. The dress code is generally casual but conservative outside resort areas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#tours">Safari Tours</a></li>
+                        <li><a href="#kilimanjaro">Kilimanjaro</a></li>
+                        <li><a href="#zanzibar">Zanzibar</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Safari Packages</h3>
+                    <ul>
+                        <li><a href="#">3-Day Safari</a></li>
+                        <li><a href="#">5-Day Safari</a></li>
+                        <li><a href="#">7-Day Safari</a></li>
+                        <li><a href="#">Custom Safari</a></li>
+                        <li><a href="#">Group Tours</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Destinations</h3>
+                    <ul>
+                        <li><a href="#">Serengeti National Park</a></li>
+                        <li><a href="#">Ngorongoro Crater</a></li>
+                        <li><a href="#">Tarangire National Park</a></li>
+                        <li><a href="#">Lake Manyara</a></li>
+                        <li><a href="#">Mount Kilimanjaro</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">
+                        Subscribe to our newsletter for travel tips and special offers!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 True Africa Escape. All rights reserved. | 
+                <a href="#" style="color: var(--accent-color);">Privacy Policy</a> | 
+                <a href="#" style="color: var(--accent-color);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Swiper JS -->
+     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const closeMenu = document.querySelector('#closeMenu');
+        const mobileMenu = document.querySelector('#mobileMenu');
+        const overlay = document.querySelector('#overlay');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        overlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Header Scroll Effect
+        const header = document.querySelector('#header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Accordion FAQ
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            
+            header.addEventListener('click', () => {
+                const currentlyActive = document.querySelector('.accordion-item.active');
+                
+                if (currentlyActive && currentlyActive !== item) {
+                    currentlyActive.classList.remove('active');
+                    currentlyActive.querySelector('.accordion-content').style.maxHeight = null;
+                }
+                
+                item.classList.toggle('active');
+                
+                const content = item.querySelector('.accordion-content');
+                if (item.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = null;
+                }
+            });
+        });
+        
+        // Form Submission
+        const inquiryForm = document.querySelector('#inquiryForm');
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show an alert
+            alert('Thank you for your inquiry! We will contact you soon.');
+            inquiryForm.reset();
+        });
+        
+        // Initialize Swiper
+        const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 5000, // Auto-scroll every 5 seconds
+                disableOnInteraction: false,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>

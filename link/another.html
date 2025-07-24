@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake Manyara National Park - Born Wild Rocks</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        /* Header styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 2rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #e74c3c;
+        }
+        
+        /* Main content styles */
+        .main-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .blog-post {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .post-header {
+            position: relative;
+        }
+        
+        .post-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        
+        .post-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 2rem;
+        }
+        
+        .post-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .post-meta {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .post-meta span {
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .post-meta i {
+            margin-right: 0.3rem;
+        }
+        
+        .post-content {
+            padding: 2rem;
+        }
+        
+        .post-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .post-content h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: #2c3e50;
+        }
+        
+        .post-content h3 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem;
+            color: #2c3e50;
+        }
+        
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        .image-caption {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-top: -1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        /* Footer styles */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #e74c3c;
+        }
+        
+        .footer-column p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            opacity: 1;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 1rem;
+            }
+            
+            .post-image {
+                height: 350px;
+            }
+            
+            .post-title h1 {
+                font-size: 2rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">Born Wild Rocks</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="main-container">
+        <article class="blog-post">
+            <div class="post-header">
+                <img src="https://www.bornwild.rocks/blog2/wp-content/uploads/2023/05/Lake-Manyara-National-Park-Tanzania.jpg" alt="Lake Manyara National Park" class="post-image">
+                <div class="post-title">
+                    <h1>Lake Manyara National Park</h1>
+                    <div class="post-meta">
+                        <span><i>📅</i> May 15, 2023</span>
+                        <span><i>🕒</i> 5 min read</span>
+                        <span><i>🏷️</i> Tanzania, National Parks</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Nestled at the base of the Great Rift Valley escarpment, Lake Manyara National Park is one of Tanzania's most diverse and scenic wildlife areas. Covering just 330 square kilometers (127 square miles), this compact park packs an incredible variety of habitats and wildlife into a relatively small area.</p>
+                
+                <h2>Park Overview</h2>
+                <p>Lake Manyara National Park was established in 1960 and is named after the shallow alkaline lake that covers about two-thirds of the park during the wet season. The park is famous for its tree-climbing lions, vast elephant herds, and thousands of flamingos that flock to the lake shores.</p>
+                
+                <img src="https://www.bornwild.rocks/blog2/wp-content/uploads/2023/05/lake-manyara-landscape.jpg" alt="Lake Manyara landscape">
+                <p class="image-caption">The stunning landscape of Lake Manyara National Park</p>
+                
+                <h2>Wildlife Highlights</h2>
+                <p>The park's varied habitats support an impressive array of wildlife:</p>
+                
+                <h3>Mammals</h3>
+                <p>Lake Manyara is home to all of the Big Five except rhinos. The park's famous tree-climbing lions are often seen lounging in acacia trees. Large herds of elephants roam the park, along with buffalo, hippos, giraffes, zebras, wildebeests, and several species of antelope.</p>
+                
+                <h3>Birds</h3>
+                <p>With over 400 species recorded, Lake Manyara is a birdwatcher's paradise. The alkaline lake attracts thousands of flamingos and other waterbirds, while the groundwater forest hosts a variety of forest species.</p>
+                
+                <img src="https://www.bornwild.rocks/blog2/wp-content/uploads/2023/05/lake-manyara-flamingos.jpg" alt="Flamingos at Lake Manyara">
+                <p class="image-caption">Flamingos feeding in the shallow waters of Lake Manyara</p>
+                
+                <h2>Best Time to Visit</h2>
+                <p>The dry season (July-October) is generally the best time for wildlife viewing as animals congregate around water sources. However, the wet season (November-June) brings migratory birds and lush green landscapes, with peak flamingo numbers between December and April.</p>
+                
+                <h2>Activities</h2>
+                <p>Game drives are the main activity in Lake Manyara, with both morning and afternoon options available. The park also offers:</p>
+                <ul>
+                    <li>Canopy walkway through the treetops</li>
+                    <li>Cultural tours to nearby Maasai villages</li>
+                    <li>Night game drives (in adjacent areas)</li>
+                    <li>Birdwatching tours</li>
+                </ul>
+                
+                <h2>Getting There</h2>
+                <p>Lake Manyara is conveniently located about 126km (78 miles) west of Arusha, making it easily accessible as part of a northern Tanzania safari circuit. The drive takes about 1.5-2 hours from Arusha or 2.5-3 hours from Serengeti National Park.</p>
+                
+                <p>Whether you're visiting for a day trip or as part of a longer safari, Lake Manyara National Park offers a wonderful introduction to Tanzania's incredible wildlife and landscapes.</p>
+            </div>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Born Wild Rocks</h3>
+                <p>Born Wild Rocks is a travel blog dedicated to sharing authentic wildlife experiences and conservation stories from around the world.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Connect With Us</h3>
+                <ul>
+                    <li><a href="https://facebook.com/bornwildrocks">Facebook</a></li>
+                    <li><a href="https://instagram.com/bornwildrocks">Instagram</a></li>
+                    <li><a href="https://twitter.com/bornwildrocks">Twitter</a></li>
+                    <li><a href="https://pinterest.com/bornwildrocks">Pinterest</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Born Wild Rocks. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

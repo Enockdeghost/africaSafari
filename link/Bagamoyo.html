@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagamoyo - Tanzania's Historical Treasure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Museo+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #e67e22;
+            --primary-dark: #d35400;
+            --secondary: #2c3e50;
+            --light: #ecf0f1;
+            --dark: #34495e;
+            --accent: #16a085;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Museo Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Kalam', cursive;
+            color: var(--secondary);
+        }
+        
+       img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.top-bar {
+    background: linear-gradient(135deg, #1a2a3a 0%, #3a4a5a 100%);
+    padding: -10px 0;
+    font-size: 12px;
+    color: #fff;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info span {
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    color: #fff;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: #c19d56;
+}
+
+@media (max-width: 576px) {
+    .top-bar-content {
+        flex-direction: column;
+        padding-bottom: 23rem;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .social-icons {
+        display: none;
+    }
+}
+
+/* Header */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: -9.96em;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+.logos img {
+    height: 49px;
+    margin-right: 1px;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Kalam", cursive;
+    margin-right: 1rem;
+    color: #e67e22;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 12px;
+    position: relative;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.nav-links a:hover {
+    color: #e67e22;
+}
+
+.quotes {
+    background-color: #e67e22;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 8rem;
+}
+
+.quotes:hover {
+    background-color: #d35400;
+}
+
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: #e67e22;
+}
+
+/* Dropdown submenu styles */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-subcontent {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #fff;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown-submenu:hover .dropdown-subcontent {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    content: "▸";
+    float: right;
+    padding-left: 5px;
+}
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1624961975767-5c5bca8e5f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            font-size: 2.5rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* History Section */
+        .history-content {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+        
+        .history-text {
+            flex: 1;
+        }
+        
+        .history-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .history-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .history-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Why Visit Section */
+        .why-visit {
+            background-color: var(--light);
+        }
+        
+        .reasons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .reason-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .reason-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .reason-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .reason-card h3 {
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        /* Activities Section */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .activity-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            height: 400px;
+        }
+        
+        .activity-image {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.5s ease;
+        }
+        
+        .activity-card:hover .activity-image {
+            transform: scale(1.1);
+        }
+        
+        .activity-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 2rem 1.5rem 1.5rem;
+            color: white;
+        }
+        
+        .activity-overlay h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Historical Sites */
+        .sites-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .site-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 350px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .site-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .site-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .site-content {
+            padding: 1.5rem;
+        }
+        
+        .site-content h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        /* Footer */
+        /* Footer */
+footer {
+    background: linear-gradient(135deg, #15212e 100%, #3a4a5a 0%);
+    color: white;
+    padding: 2rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-family: "Kalam", cursive;
+    color: var(--accent-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .history-content {
+                flex-direction: column;
+            }
+            
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+        @media (max-width: 992px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        padding-left: 20px;
+        display: none;
+    }
+
+    .dropdown-subcontent {
+        position: static;
+        box-shadow: none;
+        padding-left: 30px;
+        display: none;
+    }
+
+    .dropdown-submenu>a:after {
+        content: "▼";
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .quotes {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+       <header>
+        <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-info">
+                <span><i class="fas fa-phone-alt"></i> +4(0)20 7471 </span>
+                <span><i class="fas fa-envelope"></i> still in constructio</span>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <nav class="container">
+        <div class="logos">
+            <img src="./logo/true africa 1.png" alt="True Africa Logo">
+        </div>
+        <a href="#" class="logo">True Africa Escape</a>
+        
+        <ul class="nav-links">
+            <li><a href="">Home</a></li>
+            <li class="dropdown">
+                <a href="#itineraries">Safari Itineraries <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#3days">3 Days Safari</a>
+                    <a href="#5days">5 Days Safari</a>
+                    <a href="#7days">7+ Days Safari</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#itineraries">Destinations <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-submenu">
+                        <a href="#northern">Northern Zone</a>
+                        <div class="dropdown-subcontent">
+                            <a href="./link/arushanational.html " target="_blank">Arusha National Park</a>
+                            <a href="./link/materuni.html" target="_blank">Materuni Waterfalls & Coffee Tour</a>
+                            <a href="./link/lakemanyara.html" target="_blank">lake manyara</a>
+                            <a href="./link/duluti.html">Lake Duluti</a>
+                            <a href="./link/ngorongor.html">Ngorongoro Crater</a>
+                            <a href="./link/tarangire.html">Tarangire National Park</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="#coastal">Coastal Zone</a>
+                        <div class="dropdown-subcontent">
+                            <a href="./link/bogonyoisland.html">Bongoyo Island Marine Reserve</a>
+                            <a href="./link/mbudyaisland.html">Mbudya Island</a>
+                            <a href="./link/saadani.html">Saadani National Park</a>
+                            <a href="./link/Bagamoyo.html">Bagamoyo Historical Town</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="#zanzibar">Zanzibar Islands</a>
+                        <div class="dropdown-subcontent">
+                            <a href="./link/nzazibar.html">Prison Island</a>
+                            <a href="./link/nzazibar.html">Jozani Forest</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="#mwanza">Lake Victoria Zone</a>
+                        <div class="dropdown-subcontent">
+                            <a href="#saanane">Saanane Island National Park</a>
+                            <a href="#bismarck">Bismarck Rock & Lake Victoria</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#zanzibar">Zanzibar</a></li>
+            <li><a href="#guide">Travel Guide</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <a href="#quote" class="quotes">Plan Trip</a>
+        
+        <button class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+</header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Bagamoyo</h1>
+            <p>Tanzania's Gateway to History and Culture</p>
+            <a href="#visit" class="btn">Explore the Heritage</a>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history">
+        <div class="container">
+            <h2 class="section-title">A Journey Through Time</h2>
+            <div class="history-content">
+                <div class="history-text">
+                    <h3>The Soul of Tanzania's History</h3>
+                    <p>Bagamoyo, whose name translates to "Lay Down Your Heart" in Swahili, holds a profound place in East African history. Founded in the late 18th century, it became the last stop for thousands of enslaved Africans before they were shipped to Zanzibar and beyond during the brutal slave trade era.</p>
+                    <p>In the 19th century, Bagamoyo transformed into a major trading port, dealing in ivory, salt, and copra. The town became the first capital of German East Africa in 1891, serving as the administrative center until Dar es Salaam took over in 1891.</p>
+                    <p>Bagamoyo's historical significance is further highlighted by its role as a center for Christian missionaries. The Holy Ghost Mission established the Freedom Village in 1868 to house and educate freed slaves, making it one of the earliest Christian settlements in East Africa.</p>
+                </div>
+                <div class="history-image">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Historical buildings in Bagamoyo">
+                </div>
+            </div>
+            <div class="history-content">
+                <div class="history-image">
+                    <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Bagamoyo slave trade memorial">
+                </div>
+                <div class="history-text">
+                    <h3>From Slave Trade to Freedom</h3>
+                    <p>The infamous "Caravan Route" ended at Bagamoyo, where captives rested before being shipped to Zanzibar. Today, the haunting ruins of slave holding cells stand as a somber memorial to this dark period.</p>
+                    <p>Bagamoyo's significance continued into the 20th century as a center for independence movements. The town became a hub for nationalist activities against German and later British colonial rule, playing a crucial role in Tanzania's journey to independence.</p>
+                    <p>In 2006, Bagamoyo was officially declared a World Heritage Site by UNESCO, recognizing its outstanding universal value as a testament to human resilience, cultural fusion, and historical transformation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Visit Section -->
+    <section id="visit" class="why-visit">
+        <div class="container">
+            <h2 class="section-title">Why Visit Bagamoyo?</h2>
+            <div class="reasons">
+                <div class="reason-card">
+                    <i class="fas fa-history"></i>
+                    <h3>Living History</h3>
+                    <p>Walk through centuries of history where Arab, Indian, German, and African cultures merged. Experience authentic heritage sites that tell stories of trade, colonization, and liberation.</p>
+                </div>
+                <div class="reason-card">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <h3>Pristine Beaches</h3>
+                    <p>Relax on miles of untouched coastline with powdery white sand and tranquil turquoise waters. Enjoy some of Tanzania's most serene and unspoiled beaches away from the crowds.</p>
+                </div>
+                <div class="reason-card">
+                    <i class="fas fa-theater-masks"></i>
+                    <h3>Cultural Immersion</h3>
+                    <p>Engage with local communities, witness traditional dance performances, and explore the vibrant arts scene that has made Bagamoyo Tanzania's cultural capital.</p>
+                </div>
+                <div class="reason-card">
+                    <i class="fas fa-water"></i>
+                    <h3>Marine Wonders</h3>
+                    <p>Discover diverse marine life through snorkeling and diving in the protected coral reefs of the nearby islands. Enjoy dolphin watching and mangrove kayaking adventures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities">
+        <div class="container">
+            <h2 class="section-title">Popular Activities</h2>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-image" style="background-image: url('https://images.unsplash.com/photo-1596800401183-52d19c3d0b4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');"></div>
+                    <div class="activity-overlay">
+                        <h3>Historical Walking Tours</h3>
+                        <p>Explore colonial buildings, ancient mosques, and slave trade sites with knowledgeable local guides.</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image" style="background-image: url('https://images.unsplash.com/photo-1596454917681-95f4dce5b1d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');"></div>
+                    <div class="activity-overlay">
+                        <h3>Dhow Sailing Excursions</h3>
+                        <p>Experience traditional sailing on handcrafted dhows to nearby islands and sandbanks.</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image" style="background-image: url('https://images.unsplash.com/photo-1561501900-3701fa6a0864?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');"></div>
+                    <div class="activity-overlay">
+                        <h3>Cultural Workshops</h3>
+                        <p>Participate in drumming, carving, or traditional cooking classes with local artisans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Sites Section -->
+    <section id="sites">
+        <div class="container">
+            <h2 class="section-title">Must-See Historical Sites</h2>
+            <div class="sites-container">
+                <div class="site-card">
+                    <div class="site-image" style="background-image: url('https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80');"></div>
+                    <div class="site-content">
+                        <h3>Kaole Ruins</h3>
+                        <p>Dating back to the 13th century, these ancient ruins feature two mosques and 30 tombs, showcasing the earliest evidence of Islam in East Africa.</p>
+                    </div>
+                </div>
+                <div class="site-card">
+                    <div class="site-image" style="background-image: url('https://images.unsplash.com/photo-1571167366136-b57e07761625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1736&q=80');"></div>
+                    <div class="site-content">
+                        <h3>Old Fort</h3>
+                        <p>Built by Arabs in the 1860s and later used by Germans, this fort served as a base for colonial administration and military operations.</p>
+                    </div>
+                </div>
+                <div class="site-card">
+                    <div class="site-image" style="background-image: url('https://images.unsplash.com/photo-1585435465945-bef5a93f8849?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');"></div>
+                    <div class="site-content">
+                        <h3>Catholic Mission Museum</h3>
+                        <p>Housed in the first Catholic church in East Africa, this museum displays artifacts from the slave trade era and missionary activities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#tours">Safari Tours</a></li>
+                        <li><a href="#kilimanjaro">Kilimanjaro</a></li>
+                        <li><a href="#zanzibar">Zanzibar</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Safari Packages</h3>
+                    <ul>
+                        <li><a href="#">3-Day Safari</a></li>
+                        <li><a href="#">5-Day Safari</a></li>
+                        <li><a href="#">7-Day Safari</a></li>
+                        <li><a href="#">Custom Safari</a></li>
+                        <li><a href="#">Group Tours</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Destinations</h3>
+                    <ul>
+                        <li><a href="#">Serengeti National Park</a></li>
+                        <li><a href="#">Ngorongoro Crater</a></li>
+                        <li><a href="#">Tarangire National Park</a></li>
+                        <li><a href="#">Lake Manyara</a></li>
+                        <li><a href="#">Mount Kilimanjaro</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">
+                        Subscribe to our newsletter for travel tips and special offers!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 True Africa Escape. All rights reserved. | 
+                <a href="#" style="color: var(--accent-color);">Privacy Policy</a> | 
+                <a href="#" style="color: var(--accent-color);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Mobile dropdown functionality
+            if (window.innerWidth < 992) {
+                const dropdowns = document.querySelectorAll('.dropdown, .dropdown-submenu');
+                
+                dropdowns.forEach(function(dropdown) {
+                    const link = dropdown.querySelector('a');
+                    const menu = dropdown.querySelector('.dropdown-content, .dropdown-subcontent');
+                    
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                    });
+                });
+            }
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.dropdown') && !e.target.closest('.dropdown-submenu')) {
+                    document.querySelectorAll('.dropdown-content, .dropdown-subcontent').forEach(function(menu) {
+                        menu.style.display = 'none';
+                    });
+                }
+                
+                if (window.innerWidth < 992 && !e.target.closest('.mobile-menu') && !e.target.closest('.nav-links')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+  
+        // Sticky header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>

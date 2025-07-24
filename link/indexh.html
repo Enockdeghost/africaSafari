@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animations Tour</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* 1. Pinned Video Zoom Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+         .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            transition: transform 0.1s ease-out;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        /* 2. Sticky Header with Progress Bar */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            transform: translateY(-100%);
+        }
+
+        .header.visible {
+            transform: translateY(0);
+        }
+
+        .header.shrink {
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #667eea;
+        }
+
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        /* 3. Parallax Section */
+        .parallax-section {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: -20%;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transform: translateY(0);
+        }
+
+        .parallax-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        /* 4. Fade-in Elements */
+        .fade-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .fade-item {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+            margin-bottom: 3rem;
+        }
+
+        .fade-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-item h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .fade-item p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        /* 5. Horizontal Scroll Section */
+        .horizontal-section {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .horizontal-container {
+            height: 100%;
+            display: flex;
+            width: 500%;
+            transition: transform 0.1s ease;
+        }
+
+        .horizontal-panel {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .horizontal-panel:nth-child(1) { background: linear-gradient(45deg, #ff6b6b, #ee5a24); }
+        .horizontal-panel:nth-child(2) { background: linear-gradient(45deg, #4ecdc4, #44a08d); }
+        .horizontal-panel:nth-child(3) { background: linear-gradient(45deg, #45b7d1, #96c93d); }
+        .horizontal-panel:nth-child(4) { background: linear-gradient(45deg, #f093fb, #f5576c); }
+        .horizontal-panel:nth-child(5) { background: linear-gradient(45deg, #4facfe, #00f2fe); }
+
+        .horizontal-panel h2 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .horizontal-panel p {
+            font-size: 1.3rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        /* 6. Stacking Cards */
+        .stacking-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card-stack {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stack-card {
+            position: absolute;
+            width: 300px;
+            height: 400px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transform: scale(0.8) translateY(100px);
+            opacity: 0;
+            transition: all 0.8s ease;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .stack-card.visible {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+
+        .stack-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .stack-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* 7. Scroll-Controlled Zoom */
+        .zoom-section {
+            height: 200vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zoom-content {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .zoom-item {
+            text-align: center;
+            color: white;
+            transform: scale(0.5);
+            transition: transform 0.1s ease;
+        }
+
+        .zoom-item h2 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .zoom-item p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        /* 8. Scroll Timeline Animation */
+        .timeline-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5rem;
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 0.8s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+            transform: translateX(100px);
+        }
+
+        .timeline-item:nth-child(even).visible {
+            transform: translateX(0);
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .timeline-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .timeline-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .timeline-image {
+            flex: 1;
+            height: 300px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 10px;
+            margin: 0 2rem;
+        }
+
+        /* Final Section */
+        .final-section {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .final-content h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .final-content p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .horizontal-container {
+                width: 800%;
+            }
+            
+            .horizontal-panel {
+                width: 12.5%;
+            }
+            
+            .stack-card {
+                width: 250px;
+                height: 350px;
+            }
+            
+            .timeline-item {
+                flex-direction: column !important;
+                transform: translateY(50px) !important;
+            }
+            
+            .timeline-item.visible {
+                transform: translateY(0) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Header with Progress Bar -->
+    <header class="header" id="header">
+        <div class="header-content">
+            <div class="logo">ScrollTour</div>
+            <nav class="nav">
+                <a href="#hero">Home</a>
+                <a href="#parallax">Parallax</a>
+                <a href="#horizontal">Horizontal</a>
+                <a href="#stacking">Stacking</a>
+                <a href="#zoom">Zoom</a>
+            </nav>
+        </div>
+        <div class="progress-bar" id="progressBar"></div>
+    </header>
+
+    <!-- 1. Pinned Video Zoom Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-video" id="heroVideo"></div>
+        <video>
+            <source src="/">
+        </video>
+        <div class="hero-content">
+            
+            <!-- <h1 class="hero-title">Scroll Animations</h1>
+            <p class="hero-subtitle">Experience the future of web interactions</p> -->
+        </div>
+    </section>
+
+    <!-- 2. Parallax Section -->
+    <section class="parallax-section" id="parallax">
+        <div class="parallax-bg" id="parallaxBg"></div>
+        <div class="parallax-content">
+            <h2>Parallax Effect</h2>
+            <img src="/true africa.jpg" alt="">
+            <p>This background moves at a different speed than the foreground, creating depth and immersion. The parallax effect mimics how our eyes perceive distance in the real world.</p>
+        </div>
+    </section>
+
+    <!-- 3. Fade-in Elements -->
+    <section class="fade-section">
+        <div class="fade-item">
+            <h2>Fade-in Animation</h2>
+            <p>Elements fade and slide into view as they enter the viewport. This creates a smooth, engaging experience that guides the user's attention naturally through the content.</p>
+        </div>
+        <div class="fade-item">
+            <h2>Layered Transitions</h2>
+            <p>Multiple elements can be animated in sequence, creating a storytelling effect. Each piece of content reveals itself at the perfect moment, building anticipation and engagement.</p>
+        </div>
+        <div class="fade-item">
+            <h2>Smooth Interactions</h2>
+            <p>All animations are carefully timed and eased to feel natural and responsive. The goal is to enhance the user experience without being distracting or overwhelming.</p>
+        </div>
+    </section>
+
+    <!-- 4. Horizontal Scroll Section -->
+    <section class="horizontal-section" id="horizontal">
+        <div class="horizontal-container" id="horizontalContainer">
+            <div class="horizontal-panel">
+                <h2>Panel 1</h2>
+                <p>Horizontal scrolling breaks the traditional vertical flow, creating a unique browsing experience.</p>
+            </div>
+            <div class="horizontal-panel">
+                <h2>Panel 2</h2>
+                <p>Each panel slides in smoothly as you scroll, like pages in a digital magazine.</p>
+            </div>
+            <div class="horizontal-panel">
+                <h2>Panel 3</h2>
+                <p>This technique works great for showcasing portfolios, products, or step-by-step processes.</p>
+            </div>
+            <div class="horizontal-panel">
+                <h2>Panel 4</h2>
+                <p>The horizontal movement adds variety and keeps users engaged with fresh interactions.</p>
+            </div>
+            <div class="horizontal-panel">
+                <h2>Panel 5</h2>
+                <p>Perfect for creating immersive storytelling experiences that feel interactive and dynamic.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Stacking Cards -->
+    <section class="stacking-section" id="stacking">
+        <h2 style="text-align: center; font-size: 3rem; margin-bottom: 3rem;">Stacking Cards</h2>
+        <div class="card-stack">
+            <div class="stack-card">
+                <h3>Card 1</h3>
+                <p>Cards stack and unstack with smooth animations, creating depth and visual hierarchy.</p>
+            </div>
+            <div class="stack-card">
+                <h3>Card 2</h3>
+                <p>Each card appears with perfect timing, building a sense of anticipation and discovery.</p>
+            </div>
+            <div class="stack-card">
+                <h3>Card 3</h3>
+                <p>The stacking effect works great for testimonials, features, or any layered content.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Scroll-Controlled Zoom -->
+    <section class="zoom-section">
+        <div class="zoom-content">
+            <div class="zoom-item" id="zoomItem">
+                <h2>Zoom Animation</h2>
+                <p>Content scales smoothly based on scroll position</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Timeline Animation -->
+    <section class="timeline-section">
+        <h2 style="text-align: center; font-size: 3rem; margin-bottom: 3rem;">Timeline Animation</h2>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Step 1</h3>
+                <p>Timeline items slide in from alternating sides, creating a dynamic storytelling flow that guides users through your content naturally.</p>
+            </div>
+            <div class="timeline-image"></div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Step 2</h3>
+                <p>Each timeline entry appears with smooth animations, building the story progressively as users scroll through your content.</p>
+            </div>
+            <div class="timeline-image"></div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Step 3</h3>
+                <p>Perfect for showcasing processes, company history, project timelines, or any sequential content that benefits from visual progression.</p>
+            </div>
+            <div class="timeline-image"></div>
+        </div>
+    </section>
+
+    <!-- Final Section -->
+    <section class="final-section">
+        <div class="final-content">
+            <h2>Amazing Scroll Experience</h2>
+            <p>You've experienced all the modern scroll animations that make websites engaging and memorable!</p>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling and animation controller
+        class ScrollAnimationController {
+            constructor() {
+                this.init();
+                this.setupEventListeners();
+            }
+
+            init() {
+                this.header = document.getElementById('header');
+                this.progressBar = document.getElementById('progressBar');
+                this.heroVideo = document.getElementById('heroVideo');
+                this.parallaxBg = document.getElementById('parallaxBg');
+                this.horizontalContainer = document.getElementById('horizontalContainer');
+                this.zoomItem = document.getElementById('zoomItem');
+                
+                this.scrollTop = 0;
+                this.windowHeight = window.innerHeight;
+                this.documentHeight = document.documentElement.scrollHeight;
+                
+                this.setupIntersectionObserver();
+            }
+
+            setupEventListeners() {
+                window.addEventListener('scroll', () => this.handleScroll());
+                window.addEventListener('resize', () => this.handleResize());
+            }
+
+            handleScroll() {
+                this.scrollTop = window.pageYOffset;
+                this.updateProgressBar();
+                this.updateHeader();
+                this.updateHeroVideo();
+                this.updateParallax();
+                this.updateHorizontalScroll();
+                this.updateZoomEffect();
+            }
+
+            handleResize() {
+                this.windowHeight = window.innerHeight;
+                this.documentHeight = document.documentElement.scrollHeight;
+            }
+
+            updateProgressBar() {
+                const scrollPercent = (this.scrollTop / (this.documentHeight - this.windowHeight)) * 100;
+                this.progressBar.style.width = `${Math.min(scrollPercent, 100)}%`;
+            }
+
+            updateHeader() {
+                if (this.scrollTop > this.windowHeight * 0.1) {
+                    this.header.classList.add('visible');
+                    if (this.scrollTop > this.windowHeight * 0.3) {
+                        this.header.classList.add('shrink');
+                    }
+                } else {
+                    this.header.classList.remove('visible', 'shrink');
+                }
+            }
+
+            updateHeroVideo() {
+                if (this.scrollTop < this.windowHeight) {
+                    const scale = 1 + (this.scrollTop / this.windowHeight) * 0.5;
+                    this.heroVideo.style.transform = `scale(${scale})`;
+                }
+            }
+
+            updateParallax() {
+                const parallaxSection = document.getElementById('parallax');
+                const rect = parallaxSection.getBoundingClientRect();
+                
+                if (rect.top < this.windowHeight && rect.bottom > 0) {
+                    const speed = 0.5;
+                    const yPos = -(rect.top * speed);
+                    this.parallaxBg.style.transform = `translateY(${yPos}px)`;
+                }
+            }
+
+            updateHorizontalScroll() {
+                const horizontalSection = document.querySelector('.horizontal-section');
+                const rect = horizontalSection.getBoundingClientRect();
+                
+                if (rect.top <= 0 && rect.bottom >= this.windowHeight) {
+                    const progress = Math.abs(rect.top) / (rect.height - this.windowHeight);
+                    const translateX = -progress * 80; // 80% to show 5 panels
+                    this.horizontalContainer.style.transform = `translateX(${translateX}%)`;
+                }
+            }
+
+            updateZoomEffect() {
+                const zoomSection = document.querySelector('.zoom-section');
+                const rect = zoomSection.getBoundingClientRect();
+                
+                if (rect.top <= 0 && rect.bottom >= this.windowHeight) {
+                    const progress = Math.abs(rect.top) / (rect.height - this.windowHeight);
+                    const scale = 0.5 + (progress * 1.5); // Scale from 0.5 to 2
+                    this.zoomItem.style.transform = `scale(${scale})`;
+                }
+            }
+
+            setupIntersectionObserver() {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe fade-in elements
+                document.querySelectorAll('.fade-item').forEach(item => {
+                    observer.observe(item);
+                });
+
+                // Observe stacking cards with delays
+                document.querySelectorAll('.stack-card').forEach((card, index) => {
+                    const cardObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                setTimeout(() => {
+                                    entry.target.classList.add('visible');
+                                }, index * 200);
+                            }
+                        });
+                    }, observerOptions);
+                    
+                    cardObserver.observe(card);
+                });
+
+                // Observe timeline items
+                document.querySelectorAll('.timeline-item').forEach(item => {
+                    observer.observe(item);
+                });
+            }
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new ScrollAnimationController();
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serengeti National Park - Tanzania's Wildlife Paradise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Museo+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #d2691e;
+            --secondary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --light-color: #f9f9f9;
+            --dark-color: #333;
+            --header-font: "Kalam", cursive;
+            --body-font: "Museo Sans", sans-serif;
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--body-font);
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f5f5f5;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--header-font);
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .top-bar {
+    background: linear-gradient(135deg, #1a2a3a 0%, #3a4a5a 100%);
+    padding: -10px 0;
+    font-size: 12px;
+    color: #fff;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info span {
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    color: #fff;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: #c19d56;
+}
+
+@media (max-width: 576px) {
+    .top-bar-content {
+        flex-direction: column;
+        padding-bottom: 23rem;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .social-icons {
+        display: none;
+    }
+}
+
+/* Header */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: -9.96em;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+.logos img {
+    height: 49px;
+    margin-right: 1px;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Kalam", cursive;
+    margin-right: 1rem;
+    color: #e67e22;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 12px;
+    position: relative;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.nav-links a:hover {
+    color: #e67e22;
+}
+
+.quotes {
+    background-color: #e67e22;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 8rem;
+}
+
+.quotes:hover {
+    background-color: #d35400;
+}
+
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: #e67e22;
+}
+
+/* Dropdown submenu styles */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-subcontent {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #fff;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown-submenu:hover .dropdown-subcontent {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    content: "▸";
+    float: right;
+    padding-left: 5px;
+}
+        /* Header Styles */
+        .header1 {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1567599753820-3fc726f1caa8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background-color: var(--secondary-color);
+            padding: 0.5rem 0;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-family: var(--header-font);
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero-content {
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+       
+        
+
+
+
+
+
+         .features-section {
+        background-color: #f9f9f9;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .feature-card {
+        background: white;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        background: #d2691e;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    .feature-card p {
+        margin-bottom: 1.5rem;
+        color: #666;
+        line-height: 1.7;
+    }
+
+    .feature-highlights {
+        background: rgba(210, 105, 30, 0.1);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1.5rem;
+    }
+
+    .highlight-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .highlight-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .highlight-item i {
+        color: #d2691e;
+        margin-right: 0.8rem;
+        font-size: 1rem;
+        width: 20px;
+        text-align: center;
+    }
+
+    .feature-cta {
+        text-align: center;
+        margin-top: 4rem;
+        padding: 2rem;
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+        border-radius: 10px;
+        color: white;
+    }
+
+    .feature-cta p {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #d2691e;
+        color: white;
+        padding: 0.8rem 2rem;
+        border-radius: 30px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+        background: #e67e22;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .features-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .feature-card {
+            padding: 1.5rem;
+        }
+        
+        .feature-cta {
+            padding: 1.5rem;
+        }
+        
+        .feature-cta p {
+            font-size: 1.1rem;
+        }
+    }
+
+        /* Wildlife Section */
+        .wildlife-section {
+            background-color: var(--light-color);
+        }
+
+        .wildlife-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .wildlife-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .wildlife-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .wildlife-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .wildlife-info {
+            padding: 1.5rem;
+        }
+
+        .wildlife-info h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Activities Section */
+        .activities-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+
+        .activities-section h2 {
+            color: white;
+        }
+
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .activity-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .activity-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+
+          /* Slideshow Section Styles */
+    #slideshow {
+        position: relative;
+        overflow: hidden;
+        background-color: #f5f5f5;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+        color: #666;
+    }
+
+    .video-slideshow {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 600px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .video-slide.active {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .slide-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.7);
+    }
+
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+        background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+        color: white;
+    }
+
+    .slide-content {
+        max-width: 600px;
+        transform: translateX(0);
+        transition: transform 0.8s ease;
+        padding: 2rem;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        backdrop-filter: blur(5px);
+    }
+
+    .video-slide.active .slide-content {
+        transform: translateX(0);
+    }
+
+    .slide-content h3 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #fff;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .slide-text {
+        margin-bottom: 2rem;
+        line-height: 1.7;
+    }
+
+    .slide-text p {
+        margin-bottom: 1rem;
+    }
+
+    .slide-text strong {
+        color: #d2691e;
+        font-weight: 500;
+    }
+
+    .cta-button {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.8rem 1.8rem;
+        background-color: #d2691e;
+        color: white;
+        border-radius: 30px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #e67e22;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .cta-button i {
+        margin-left: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .video-controls {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        background: rgba(0,0,0,0.5);
+        padding: 0.5rem 1rem;
+        border-radius: 30px;
+    }
+
+    .slide-prev, .slide-next {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .slide-prev:hover, .slide-next:hover {
+        color: #d2691e;
+        transform: scale(1.2);
+    }
+
+    .dots-container {
+        display: flex;
+        margin: 0 1rem;
+    }
+
+    .video-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.5);
+        margin: 0 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .video-dot.active {
+        background: #d2691e;
+        transform: scale(1.2);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+        .video-slideshow {
+            height: 500px;
+        }
+        
+        .slide-content {
+            max-width: 80%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .video-slideshow {
+            height: 600px;
+        }
+        
+        .video-overlay {
+            align-items: flex-end;
+            padding-bottom: 5rem;
+        }
+        
+        .slide-content {
+            max-width: 100%;
+            padding: 1.5rem;
+        }
+        
+        .slide-content h3 {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .video-slideshow {
+            height: 500px;
+        }
+        
+        .slide-content h3 {
+            font-size: 1.8rem;
+        }
+        
+        .video-controls {
+            bottom: 1rem;
+        }
+    }
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            color: white;
+            font-size: 2rem;
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            background-color: var(--light-color);
+        }
+
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: none;
+        }
+
+        .testimonial.active {
+            display: block;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            background: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .testimonial-dot.active {
+            background: var(--primary-color);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .contact-section h2 {
+            color: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-details div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-details i {
+            margin-right: 1rem;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #ccc;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links li {
+            margin: 0 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        /* Auto-scroll Section */
+        .auto-scroll-container {
+            width: 100%;
+            overflow: hidden;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 0;
+            margin: 2rem 0;
+        }
+
+        .auto-scroll-content {
+            display: flex;
+            white-space: nowrap;
+            animation: scroll 30s linear infinite;
+        }
+
+        .scroll-item {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 3rem;
+            font-size: 1.2rem;
+        }
+
+        .scroll-item i {
+            margin-right: 1rem;
+            color: var(--primary-color);
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+        
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--secondary-color);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 2rem;
+                transition: all 0.5s ease;
+            }
+        
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .auto-scroll-content {
+                animation: scroll-mobile 20s linear infinite;
+            }
+
+            @keyframes scroll-mobile {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-100%); }
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 0.6rem 1.5rem;
+            }
+
+            .scroll-item {
+                font-size: 1rem;
+                margin-right: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+ <header>
+          <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone-alt"></i> +44 (0)20 7471 8780</span>
+                    <span><i class="fas fa-envelope"></i> info@tanzaniaodyssey.com</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="container">
+            <div class="logos">
+                <img src="./logo/true africa 1.png" alt="True Africa Logo">
+            </div>
+            <a href="#" class="logo">True Africa Escape</a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#itineraries">Safari Itineraries <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#3days">3 Days Safari</a>
+                        <a href="#5days">5 Days Safari</a>
+                        <a href="#7days">7+ Days Safari</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#itineraries">Destinations <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-submenu">
+                            <a href="#northern">Northern Zone</a>
+                            <div class="dropdown-subcontent">
+                                <a href="arushanational.html">Arusha National Park</a>
+                                <a href="materuni.html">Materuni Waterfalls & Coffee Tour</a>
+                                <a href="lakemanyara.html">lake manyara</a>
+                                <a href="#duluti">Lake Duluti</a>
+                                <a href="#ngorongoro">Ngorongoro Crater</a>
+                                <a href="#tarangire">Tarangire National Park</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="#coastal">Coastal Zone</a>
+                            <div class="dropdown-subcontent">
+                                <a href="#bongoyo">Bongoyo Island Marine Reserve</a>
+                                <a href="#mbudya">Mbudya Island</a>
+                                <a href="#saadani">Saadani National Park</a>
+                                <a href="#bagamoyo">Bagamoyo Historical Town</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="#zanzibar">Zanzibar Islands</a>
+                            <div class="dropdown-subcontent">
+                                <a href="#prison-island">Prison Island</a>
+                                <a href="#jozani">Jozani Forest</a>
+                                <a href="#spice-tour">Spice Farm Tour</a>
+                                <a href="#stone-town">Stone Town Tour</a>
+                                <a href="#safari-blue">Safari Blue Trip</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="#mwanza">Lake Victoria Zone</a>
+                            <div class="dropdown-subcontent">
+                                <a href="#saanane">Saanane Island National Park</a>
+                                <a href="#bismarck">Bismarck Rock & Lake Victoria</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#zanzibar">Zanzibar</a></li>
+                <li><a href="#guide">Travel Guide</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <a href="#quote" class="quotes">Plan Trip</a>
+            
+            <button class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <header class="header1" id="home">
+        <div class="hero-content">
+            <h1>Discover the Wonders of Serengeti</h1>
+            <p>Experience the breathtaking beauty of Tanzania's most iconic national park, home to the Great Migration and Africa's Big Five.</p>
+            <a href="#about" class="btn">Explore More</a>
+        </div>
+    </header>
+
+    <!-- Auto-scrolling Facts -->
+    <div class="auto-scroll-container">
+        <div class="auto-scroll-content">
+            <div class="scroll-item">
+                <i class="fas fa-paw"></i>
+                <span>Home to over 1.5 million wildebeest</span>
+            </div>
+            <div class="scroll-item">
+                <i class="fas fa-tree"></i>
+                <span>14,750 square kilometers of protected wilderness</span>
+            </div>
+            <div class="scroll-item">
+                <i class="fas fa-lion"></i>
+                <span>One of Africa's largest lion populations</span>
+            </div>
+            <div class="scroll-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Best time to visit: June to October</span>
+            </div>
+            <div class="scroll-item">
+                <i class="fas fa-umbrella-beach"></i>
+                <span>UNESCO World Heritage Site since 1981</span>
+            </div>
+            <div class="scroll-item">
+                <i class="fas fa-paw"></i>
+                <span>Home to over 1.5 million wildebeest</span>
+            </div>
+            <div class="scroll-item">
+                <i class="fas fa-tree"></i>
+                <span>14,750 square kilometers of protected wilderness</span>
+            </div>
+            <div class="scroll-item">
+                <i class="fas fa-lion"></i>
+                <span>One of Africa's largest lion populations</span>
+            </div>
+            <div class="scroll-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Best time to visit: June to October</span>
+            </div>
+            <div class="scroll-item">
+                <i class="fas fa-umbrella-beach"></i>
+                <span>UNESCO World Heritage Site since 1981</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Serengeti National Park</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>The Serengeti National Park is a Tanzanian national park in the Serengeti ecosystem in the Mara and Simiyu regions. It is famous for its annual migration of over 1.5 million white-bearded (or brindled) wildebeest and 250,000 zebra and for its numerous Nile crocodile and honey badger.</p>
+                    <p>Covering 14,750 square kilometers (5,700 sq mi) of grassland plains, savanna, riverine forest, and woodlands, the park is located in northern Tanzania and lies in the eastern Mara Region and northeastern Simiyu Region. It is bordered to the north by the Kenyan border, where it is continuous with the Maasai Mara National Reserve.</p>
+                    <p>The Serengeti is also renowned for its large lion population and is one of the best places to observe prides in their natural environment. The park was established in 1951 and has been designated as a UNESCO World Heritage Site.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Serengeti Landscape">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wildlife Section -->
+    <section id="wildlife" class="section wildlife-section">
+        <div class="container">
+            <h2 class="section-title">Wildlife of Serengeti</h2>
+            <div class="wildlife-grid">
+                <div class="wildlife-card">
+                    <img src="https://images.unsplash.com/photo-1550358864-518f202c02ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Lion">
+                    <div class="wildlife-info">
+                        <h3>The Big Five</h3>
+                        <p>Serengeti is home to Africa's famous Big Five: lion, leopard, elephant, buffalo, and rhino. These magnificent animals can be spotted throughout the park.</p>
+                    </div>
+                </div>
+                <div class="wildlife-card">
+                    <img src="https://images.unsplash.com/photo-1550358864-518f202c02ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wildebeest Migration">
+                    <div class="wildlife-info">
+                        <h3>The Great Migration</h3>
+                        <p>Witness one of nature's greatest spectacles as over 1.5 million wildebeest, zebras and gazelles traverse the plains in search of fresh grazing.</p>
+                    </div>
+                </div>
+                <div class="wildlife-card">
+                    <img src="https://images.unsplash.com/photo-1561736778-92e52a7769ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cheetah">
+                    <div class="wildlife-info">
+                        <h3>Predators & Prey</h3>
+                        <p>The Serengeti supports a remarkable diversity of predators including cheetahs, hyenas, and jackals that thrive alongside their prey species.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="slideshow">
+    <div class="container">
+        <h2 class="section-title">Experience the Serengeti</h2>
+        <p class="section-subtitle">Discover the wonders of Africa's most iconic wildlife destination</p>
+
+        <div class="video-slideshow">
+            <!-- Slide 1: Endless Plains -->
+            <div class="video-slide active">
+                <div class="slide-image">
+                    <img src="https://images.unsplash.com/photo-1549366021-9f761d040a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+                         alt="Serengeti Plains" loading="lazy">
+                </div>
+                <div class="video-overlay">
+                    <div class="slide-content">
+                        <h3>Endless Plains</h3>
+                        <div class="slide-text">
+                            <p>Where the earth meets the sky in an unbroken golden horizon, the Serengeti's endless plains stretch beyond imagination. This vast sea of grass, covering nearly 15,000 square kilometers, is the stage for Africa's greatest wildlife dramas.</p>
+                            <p>The plains are <strong>the beating heart of the Serengeti ecosystem</strong> - their nutrient-rich soils supporting millions of grazing animals and the predators that follow them. During the rainy season, they transform into lush green carpets that disappear into the distant haze.</p>
+                            <p>More than just scenery, these plains offer <strong>unmatched wildlife visibility</strong>. With few trees obstructing views, you can spot hunting cheetahs from kilometers away or watch wildebeest herds moving like living rivers across the landscape.</p>
+                        </div>
+                        <a href="#contact" class="cta-button">Plan Your Safari <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Great Migration -->
+            <div class="video-slide">
+                <div class="slide-image">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+                         alt="Great Migration" loading="lazy">
+                </div>
+                <div class="video-overlay">
+                    <div class="slide-content">
+                        <h3>Great Migration</h3>
+                        <div class="slide-text">
+                            <p>Follow the world's greatest wildlife spectacle. The Great Migration in Serengeti National Park is one of the most spectacular wildlife events on Earth. Every year, over 1.5 million wildebeest, along with hundreds of thousands of zebras and gazelles, embark on a circular journey of about 1,200 miles in search of fresh grazing and water.</p>
+                            <p>The Great Migration is the <strong>largest overland mammal migration in the world</strong>, following the rains and grass growth across the Serengeti-Mara ecosystem.</p>
+                            <p>Unlike scheduled events, the migration follows nature's rhythm—<strong>unpredictable in timing and path</strong>. River crossings, calving seasons, and predator encounters depend on rainfall patterns, making each year's migration a unique spectacle.</p>
+                        </div>
+                        <a href="#migration-tours" class="cta-button">View Migration Packages <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Big Five -->
+            <div class="video-slide">
+                <div class="slide-image">
+                    <img src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+                         alt="Big Five Safari" loading="lazy">
+                </div>
+                <div class="video-overlay">
+                    <div class="slide-content">
+                        <h3>Big Five Safari</h3>
+                        <div class="slide-text">
+                            <p>Witness Africa's most iconic wildlife. The Big Five - lion, leopard, elephant, buffalo, and rhinoceros - represent the crown jewels of Serengeti National Park's incredible biodiversity. These magnificent creatures roam freely across the endless plains.</p>
+                            <p>The Serengeti is <strong>one of Africa's best destinations</strong> to see all Big Five animals in their natural habitat. With vast savannas, riverine forests, and rocky outcrops, the park provides perfect habitats for these legendary species throughout the year.</p>
+                            <p>Unlike zoos or confined areas, spotting the Big Five here is <strong>a true wilderness experience</strong>. Each sighting is unique, from lions hunting at dawn to leopards lounging in acacia trees.</p>
+                        </div>
+                        <a href="#big-five-tours" class="cta-button">Book Big Five Tour <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Sunset Adventures -->
+            <div class="video-slide">
+                <div class="slide-image">
+                    <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+                         alt="Sunset Safari" loading="lazy">
+                </div>
+                <div class="video-overlay">
+                    <div class="slide-content">
+                        <h3>Sunset Adventures</h3>
+                        <div class="slide-text">
+                            <p>As the African sun dips below the horizon, the Serengeti transforms into a golden paradise. Our sunset adventures offer magical moments when predators become active, silhouettes stretch across the plains, and the sky erupts in fiery colors.</p>
+                            <p>Sunset in the Serengeti is <strong>nature's daily spectacle</strong> - the perfect time for photography, sundowners, and witnessing the shift from diurnal to nocturnal wildlife. Special evening game drives extend your safari beyond normal park hours.</p>
+                            <p>Unlike daytime viewing, sunset brings <strong>unique animal behaviors</strong> - lions beginning their nocturnal hunts, hippos emerging from rivers, and the haunting calls of hyenas marking their territories under the twilight sky.</p>
+                        </div>
+                        <a href="#sunset-tours" class="cta-button">Explore Sunset Tours <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="video-controls">
+                <button class="slide-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="dots-container">
+                    <span class="video-dot active" data-slide="0"></span>
+                    <span class="video-dot" data-slide="1"></span>
+                    <span class="video-dot" data-slide="2"></span>
+                    <span class="video-dot" data-slide="3"></span>
+                </div>
+                <button class="slide-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="section activities-section">
+        <div class="container">
+            <h2 class="section-title">Things to Do in Serengeti</h2>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-binoculars"></i>
+                    </div>
+                    <h3>Game Drives</h3>
+                    <p>Experience the thrill of spotting wildlife up close on morning, afternoon, and full-day game drives with expert guides.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-hot-air-balloon"></i>
+                    </div>
+                    <h3>Hot Air Balloon Safaris</h3>
+                    <p>Soar above the plains at sunrise for a breathtaking aerial view of the wildlife and landscapes below.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-hiking"></i>
+                    </div>
+                    <h3>Walking Safaris</h3>
+                    <p>Explore the bush on foot with armed rangers for a more intimate connection with nature.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Photography Tours</h3>
+                    <p>Join specialized photography tours to capture the perfect wildlife shots with professional guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section features-section" id="why-visit">
+    <div class="container">
+        <h2 class="section-title">Why Visit Serengeti National Park?</h2>
+        <p class="section-subtitle">Discover what makes Serengeti one of the world's most extraordinary wildlife destinations</p>
+
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-paw"></i>
+                </div>
+                <h3>The Great Migration</h3>
+                <p>Witness the largest terrestrial mammal migration on Earth, where over 1.5 million wildebeest, 300,000 zebra, and 500,000 gazelles make their annual circular journey across the ecosystem.</p>
+                <div class="feature-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Best viewing: June-October (river crossings)</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Key locations: Grumeti River, Mara River</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-lion"></i>
+                </div>
+                <h3>Big Five Safaris</h3>
+                <p>Experience Africa's most iconic wildlife - lions, leopards, elephants, buffaloes, and rhinos - in their natural habitat with some of the highest predator densities on the continent.</p>
+                <div class="feature-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-binoculars"></i>
+                        <span>3,000+ lions in the ecosystem</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-tree"></i>
+                        <span>Diverse habitats support all species year-round</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-globe-africa"></i>
+                </div>
+                <h3>Pristine Wilderness</h3>
+                <p>Explore 14,763 km² of untouched African savanna, from endless grassy plains to acacia woodlands and riverine forests, protected as a UNESCO World Heritage Site since 1981.</p>
+                <div class="feature-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <span>One of the oldest ecosystems on Earth</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-leaf"></i>
+                        <span>500+ bird species recorded</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h3>World-Class Photography</h3>
+                <p>Capture stunning wildlife moments with perfect golden light, dramatic landscapes, and unparalleled animal encounters that make Serengeti a photographer's paradise.</p>
+                <div class="feature-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-sun"></i>
+                        <span>Golden hour lasts all day during dry season</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-images"></i>
+                        <span>Minimal vegetation obstruction for clear shots</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-hot-air-balloon"></i>
+                </div>
+                <h3>Unique Experiences</h3>
+                <p>From sunrise balloon safaris to walking tours and cultural visits with Maasai communities, Serengeti offers adventures found nowhere else.</p>
+                <div class="feature-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-hiking"></i>
+                        <span>Walking safaris with expert guides</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-moon"></i>
+                        <span>Night game drives in special areas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3>Year-Round Wildlife</h3>
+                <p>Unlike seasonal parks, Serengeti offers exceptional game viewing every month, with different highlights throughout the annual cycle.</p>
+                <div class="feature-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-baby"></i>
+                        <span>Feb-Mar: Calving season in southern plains</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-trophy"></i>
+                        <span>Nov-Dec: Mating season for predators</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-cta">
+            <p>Ready to experience the magic of Serengeti?</p>
+            <a href="#contact" class="btn">Plan Your Safari Today</a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1567599753820-3fc726f1caa8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Serengeti Sunset">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1550358864-518f202c02ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Lions">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Elephants">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1561736778-92e52a7769ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cheetah">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Balloon Safari">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Landscape">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Visitor Experiences</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial active">
+                    <p class="testimonial-text">"The Serengeti exceeded all my expectations. Witnessing the Great Migration was a life-changing experience. Our guide was incredibly knowledgeable and helped us spot all of the Big Five!"</p>
+                    <p class="testimonial-author">- Sarah Johnson, USA</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"The hot air balloon safari at sunrise was worth every penny. Seeing the vast plains from above with herds of animals moving below was simply magical. Can't wait to return!"</p>
+                    <p class="testimonial-author">- Michael Chen, Australia</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"As a photographer, Serengeti offered endless opportunities. The golden light, dramatic landscapes, and abundance of wildlife made every moment picture-perfect."</p>
+                    <p class="testimonial-author">- Elena Rodriguez, Spain</p>
+                </div>
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active"></div>
+                    <div class="testimonial-dot"></div>
+                    <div class="testimonial-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Plan Your Visit</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Serengeti National Park, Tanzania</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            <span>+255 27 250 3471</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@serengetipark.go.tz</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-clock"></i>
+                            <span>Open daily from 6:00 AM to 6:00 PM</span>
+                        </div>
+                    </div>
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Get in Touch</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#wildlife">Wildlife</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <p class="copyright">© 2023 Serengeti National Park. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+          document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.video-slide');
+        const dots = document.querySelectorAll('.video-dot');
+        const prevBtn = document.querySelector('.slide-prev');
+        const nextBtn = document.querySelector('.slide-next');
+        let currentSlide = 0;
+        let slideInterval;
+        const slideDuration = 6000; // 6 seconds
+        
+        // Initialize slideshow
+        function initSlideshow() {
+            showSlide(currentSlide);
+            startSlideTimer();
+        }
+        
+        // Show specific slide
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Show selected slide
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        // Next slide
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+            resetSlideTimer();
+        }
+        
+        // Previous slide
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+            resetSlideTimer();
+        }
+        
+        // Start auto slide timer
+        function startSlideTimer() {
+            slideInterval = setInterval(nextSlide, slideDuration);
+        }
+        
+        // Reset slide timer
+        function resetSlideTimer() {
+            clearInterval(slideInterval);
+            startSlideTimer();
+        }
+        
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const slideIndex = parseInt(this.getAttribute('data-slide'));
+                showSlide(slideIndex);
+                resetSlideTimer();
+            });
+        });
+        
+        // Pause on hover
+        const slideshow = document.querySelector('.video-slideshow');
+        slideshow.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        slideshow.addEventListener('mouseleave', () => {
+            startSlideTimer();
+        });
+        
+        // Initialize
+        initSlideshow();
+    });
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            // Back to top button
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        });
+        
+        // Testimonial slider
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        
+        function showTestimonial(index) {
+            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            testimonials[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentTestimonial = index;
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showTestimonial(index));
+        });
+        
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Auto-scroll pause on hover
+        const autoScrollContent = document.querySelector('.auto-scroll-content');
+        
+        autoScrollContent.addEventListener('mouseenter', () => {
+            autoScrollContent.style.animationPlayState = 'paused';
+        });
+        
+        autoScrollContent.addEventListener('mouseleave', () => {
+            autoScrollContent.style.animationPlayState = 'running';
+        });
+    </script>
+</body>
+</html>

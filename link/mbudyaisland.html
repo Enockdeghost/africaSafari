@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mbudya Island - Tanzania's Tropical Paradise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Museo+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #e67e22;
+            --primary-dark: #d35400;
+            --secondary: #3498db;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --sand: #f9f3e9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Museo Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--sand);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Kalam', cursive;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            font-family: 'Museo Sans', sans-serif;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+            border-color: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            color: var(--secondary);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .top-bar {
+            background: linear-gradient(135deg, #1a2a3a 0%, #3a4a5a 100%);
+            padding: -10px 0;
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info span {
+            margin-right: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-icons a {
+            margin-left: 15px;
+            color: #fff;
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-3px);
+            color: #c19d56;
+        }
+
+        @media (max-width: 576px) {
+            .top-bar-content {
+                flex-direction: column;
+                padding-bottom: 23rem;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .social-icons {
+                display: none;
+            }
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: -9.96em;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 8px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .logos {
+            display: flex;
+            align-items: center;
+        }
+
+        .logos img {
+            height: 49px;
+            margin-right: 1px;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: "Kalam", cursive;
+            margin-right: 1rem;
+            color: #e67e22;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 12px;
+            position: relative;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .nav-links a:hover {
+            color: #e67e22;
+        }
+
+        .quotes {
+            background-color: #e67e22;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 9px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-left: 8rem;
+        }
+
+        .quotes:hover {
+            background-color: #d35400;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            color: #333;
+            cursor: pointer;
+        }
+
+        /* Dropdown styles */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1;
+            padding: 10px 0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            padding: 10px 20px;
+            display: block;
+            color: #333;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f5f5f5;
+            color: #e67e22;
+        }
+
+        /* Dropdown submenu styles */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-subcontent {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #fff;
+            min-width: 250px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1;
+            padding: 10px 0;
+        }
+
+        .dropdown-submenu:hover .dropdown-subcontent {
+            display: block;
+        }
+
+        .dropdown-submenu>a:after {
+            content: "▸";
+            float: right;
+            padding-left: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 60px;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--light);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Why Visit */
+        .why-visit {
+            background-color: var(--sand);
+            padding: 100px 0;
+        }
+        
+        .reasons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .reason-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .reason-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .reason-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .reason-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .reason-card:hover .reason-image img {
+            transform: scale(1.1);
+        }
+        
+        .reason-content {
+            padding: 25px;
+        }
+        
+        .reason-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        /* Activities */
+        .activities {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .activity-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: relative;
+            height: 350px;
+        }
+        
+        .activity-image {
+            height: 100%;
+            position: relative;
+        }
+        
+        .activity-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .activity-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            transform: translateY(30px);
+            transition: transform 0.5s;
+        }
+        
+        .activity-card:hover .activity-overlay {
+            transform: translateY(0);
+        }
+        
+        .activity-overlay h3 {
+            color: white;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Gallery */
+        .gallery {
+            padding: 100px 0;
+            background: var(--sand);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 250px;
+            gap: 15px;
+            margin-top: 50px;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(230, 126, 34, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-overlay i {
+            color: white;
+            font-size: 2.5rem;
+        }
+        
+        /* Plan Your Trip */
+        .plan-trip {
+            padding: 100px 0;
+            background: white;
+            text-align: center;
+        }
+        
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .info-card {
+            background: var(--sand);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .info-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .info-card h3 {
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        
+        .testimonials h2 {
+            color: var(--primary);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .client {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .client img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 3px solid var(--primary);
+        }
+        
+        /* Contact */
+        .contact {
+            padding: 100px 0;
+            background: var(--sand);
+        }
+        
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-top: 5px;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Museo Sans', sans-serif;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .hero-content {
+                padding: 0 20px;
+            }
+        }
+        @media (max-width: 992px) {
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 10px 0;
+        }
+
+        .dropdown-content {
+            position: static;
+            box-shadow: none;
+            padding-left: 20px;
+            display: none;
+        }
+
+        .dropdown-subcontent {
+            position: static;
+            box-shadow: none;
+            padding-left: 30px;
+            display: none;
+        }
+
+        .dropdown-submenu>a:after {
+            content: "▼";
+        }
+
+        .mobile-menu {
+            display: block;
+        }
+
+        .quotes {
+            margin-left: auto;
+            margin-right: 20px;
+        }
+    }
+
+        @media (max-width: 768px) {
+ 
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                height: 80vh;
+            }
+            
+            h1 {
+                font-size: 2.3rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+     <header>
+          <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone-alt"></i> +4(0)20 7471 </span>
+                    <span><i class="fas fa-envelope"></i> still in constructio</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="container">
+            <div class="logos">
+                <img src="./logo/true africa 1.png" alt="True Africa Logo">
+            </div>
+            <a href="#" class="logo">True Africa Escape</a>
+            
+            <ul class="nav-links">
+                <li><a href="">Home</a></li>
+                <li class="dropdown">
+                    <a href="#itineraries">Safari Itineraries <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#3days">3 Days Safari</a>
+                        <a href="#5days">5 Days Safari</a>
+                        <a href="#7days">7+ Days Safari</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#itineraries">Destinations <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-submenu">
+                            <a href="#northern">Northern Zone</a>
+                            <div class="dropdown-subcontent">
+                                <a href="arushanational.html " target="_blank">Arusha National Park</a>
+                                <a href="materuni.html" target="_blank">Materuni Waterfalls & Coffee Tour</a>
+                                <a href="lakemanyara.html" target="_blank">lake manyara</a>
+                                <a href="duluti.html">Lake Duluti</a>
+                                <a href="ngorongor.html">Ngorongoro Crater</a>
+                                <a href="tarangire.html">Tarangire National Park</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="#coastal">Coastal Zone</a>
+                            <div class="dropdown-subcontent">
+                                <a href="./link/bogonyoisland.html">Bongoyo Island Marine Reserve</a>
+                                <a href="./link/mbudyaisland.html">Mbudya Island</a>
+                                <a href="./link/saadani.html">Saadani National Park</a>
+                                <a href="./link/Bagamoyo.html">Bagamoyo Historical Town</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="#zanzibar">Zanzibar Islands</a>
+                            <div class="dropdown-subcontent">
+                                <a href="./link/nzazibar.html">Prison Island</a>
+                                <a href="./link/nzazibar.html">Jozani Forest</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="#mwanza">Lake Victoria Zone</a>
+                            <div class="dropdown-subcontent">
+                                <a href="#saanane">Saanane Island National Park</a>
+                                <a href="#bismarck">Bismarck Rock & Lake Victoria</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#zanzibar">Zanzibar</a></li>
+                <li><a href="#guide">Travel Guide</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <a href="#quote" class="quotes">Plan Trip</a>
+            
+            <button class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Discover the Paradise of Mbudya Island</h1>
+            <p>A pristine tropical island just off the coast of Dar es Salaam, Tanzania. Experience white sandy beaches, crystal-clear waters, and vibrant marine life in this untouched paradise.</p>
+            <a href="#plan" class="btn">Plan Your Visit</a>
+            <a href="#gallery" class="btn btn-secondary">View Gallery</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Mbudya Island</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Mbudya Island is part of the Dar es Salaam Marine Reserve System, located just a short boat ride from the bustling city of Dar es Salaam. This protected island offers a sanctuary of natural beauty with its powdery white sand beaches, turquoise waters, and lush vegetation.</p>
+                    <p>Designated as a marine reserve, Mbudya Island boasts thriving coral reefs teeming with colorful fish and marine life. The island remains largely undeveloped, preserving its natural charm and offering visitors an authentic tropical island experience.</p>
+                    <p>With no permanent residents, Mbudya provides the perfect escape from city life. Visitors can enjoy fresh seafood barbecues, relax under the shade of coconut palms, and swim in some of the clearest waters in Tanzania.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Aerial view of Mbudya Island">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Visit -->
+    <section id="why-visit" class="why-visit">
+        <div class="container">
+            <h2>Why Visit Mbudya Island</h2>
+            <div class="reasons">
+                <div class="reason-card">
+                    <div class="reason-image">
+                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Pristine Beach">
+                    </div>
+                    <div class="reason-content">
+                        <h3>Pristine Beaches</h3>
+                        <p>Experience untouched white sand beaches that stretch around the entire island. With no development along the shoreline, you'll find the perfect spot to relax away from crowds.</p>
+                    </div>
+                </div>
+                
+                <div class="reason-card">
+                    <div class="reason-image">
+                        <img src="https://images.unsplash.com/photo-1536152470836-b943b246224c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Coral Reef">
+                    </div>
+                    <div class="reason-content">
+                        <h3>Vibrant Coral Reefs</h3>
+                        <p>Snorkel in protected marine areas with stunning coral formations and diverse fish species. The clear waters offer excellent visibility for underwater exploration.</p>
+                    </div>
+                </div>
+                
+                <div class="reason-card">
+                    <div class="reason-image">
+                        <img src="https://images.unsplash.com/photo-1562514947-bf9cf8e45e2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Seafood">
+                    </div>
+                    <div class="reason-content">
+                        <h3>Fresh Seafood</h3>
+                        <p>Enjoy freshly caught seafood grilled to perfection right on the beach. Local chefs prepare lobster, prawns, fish, and other delicacies with authentic Tanzanian flavors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities -->
+    <section id="activities" class="activities">
+        <div class="container">
+            <h2>Popular Activities</h2>
+            <div class="activity-grid">
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Snorkeling">
+                        <div class="activity-overlay">
+                            <h3>Snorkeling</h3>
+                            <p>Explore vibrant coral gardens teeming with marine life just meters from shore.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Beach Relaxation">
+                        <div class="activity-overlay">
+                            <h3>Beach Relaxation</h3>
+                            <p>Unwind on pristine beaches under the shade of coconut palms.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Island Exploration">
+                        <div class="activity-overlay">
+                            <h3>Island Exploration</h3>
+                            <p>Walk around the entire island in about 45 minutes, discovering hidden coves.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Bird Watching">
+                        <div class="activity-overlay">
+                            <h3>Bird Watching</h3>
+                            <p>Spot various seabird species that nest on the island's rocky outcrops.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Island Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1562514947-bf9cf8e45e2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beach view">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coral reef">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Snorkeling">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beach relaxation">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sunset">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Aerial view">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Your Trip -->
+    <section id="plan" class="plan-trip">
+        <div class="container">
+            <h2>Plan Your Visit</h2>
+            <div class="info-cards">
+                <div class="info-card">
+                    <i class="fas fa-ship"></i>
+                    <h3>Getting There</h3>
+                    <p>Accessible by boat from Dar es Salaam. Trips depart daily from the Slipway, Msasani Peninsula. The journey takes 20-30 minutes.</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Best Time to Visit</h3>
+                    <p>June to October (dry season) offers the best weather. November to February is also pleasant but with occasional rain showers.</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-sun"></i>
+                    <h3>What to Bring</h3>
+                    <p>Sunscreen, hat, swimwear, towel, snorkeling gear (can be rented), cash (no ATMs on island), and camera.</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>Entrance Fees</h3>
+                    <p>Conservation fees apply (approx. $15 for non-residents, less for residents). Includes park ranger services and conservation efforts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Visitor Experiences</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Mbudya Island is paradise found! The water was crystal clear and the snorkeling was incredible. We saw so many colorful fish just a few meters from shore."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <p>UK, July 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"The fresh seafood lunch on the beach was the highlight of our Tanzania trip. Grilled lobster with coconut rice - absolutely delicious! The island is so peaceful."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Michael Chen">
+                        <div>
+                            <h4>Michael Chen</h4>
+                            <p>Canada, August 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"Just 30 minutes from the city but feels a world away. Perfect day trip from Dar es Salaam. The kids loved snorkeling and building sandcastles on the perfect white sand."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Amina Hassan">
+                        <div>
+                            <h4>Amina Hassan</h4>
+                            <p>Tanzania, September 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Dar es Salaam Marine Reserve, Tanzania</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+255 22 123 4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@mbudya-island.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Operating Hours</h3>
+                            <p>Daily: 8:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Mbudya Island</h3>
+                    <p>Discover Tanzania's hidden paradise with pristine beaches, vibrant coral reefs, and unforgettable experiences just a short boat ride from Dar es Salaam.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Mbudya</a></li>
+                        <li><a href="#why-visit">Why Visit</a></li>
+                        <li><a href="#activities">Activities</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#plan">Plan Your Trip</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Conservation Efforts</a></li>
+                        <li><a href="#">Marine Reserve Rules</a></li>
+                        <li><a href="#">Boat Operators</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for updates on special offers and island news.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Mbudya Island Tourism. All rights reserved. | Designed with ❤️ for Tanzania</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add a simple scroll animation effect
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.reason-card, .activity-card, .info-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if(elementPosition < screenPosition) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // Initialize elements with some styles for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.reason-card, .activity-card, .info-card');
+            
+            animatedElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+        });
+          document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Mobile dropdown functionality
+            if (window.innerWidth < 992) {
+                const dropdowns = document.querySelectorAll('.dropdown, .dropdown-submenu');
+                
+                dropdowns.forEach(function(dropdown) {
+                    const link = dropdown.querySelector('a');
+                    const menu = dropdown.querySelector('.dropdown-content, .dropdown-subcontent');
+                    
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                    });
+                });
+            }
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.dropdown') && !e.target.closest('.dropdown-submenu')) {
+                    document.querySelectorAll('.dropdown-content, .dropdown-subcontent').forEach(function(menu) {
+                        menu.style.display = 'none';
+                    });
+                }
+                
+                if (window.innerWidth < 992 && !e.target.closest('.mobile-menu') && !e.target.closest('.nav-links')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+  
+        // Sticky header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>

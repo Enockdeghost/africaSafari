@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materuni Waterfalls - Tanzania Tourism</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Museo+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            font-family: "Museo Sans", sans-serif;
+        }
+        
+       .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+}
+
+.top-bar {
+    background: linear-gradient(135deg, #1a2a3a 0%, #3a4a5a 100%);
+    padding: -10px 0;
+    font-size: 12px;
+    color: #fff;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info span {
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    color: #fff;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: #c19d56;
+}
+
+@media (max-width: 576px) {
+    .top-bar-content {
+        flex-direction: column;
+        padding-bottom: 23rem;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .social-icons {
+        display: none;
+    }
+}
+
+/* Header */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: -9.96em;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+.logos img {
+    height: 49px;
+    margin-right: 1px;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Kalam", cursive;
+    margin-right: 1rem;
+    color: #e67e22;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 12px;
+    position: relative;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.nav-links a:hover {
+    color: #e67e22;
+}
+
+.quotes {
+    background-color: #e67e22;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 8rem;
+}
+
+.quotes:hover {
+    background-color: #d35400;
+}
+
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: #e67e22;
+}
+
+/* Dropdown submenu styles */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-subcontent {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #fff;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown-submenu:hover .dropdown-subcontent {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    content: "▸";
+    float: right;
+    padding-left: 5px;
+}
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/mteruni/pexels-renanbomtempo-772481.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-family: "Kalam", cursive;
+        }
+        
+        .breadcrumb {
+            padding: 1rem 0;
+            background-color: #f1f1f1;
+        }
+        
+        .breadcrumb a {
+            color: #e67e22;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .content-section {
+            padding: 3rem 0;
+        }
+        
+        .content-section h2 {
+            color: #e67e22;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            font-family: "Kalam", cursive;
+        }
+        
+        .content-section h3 {
+            color: #e67e22;
+            margin: 1.5rem 0 1rem;
+            font-size: 1.5rem;
+            font-family: "Kalam", cursive;
+        }
+        
+        .content-section h4 {
+            font-family: "Kalam", cursive;
+        }
+        
+        .content-section p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .image-gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .image-gallery img:hover {
+            transform: scale(1.03);
+        }
+        
+        .highlight-box {
+            background-color: #fef6e9;
+            border-left: 4px solid #e67e22;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .activity-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .activity-img {
+            height: 150px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .activity-content {
+            padding: 1.2rem;
+        }
+        
+        .activity-content h4 {
+            color: #e67e22;
+            margin-bottom: 0.5rem;
+        }
+        
+        .why-choose {
+            background-color: #f5f5f5;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .why-list {
+            list-style-type: none;
+        }
+        
+        .why-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .why-list li:before {
+            content: "✓";
+            color: #e67e22;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        footer {
+    background: linear-gradient(135deg, #15212e 100%, #3a4a5a 0%);
+    color: white;
+    padding: 2rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-family: "Kalam", cursive;
+    color: var(--accent-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Blog Preview */
+.blog-preview {
+    padding: 3rem 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 1.2rem;
+}
+
+.blog-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--dark-green);
+}
+
+.blog-excerpt {
+    color: var(--gray);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.blog-meta {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+@media (max-width: 992px) {
+    .nav-links {
+        position: fixed;
+        top: 90px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    .btn-primary {
+        margin-top: -2rem;
+        height: 30px;
+        width: 290px;
+        padding-bottom: 2rem;
+        border-radius: 2px;
+        border-radius: 50px;
+        margin-left: 2rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        display: none;
+        width: 100%;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+     .quotes {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+}
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+            }
+            
+            nav ul li {
+                margin: 0 0.5rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+   <header>
+          <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone-alt"></i> +44 (0)20 7471 8780</span>
+                    <span><i class="fas fa-envelope"></i> info@tanzaniaodyssey.com</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="container">
+            <div class="logos">
+                <img src="./logo/true africa 1.png" alt="True Africa Logo">
+            </div>
+            <a href="#" class="logo">True Africa Escape</a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#itineraries">Safari Itineraries <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#3days">3 Days Safari</a>
+                        <a href="#5days">5 Days Safari</a>
+                        <a href="#7days">7+ Days Safari</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#itineraries">Destinations <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-submenu">
+                            <a href="#northern">Northern Zone</a>
+                            <div class="dropdown-subcontent">
+                                <a href="arushanational.html">Arusha National Park</a>
+                                <a href="materuni.html">Materuni Waterfalls & Coffee Tour</a>
+                                <a href="lakemanyara.html">lake manyara</a>
+                                <a href="#duluti">Lake Duluti</a>
+                                <a href="#ngorongoro">Ngorongoro Crater</a>
+                                <a href="#tarangire">Tarangire National Park</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="#coastal">Coastal Zone</a>
+                            <div class="dropdown-subcontent">
+                                <a href="#bongoyo">Bongoyo Island Marine Reserve</a>
+                                <a href="#mbudya">Mbudya Island</a>
+                                <a href="#saadani">Saadani National Park</a>
+                                <a href="#bagamoyo">Bagamoyo Historical Town</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="#zanzibar">Zanzibar Islands</a>
+                            <div class="dropdown-subcontent">
+                                <a href="#prison-island">Prison Island</a>
+                                <a href="#jozani">Jozani Forest</a>
+                                <a href="#spice-tour">Spice Farm Tour</a>
+                                <a href="#stone-town">Stone Town Tour</a>
+                                <a href="#safari-blue">Safari Blue Trip</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="#mwanza">Lake Victoria Zone</a>
+                            <div class="dropdown-subcontent">
+                                <a href="#saanane">Saanane Island National Park</a>
+                                <a href="#bismarck">Bismarck Rock & Lake Victoria</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#zanzibar">Zanzibar</a></li>
+                <li><a href="#guide">Travel Guide</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <a href="#quote" class="quotes">Plan Trip</a>
+            
+            <button class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Materuni Waterfalls</h1>
+            <p>Discover the breathtaking beauty of this natural wonder at the foothills of Kilimanjaro</p>
+        </div>
+    </section>
+    
+    <main class="container content-section">
+        <article>
+            <h2>Discover Materuni Waterfalls</h2>
+            <p>The beautiful path leading to Materuni Waterfall is lined with coffee farms and banana plantations. The waterfall is about 70m high, and the pool at the base is great for swimming. The views of Kibo and Moshi town can be seen.</p>
+            
+            <div class="highlight-box">
+                <p>Materuni Village is the last village on the slopes of Mount Kilimanjaro before the rainforest starts. The village is inhabited by the Chagga people who are known for their coffee farming and rich cultural traditions.</p>
+            </div>
+            
+            <div class="image-gallery">
+                <img src="/mteruni/pexels-1093389518-30980291.jpg" alt="Materuni Waterfall view">
+                <img src="/mteruni/pexels-ivars-33090643.jpg" alt="Hiking path to Materuni">
+                <img src="/mteruni/pexels-daciana-cristina-visan-2149801141-33047459.jpg" alt="Swimming pool at the base">
+            </div>
+            
+            <section class="why-choose">
+                <h2>Why Choose Materuni Waterfalls?</h2>
+                <p>Materuni offers a unique combination of natural beauty, cultural experiences, and adventure that makes it stand out from other destinations:</p>
+                
+                <ul class="why-list">
+                    <li><strong>Authentic Cultural Experience:</strong> Interact with the local Chagga people and learn about their traditions</li>
+                    <li><strong>Perfect Day Trip:</strong> Easily accessible from Moshi or Arusha for a refreshing getaway</li>
+                    <li><strong>Less Crowded:</strong> Enjoy nature without the large tourist crowds of more commercial sites</li>
+                    <li><strong>Diverse Activities:</strong> From hiking to coffee tours to waterfall swimming</li>
+                    <li><strong>Stunning Scenery:</strong> Breathtaking views of Kilimanjaro and lush landscapes</li>
+                    <li><strong>Cool Climate:</strong> Pleasant temperatures at this elevation (about 1,500m above sea level)</li>
+                </ul>
+            </section>
+            
+            <h2>About Materuni Waterfalls</h2>
+            <p>The Materuni Waterfalls are located in the Materuni Village, about 15km from Moshi town at the foothills of Mount Kilimanjaro. The waterfall cascades down from a height of about 70 meters into a refreshing pool below, surrounded by lush vegetation and dramatic rock formations.</p>
+            
+            <h3>Geology and Environment</h3>
+            <p>The waterfall is fed by natural springs from Mount Kilimanjaro, with water that is remarkably clean and cold. The area around the falls is part of Kilimanjaro's ecosystem, featuring rich biodiversity including various bird species and tropical plants.</p>
+            
+            <h3>Cultural Significance</h3>
+            <p>For the Chagga people, the waterfall holds cultural importance as a source of clean water and a gathering place. Local legends tell stories about the spirits that inhabit the waterfall and surrounding forest.</p>
+            
+            <h2>Activities at Materuni</h2>
+            <p>Visitors to Materuni Waterfalls can enjoy a variety of activities that combine nature, culture, and adventure:</p>
+            
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <img src="/mteruni/meg-von-haartman-ywt_cO2XrXQ-unsplash.jpg" alt="Hiking" class="activity-img">
+                    <div class="activity-content">
+                        <h4>Waterfall Hike</h4>
+                        <p>A scenic 45-minute hike through coffee plantations with local guides explaining the flora and fauna.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <img src="/mteruni/pexels-adria-masi-461420600-33054120.jpg" alt="Swimming" class="activity-img">
+                    <div class="activity-content">
+                        <h4>Waterfall Swimming</h4>
+                        <p>Take a refreshing dip in the natural pool at the base of the 70m waterfall.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <img src="/mteruni/pexels-michael-burrows-7125547.jpg"alt="Coffee Tour" class="activity-img">
+                    <div class="activity-content">
+                        <h4>Coffee Tour</h4>
+                        <p>Learn about traditional Chagga coffee production from bean to cup, including roasting demonstration.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <img src="/mteruni/pexels-followalice-667200.jpg" alt="Cultural Experience" class="activity-img">
+                    <div class="activity-content">
+                        <h4>Cultural Experience</h4>
+                        <p>Visit a Chagga village, see traditional homes, and learn about local customs and history.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Detailed Activity Information</h3>
+            <p><strong>Hiking to the Waterfall:</strong> The trail is moderately challenging, taking about 45 minutes each way. The path winds through coffee farms and lush vegetation, with occasional steep sections. Guides are recommended and can be arranged in Materuni village.</p>
+            
+            <p><strong>Swimming:</strong> The natural pool at the base of the waterfall is safe for swimming, with water temperatures around 15-18°C (59-64°F). The best time for swimming is during the drier months (June-October and January-February) when water flow is slightly reduced.</p>
+            
+            <p><strong>Coffee Experience:</strong> Materuni is famous for its Arabica coffee. Visitors can participate in the entire process - from picking ripe coffee cherries to roasting beans over an open fire, followed by grinding and brewing traditional Chagga coffee.</p>
+            
+            <h2>Best Time to Visit</h2>
+            <p>Materuni Waterfalls can be visited year-round, but the best conditions are during the dry seasons:</p>
+            <ul>
+                <li><strong>June to October:</strong> Clear skies, less rain, and good visibility of Kilimanjaro</li>
+                <li><strong>January to February:</strong> Another dry period with pleasant temperatures</li>
+                <li><strong>Rainy seasons (March-May and November):</strong> The waterfall is more powerful but trails can be muddy</li>
+            </ul>
+            
+            <h2>Getting There</h2>
+            <p>Materuni Waterfalls is accessible from Moshi town (about 15km/9mi, 30-40 minute drive). Options include:</p>
+            <ul>
+                <li><strong>Guided Tour:</strong> Most convenient option with transportation included</li>
+                <li><strong>Taxi:</strong> Can be hired for the day from Moshi (negotiate price in advance)</li>
+                <li><strong>Public Transport:</strong> Take a dalla-dalla (minibus) to Materuni village then walk</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <p><strong>Tip:</strong> Combine your visit with other nearby attractions like Kikuletwa Hot Springs or a coffee plantation tour for a full day experience.</p>
+            </div>
+        </article>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#tours">Safari Tours</a></li>
+                        <li><a href="#kilimanjaro">Kilimanjaro</a></li>
+                        <li><a href="#zanzibar">Zanzibar</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Safari Packages</h3>
+                    <ul>
+                        <li><a href="#">3-Day Safari</a></li>
+                        <li><a href="#">5-Day Safari</a></li>
+                        <li><a href="#">7-Day Safari</a></li>
+                        <li><a href="#">Custom Safari</a></li>
+                        <li><a href="#">Group Tours</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Destinations</h3>
+                    <ul>
+                        <li><a href="#">Serengeti National Park</a></li>
+                        <li><a href="#">Ngorongoro Crater</a></li>
+                        <li><a href="#">Tarangire National Park</a></li>
+                        <li><a href="#">Lake Manyara</a></li>
+                        <li><a href="#">Mount Kilimanjaro</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">
+                        Subscribe to our newsletter for travel tips and special offers!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 True Africa Escape. All rights reserved. | 
+                <a href="#" style="color: var(--accent-color);">Privacy Policy</a> | 
+                <a href="#" style="color: var(--accent-color);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+   <script>
+     document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Mobile dropdown functionality
+            if (window.innerWidth < 992) {
+                const dropdowns = document.querySelectorAll('.dropdown, .dropdown-submenu');
+                
+                dropdowns.forEach(function(dropdown) {
+                    const link = dropdown.querySelector('a');
+                    const menu = dropdown.querySelector('.dropdown-content, .dropdown-subcontent');
+                    
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                    });
+                });
+            }
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.dropdown') && !e.target.closest('.dropdown-submenu')) {
+                    document.querySelectorAll('.dropdown-content, .dropdown-subcontent').forEach(function(menu) {
+                        menu.style.display = 'none';
+                    });
+                }
+                
+                if (window.innerWidth < 992 && !e.target.closest('.mobile-menu') && !e.target.closest('.nav-links')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+  
+        // Sticky header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+   </script>
+</body>
+</html>

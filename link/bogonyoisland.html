@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bogonyo Island - Tanzania's Hidden Paradise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Museo+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #e67e22;
+            --secondary-color: #1a5276;
+            --light-color: #f9f7f0;
+            --dark-color: #333;
+            --accent-color: #e67e22;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Museo Sans', sans-serif;
+            line-height: 1.6;
+            color: #444;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Kalam', cursive;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+                
+        /* Header Styles */
+        img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.top-bar {
+    background: linear-gradient(135deg, #1a2a3a 0%, #3a4a5a 100%);
+    padding: -10px 0;
+    font-size: 12px;
+    color: #fff;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info span {
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    color: #fff;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: #c19d56;
+}
+
+@media (max-width: 576px) {
+    .top-bar-content {
+        flex-direction: column;
+        padding-bottom: 23rem;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .social-icons {
+        display: none;
+    }
+}
+
+/* Header */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: -9.96em;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+.logos img {
+    height: 49px;
+    margin-right: 1px;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Kalam", cursive;
+    margin-right: 1rem;
+    color: #e67e22;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 12px;
+    position: relative;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.nav-links a:hover {
+    color: #e67e22;
+}
+
+.quotes {
+    background-color: #e67e22;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 8rem;
+}
+
+.quotes:hover {
+    background-color: #d35400;
+}
+
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: #e67e22;
+}
+
+/* Dropdown submenu styles */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-subcontent {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #fff;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown-submenu:hover .dropdown-subcontent {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    content: "▸";
+    float: right;
+    padding-left: 5px;
+}
+
+
+        
+        /* Section Styling */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        /* Why Visit Section */
+        .why-visit {
+            background-color: var(--light-color);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .feature-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .feature-card:hover .feature-img img {
+            transform: scale(1.1);
+        }
+        
+        .feature-content {
+            padding: 1.5rem;
+        }
+        
+        .feature-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Activities Section */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .activity-card {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .activity-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .activity-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            background: linear-gradient(to bottom, var(--light-color) 0%, #fff 100%);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        
+        .gallery-item {
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        /* Travel Info */
+        .travel-info {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .travel-info .section-title h2 {
+            color: white;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .info-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .info-card h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .info-list {
+            list-style: none;
+        }
+        
+        .info-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .info-list i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+       /* Footer */
+footer {
+    background: linear-gradient(135deg, #15212e 100%, #3a4a5a 0%);
+    color: white;
+    padding: 2rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-family: "Kalam", cursive;
+    color: var(--accent-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Hero Section -->
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-info">
+                <span><i class="fas fa-phone-alt"></i> +4(0)20 7471 </span>
+                <span><i class="fas fa-envelope"></i> still in constructio</span>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <nav class="container">
+        <div class="logos">
+            <img src="./logo/true africa 1.png" alt="True Africa Logo">
+        </div>
+        <a href="#" class="logo">True Africa Escape</a>
+        
+        <ul class="nav-links">
+            <li><a href="">Home</a></li>
+            <li class="dropdown">
+                <a href="#itineraries">Safari Itineraries <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#3days">3 Days Safari</a>
+                    <a href="#5days">5 Days Safari</a>
+                    <a href="#7days">7+ Days Safari</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#itineraries">Destinations <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-submenu">
+                        <a href="#northern">Northern Zone</a>
+                        <div class="dropdown-subcontent">
+                            <a href="./link/arushanational.html " target="_blank">Arusha National Park</a>
+                            <a href="./link/materuni.html" target="_blank">Materuni Waterfalls & Coffee Tour</a>
+                            <a href="./link/lakemanyara.html" target="_blank">lake manyara</a>
+                            <a href="./link/duluti.html">Lake Duluti</a>
+                            <a href="./link/ngorongor.html">Ngorongoro Crater</a>
+                            <a href="./link/tarangire.html">Tarangire National Park</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="#coastal">Coastal Zone</a>
+                        <div class="dropdown-subcontent">
+                            <a href="./link/bogonyoisland.html">Bongoyo Island Marine Reserve</a>
+                            <a href="./link/mbudyaisland.html">Mbudya Island</a>
+                            <a href="./link/saadani.html">Saadani National Park</a>
+                            <a href="./link/Bagamoyo.html">Bagamoyo Historical Town</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="#zanzibar">Zanzibar Islands</a>
+                        <div class="dropdown-subcontent">
+                            <a href="./link/nzazibar.html">Prison Island</a>
+                            <a href="./link/nzazibar.html">Jozani Forest</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="#mwanza">Lake Victoria Zone</a>
+                        <div class="dropdown-subcontent">
+                            <a href="#saanane">Saanane Island National Park</a>
+                            <a href="#bismarck">Bismarck Rock & Lake Victoria</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#zanzibar">Zanzibar</a></li>
+            <li><a href="#guide">Travel Guide</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <a href="#quote" class="quotes">Plan Trip</a>
+        
+        <button class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+</header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Welcome to Bogonyo Island</h2>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                    Nestled in the sparkling waters of Lake Victoria, Bogonyo Island is a hidden gem of Tanzania. This unspoiled paradise offers visitors a unique blend of natural beauty, rich cultural heritage, and unforgettable experiences. As the largest island in the Ukerewe Archipelago, Bogonyo remains one of East Africa's best-kept secrets.
+                </p>
+                <p style="font-size: 1.2rem;">
+                    With its pristine beaches, diverse wildlife, and welcoming local communities, Bogonyo Island provides an authentic African experience away from the crowds. Whether you're seeking adventure, relaxation, or cultural immersion, this island paradise has something for every traveler.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Visit Section -->
+    <section id="why-visit" class="why-visit">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Visit Bogonyo Island</h2>
+                <p>Discover what makes this island so special</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pristine beaches of Bogonyo Island">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Pristine Natural Beauty</h3>
+                        <p>Experience untouched beaches with golden sands and crystal-clear waters. The island's interior features lush vegetation, ancient baobab trees, and diverse ecosystems waiting to be explored.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://images.unsplash.com/photo-1567599754651-5b73e1db3a74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bird watching on Bogonyo Island">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Rich Biodiversity</h3>
+                        <p>Bogonyo is a haven for birdwatchers with over 200 species recorded. The surrounding waters of Lake Victoria are home to diverse fish species, including the famous Nile perch.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://images.unsplash.com/photo-1593118247619-e2d6f056869e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cultural experience on Bogonyo Island">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Authentic Cultural Experience</h3>
+                        <p>Engage with the warm and welcoming local communities. Learn about traditional fishing techniques, local crafts, and the unique way of life on Lake Victoria's islands.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities">
+        <div class="container">
+            <div class="section-title">
+                <h2>Popular Activities</h2>
+                <p>Experience the best of Bogonyo Island</p>
+            </div>
+            
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3>Island Hopping</h3>
+                    <p>Explore the beautiful archipelago with guided boat tours to neighboring islands and hidden coves.</p>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <h3>Sport Fishing</h3>
+                    <p>Try your hand at catching Nile perch, tilapia, and other species in the abundant waters of Lake Victoria.</p>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-binoculars"></i>
+                    </div>
+                    <h3>Bird Watching</h3>
+                    <p>Discover the island's rich birdlife including kingfishers, fish eagles, and rare migratory species.</p>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Culinary Experiences</h3>
+                    <p>Taste traditional Tanzanian cuisine with freshly caught fish and locally grown produce.</p>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-hiking"></i>
+                    </div>
+                    <h3>Nature Walks</h3>
+                    <p>Explore the island's interior with guided walks through diverse landscapes and viewpoints.</p>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Photography Tours</h3>
+                    <p>Capture stunning landscapes, vibrant sunsets, and authentic cultural moments with expert guides.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Island Gallery</h2>
+                <p>A visual journey through Bogonyo Island</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sunset on Bogonyo Island">
+                    <div class="gallery-overlay">
+                        <h3>Golden Sunsets</h3>
+                        <p>Witness breathtaking sunsets over Lake Victoria</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Traditional fishing boats">
+                    <div class="gallery-overlay">
+                        <h3>Traditional Fishing</h3>
+                        <p>Colorful fishing boats at dawn</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tropical beach">
+                    <div class="gallery-overlay">
+                        <h3>Pristine Beaches</h3>
+                        <p>Relax on untouched sandy shores</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Island wildlife">
+                    <div class="gallery-overlay">
+                        <h3>Island Wildlife</h3>
+                        <p>Discover diverse bird species and small mammals</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Local village">
+                    <div class="gallery-overlay">
+                        <h3>Village Life</h3>
+                        <p>Experience authentic Tanzanian culture</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fresh seafood">
+                    <div class="gallery-overlay">
+                        <h3>Local Cuisine</h3>
+                        <p>Freshly caught fish and traditional dishes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Info Section -->
+    <section id="travel-info" class="travel-info">
+        <div class="container">
+            <div class="section-title">
+                <h2>Essential Travel Information</h2>
+                <p>Everything you need to know before your visit</p>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Getting There</h3>
+                    <ul class="info-list">
+                        <li><i class="fas fa-plane"></i> Fly to Mwanza Airport (MWZ) from Dar es Salaam or Nairobi</li>
+                        <li><i class="fas fa-car"></i> 1.5-hour drive from Mwanza to the port of Bukoba</li>
+                        <li><i class="fas fa-ship"></i> Regular boat services from Bukoba to Bogonyo Island (2-3 hours)</li>
+                        <li><i class="fas fa-calendar"></i> Best to coordinate transfers with your accommodation</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Best Time to Visit</h3>
+                    <ul class="info-list">
+                        <li><i class="fas fa-sun"></i> Dry Season: June to October (Best for wildlife and activities)</li>
+                        <li><i class="fas fa-cloud-sun"></i> Shoulder Season: November to February (Fewer crowds)</li>
+                        <li><i class="fas fa-umbrella"></i> Rainy Season: March to May (Lush vegetation but challenging travel)</li>
+                        <li><i class="fas fa-temperature-high"></i> Average temperatures: 25-30°C year-round</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Travel Essentials</h3>
+                    <ul class="info-list">
+                        <li><i class="fas fa-passport"></i> Valid passport with at least 6 months validity</li>
+                        <li><i class="fas fa-syringe"></i> Recommended vaccinations: Yellow Fever, Hepatitis A, Typhoid</li>
+                        <li><i class="fas fa-mosquito"></i> Malaria prophylaxis recommended</li>
+                        <li><i class="fas fa-money-bill-wave"></i> Currency: Tanzanian Shilling (TZS). USD accepted in some places</li>
+                        <li><i class="fas fa-plug"></i> Power: 230V, Type G sockets (UK style)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#tours">Safari Tours</a></li>
+                        <li><a href="#kilimanjaro">Kilimanjaro</a></li>
+                        <li><a href="#zanzibar">Zanzibar</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Safari Packages</h3>
+                    <ul>
+                        <li><a href="#">3-Day Safari</a></li>
+                        <li><a href="#">5-Day Safari</a></li>
+                        <li><a href="#">7-Day Safari</a></li>
+                        <li><a href="#">Custom Safari</a></li>
+                        <li><a href="#">Group Tours</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Destinations</h3>
+                    <ul>
+                        <li><a href="#">Serengeti National Park</a></li>
+                        <li><a href="#">Ngorongoro Crater</a></li>
+                        <li><a href="#">Tarangire National Park</a></li>
+                        <li><a href="#">Lake Manyara</a></li>
+                        <li><a href="#">Mount Kilimanjaro</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" style="color: var(--accent-color); font-size: 1.5rem;">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">
+                        Subscribe to our newsletter for travel tips and special offers!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 True Africa Escape. All rights reserved. | 
+                <a href="#" style="color: var(--accent-color);">Privacy Policy</a> | 
+                <a href="#" style="color: var(--accent-color);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+    
+    <script>
+        // Initialize Hero Swiper
+        const heroSwiper = new Swiper('.heroSwiper', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            }
+        });
+
+        // Initialize Testimonials Swiper
+        const testimonialSwiper = new Swiper('.testimonialSwiper', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+            },
+        });
+
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+
+           document.addEventListener('DOMContentLoaded', function() {
+            // Slider functionality
+            const slider = document.getElementById('slider');
+            const slides = document.querySelectorAll('.slide');
+            const paginationDots = document.querySelectorAll('.pagination-dot');
+            const slideCount = slides.length;
+            let currentSlide = 0;
+            let slideInterval;
+            
+            function goToSlide(index) {
+                slider.style.transform = `translateX(-${index * 100}%)`;
+                currentSlide = index;
+                
+                // Update pagination dots
+                paginationDots.forEach(dot => dot.classList.remove('active'));
+                paginationDots[currentSlide].classList.add('active');
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slideCount;
+                goToSlide(currentSlide);
+            }
+            
+            // Set up auto-scroll
+            function startSlider() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+            
+            // Initialize slider
+            goToSlide(0);
+            startSlider();
+            
+            // Click handlers for pagination dots
+            paginationDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    clearInterval(slideInterval);
+                    goToSlide(index);
+                    startSlider();
+                });
+            });
+            
+            // Pause on hover
+            slider.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            slider.addEventListener('mouseleave', startSlider);
+            
+            // Animation on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateX(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            const animatedElements = document.querySelectorAll('.hero-title, .hero-subtitle, .hero-text, .btn-primary');
+            animatedElements.forEach(el => {
+                if (!el.classList.contains('slide-in-left') && !el.classList.contains('slide-in-right') && !el.classList.contains('fade-in')) {
+                    el.style.opacity = 0;
+                    el.style.transform = 'translateY(20px)';
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    observer.observe(el);
+                }
+            });
+        });
+        // Back to top button functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Language switcher functionality
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // Here you would implement actual language switching logic
+            });
+        });
+
+            document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Mobile dropdown functionality
+            if (window.innerWidth < 992) {
+                const dropdowns = document.querySelectorAll('.dropdown, .dropdown-submenu');
+                
+                dropdowns.forEach(function(dropdown) {
+                    const link = dropdown.querySelector('a');
+                    const menu = dropdown.querySelector('.dropdown-content, .dropdown-subcontent');
+                    
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                    });
+                });
+            }
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.dropdown') && !e.target.closest('.dropdown-submenu')) {
+                    document.querySelectorAll('.dropdown-content, .dropdown-subcontent').forEach(function(menu) {
+                        menu.style.display = 'none';
+                    });
+                }
+                
+                if (window.innerWidth < 992 && !e.target.closest('.mobile-menu') && !e.target.closest('.nav-links')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+  
+        // Sticky header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
