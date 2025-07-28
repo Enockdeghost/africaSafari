@@ -538,9 +538,9 @@
     <section class="destinations-section">
         <!-- Background Video -->
         <div class="video-background">
-            <video autoplay muted loop playsinline poster="fallback-image.jpg">
-             <source src="https://videos.pexels.com/video-files/5214169/5214169-hd_1920_1080_25fps.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+        <video autoplay muted loop playsinline poster="fallback-image.jpg" controls style="width:100%;height:100%;">
+            <source src="https://videos.pexels.com/video-files/5214169/5214169-hd_1920_1080_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
             <div class="video-overlay"></div>
         </div>
@@ -671,7 +671,6 @@
         /* Base Styles */
         :root {
             --header-color: #d2691e;
-            /* Chocolate orange */
             --text-light: rgba(255, 255, 255, 0.9);
             --card-border: 1px solid rgba(210, 105, 30, 0.3);
         }
@@ -682,7 +681,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh; /* Changed from fixed 900px */
+        height: 900px; /* Changed from fixed 900px */
         z-index: -1;
         overflow: hidden;
     }
@@ -838,27 +837,37 @@
             }
         }
 
-        @media (min-width: 1200px) {
+    @media (min-width: 1200px) {
 
-            /* Large desktops */
-            .destinations-container {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        @media (max-width: 768px) {
-                 .video-background {
-                    height: auto; /* More reasonable for mobile */
-             }
+        /* Large desktops */
+        .destinations-container {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .video-background {
+            height: auto; /* More reasonable for mobile */
+        }
+    }
+    @media (max-width: 768px) {
+    .video-background {
+        height: 60vh; /* More reasonable for mobile */
+    }
 }
-        }
-     
-        
-        .video-background video {
-            width: 100%;
-            height: auto;
-        }
-        
-        
-    </style>
+    
+    .video-background.fallback {
+        background-image: url('https://www.pexels.com/photo/scenic-view-of-sunset-2340626/');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .video-background.fallback video {
+        display: none;
+    }
+
+   
+</style>
 
     <!-- Add Kalam font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
@@ -1811,10 +1820,57 @@
             }
         });
         
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            const videoBg = document.querySelector('.video-background');
-            videoBg.innerHTML = '<div class="mobile-fallback" style="background-image: url(fallback-image.jpg)"></div>';
+    document.addEventListener('DOMContentLoaded', function() {
+        const videoBg = document.querySelector('.video-background');
+        const video = videoBg.querySelector('video');
+
+        // Check if mobile device
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            // First try to play the video
+            const playPromise = video.play();
+
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    // If autoplay fails, show fallback
+                    videoBg.classList.add('fallback');
+
+                    // Try again after user interaction
+                    document.body.addEventListener('click', function tryPlay() {
+                        video.play()
+                            .then(() => {
+                                videoBg.classList.remove('fallback');
+                                document.body.removeEventListener('click', tryPlay);
+                            })
+                            .catch(e => {
+                                console.log("Video playback still prevented");
+                            });
+                    }, { once: true });
+                });
+            }
+        } else {
+            // For desktop, just try to play
+            video.play().catch(e => {
+                console.log("Desktop video playback error:", e);
+            });
         }
+
+        // Additional check for iOS specifically
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+            // iOS often requires more explicit handling
+            video.setAttribute('playsinline', '');
+            video.setAttribute('webkit-playsinline', '');
+            video.setAttribute('muted', 'muted');
+        }
+
+        // Listen for visibility changes to restart video if needed
+        document.addEventListener('visibilitychange', function() {
+            if (document.visibilityState === 'visible' && video.paused) {
+                video.play().catch(e => console.log("Couldn't resume playback"));
+            }
+        });
+    });
     </script>
 </body>
 
