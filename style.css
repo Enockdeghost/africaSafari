@@ -245,6 +245,7 @@ header .container {
 .language-dropdown {
     position: relative;
     display: inline-block;
+    margin-left: 20px;
 }
 
 .lang-btn {
@@ -269,8 +270,8 @@ header .container {
     position: absolute;
     right: 0;
     background-color: white;
-    min-width: 60px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
     z-index: 1;
     border-radius: 5px;
 }
@@ -288,6 +289,16 @@ header .container {
 }
 
 .language-dropdown:hover .lang-dropdown-content {
+    display: block;
+}
+   /* Add this new CSS for active dropdown state */
+   .language-dropdown.active .lang-dropdown-content {
+    display: block;
+}
+
+/* Modify the existing hover rule to include active state */
+.language-dropdown:hover .lang-dropdown-content,
+.language-dropdown.active .lang-dropdown-content {
     display: block;
 }
 
@@ -494,6 +505,10 @@ header .container {
     color: var(--primary-color);
     text-align: right;
     margin-top: 2rem;
+}
+.founder-signature {
+  display: block;
+  white-space: pre-line; /* respects <br> and newlines */
 }
 
 
