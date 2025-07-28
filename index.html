@@ -54,12 +54,12 @@
                     <div class="dropdown-submenu">
                         <a href="#northern">Northern Zone</a>
                         <div class="dropdown-subcontent">
-                            <a href="./link/arushanational.html " target="_blank">Arusha National Park</a>
-                            <a href="./link/materuni.html" target="_blank">Materuni Waterfalls & Coffee Tour</a>
-                            <a href="./link/lakemanyara.html" target="_blank">lake manyara</a>
-                            <a href="./link/duluti.html">Lake Duluti</a>
-                            <a href="./link/ngorongor.html">Ngorongoro Crater</a>
-                            <a href="./link/tarangire.html">Tarangire National Park</a>
+                            <a href=" " target="_blank">Arusha National Park</a>
+                            <a href="" target="_blank">Materuni Waterfalls & Coffee Tour</a>
+                            <a href="" target="_blank">lake manyara</a>
+                            <a href="">Lake Duluti</a>
+                            <a href="">Ngorongoro Crater</a>
+                            <a href="">Tarangire National Park</a>
                         </div>
                     </div>
                     <div class="dropdown-submenu">
@@ -93,7 +93,18 @@
             <li><a href="#contact">FAQ</a></li>
         </ul>
         
-        <a href="#quote" class="quotes">Plan Trip</a>
+        <!-- <a href="#quote" class="quotes">Plan Trip</a> -->
+           
+        <div class="language-dropdown">
+            <button class="lang-btn">English <i class="fas fa-chevron-down"></i></button>
+            <div class="lang-dropdown-content">
+                <a href="#" data-lang="en">English</a>
+                <a href="#" data-lang="sw">Swahili</a>
+                <a href="#" data-lang="fr">French</a>
+                <a href="#" data-lang="de">German</a>
+                <a href="#" data-lang="es">Spanish</a>
+            </div>
+        </div>
         
         <button class="mobile-menu">
             <i class="fas fa-bars"></i>
@@ -101,376 +112,844 @@
     </nav>
 </header>
       <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="swiper heroSwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-content">
-                        <h1 class="script-font">Discover Wild Tanzania</h1>
-                        <p>Experience the ultimate safari adventure in the heart of East Africa</p>
-                        <a href="#tours" class="hero-cta">Start Your Journey</a>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-content">
-                        <h1 class="script-font">Escape with Us</h1>
-                        <p>Create Memories that last a lifetime</p>
-                        <a href="#kilimanjaro" class="hero-cta">Book Your Climb</a>
-                    </div>
+  <section class="hero" id="home">
+    <div class="swiper heroSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1 class="script-font" 
+                        data-en="Discover Wild Tanzania" 
+                        data-sw="Gundua Tanzania ya Mwituni" 
+                        data-fr="Découvrez la Tanzanie sauvage" 
+                        data-de="Entdecke wildes Tansania" 
+                        data-es="Descubre la Tanzania salvaje">
+                        Discover Wild Tanzania
+                    </h1>
+                    <p data-en="Experience the ultimate safari adventure in the heart of East Africa"
+                       data-sw="Jifikirie safari bora kabisa moyoni mwa Afrika Mashariki"
+                       data-fr="Vivez l'aventure safari ultime au cœur de l'Afrique de l'Est"
+                       data-de="Erlebe das ultimative Safari-Abenteuer im Herzen Ostafrikas"
+                       data-es="Experimenta la aventura de safari definitiva en el corazón de África Oriental">
+                        Experience the ultimate safari adventure in the heart of East Africa
+                    </p>
+                    <a href="#tours" class="hero-cta"
+                       data-en="Start Your Journey"
+                       data-sw="Anza Safari Yako"
+                       data-fr="Commencez votre voyage"
+                       data-de="Beginne deine Reise"
+                       data-es="Comienza tu viaje">
+                        Start Your Journey
+                    </a>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1 class="script-font"
+                        data-en="Escape with Us"
+                        data-sw="Toka Nasi"
+                        data-fr="Évadez-vous avec nous"
+                        data-de="Flüchte mit uns"
+                        data-es="Escápate con nosotros">
+                        Escape with Us
+                    </h1>
+                    <p data-en="Create Memories that last a lifetime"
+                       data-sw="Unda kumbukumbu za kudumu maishani"
+                       data-fr="Créez des souvenirs qui dureront toute une vie"
+                       data-de="Erschaffe Erinnerungen, die ein Leben lang halten"
+                       data-es="Crea recuerdos que durarán toda la vida">
+                        Create Memories that last a lifetime
+                    </p>
+                    <a href="#kilimanjaro" class="hero-cta"
+                       data-en="Book Your Climb"
+                       data-sw="Nunua Mlima Wako"
+                       data-fr="Réservez votre ascension"
+                       data-de="Buche deine Besteigung"
+                       data-es="Reserva tu ascenso">
+                        Book Your Climb
+                    </a>
+                </div>
+            </div>
         </div>
-    </section>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
 
 
        <!-- Welcome Section -->
-    <section class="welcome-section">
-        <div class="container">
-            <h2 class="section-title">Karibu! Welcome to True Africa Escape</h2>
-            <div class="welcome-container">
-                <div class="welcome-text-content">
-                    <h2 class="script-font">We're delighted to welcome you</h2>
-                    <p>Welcome to True Africa Escape, where every journey is more than just a trip — it's a doorway into
-                        the soul of Africa. Whether you're exploring the iconic Serengeti, climbing majestic
-                        Kilimanjaro, relaxing on the beaches of Zanzibar, or immersing yourself in local cultures —
-                        we're here to make your experience personal, safe, and unforgettable.</p>
-                    <p>Our team of passionate professionals, experienced guides, and caring hosts are ready to serve you
-                        with heart, integrity, and authenticity. From the moment you arrive to your final farewell,
-                        we're committed to turning moments into memories that last a lifetime.</p>
-                    <p>Thank you for choosing us. Your African adventure begins now.</p>
-                </div>
-                <div class="welcome-image">
-                    <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                        alt="Welcome to Africa">
-                </div>
+   <section class="welcome-section">
+    <div class="container">
+        <h2 class="section-title" 
+            data-en="Welcome to True Africa Escape"
+            data-sw="Karibu True Africa Escape"
+            data-fr="Bienvenue à True Africa Escape"
+            data-de="Willkommen bei True Africa Escape"
+            data-es="Bienvenido a True Africa Escape">
+            Karibu! Welcome to True Africa Escape
+        </h2>
+        <div class="welcome-container">
+            <div class="welcome-text-content">
+                <h2 class="script-font"
+                    data-en="We're delighted to welcome you"
+                    data-sw="Tunafurahi kukualika"
+                    data-fr="Nous sommes ravis de vous accueillir"
+                    data-de="Wir freuen uns, Sie begrüßen zu dürfen"
+                    data-es="Estamos encantados de darle la bienvenida">
+                    We're delighted to welcome you
+                </h2>
+                <p data-en="Welcome to True Africa Escape, where every journey is more than just a trip — it's a doorway into the soul of Africa. Whether you're exploring the iconic Serengeti, climbing majestic Kilimanjaro, relaxing on the beaches of Zanzibar, or immersing yourself in local cultures — we're here to make your experience personal, safe, and unforgettable."
+                   data-sw="Karibu True Africa Escape, ambapo kila safari sio tu matembezi — bali ni mlango wa kuingia katika roho ya Afrika. Iwe unachunguza Serengeti maarufu, kupanda Kilimanjaro kubwa, kupumzika kwenye fukwe za Zanzibar, au kujikita katika tamaduni za kienyeji — tupo hapa kufanya uzoefu wako uwe wa kibinafsi, salama, na usioweza kusahaulika."
+                   data-fr="Bienvenue à True Africa Escape, où chaque voyage est bien plus qu'un simple voyage - c'est une porte d'entrée vers l'âme de l'Afrique. Que vous exploriez le célèbre Serengeti, escaladiez le majestueux Kilimandjaro, vous détendiez sur les plages de Zanzibar ou vous immergiez dans les cultures locales, nous sommes là pour rendre votre expérience personnelle, sûre et inoubliable."
+                   data-de="Willkommen bei True Africa Escape, wo jede Reise mehr als nur eine Reise ist – es ist ein Tor zur Seele Afrikas. Ob Sie die berühmte Serengeti erkunden, den majestätischen Kilimandscharo besteigen, an den Stränden von Sansibar entspannen oder sich in lokale Kulturen vertiefen – wir sind hier, um Ihr Erlebnis persönlich, sicher und unvergesslich zu gestalten."
+                   data-es="Bienvenido a True Africa Escape, donde cada viaje es más que un simple viaje: es una puerta al alma de África. Ya sea que esté explorando el icónico Serengeti, escalando el majestuoso Kilimanjaro, relajándose en las playas de Zanzíbar o sumergiéndose en las culturas locales, estamos aquí para que su experiencia sea personal, segura e inolvidable.">
+                    Welcome to True Africa Escape, where every journey is more than just a trip — it's a doorway into the soul of Africa. Whether you're exploring the iconic Serengeti, climbing majestic Kilimanjaro, relaxing on the beaches of Zanzibar, or immersing yourself in local cultures — we're here to make your experience personal, safe, and unforgettable.
+                </p>
+                <p data-en="Our team of passionate professionals, experienced guides, and caring hosts are ready to serve you with heart, integrity, and authenticity. From the moment you arrive to your final farewell, we're committed to turning moments into memories that last a lifetime."
+                   data-sw="Timu yetu ya wataalamu wenye shauku, viongozi wenye uzoefu, na wenyewe wa kupokea wageni wako tayari kukuhudumia kwa moyo, uadilifu, na uhalisi. Kuanzia wakati utakapowasili hadi kwaheri yako ya mwisho, tumejikita kugeza muda kuwa kumbukumbu za kudumu maishani."
+                   data-fr="Notre équipe de professionnels passionnés, de guides expérimentés et d'hôtes attentionnés est prête à vous servir avec cœur, intégrité et authenticité. Dès votre arrivée jusqu'à vos derniers adieux, nous nous engageons à transformer les moments en souvenirs qui dureront toute une vie."
+                   data-de="Unser Team aus leidenschaftlichen Fachleuten, erfahrenen Führern und fürsorglichen Gastgebern ist bereit, Ihnen mit Herz, Integrität und Authentizität zu dienen. Vom Moment Ihrer Ankunft bis zum Abschied sind wir bestrebt, Momente in Erinnerungen zu verwandeln, die ein Leben lang halten."
+                   data-es="Nuestro equipo de profesionales apasionados, guías experimentados y anfitriones atentos está listo para servirle con corazón, integridad y autenticidad. Desde el momento de su llegada hasta su despedida final, nos comprometemos a convertir los momentos en recuerdos que durarán toda la vida.">
+                    Our team of passionate professionals, experienced guides, and caring hosts are ready to serve you with heart, integrity, and authenticity. From the moment you arrive to your final farewell, we're committed to turning moments into memories that last a lifetime.
+                </p>
+                <p data-en="Thank you for choosing us. Your African adventure begins now."
+                   data-sw="Asante kwa kuchagua sisi. Safari yako ya Kiafrika inaanza sasa."
+                   data-fr="Merci de nous avoir choisis. Votre aventure africaine commence maintenant."
+                   data-de="Vielen Dank, dass Sie uns gewählt haben. Ihr afrikanisches Abenteuer beginnt jetzt."
+                   data-es="Gracias por elegirnos. Tu aventura africana comienza ahora.">
+                    Thank you for choosing us. Your African adventure begins now.
+                </p>
+            </div>
+            <div class="welcome-image">
+                <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="Welcome to Africa"
+                    data-en-alt="Welcome to Africa"
+                    data-sw-alt="Karibu Afrika"
+                    data-fr-alt="Bienvenue en Afrique"
+                    data-de-alt="Willkommen in Afrika"
+                    data-es-alt="Bienvenido a África">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
+    
         <!-- Founder Message -->
-    <section class="founder-section">
-        <div class="container">
-            <div class="founder-card">
-                <div class="founder-content">
-                    <h2 class="section-title">Founder's Message</h2>
-                    <p>I'm Tony — a proud Tanzanian and the heart behind this company. For me, travel is more than
-                        seeing new places. It's about creating moments that matter and memories that last.</p>
-                    <p>I created True Africa Escape to give travelers a chance to experience East Africa in a real,
-                        personal way — through local eyes, honest service, and unforgettable adventures. Whether it's a
-                        thrilling safari in the Serengeti or a peaceful escape to the beaches of Zanzibar, every trip we
-                        plan is guided by passion and care.</p>
-                    <p>I invite you to escape with us — not just from the ordinary, but into something deeply
-                        meaningful. Let's create your next story.</p>
-                    <div class="founder-signature">— Antony Mark Ngowi<br>Founder, True Africa Escape</div>
+   <section class="founder-section">
+    <div class="container">
+        <div class="founder-card">
+            <div class="founder-content">
+                <h2 class="section-title" 
+                    data-en="Founder's Message"
+                    data-sw="Ujumbe wa Mwanzilishi"
+                    data-fr="Message du fondateur"
+                    data-de="Nachricht des Gründers"
+                    data-es="Mensaje del fundador">
+                    Founder's Message
+                </h2>
+                <p data-en="I'm Tony — a proud Tanzanian and the heart behind this company. For me, travel is more than seeing new places. It's about creating moments that matter and memories that last."
+                   data-sw="Mimi ni Tony — Mtanzania mwenye kujivunia na moyo nyuma ya kampuni hii. Kwangu, kusafiri siyo tu kuona maeneo mapya. Ni kuhusu kuunda muda muhimu na kumbukumbu zinazodumu."
+                   data-fr="Je suis Tony - un Tanzanien fier et l'âme de cette entreprise. Pour moi, voyager ne se limite pas à voir de nouveaux endroits. Il s'agit de créer des moments qui comptent et des souvenirs qui durent."
+                   data-de="Ich bin Tony - ein stolzer Tansanier und das Herz dieses Unternehmens. Für mich ist Reisen mehr als nur neue Orte zu sehen. Es geht darum, bedeutsame Momente und bleibende Erinnerungen zu schaffen."
+                   data-es="Soy Tony, un tanzano orgulloso y el corazón detrás de esta empresa. Para mí, viajar es más que ver nuevos lugares. Se trata de crear momentos que importan y recuerdos que duran.">
+                    I'm Tony — a proud Tanzanian and the heart behind this company. For me, travel is more than seeing new places. It's about creating moments that matter and memories that last.
+                </p>
+                <p data-en="I created True Africa Escape to give travelers a chance to experience East Africa in a real, personal way — through local eyes, honest service, and unforgettable adventures. Whether it's a thrilling safari in the Serengeti or a peaceful escape to the beaches of Zanzibar, every trip we plan is guided by passion and care."
+                   data-sw="Nilianzisha True Africa Escape kuwapa watalii fursa ya kufurahia Afrika Mashariki kwa njia halisi, ya kibinafsi — kupitia macho ya wenyeji, huduma ya uaminifu, na adventures zisizoweza kusahaulika. Iwe ni safari ya kusisimua Serengeti au utulivu kwenye fukwe za Zanzibar, kila safari tunayopanga inaongozwa na shauku na uangalifu."
+                   data-fr="J'ai créé True Africa Escape pour donner aux voyageurs la chance de découvrir l'Afrique de l'Est de manière réelle et personnelle - à travers les yeux des locaux, un service honnête et des aventures inoubliables. Que ce soit un safari palpitant dans le Serengeti ou une escapade paisible sur les plages de Zanzibar, chaque voyage que nous organisons est guidé par la passion et le souci du détail."
+                   data-de="Ich habe True Africa Escape gegründet, um Reisenden die Möglichkeit zu geben, Ostafrika auf echte, persönliche Weise zu erleben - durch die Augen der Einheimischen, ehrlichen Service und unvergessliche Abenteuer. Ob es eine aufregende Safari in der Serengeti oder ein friedlicher Ausflug an die Strände von Sansibar ist, jede Reise, die wir planen, wird von Leidenschaft und Fürsorge geleitet."
+                   data-es="Creé True Africa Escape para dar a los viajeros la oportunidad de experimentar África Oriental de una manera real y personal: a través de los ojos locales, servicio honesto y aventuras inolvidables. Ya sea un safari emocionante en el Serengeti o un escape pacífico a las playas de Zanzíbar, cada viaje que planeamos está guiado por la pasión y el cuidado.">
+                    I created True Africa Escape to give travelers a chance to experience East Africa in a real, personal way — through local eyes, honest service, and unforgettable adventures. Whether it's a thrilling safari in the Serengeti or a peaceful escape to the beaches of Zanzibar, every trip we plan is guided by passion and care.
+                </p>
+                <p data-en="I invite you to escape with us — not just from the ordinary, but into something deeply meaningful. Let's create your next story."
+                   data-sw="Ninakualika uishi nasi — sio tu kutoka kwa kawaida, lakini kwa kitu chenye maana sana. Hebu tuunde hadithi yako ijayo."
+                   data-fr="Je vous invite à vous évader avec nous - pas seulement de l'ordinaire, mais vers quelque chose de profondément significatif. Créons ensemble votre prochaine histoire."
+                   data-de="Ich lade Sie ein, mit uns zu entfliehen - nicht nur dem Alltäglichen, sondern in etwas zutiefst Bedeutungsvolles. Lassen Sie uns Ihre nächste Geschichte schreiben."
+                   data-es="Te invito a escaparte con nosotros, no solo de lo ordinario, sino hacia algo profundamente significativo. Creemos tu próxima historia.">
+                    I invite you to escape with us — not just from the ordinary, but into something deeply meaningful. Let's create your next story.
+                </p>
+                <div class="founder-signature"
+                     data-en="— Antony Mark Ngowi <br> Founder, True Africa Escape"
+                     data-sw="— Antony Mark Ngowi<br>Mwanzilishi, True Africa Escape"
+                     data-fr="— Antony Mark Ngowi<br>Fondateur, True Africa Escape"
+                     data-de="— Antony Mark Ngowi<br>Gründer, True Africa Escape"
+                     data-es="— Antony Mark Ngowi<br>Fundador, True Africa Escape">
+                    — Antony Mark Ngowi<br>Founder, True Africa Escape
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
      <!-- Tanzania Map Section -->
     <section class="map-info-section">
-        <div class="container">
-            <h2 class="section-title">Tanzania at a Glance</h2>
-            <div class="map-container">
-                <div class="map-image">
-                    <img src="https://images.unsplash.com/photo-1598940603846-a1edd0ef2574?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                        alt="Tanzania Map">
-                </div>
-                <div class="map-info">
-                    <h3>Where Timeless Culture, Scenic Beauty & Adventure Unite</h3>
-                    <p>Nestled in East Africa along the sparkling Indian Ocean, Tanzania is a land of breathtaking
-                        contrasts — from the snow-capped peak of Mount Kilimanjaro to the endless plains of the
-                        Serengeti, the blue waters of Zanzibar, and the vast wildlife-rich Ngorongoro Crater.</p>
-                    <p>Known as the Cradle of Mankind, Tanzania holds some of the world's oldest human fossils found at
-                        Olduvai Gorge. Its history unfolds through powerful tribal kingdoms, Swahili-Arab coastal trade,
-                        colonial chapters, and the peaceful union of Tanganyika and Zanzibar in 1964.</p>
-                    <p>Tanzania's cultural heritage is as rich as its landscapes — with over 120 ethnic groups, each
-                        with unique traditions, languages, and lifestyles. From the storytelling Maasai of the savannah
-                        to the spice-scented alleys of Stone Town, every encounter offers a glimpse into a deeply
-                        rooted, welcoming culture.</p>
-                    <p>The climate varies by region: coastal areas are warm and humid, the central highlands are cool
-                        and dry, and the north enjoys mild weather year-round — making Tanzania a year-round
-                        destination.</p>
-                </div>
+    <div class="container">
+        <h2 class="section-title" 
+            data-en="Tanzania at a Glance"
+            data-sw="Tanzania Kwa Ufupi"
+            data-fr="Tanzanie en un coup d'œil"
+            data-de="Tansania auf einen Blick"
+            data-es="Tanzania en pocas palabras">
+            Tanzania at a Glance
+        </h2>
+        <div class="map-container">
+            <div class="map-image">
+                <img src="https://cdn.vectorstock.com/i/1000v/67/51/tanzania-national-parks-map-vector-33206751.jpg"
+                    alt="Tanzania Map"
+                    data-en-alt="Tanzania Map"
+                    data-sw-alt="Ramani ya Tanzania"
+                    data-fr-alt="Carte de la Tanzanie"
+                    data-de-alt="Karte von Tansania"
+                    data-es-alt="Mapa de Tanzania">
             </div>
-        </div>
-    </section>
-
-    <div class="container2">
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title slide-in-left">Book Your Dream Tanzania Vacation Now!</h1>
-                
-                <div class="text-block fade-in" style="animation-delay: 0.2s;">
-                    <h2 class="hero-subtitle">Book your dream trip today!</h2>
-                    <p class="hero-text">
-                        A trip to Tanzania is an unforgettable once-in-a-lifetime adventure! With so much to offer, Tanzania is a great safari destination. You have the option of doing a breathtaking Tanzanian safari or relaxing on Zanzibar Island's gorgeous beaches. Yet had climbing Kilimanjaro always in your minds? By a good reason, we are known as Tanzania True Africa—we provide the widest selection of Tanzania vacation packages!
-                    </p>
-                </div>
-                
-                <a href="#" class="btn-primary slide-in-right" style="animation-delay: 0.6s;">View Our Safari Packages</a>
-            </div>
-            
-            <div class="hero-image-container2">
-                <div class="slider-container21" id="slider">
-                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
-                </div>
-                <div class="pagination" id="pagination">
-                    <div class="pagination-dot active"></div>
-                    <div class="pagination-dot"></div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-     <section class="why-choose-section">
-        <div class="container">
-            <h2 class="section-title">Why Choose True Africa Escape?</h2>
-            <p
-                style="text-align: center; font-size: 1.3rem; margin-bottom: 3rem; color: var(--gray); font-family: 'Kalam', cursive;">
-                <strong>Hakuna Matata | No Worries</strong><br>
-                Because every detail of your journey matters.
-            </p>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-heart-pulse"></i>
-                    </div>
-                    <h3 class="feature-title">Health & Hygiene</h3>
-                    <p class="feature-desc">We prioritize your well-being with clean, sanitized lodges, vehicles, and
-                        health-aware travel practices.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3 class="feature-title">Food & Beverages</h3>
-                    <p class="feature-desc">Enjoy a variety of fresh, hygienically prepared local and international
-                        meals — with special dietary needs catered for.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="feature-title">Safety First</h3>
-                    <p class="feature-desc">All tours are backed by trained guides, licensed drivers, and 24/7 emergency
-                        support. Your safety is our top priority.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h3 class="feature-title">Quality Fleet</h3>
-                    <p class="feature-desc">Travel in modern, well-maintained safari vehicles — with pop-up roofs,
-                        charging ports, and Wi-Fi (where available).</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3 class="feature-title">Local Expertise</h3>
-                    <p class="feature-desc">Our guides are Tanzanian-born, deeply knowledgeable, and passionate about
-                        sharing their land.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3 class="feature-title">Tailored Experiences</h3>
-                    <p class="feature-desc">Whether you want luxury, adventure, romance, or family time — we customize
-                        everything for you.</p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 3rem;">
-                <p style="font-size: 1.2rem; color: var(--gray); font-style: italic;">
-                    Escape with confidence. Explore with purpose. Experience Africa — truly.
+            <div class="map-info">
+                <h3 data-en="Where Timeless Culture, Scenic Beauty & Adventure Unite"
+                    data-sw="Mahali Tamaduni Isiyo na Mwisho, Urembo wa Mandhari na Adventure Hukutana"
+                    data-fr="Où culture intemporelle, beauté scénique et aventure se rencontrent"
+                    data-de="Wo zeitlose Kultur, landschaftliche Schönheit und Abenteuer zusammentreffen"
+                    data-es="Donde se unen la cultura atemporal, la belleza escénica y la aventura">
+                    Where Timeless Culture, Scenic Beauty & Adventure Unite
+                </h3>
+                <p data-en="Nestled in East Africa along the sparkling Indian Ocean, Tanzania is a land of breathtaking contrasts — from the snow-capped peak of Mount Kilimanjaro to the endless plains of the Serengeti, the blue waters of Zanzibar, and the vast wildlife-rich Ngorongoro Crater."
+                   data-sw="Iliko Afrika Mashariki kando ya Bahari ya Hindi yenye kumetameta, Tanzania ni nchi ya tofauti za kusisimua — kutoka kilele chenye theluji cha Mlima Kilimanjaro hadi nyanda za Serengeti zisizo na mwisho, maji ya buluu ya Zanzibar, na volkano kubwa ya Ngorongoro yenye wanyama pori wengi."
+                   data-fr="Nichée en Afrique de l'Est le long de l'océan Indien étincelant, la Tanzanie est un pays de contrastes à couper le souffle - du sommet enneigé du mont Kilimandjaro aux plaines infinies du Serengeti, des eaux bleues de Zanzibar au vaste cratère du Ngorongoro riche en faune."
+                   data-de="Eingebettet in Ostafrika entlang des funkelnden Indischen Ozeans ist Tansania ein Land atemberaubender Kontraste - vom schneebedeckten Gipfel des Kilimandscharo über die endlosen Ebenen der Serengeti, die blauen Gewässer Sansibars bis zum riesigen, wildreichen Ngorongoro-Krater."
+                   data-es="Ubicada en África Oriental a lo largo del brillante Océano Índico, Tanzania es una tierra de contrastes impresionantes: desde el pico nevado del Monte Kilimanjaro hasta las llanuras infinitas del Serengeti, las aguas azules de Zanzíbar y el vasto y rico en vida silvestre cráter de Ngorongoro.">
+                    Nestled in East Africa along the sparkling Indian Ocean, Tanzania is a land of breathtaking contrasts — from the snow-capped peak of Mount Kilimanjaro to the endless plains of the Serengeti, the blue waters of Zanzibar, and the vast wildlife-rich Ngorongoro Crater.
+                </p>
+                <p data-en="Known as the Cradle of Mankind, Tanzania holds some of the world's oldest human fossils found at Olduvai Gorge. Its history unfolds through powerful tribal kingdoms, Swahili-Arab coastal trade, colonial chapters, and the peaceful union of Tanganyika and Zanzibar in 1964."
+                   data-sw="Inayojulikana kama Cradle of Mankind, Tanzania ina baadhi ya mabaki ya kale zaidi ya binadamu yaliyopatikana katika Olduvai Gorge. Historia yake inafunuliwa kupitia falme za kikabila zenye nguvu, biashara ya pwani ya Kiswahili-Kiarabu, sura za ukoloni, na muungano wa amani wa Tanganyika na Zanzibar mwaka 1964."
+                   data-fr="Connue comme le berceau de l'humanité, la Tanzanie abrite certains des plus anciens fossiles humains du monde découverts dans la gorge d'Olduvai. Son histoire se déploie à travers de puissants royaumes tribaux, le commerce côtier swahili-arabe, les chapitres coloniaux et l'union pacifique du Tanganyika et de Zanzibar en 1964."
+                   data-de="Als Wiege der Menschheit bekannt, beherbergt Tansania einige der ältesten menschlichen Fossilien der Welt, die in der Olduvai-Schlucht gefunden wurden. Seine Geschichte entfaltet sich durch mächtige Stammeskönigreiche, swahili-arabischen Küstenhandel, koloniale Kapitel und die friedliche Vereinigung von Tanganyika und Sansibar im Jahr 1964."
+                   data-es="Conocida como la Cuna de la Humanidad, Tanzania alberga algunos de los fósiles humanos más antiguos del mundo encontrados en la Garganta de Olduvai. Su historia se desarrolla a través de poderosos reinos tribales, el comercio costero swahili-árabe, capítulos coloniales y la unión pacífica de Tanganica y Zanzíbar en 1964.">
+                    Known as the Cradle of Mankind, Tanzania holds some of the world's oldest human fossils found at Olduvai Gorge. Its history unfolds through powerful tribal kingdoms, Swahili-Arab coastal trade, colonial chapters, and the peaceful union of Tanganyika and Zanzibar in 1964.
+                </p>
+                <p data-en="Tanzania's cultural heritage is as rich as its landscapes — with over 120 ethnic groups, each with unique traditions, languages, and lifestyles. From the storytelling Maasai of the savannah to the spice-scented alleys of Stone Town, every encounter offers a glimpse into a deeply rooted, welcoming culture."
+                   data-sw="Urithi wa kitamaduni wa Tanzania ni tajiri kama mandhari yake — na zaidi ya makabila 120, kila moja ikiwa na mila ya kipekee, lugha, na mitindo ya maisha. Kutoka kwa Maasai wa savannah wenye hadithi hadi kwenye mitaani zenye harufu ya viungo vya Stone Town, kila kukutana kunatoa mwanga juu ya tamaduni yenye mizizi, ya kukaribisha."
+                   data-fr="Le patrimoine culturel de la Tanzanie est aussi riche que ses paysages - avec plus de 120 groupes ethniques, chacun ayant des traditions, des langues et des modes de vie uniques. Des Maasaï conteurs de la savane aux ruelles parfumées aux épices de Stone Town, chaque rencontre offre un aperçu d'une culture profondément enracinée et accueillante."
+                   data-de="Das kulturelle Erbe Tansanias ist so reich wie seine Landschaften - mit über 120 ethnischen Gruppen, jede mit einzigartigen Traditionen, Sprachen und Lebensweisen. Von den erzählenden Massai der Savanne bis zu den gewürzduftenden Gassen von Stone Town bietet jede Begegnung einen Einblick in eine tief verwurzelte, einladende Kultur."
+                   data-es="El patrimonio cultural de Tanzania es tan rico como sus paisajes, con más de 120 grupos étnicos, cada uno con tradiciones, idiomas y estilos de vida únicos. Desde los narradores masái de la sabana hasta los callejones con aroma a especias de Stone Town, cada encuentro ofrece una visión de una cultura profundamente arraigada y acogedora.">
+                    Tanzania's cultural heritage is as rich as its landscapes — with over 120 ethnic groups, each with unique traditions, languages, and lifestyles. From the storytelling Maasai of the savannah to the spice-scented alleys of Stone Town, every encounter offers a glimpse into a deeply rooted, welcoming culture.
+                </p>
+                <p data-en="The climate varies by region: coastal areas are warm and humid, the central highlands are cool and dry, and the north enjoys mild weather year-round — making Tanzania a year-round destination."
+                   data-sw="Hali ya hewa hutofautiana kwa mkoa: maeneo ya pwani ni ya joto na unyevu, nyanda za juu za kati ni baridi na kavu, na kaskazini inafurahia hali ya hewa nzuri mwaka mzima — na kufanya Tanzania kuwa destinacioni ya mwaka mzima."
+                   data-fr="Le climat varie selon les régions : les zones côtières sont chaudes et humides, les hautes terres centrales sont fraîches et sèches, et le nord bénéficie d'un climat doux toute l'année - faisant de la Tanzanie une destination toute l'année."
+                   data-de="Das Klima variiert je nach Region: Die Küstengebiete sind warm und feucht, die zentralen Hochländer sind kühl und trocken, und der Norden genießt das ganze Jahr über mildes Wetter - was Tansania zu einem Ganzjahresziel macht."
+                   data-es="El clima varía según la región: las zonas costeras son cálidas y húmedas, las tierras altas centrales son frescas y secas, y el norte disfruta de un clima templado durante todo el año, lo que convierte a Tanzania en un destino para todo el año.">
+                    The climate varies by region: coastal areas are warm and humid, the central highlands are cool and dry, and the north enjoys mild weather year-round — making Tanzania a year-round destination.
                 </p>
             </div>
         </div>
-    </section>
-    <!-- Popular Tours -->
-    <!-- Destinations Section -->
-    <section class="destinations-section">
-        <div class="container">
-            <h2 class="section-title">Our Destinations</h2>
-            <div class="destinations-grid">
-                <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Serengeti" class="destination-image">
-                    <div class="destination-content">
-                        <h3 class="destination-title">Serengeti National Park</h3>
-                        <span class="destination-country">Tanzania</span>
-                        <p>Witness the Great Migration and Africa's most spectacular wildlife.</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kilimanjaro" class="destination-image">
-                    <div class="destination-content">
-                        <h3 class="destination-title">Mount Kilimanjaro</h3>
-                        <span class="destination-country">Tanzania</span>
-                        <p>Conquer Africa's highest peak with our expert guides.</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ngorongoro" class="destination-image">
-                    <div class="destination-content">
-                        <h3 class="destination-title">Ngorongoro Crater</h3>
-                        <span class="destination-country">Tanzania</span>
-                        <p>Explore the world's largest intact volcanic caldera.</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1571919743851-c4df8b6ee95d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Zanzibar" class="destination-image">
-                    <div class="destination-content">
-                        <h3 class="destination-title">Zanzibar</h3>
-                        <span class="destination-country">Tanzania</span>
-                        <p>Relax on pristine beaches and explore Stone Town's history.</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tarangire" class="destination-image">
-                    <div class="destination-content">
-                        <h3 class="destination-title">Tarangire National Park</h3>
-                        <span class="destination-country">Tanzania</span>
-                        <p>Famous for its massive elephant herds and baobab trees.</p>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1549366021-9f761d040a94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Arusha" class="destination-image">
-                    <div class="destination-content">
-                        <h3 class="destination-title">Arusha National Park</h3>
-                        <span class="destination-country">Tanzania</span>
-                        <p>Gateway to Northern Tanzania's safari circuit.</p>
-                    </div>
-                </div>
+    </div>
+</section>
+
+    <div class="container2">
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title slide-in-left" 
+                data-en="Book Your Dream Tanzania Vacation Now!"
+                data-sw="Nunua Likizo ya Ndoto Yako ya Tanzania Sasa!"
+                data-fr="Réservez dès maintenant vos vacances de rêve en Tanzanie !"
+                data-de="Buchen Sie jetzt Ihren Traumurlaub in Tansania!"
+                data-es="¡Reserva ahora tus vacaciones soñadas en Tanzania!">
+                Book Your Dream Tanzania Vacation Now!
+            </h1>
+            
+            <div class="text-block fade-in" style="animation-delay: 0.2s;">
+                <h2 class="hero-subtitle"
+                    data-en="Book your dream trip today!"
+                    data-sw="Nunua safari yako ya ndoto leo!"
+                    data-fr="Réservez votre voyage de rêve dès aujourd'hui !"
+                    data-de="Buchen Sie heute Ihre Traumreise!"
+                    data-es="¡Reserva tu viaje soñado hoy!">
+                    Book your dream trip today!
+                </h2>
+                <p class="hero-text"
+                   data-en="A trip to Tanzania is an unforgettable once-in-a-lifetime adventure! With so much to offer, Tanzania is a great safari destination. You have the option of doing a breathtaking Tanzanian safari or relaxing on Zanzibar Island's gorgeous beaches. Yet had climbing Kilimanjaro always in your minds? By a good reason, we are known as Tanzania True Africa—we provide the widest selection of Tanzania vacation packages!"
+                   data-sw="Safari ya Tanzania ni adventure ya kipekee ambayo haitowezesahau kwa maisha yako yote! Kwa kutoa mengi, Tanzania ni destinacioni nzuri ya safari. Una chaguo la kufanya safari ya kuvutia ya Tanzania au kupumzika kwenye fukwe nzuri za Zanzibar. Lakini je! Umewahi kufikiria kupanda Mlima Kilimanjaro? Kwa sababu nzuri, tunajulikana kama Tanzania True Africa—tunatoa mchanganyiko mpana wa mipango ya likizo ya Tanzania!"
+                   data-fr="Un voyage en Tanzanie est une aventure inoubliable unique en son genre ! Avec tant à offrir, la Tanzanie est une excellente destination de safari. Vous avez le choix entre faire un safari tanzanien à couper le souffle ou vous détendre sur les magnifiques plages de l'île de Zanzibar. Mais avez-vous toujours rêvé de gravir le Kilimandjaro ? Pour une bonne raison, nous sommes connus sous le nom de Tanzania True Africa - nous proposons la plus large sélection de forfaits de vacances en Tanzanie !"
+                   data-de="Eine Reise nach Tansania ist ein unvergessliches Abenteuer, das man nur einmal im Leben erlebt! Mit so viel zu bieten ist Tansania ein großartiges Safariziel. Sie haben die Wahl zwischen einer atemberaubenden Tansania-Safari oder Entspannung an den herrlichen Stränden der Insel Sansibar. Doch hatten Sie schon immer die Besteigung des Kilimandscharo im Sinn? Aus gutem Grund sind wir als Tanzania True Africa bekannt - wir bieten die größte Auswahl an Tansania-Urlaubspaketen!"
+                   data-es="¡Un viaje a Tanzania es una aventura inolvidable única en la vida! Con tanto que ofrecer, Tanzania es un gran destino de safari. Tien puedes hacer un safari tanzano impresionante o relajarte en las hermosas playas de la isla de Zanzíbar. ¿Pero has tenido siempre en mente escalar el Kilimanjaro? Por una buena razón, somos conocidos como Tanzania True Africa: ¡ofrecemos la selección más amplia de paquetes vacacionales en Tanzania!">
+                    A trip to Tanzania is an unforgettable once-in-a-lifetime adventure! With so much to offer, Tanzania is a great safari destination. You have the option of doing a breathtaking Tanzanian safari or relaxing on Zanzibar Island's gorgeous beaches. Yet had climbing Kilimanjaro always in your minds? By a good reason, we are known as Tanzania True Africa—we provide the widest selection of Tanzania vacation packages!
+                </p>
+            </div>
+            
+            <a href="#" class="btn-primary slide-in-right" style="animation-delay: 0.6s;"
+               data-en="View Our Safari Packages"
+               data-sw="Tazama Mipango Yetu ya Safari"
+               data-fr="Voir nos forfaits safari"
+               data-de="Unsere Safari-Pakete ansehen"
+               data-es="Ver nuestros paquetes de safari">
+                View Our Safari Packages
+            </a>
+        </div>
+        
+        <div class="hero-image-container2">
+            <div class="slider-container21" id="slider">
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+            </div>
+            <div class="pagination" id="pagination">
+                <div class="pagination-dot active"></div>
+                <div class="pagination-dot"></div>
             </div>
         </div>
     </section>
+</div>
 
+    <section class="why-choose-section">
+    <div class="container">
+        <h2 class="section-title"
+            data-en="Why Choose True Africa Escape?"
+            data-sw="Kwa Nini Kuchagua True Africa Escape?"
+            data-fr="Pourquoi choisir True Africa Escape ?"
+            data-de="Warum True Africa Escape wählen?"
+            data-es="¿Por qué elegir True Africa Escape?">
+            Why Choose True Africa Escape?
+        </h2>
+        <p style="text-align: center; font-size: 1.3rem; margin-bottom: 3rem; color: var(--gray); font-family: 'Kalam', cursive;"
+           data-en="<strong>Hakuna Matata | No Worries</strong><br>Because every detail of your journey matters."
+           data-sw="<strong>Hakuna Matata | Hamna Shida</strong><br>Kwa sababu kila undani ya safari yako ni muhimu."
+           data-fr="<strong>Hakuna Matata | Pas de soucis</strong><br>Parce que chaque détail de votre voyage compte."
+           data-de="<strong>Hakuna Matata | Keine Sorgen</strong><br>Weil jedes Detail Ihrer Reise wichtig ist."
+           data-es="<strong>Hakuna Matata | No hay problemas</strong><br>Porque cada detalle de tu viaje es importante.">
+            <strong>Hakuna Matata | No Worries</strong><br>
+            Because every detail of your journey matters.
+        </p>
 
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-heart-pulse"></i>
+                </div>
+                <h3 class="feature-title"
+                    data-en="Health & Hygiene"
+                    data-sw="Afya na Usafi"
+                    data-fr="Santé & Hygiène"
+                    data-de="Gesundheit & Hygiene"
+                    data-es="Salud e Higiene">
+                    Health & Hygiene
+                </h3>
+                <p class="feature-desc"
+                   data-en="We prioritize your well-being with clean, sanitized lodges, vehicles, and health-aware travel practices."
+                   data-sw="Tunakuza ustawi wako kwa nyumba za kulala, magari safi, na mazoea ya usafiri yenye ufahamu wa afya."
+                   data-fr="Nous donnons la priorité à votre bien-être avec des lodges et véhicules propres et désinfectés, et des pratiques de voyage soucieuses de la santé."
+                   data-de="Wir priorisieren Ihr Wohlbefinden mit sauberen, desinfizierten Lodges, Fahrzeugen und gesundheitsbewussten Reiseverfahren."
+                   data-es="Priorizamos su bienestar con alojamientos y vehículos limpios y desinfectados, y prácticas de viaje conscientes de la salud.">
+                    We prioritize your well-being with clean, sanitized lodges, vehicles, and health-aware travel practices.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3 class="feature-title"
+                    data-en="Food & Beverages"
+                    data-sw="Chakula na Vinywaji"
+                    data-fr="Nourriture & Boissons"
+                    data-de="Essen & Getränke"
+                    data-es="Comida y Bebidas">
+                    Food & Beverages
+                </h3>
+                <p class="feature-desc"
+                   data-en="Enjoy a variety of fresh, hygienically prepared local and international meals — with special dietary needs catered for."
+                   data-sw="Furahia vyakula mbalimbali vya kienyeji na kimataifa vilivyotayarishwa kwa usafi - pamoja na mahitaji maalum ya lishe."
+                   data-fr="Profitez d'une variété de plats locaux et internationaux frais et préparés de manière hygiénique — avec des besoins alimentaires spéciaux pris en compte."
+                   data-de="Genießen Sie eine Vielzahl von frischen, hygienisch zubereiteten lokalen und internationalen Mahlzeiten — mit Berücksichtigung besonderer Ernährungsbedürfnisse."
+                   data-es="Disfrute de una variedad de comidas locales e internacionales frescas y preparadas higiénicamente, con atención a necesidades dietéticas especiales.">
+                    Enjoy a variety of fresh, hygienically prepared local and international meals — with special dietary needs catered for.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="feature-title"
+                    data-en="Safety First"
+                    data-sw="Usalama Kwanza"
+                    data-fr="Sécurité d'abord"
+                    data-de="Sicherheit zuerst"
+                    data-es="Seguridad primero">
+                    Safety First
+                </h3>
+                <p class="feature-desc"
+                   data-en="All tours are backed by trained guides, licensed drivers, and 24/7 emergency support. Your safety is our top priority."
+                   data-sw="Safari zote zinaongozwa na viongozi waliokufunzwa, madereva wenye leseni, na msaada wa dharura saa 24/7. Usalama wako ndio kipaumbele chetu."
+                   data-fr="Toutes les excursions sont soutenues par des guides formés, des chauffeurs agréés et une assistance d'urgence 24h/24. Votre sécurité est notre priorité absolue."
+                   data-de="Alle Touren werden von ausgebildeten Guides, lizenzierten Fahrern und 24/7 Notfallunterstützung begleitet. Ihre Sicherheit hat für uns höchste Priorität."
+                   data-es="Todos los tours cuentan con guías capacitados, conductores licenciados y soporte de emergencia 24/7. Su seguridad es nuestra máxima prioridad.">
+                    All tours are backed by trained guides, licensed drivers, and 24/7 emergency support. Your safety is our top priority.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h3 class="feature-title"
+                    data-en="Quality Fleet"
+                    data-sw="Meli Bora"
+                    data-fr="Flotte de qualité"
+                    data-de="Qualitätsflotte"
+                    data-es="Flota de calidad">
+                    Quality Fleet
+                </h3>
+                <p class="feature-desc"
+                   data-en="Travel in modern, well-maintained safari vehicles — with pop-up roofs, charging ports, and Wi-Fi (where available)."
+                   data-sw="Safiri kwa magari ya kisasa ya safari yaliyotunzwa vizuri — yenye paa zinazoweza kufunguliwa, bandari za kuchaji, na Wi-Fi (inapopatikana)."
+                   data-fr="Voyagez dans des véhicules de safari modernes et bien entretenus — avec toits ouvrants, ports de charge et Wi-Fi (selon disponibilité)."
+                   data-de="Reisen Sie in modernen, gut gewarteten Safari-Fahrzeugen — mit Pop-up-Dächern, Ladeanschlüssen und WLAN (wo verfügbar)."
+                   data-es="Viaje en vehículos de safari modernos y bien mantenidos, con techos abatibles, puertos de carga y Wi-Fi (donde esté disponible).">
+                    Travel in modern, well-maintained safari vehicles — with pop-up roofs, charging ports, and Wi-Fi (where available).
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h3 class="feature-title"
+                    data-en="Local Expertise"
+                    data-sw="Utaalam wa Kienyeji"
+                    data-fr="Expertise locale"
+                    data-de="Lokale Expertise"
+                    data-es="Experiencia local">
+                    Local Expertise
+                </h3>
+                <p class="feature-desc"
+                   data-en="Our guides are Tanzanian-born, deeply knowledgeable, and passionate about sharing their land."
+                   data-sw="Viongozi wetu ni wazawa wa Tanzania, wenye maarifa ya kina, na shauku ya kushiriki nchi yao."
+                   data-fr="Nos guides sont nés en Tanzanie, profondément connaisseurs et passionnés par le partage de leur terre."
+                   data-de="Unsere Guides sind in Tansania geboren, sehr kenntnisreich und leidenschaftlich daran interessiert, ihr Land zu teilen."
+                   data-es="Nuestros guías son de origen tanzano, profundamente conocedores y apasionados por compartir su tierra.">
+                    Our guides are Tanzanian-born, deeply knowledgeable, and passionate about sharing their land.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 class="feature-title"
+                    data-en="Tailored Experiences"
+                    data-sw="Mambo Maalum"
+                    data-fr="Expériences sur mesure"
+                    data-de="Maßgeschneiderte Erlebnisse"
+                    data-es="Experiencias personalizadas">
+                    Tailored Experiences
+                </h3>
+                <p class="feature-desc"
+                   data-en="Whether you want luxury, adventure, romance, or family time — we customize everything for you."
+                   data-sw="Iwe unataka anasa, adventure, romance, au wakati wa familia — tunarekebisha kila kitu kwa ajili yako."
+                   data-fr="Que vous vouliez du luxe, de l'aventure, de la romance ou du temps en famille — nous personnalisons tout pour vous."
+                   data-de="Egal, ob Sie Luxus, Abenteuer, Romantik oder Familienzeit wollen — wir passen alles für Sie an."
+                   data-es="Ya sea que desee lujo, aventura, romance o tiempo en familia, lo personalizamos todo para usted.">
+                    Whether you want luxury, adventure, romance, or family time — we customize everything for you.
+                </p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <p style="font-size: 1.2rem; color: var(--gray); font-style: italic;"
+               data-en="Escape with confidence. Explore with purpose. Experience Africa — truly."
+               data-sw="Toroka kwa ujasiri. Chunguza kwa nia. Jifunze Afrika — kweli."
+               data-fr="Échappez-vous en toute confiance. Explorez avec un but. Vivez l'Afrique — véritablement."
+               data-de="Entfliehen Sie mit Vertrauen. Erkunden Sie mit Absicht. Erleben Sie Afrika — wirklich."
+               data-es="Escápate con confianza. Explora con propósito. Experimenta África — verdaderamente.">
+                Escape with confidence. Explore with purpose. Experience Africa — truly.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Destinations Section -->
+<section class="destinations-section">
+    <!-- Background Video -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/5214169/5214169-hd_1920_1080_25fps.mp4" type="video/mp4">
+            <!-- Your browser does not support the video tag. -->
+        </video>
+        <div class="video-overlay"></div>
+    </div>
     
-    <!-- Blog Preview -->
-    <section class="blog-preview" id="blog">
-        <div class="container">
-            <h2 class="section-title handwritten">Latest Travel Stories</h2>
-            <div class="blog-grid">
-                <article class="blog-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Great Migration">
-                    <div class="blog-content">
-                        <h3 class="blog-title">The Great Migration: Best Time to Visit</h3>
-                        <p class="blog-excerpt">Discover the optimal timing for witnessing one of nature's most spectacular events in the Serengeti.</p>
-                        <div class="blog-meta">
-                            <i class="fas fa-calendar"></i> January 15, 2025
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="blog-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kilimanjaro Tips">
-                    <div class="blog-content">
-                        <h3 class="blog-title">10 Essential Kilimanjaro Climbing Tips</h3>
-                        <p class="blog-excerpt">Expert advice from our mountain guides to help you successfully summit Africa's highest peak.</p>
-                        <div class="blog-meta">
-                            <i class="fas fa-calendar"></i> January 10, 2025
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="blog-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Zanzibar Guide">
-                    <div class="blog-content">
-                        <h3 class="blog-title">Zanzibar: Beyond the Beaches</h3>
-                        <p class="blog-excerpt">Explore the rich culture, historic Stone Town, and hidden gems of this tropical paradise.</p>
-                        <div class="blog-meta">
-                            <i class="fas fa-calendar"></i> January 5, 2025
-                        </div>
-                    </div>
-                </article>
+    <div class="container">
+        <h2 class="section-title"
+            data-en="Our Destinations"
+            data-sw="Destinacioni Zetu"
+            data-fr="Nos Destinations"
+            data-de="Unsere Ziele"
+            data-es="Nuestros Destinos">
+            Our Destinations
+        </h2>
+        
+        <div class="destinations-container">
+            <!-- Serengeti Card -->
+            <div class="destination-category">
+                <h3><i class="fas fa-paw"></i>
+                    <span data-en="Serengeti National Park"
+                          data-sw="Hifadhi ya Taifa ya Serengeti"
+                          data-fr="Parc National de Serengeti"
+                          data-de="Serengeti Nationalpark"
+                          data-es="Parque Nacional Serengeti">
+                        Serengeti National Park
+                    </span>
+                </h3>
+                <ul class="destination-list">
+                    <li><i class="fas fa-binoculars"></i> <span data-en="Great Migration viewing" data-sw="Kutazama uhamiaji mkubwa" data-fr="Observation de la Grande Migration" data-de="Große Migration beobachten" data-es="Avistamiento de la Gran Migración">Great Migration viewing</span></li>
+                    <li><i class="fas fa-lion"></i> <span data-en="Big Five safaris" data-sw="Safari za wanyama watano" data-fr="Safaris des Big Five" data-de="Big Five Safaris" data-es="Safaris de los Cinco Grandes">Big Five safaris</span></li>
+                    <li><i class="fas fa-camera"></i> <span data-en="Wildlife photography" data-sw="Upigaji picha wa wanyamapori" data-fr="Photographie animalière" data-de="Wildlife-Fotografie" data-es="Fotografía de vida silvestre">Wildlife photography</span></li>
+                    <li><i class="fas fa-campground"></i> <span data-en="Luxury tented camps" data-sw="Makambi ya hema ya kifahari" data-fr="Camps de tentes de luxe" data-de="Luxus-Zeltcamps" data-es="Campamentos de lujo">Luxury tented camps</span></li>
+                </ul>
+            </div>
+            
+            <!-- Kilimanjaro Card -->
+            <div class="destination-category">
+                <h3><i class="fas fa-mountain"></i>
+                    <span data-en="Mount Kilimanjaro"
+                          data-sw="Mlima Kilimanjaro"
+                          data-fr="Mont Kilimandjaro"
+                          data-de="Kilimandscharo"
+                          data-es="Monte Kilimanjaro">
+                        Mount Kilimanjaro
+                    </span>
+                </h3>
+                <ul class="destination-list">
+                    <li><i class="fas fa-hiking"></i> <span data-en="Summit climbs" data-sw="Kupanda kilele" data-fr="Ascensions au sommet" data-de="Gipfelbesteigungen" data-es="Ascensos a la cumbre">Summit climbs</span></li>
+                    <li><i class="fas fa-route"></i> <span data-en="Multiple route options" data-sw="Njia mbalimbali za kupanda" data-fr="Plusieurs itinéraires" data-de="Mehrere Routenoptionen" data-es="Múltiples opciones de ruta">Multiple route options</span></li>
+                    <li><i class="fas fa-users"></i> <span data-en="Expert mountain guides" data-sw="Waongozaji wenye ujuzi" data-fr="Guides de montagne experts" data-de="Experten Bergführer" data-es="Guías de montaña expertos">Expert mountain guides</span></li>
+                    <li><i class="fas fa-tree"></i> <span data-en="Five ecological zones" data-sw="Maeneo tano ya ekolojia" data-fr="Cinq zones écologiques" data-de="Fünf ökologische Zonen" data-es="Cinco zonas ecológicas">Five ecological zones</span></li>
+                </ul>
+            </div>
+            
+            <!-- Zanzibar Card -->
+            <div class="destination-category">
+                <h3><i class="fas fa-umbrella-beach"></i>
+                    <span data-en="Zanzibar Archipelago"
+                          data-sw="Funguvisiwa la Zanzibar"
+                          data-fr="Archipel de Zanzibar"
+                          data-de="Sansibar-Archipel"
+                          data-es="Archipiélago de Zanzíbar">
+                        Zanzibar Archipelago
+                    </span>
+                </h3>
+                <ul class="destination-list">
+                    <li><i class="fas fa-building"></i> <span data-en="Stone Town tours" data-sw="Ziara za Stone Town" data-fr="Visites de Stone Town" data-de="Stone Town Touren" data-es="Tours por Stone Town">Stone Town tours</span></li>
+                    <li><i class="fas fa-fish"></i> <span data-en="Spice & seafood tours" data-sw="Ziara za viungo na samaki" data-fr="Visites d'épices et fruits de mer" data-de="Gewürz- & Meeresfrüchte-Touren" data-es="Tours de especias y mariscos">Spice & seafood tours</span></li>
+                    <li><i class="fas fa-sun"></i> <span data-en="Pristine beaches" data-sw="Fukwe safi" data-fr="Plages immaculées" data-de="Ungestörte Strände" data-es="Playas prístinas">Pristine beaches</span></li>
+                    <li><i class="fas fa-sailboat"></i> <span data-en="Dhow sailing trips" data-sw="Safari za dau" data-fr="Excursions en dhow" data-de="Dhow-Segeltouren" data-es="Viajes en dhow">Dhow sailing trips</span></li>
+                </ul>
+            </div>
+            
+            <!-- Ngorongoro Card -->
+            <div class="destination-category">
+                <h3><i class="fas fa-volcano"></i>
+                    <span data-en="Ngorongoro Conservation"
+                          data-sw="Hifadhi ya Ngorongoro"
+                          data-fr="Zone de Conservation de Ngorongoro"
+                          data-de="Ngorongoro-Schutzgebiet"
+                          data-es="Área de Conservación de Ngorongoro">
+                        Ngorongoro Conservation
+                    </span>
+                </h3>
+                <ul class="destination-list">
+                    <li><i class="fas fa-eye"></i> <span data-en="Crater floor game viewing" data-sw="Kutazama wanyama kwenye volkano" data-fr="Observation des animaux au fond du cratère" data-de="Tierbeobachtung am Kraterboden" data-es="Avistamiento de animales en el suelo del cráter">Crater floor game viewing</span></li>
+                    <li><i class="fas fa-hotel"></i> <span data-en="Crater rim lodges" data-sw="Malodge kwenye ukingo wa volkano" data-fr="Lodges sur le bord du cratère" data-de="Lodges am Kraterrand" data-es="Lodges en el borde del cráter">Crater rim lodges</span></li>
+                    <li><i class="fas fa-users"></i> <span data-en="Maasai cultural experiences" data-sw="Uzoefu wa utamaduni wa Wamasai" data-fr="Expériences culturelles Maasai" data-de="Maasai-Kulturerlebnisse" data-es="Experiencias culturales Maasai">Maasai cultural experiences</span></li>
+                    <li><i class="fas fa-landmark"></i> <span data-en="Olduvai Gorge museum" data-sw="Makumbusho ya Olduvai Gorge" data-fr="Musée d'Olduvai Gorge" data-de="Olduvai-Schlucht-Museum" data-es="Museo de la Garganta de Olduvai">Olduvai Gorge museum</span></li>
+                </ul>
             </div>
         </div>
-    </section>
-     <!-- Activities Section -->
-     <section class="activities-section">
-        <div class="container">
-            <h2 class="section-title">Tourist Activities</h2>
-            <div class="activities-container">
-                <div class="activity-category">
-                    <h3><i class="fas fa-binoculars"></i> Wildlife & Safari Activities</h3>
-                    <ul class="activity-list">
-                        <li><i class="fas fa-paw"></i> Game drives</li>
-                        <li><i class="fas fa-lion"></i> Big Five viewing</li>
-                        <li><i class="fas fa-moon"></i> Night game drives</li>
-                        <li><i class="fas fa-walking"></i> Walking safaris</li>
-                        <li><i class="fas fa-hot-air-balloon"></i> Balloon safaris</li>
-                        <li><i class="fas fa-users"></i> Combined wildlife + cultural safaris</li>
-                    </ul>
-                </div>
-                <div class="activity-category">
-                    <h3><i class="fas fa-mountain"></i> Mountain Climbing & Hiking</h3>
-                    <ul class="activity-list">
-                        <li><i class="fas fa-flag"></i> Mount Kilimanjaro</li>
-                        <li><i class="fas fa-mountain"></i> Mount Meru</li>
-                        <li><i class="fas fa-tree"></i> Usambara Mountains</li>
-                        <li><i class="fas fa-leaf"></i> Udzungwa Mountains</li>
-                        <li><i class="fas fa-fire"></i> Ol Doinyo Lengai (active volcano)</li>
-                    </ul>
-                </div>
-                <div class="activity-category">
-                    <h3><i class="fas fa-water"></i> Beach & Water Activities</h3>
-                    <ul class="activity-list">
-                        <li><i class="fas fa-fish"></i> Snorkeling & scuba diving</li>
-                        <li><i class="fas fa-sailboat"></i> Dhow sailing & sunset cruises</li>
-                        <li><i class="fas fa-umbrella-beach"></i> Sandbank picnics</li>
-                        <li><i class="fas fa-sun"></i> Beach relaxation</li>
-                        <li><i class="fas fa-wind"></i> Kite surfing</li>
-                        <li><i class="fas fa-anchor"></i> Deep-sea fishing</li>
-                        <li><i class="fas fa-swimmer"></i> Whale shark swimming (Mafia Island)</li>
-                    </ul>
-                </div>
-                <div class="activity-category">
-                    <h3><i class="fas fa-home"></i> Cultural & Historical Experiences</h3>
-                    <ul class="activity-list">
-                        <li><i class="fas fa-users"></i> Maasai, Hadza, Datoga, and Iraqw village visits</li>
-                        <li><i class="fas fa-building"></i> Stone Town tours (Zanzibar)</li>
-                        <li><i class="fas fa-landmark"></i> Bagamoyo & Kilwa ruins</li>
-                        <li><i class="fas fa-church"></i> Missionary and colonial heritage sites</li>
-                    </ul>
-                </div>
-                <div class="activity-category">
-                    <h3><i class="fas fa-leaf"></i> Nature & Ecological Activities</h3>
-                    <ul class="activity-list">
-                        <li><i class="fas fa-dove"></i> Birdwatching</li>
-                        <li><i class="fas fa-monkey"></i> Chimpanzee tracking</li>
-                        <li><i class="fas fa-kayak"></i> Canoeing</li>
-                        <li><i class="fas fa-tint"></i> Waterfall hikes & hot springs</li>
-                        <li><i class="fas fa-hiking"></i> Crater and highland treks</li>
-                    </ul>
-                </div>
-                <div class="activity-category">
-                    <h3><i class="fas fa-rocket"></i> Adventure Activities</h3>
-                    <ul class="activity-list">
-                        <li><i class="fas fa-zip-line"></i> Zip-lining</li>
-                        <li><i class="fas fa-horse"></i> Horseback riding</li>
-                        <li><i class="fas fa-motorcycle"></i> Quad biking</li>
-                        <li><i class="fas fa-bicycle"></i> Cycling tours</li>
-                        <li><i class="fas fa-campground"></i> Camping safaris</li>
-                        <li><i class="fas fa-cave"></i> Lava tube & cave exploration</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
+<style>
+    /* Base Styles */
+    :root {
+        --header-color: #d2691e; /* Chocolate orange */
+        --text-light: rgba(255, 255, 255, 0.9);
+        --text-dark: rgba(0, 0, 0, 0.8);
+        --overlay-color: rgba(0, 0, 0, 0.6);
+        --card-bg: rgba(255, 255, 255, 0.85);
+        --card-border: 1px solid rgba(210, 105, 30, 0.3);
+    }
+    
+    /* Video Background */
+    .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 900px;
+        z-index: -1;
+        overflow: hidden;
+    }
+    
+    .video-background video {
+        min-width: 100%;
+        min-height: 100%;
+
+        object-fit: cover;
+    }
+    
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--overlay-color);
+    }
+    
+    /* Section Styling */
+    .destinations-section {
+        position: relative;
+        padding: 80px 0;
+        color: var(--text-light);
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+    }
+        .video-filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            rgba(100, 100, 100, 0.3), 
+            rgba(50, 50, 50, 0.6)
+        );
+        mix-blend-mode: multiply;
+        z-index: 1;
+    }
+    
+    
+    /* Title Styling */
+    .section-title {
+        font-family: 'Kalam', cursive;
+        color: var(--header-color);
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 50px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Destinations Container */
+    .destinations-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+    }
+    
+    /* Destination Category Cards */
+    .destination-category {
+        background: var(--card-bg);
+        border-radius: 8px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        border: var(--card-border);
+        transition: transform 0.3s ease;
+        color: var(--text-dark);
+    }
+    
+    .destination-category:hover {
+        transform: translateY(-5px);
+    }
+    
+    .destination-category h3 {
+        font-family: 'Kalam', cursive;
+        color: var(--header-color);
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .destination-category h3 i {
+        font-size: 1.3rem;
+    }
+    
+    /* Destination List */
+    .destination-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .destination-list li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        line-height: 1.5;
+    }
+    
+    .destination-list li i {
+        color: var(--header-color);
+        width: 20px;
+        text-align: center;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .destinations-container {
+            grid-template-columns: 1fr;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+        }
+    }
+</style>
+
+<!-- Add Kalam font from Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+ <section class="activities-section">
+    <div class="container">
+        <h2 class="section-title"
+            data-en="Tourist Activities"
+            data-sw="Shughuli za Watalii"
+            data-fr="Activités Touristiques"
+            data-de="Touristische Aktivitäten"
+            data-es="Actividades Turísticas">
+            Tourist Activities
+        </h2>
+        <div class="activities-container">
+            <!-- Wildlife & Safari Activities -->
+            <div class="activity-category">
+                <h3><i class="fas fa-binoculars"></i> 
+                    <span data-en="Wildlife & Safari Activities"
+                          data-sw="Shughuli za Wanyamapori na Safari"
+                          data-fr="Activités de Safari et Faune"
+                          data-de="Wildlife- & Safari-Aktivitäten"
+                          data-es="Actividades de Vida Silvestre y Safari">
+                        Wildlife & Safari Activities
+                    </span>
+                </h3>
+                <ul class="activity-list">
+                    <li><i class="fas fa-paw"></i> <span data-en="Game drives" data-sw="Safari za wanyamapori" data-fr="Safaris en véhicule" data-de="Pirschfahrten" data-es="Safaris en vehículo">Game drives</span></li>
+                    <li><i class="fas fa-lion"></i> <span data-en="Big Five viewing" data-sw="Kutazama wanyamapori watano" data-fr="Observation des Big Five" data-de="Big Five Beobachtung" data-es="Avistamiento de los Cinco Grandes">Big Five viewing</span></li>
+                    <li><i class="fas fa-moon"></i> <span data-en="Night game drives" data-sw="Safari za usiku" data-fr="Safaris nocturnes" data-de="Nachtpirschfahrten" data-es="Safaris nocturnos">Night game drives</span></li>
+                    <li><i class="fas fa-walking"></i> <span data-en="Walking safaris" data-sw="Safari za kutembea" data-fr="Safaris à pied" data-de="Wandersafaris" data-es="Safaris a pie">Walking safaris</span></li>
+                    <li><i class="fas fa-hot-air-balloon"></i> <span data-en="Balloon safaris" data-sw="Safari za kupanda baluni" data-fr="Safaris en montgolfière" data-de="Ballonsafaris" data-es="Safaris en globo">Balloon safaris</span></li>
+                    <li><i class="fas fa-users"></i> <span data-en="Combined wildlife + cultural safaris" data-sw="Safari za wanyamapori na utamaduni" data-fr="Safaris combinés faune + culture" data-de="Kombinierte Wildlife- und Kultursafaris" data-es="Safaris combinados de vida silvestre y cultura">Combined wildlife + cultural safaris</span></li>
+                </ul>
+            </div>
+
+            <!-- Mountain Climbing & Hiking -->
+            <div class="activity-category">
+                <h3><i class="fas fa-mountain"></i> 
+                    <span data-en="Mountain Climbing & Hiking"
+                          data-sw="Kupanda Milima na Matembezi"
+                          data-fr="Randonnée et Alpinisme"
+                          data-de="Bergsteigen & Wandern"
+                          data-es="Escalada y Senderismo">
+                        Mountain Climbing & Hiking
+                    </span>
+                </h3>
+                <ul class="activity-list">
+                    <li><i class="fas fa-flag"></i> Mount Kilimanjaro</li>
+                    <li><i class="fas fa-mountain"></i> Mount Meru</li>
+                    <li><i class="fas fa-tree"></i> Usambara Mountains</li>
+                    <li><i class="fas fa-leaf"></i> Udzungwa Mountains</li>
+                    <li><i class="fas fa-fire"></i> <span data-en="Ol Doinyo Lengai (active volcano)" data-sw="Ol Doinyo Lengai (volkano hai)" data-fr="Ol Doinyo Lengai (volcan actif)" data-de="Ol Doinyo Lengai (aktiver Vulkan)" data-es="Ol Doinyo Lengai (volcán activo)">Ol Doinyo Lengai (active volcano)</span></li>
+                </ul>
+            </div>
+
+            <!-- Beach & Water Activities -->
+            <div class="activity-category">
+                <h3><i class="fas fa-water"></i> 
+                    <span data-en="Beach & Water Activities"
+                          data-sw="Shughuli za Pwani na Maji"
+                          data-fr="Activités Nautiques et Plage"
+                          data-de="Strand- & Wasseraktivitäten"
+                          data-es="Actividades Acuáticas y de Playa">
+                        Beach & Water Activities
+                    </span>
+                </h3>
+                <ul class="activity-list">
+                    <li><i class="fas fa-fish"></i> <span data-en="Snorkeling & scuba diving" data-sw="Snorkeling na kupiga mbizi" data-fr="Snorkeling et plongée sous-marine" data-de="Schnorcheln & Tauchen" data-es="Snorkel y buceo">Snorkeling & scuba diving</span></li>
+                    <li><i class="fas fa-sailboat"></i> <span data-en="Dhow sailing & sunset cruises" data-sw="Kusafiri kwa dau na safari za jua kutua" data-fr="Croisières en dhow et couchers de soleil" data-de="Dhow-Segeln & Sonnenuntergangsfahrten" data-es="Navegación en dhow y cruceros al atardecer">Dhow sailing & sunset cruises</span></li>
+                    <li><i class="fas fa-umbrella-beach"></i> <span data-en="Sandbank picnics" data-sw="Picnic kwenye mchanga" data-fr="Pique-niques sur bancs de sable" data-de="Sandbank-Picknicks" data-es="Picnics en bancos de arena">Sandbank picnics</span></li>
+                    <li><i class="fas fa-sun"></i> <span data-en="Beach relaxation" data-sw="Kupumzika kwenye pwani" data-fr="Détente sur la plage" data-de="Strandentspannung" data-es="Relajación en la playa">Beach relaxation</span></li>
+                    <li><i class="fas fa-wind"></i> <span data-en="Kite surfing" data-sw="Kite surfing" data-fr="Kitesurf" data-de="Kitesurfen" data-es="Kitesurf">Kite surfing</span></li>
+                    <li><i class="fas fa-anchor"></i> <span data-en="Deep-sea fishing" data-sw="Uvuvi wa bahari" data-fr="Pêche en haute mer" data-de="Hochseefischen" data-es="Pesca en alta mar">Deep-sea fishing</span></li>
+                    <li><i class="fas fa-swimmer"></i> <span data-en="Whale shark swimming (Mafia Island)" data-sw="Kuogelea na papa whale (kisiwa cha Mafia)" data-fr="Nage avec requins baleines (île de Mafia)" data-de="Walhaischwimmen (Mafia Island)" data-es="Nado con tiburón ballena (Isla Mafia)">Whale shark swimming (Mafia Island)</span></li>
+                </ul>
+            </div>
+
+            <!-- Cultural & Historical Experiences -->
+            <div class="activity-category">
+                <h3><i class="fas fa-home"></i> 
+                    <span data-en="Cultural & Historical Experiences"
+                          data-sw="Uzoefu wa Utamaduni na Historia"
+                          data-fr="Expériences Culturelles et Historiques"
+                          data-de="Kulturelle & Historische Erlebnisse"
+                          data-es="Experiencias Culturales e Históricas">
+                        Cultural & Historical Experiences
+                    </span>
+                </h3>
+                <ul class="activity-list">
+                    <li><i class="fas fa-users"></i> <span data-en="Maasai, Hadza, Datoga, and Iraqw village visits" data-sw="Ziara za vijiji vya Wamasai, Wahadza, Wadatoga na Wairaqw" data-fr="Visites de villages Maasai, Hadza, Datoga et Iraqw" data-de="Besuche in Maasai-, Hadza-, Datoga- und Iraqw-Dörfern" data-es="Visitas a aldeas Maasai, Hadza, Datoga e Iraqw">Maasai, Hadza, Datoga, and Iraqw village visits</span></li>
+                    <li><i class="fas fa-building"></i> <span data-en="Stone Town tours (Zanzibar)" data-sw="Ziara za Stone Town (Zanzibar)" data-fr="Visites de Stone Town (Zanzibar)" data-de="Stone Town Touren (Sansibar)" data-es="Tours por Stone Town (Zanzíbar)">Stone Town tours (Zanzibar)</span></li>
+                    <li><i class="fas fa-landmark"></i> <span data-en="Bagamoyo & Kilwa ruins" data-sw="Magofu ya Bagamoyo na Kilwa" data-fr="Ruines de Bagamoyo et Kilwa" data-de="Ruinen von Bagamoyo & Kilwa" data-es="Ruinas de Bagamoyo y Kilwa">Bagamoyo & Kilwa ruins</span></li>
+                    <li><i class="fas fa-church"></i> <span data-en="Missionary and colonial heritage sites" data-sw="Maeneo ya urithi wa wamishonari na ukoloni" data-fr="Sites du patrimoine missionnaire et colonial" data-de="Missionars- und Kolonialerbestätten" data-es="Sitios del patrimonio misionero y colonial">Missionary and colonial heritage sites</span></li>
+                </ul>
+            </div>
+
+            <!-- Nature & Ecological Activities -->
+            <div class="activity-category">
+                <h3><i class="fas fa-leaf"></i> 
+                    <span data-en="Nature & Ecological Activities"
+                          data-sw="Shughuli za Asili na Ikologia"
+                          data-fr="Activités Nature et Écologiques"
+                          data-de="Natur- & Ökologische Aktivitäten"
+                          data-es="Actividades Naturales y Ecológicas">
+                        Nature & Ecological Activities
+                    </span>
+                </h3>
+                <ul class="activity-list">
+                    <li><i class="fas fa-dove"></i> <span data-en="Birdwatching" data-sw="Kutazama ndege" data-fr="Observation des oiseaux" data-de="Vogelbeobachtung" data-es="Observación de aves">Birdwatching</span></li>
+                    <li><i class="fas fa-monkey"></i> <span data-en="Chimpanzee tracking" data-sw="Kufuatilia sokwe" data-fr="Pistage des chimpanzés" data-de="Schimpansentracking" data-es="Seguimiento de chimpancés">Chimpanzee tracking</span></li>
+                    <li><i class="fas fa-kayak"></i> <span data-en="Canoeing" data-sw="Kupiga mtumbwi" data-fr="Canoë" data-de="Kanutouren" data-es="Piragüismo">Canoeing</span></li>
+                    <li><i class="fas fa-tint"></i> <span data-en="Waterfall hikes & hot springs" data-sw="Tembezi za maporomoko na chemchemi za moto" data-fr="Randonnées aux cascades et sources chaudes" data-de="Wasserfallwanderungen & heiße Quellen" data-es="Senderismo a cascadas y aguas termales">Waterfall hikes & hot springs</span></li>
+                    <li><i class="fas fa-hiking"></i> <span data-en="Crater and highland treks" data-sw="Tembezi za volkano na nyanda za juu" data-fr="Randonnées dans les cratères et hauts plateaux" data-de="Krater- & Hochlandwanderungen" data-es="Senderismo en cráteres y tierras altas">Crater and highland treks</span></li>
+                </ul>
+            </div>
+
+            <!-- Adventure Activities -->
+            <div class="activity-category">
+                <h3><i class="fas fa-rocket"></i> 
+                    <span data-en="Adventure Activities"
+                          data-sw="Shughuli za Mavuno"
+                          data-fr="Activités d'Aventure"
+                          data-de="Abenteueraktivitäten"
+                          data-es="Actividades de Aventura">
+                        Adventure Activities
+                    </span>
+                </h3>
+                <ul class="activity-list">
+                    <li><i class="fas fa-zip-line"></i> <span data-en="Zip-lining" data-sw="Zip-lining" data-fr="Tyrolienne" data-de="Ziplining" data-es="Tirolesa">Zip-lining</span></li>
+                    <li><i class="fas fa-horse"></i> <span data-en="Horseback riding" data-sw="Kupanda farasi" data-fr="Équitation" data-de="Reiten" data-es="Equitación">Horseback riding</span></li>
+                    <li><i class="fas fa-motorcycle"></i> <span data-en="Quad biking" data-sw="Kupiga baiskeli ya nne" data-fr="Quad" data-de="Quadfahren" data-es="Paseos en quad">Quad biking</span></li>
+                    <li><i class="fas fa-bicycle"></i> <span data-en="Cycling tours" data-sw="Safari za baiskeli" data-fr="Circuits à vélo" data-de="Radausflüge" data-es="Circuitos en bicicleta">Cycling tours</span></li>
+                    <li><i class="fas fa-campground"></i> <span data-en="Camping safaris" data-sw="Safari za kambi" data-fr="Safaris en camping" data-de="Campingsafaris" data-es="Safaris de campamento">Camping safaris</span></li>
+                    <li><i class="fas fa-cave"></i> <span data-en="Lava tube & cave exploration" data-sw="Uchunguzi wa mianya na mapango" data-fr="Exploration de tubes de lave et grottes" data-de="Lavaröhren- & Höhlenerkundung" data-es="Exploración de tubos de lava y cuevas">Lava tube & cave exploration</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
@@ -567,8 +1046,8 @@
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="contact">Email/WhatsApp:</label>
-                        <input type="text" id="contact" name="contact" required>
+                        <label for="contact">Email:</label>
+                        <input type="email" id="contact" name="contact" required>
                     </div>
                 </div>
                 
@@ -828,6 +1307,82 @@
         });
 
 
+          const langData = {
+            'en': 'English',
+            'sw': 'Swahili', 
+            'fr': 'French',
+            'de': 'German',
+            'es': 'Spanish'
+        };
+
+        let currentLang = 'en';
+
+        // Function to switch language
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Update all elements with data attributes
+            document.querySelectorAll('[data-' + lang + ']').forEach(element => {
+                const text = element.getAttribute('data-' + lang);
+                if (text) {
+                    // Handle dropdown items that include icons
+                    if (element.querySelector('i.fa-chevron-down')) {
+                        element.innerHTML = text + ' <i class="fas fa-chevron-down"></i>';
+                    } else {
+                        element.textContent = text;
+                    }
+                }
+            });
+            
+            // Update language button
+            const langBtn = document.querySelector('.lang-btn');
+            langBtn.innerHTML = langData[lang] + ' <i class="fas fa-chevron-down"></i>';
+            
+            // Store selection in localStorage
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Initialize language switcher
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get saved language or default to English
+            const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+            switchLanguage(savedLang);
+            
+            // Add click events to language dropdown
+            document.querySelectorAll('.lang-dropdown-content a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const selectedLang = this.getAttribute('data-lang');
+                    switchLanguage(selectedLang);
+                });
+            });
+              const mobileMenu = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenu && navLinks) {
+                mobileMenu.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Language dropdown toggle for mobile
+            const langBtn = document.querySelector('.lang-btn');
+            const langDropdown = document.querySelector('.language-dropdown');
+            
+            if (langBtn && langDropdown) {
+                langBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    langDropdown.classList.toggle('active');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function() {
+                    langDropdown.classList.remove('active');
+                });
+            }
+        });
+
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -962,19 +1517,19 @@
                     });
                 });
             }
-            
-            // Close dropdowns when clicking outside
-            // document.addEventListener('click', function(e) {
-            //     if (!e.target.closest('.dropdown') && !e.target.closest('.dropdown-submenu')) {
-            //         document.querySelectorAll('.dropdown-content, .dropdown-subcontent').forEach(function(menu) {
-            //             menu.style.display = 'none';
-            //         });
-            //     }
                 
-            //     if (window.innerWidth < 992 && !e.target.closest('.mobile-menu') && !e.target.closest('.nav-links')) {
-            //         navLinks.classList.remove('active');
-            //     }
-            // });
+                // Close dropdowns when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.dropdown') && !e.target.closest('.dropdown-submenu')) {
+                        document.querySelectorAll('.dropdown-content, .dropdown-subcontent').forEach(function(menu) {
+                            menu.style.display = 'none';
+                        });
+                    }
+                    
+                    if (window.innerWidth < 992 && !e.target.closest('.mobile-menu') && !e.target.closest('.nav-links')) {
+                        navLinks.classList.remove('active');
+                    }
+                });
         });
 
   
