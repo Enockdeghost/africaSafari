@@ -10,6 +10,9 @@
     --black: #000000;
     --gray: #666666;
     --light-gray: #f5f5f5;
+     --header-color: #d2691e;
+     --text-light2: rgba(255, 255, 255, 0.9);
+     --card-border: 1px solid rgba(210, 105, 30, 0.3);
 }
 
 * {
@@ -1318,52 +1321,196 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Blog Preview */
-.blog-preview {
-    padding: 3rem 0;
-}
+.video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; 
+        z-index: -1;
+        min-height: 900px;
+        overflow: hidden;
+    }
 
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
+    .video-background video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--overlay-color);
+        }
 
-.blog-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
+        /* Section Styling */
+        .destinations-section {
+            position: relative;
+            padding: 80px 0;
+            color: var(--text-light2);
+        }
 
-.blog-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
 
-.blog-content {
-    padding: 1.2rem;
-}
+        .video-filter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(100, 100, 100, 0.3),
+                    rgba(50, 50, 50, 0.6));
+            mix-blend-mode: multiply;
+            z-index: 1;
+        }
 
-.blog-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: var(--dark-green);
-}
 
-.blog-excerpt {
-    color: var(--gray);
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-}
+        /* Title Styling */
+        .section-title {
+            font-family: 'Kalam', cursive;
+            color: var(--header-color);
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
-.blog-meta {
-    font-size: 0.8rem;
-    color: var(--primary-color);
+        /* Destinations Container */
+        .destinations-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        /* Destination Category Cards */
+        .destination-category {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: var(--card-border);
+            transition: transform 0.3s ease;
+            color: var(--text-dark);
+        }
+
+        .destination-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .destination-category h3 {
+            font-family: 'Kalam', cursive;
+            color: var(--header-color);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .destination-category h3 i {
+            font-size: 1.3rem;
+        }
+
+        /* Destination List */
+        .destination-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .destination-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            line-height: 1.5;
+        }
+
+        .destination-list li i {
+            color: var(--header-color);
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 480px) {
+
+            /* Small tablets and large phones */
+            .destinations-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 768px) {
+
+            /* Tablets */
+            .destinations-section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+                margin-bottom: 40px;
+            }
+
+            .destinations-container {
+                gap: 25px;
+            }
+
+            .destination-card {
+                padding: 25px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+
+            /* Desktops */
+            .destinations-container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+
+    @media (min-width: 1200px) {
+
+        /* Large desktops */
+        .destinations-container {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .video-background {
+            height: auto; /* More reasonable for mobile */
+        }
+    }
+    @media (max-width: 768px) {
+    .video-background {
+        height: 60vh; /* More reasonable for mobile */
+    }
 }
+    
+    .video-background.fallback {
+        background-image: url('https://www.pexels.com/photo/scenic-view-of-sunset-2340626/');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .video-background.fallback video {
+        display: none;
+    }
 
 /* Responsive Design */
 @media (max-width: 992px) {
@@ -1476,4 +1623,136 @@ footer {
 
 .swiper-pagination-bullet-active {
     opacity: 1;
+}
+/* Mobile-first responsive styles */
+@media (max-width: 767px) {
+    /* Base typography */
+    html {
+        font-size: 16px;
+    }
+    
+    /* Header adjustments */
+    header {
+        padding: 10px 0;
+    }
+    
+    .top-bar {
+        display: none; /* Hide top bar on small screens */
+    }
+    
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-links li {
+        margin: 5px 0;
+    }
+    
+    /* Hero section */
+    .hero {
+        height: 60vh;
+    }
+    
+    .slide-content h1 {
+        font-size: 2rem;
+    }
+    
+    .slide-content p {
+        font-size: 1rem;
+    }
+    
+    /* Welcome section */
+    .welcome-container {
+        flex-direction: column;
+    }
+    
+    .welcome-image {
+        margin-top: 20px;
+    }
+    
+    /* Founder section */
+    .founder-card {
+        padding: 20px;
+    }
+    
+    /* Map section */
+    .map-container {
+        flex-direction: column;
+    }
+    
+    /* Activities section */
+    .activities-container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Testimonials */
+    .testimonialSwiper .swiper-slide {
+        width: 100% !important;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Form elements */
+    input, select, textarea {
+        font-size: 16px; /* Prevent iOS zoom on focus */
+    }
+    
+    /* Increase tap target sizes */
+    a, button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Video background fallback */
+    .video-background {
+        position: relative;
+        height: 40vh;
+    }
+    
+    .video-background video {
+        display: none;
+    }
+    
+    .video-background.fallback {
+        background-image: url('fallback-mobile.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/* iPhone 6/7/8 specific (375px wide) */
+@media (max-width: 375px) {
+    .hero-cta {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .feature-card {
+        padding: 15px;
+    }
+}
+
+/* Very small screens (320px wide) */
+@media (max-width: 320px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .slide-content h1 {
+        font-size: 1.5rem;
+    }
 }
