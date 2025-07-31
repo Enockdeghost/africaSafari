@@ -44,72 +44,13 @@
             <a href="#" class="logo">True Africa Escape</a>
 
             <ul class="nav-links">
-                <li><a href="">Home</a></li>
-                <li class="dropdown">
-                    <a href="#itineraries">Safari Itineraries <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="#3days">3 Days Safari</a>
-                        <a href="#5days">5 Days Safari</a>
-                        <a href="#7days">7+ Days Safari</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#itineraries">Destinations <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <div class="dropdown-submenu">
-                            <a href="#northern">Northern Zone</a>
-                            <div class="dropdown-subcontent">
-                                <a href="./link/arushanational.html " target="_blank">Arusha National Park</a>
-                                <a href="./link/materuni.html" target="_blank">Materuni Waterfalls & Coffee Tour</a>
-                                <a href="./link/lakemanyara.html" target="_blank">lake manyara</a>
-                                <a href="./link/duluti.html">Lake Duluti</a>
-                                <a href="./link/ngorongor.html">Ngorongoro Crater</a>
-                                <a href="./link/tarangire.html">Tarangire National Park</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-submenu">
-                            <a href="#coastal">Coastal Zone</a>
-                            <div class="dropdown-subcontent">
-                                <a href="./link/bogonyoisland.html">Bongoyo Island Marine Reserve</a>
-                                <a href="./link/mbudyaisland.html">Mbudya Island</a>
-                                <a href="./link/saadani.html">Saadani National Park</a>
-                                <a href="link/Bagamoyo.html">Bagamoyo Historical Town</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-submenu">
-                            <a href="#zanzibar">Zanzibar Islands</a>
-                            <div class="dropdown-subcontent">
-                                <a href="./link/nzazibar.html">Prison Island</a>
-                                <a href="./link/nzazibar.html">Jozani Forest</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-submenu">
-                            <a href="#mwanza">Lake Victoria Zone</a>
-                            <div class="dropdown-subcontent">
-                                <a href="#saanane">Saanane Island National Park</a>
-                                <a href="#bismarck">Bismarck Rock & Lake Victoria</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="#zanzibar">Info</a></li>
+                <li><a href="/index.html">home</a></li>
+                <li><a href="#">destination</a></li>
+                <li><a href="./link/info.html">Info</a></li>
                 <li><a href="#guide">About us</a></li>
                 <li><a href="#about">Contant</a></li>
                 <li><a href="#contact">FAQ</a></li>
             </ul>
-
-            <!-- <a href="#quote" class="quotes">Plan Trip</a> -->
-
-            <div class="language-dropdown">
-                <button class="lang-btn">English <i class="fas fa-chevron-down"></i></button>
-                <div class="lang-dropdown-content">
-                    <a href="#" data-lang="en">English</a>
-                    <a href="#" data-lang="sw">Swahili</a>
-                    <a href="#" data-lang="fr">French</a>
-                    <a href="#" data-lang="de">German</a>
-                    <a href="#" data-lang="es">Spanish</a>
-                </div>
-            </div>
 
             <button class="mobile-menu">
                 <i class="fas fa-bars"></i>
@@ -537,12 +478,12 @@
 
     <!-- Destinations Section -->
     <section class="destinations-section">
-        <!-- Background Video -->
         <div class="video-background">
-        <video autoplay muted loop playsinline poster="fallback-image.jpg" controls style="width:100%;height:100%;">
-            <source src="https://videos.pexels.com/video-files/5214169/5214169-hd_1920_1080_25fps.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+            <video autoplay muted loop playsinline poster="fallback-image.jpg" controls style="width:100%;height:100%;">
+                <source src="https://videos.pexels.com/video-files/5214169/5214169-hd_1920_1080_25fps.mp4"
+                    type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <div class="video-overlay"></div>
         </div>
 
@@ -1195,14 +1136,14 @@
         const heroSwiper = new Swiper('.heroSwiper', {
             loop: true,
             autoplay: {
-                delay: 5000,  
+                delay: 5000,
                 disableOnInteraction: false,
             },
-            speed: 1000,  
-            parallax: true,  
-            grabCursor: true,  
+            speed: 1000,
+            parallax: true,
+            grabCursor: true,
 
-            
+
             effect: 'cube',
             cubeEffect: {
                 shadow: true,
@@ -1211,7 +1152,7 @@
                 shadowScale: 0.94,
             },
 
-            
+
             effect: 'coverflow',
             coverflowEffect: {
                 rotate: 30,
@@ -1225,7 +1166,7 @@
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
-                dynamicBullets: true, 
+                dynamicBullets: true,
                 renderBullet: function (index, className) {
                     return `<span class="${className}">
                 <svg viewBox="0 0 20 20" width="20" height="20">
@@ -1235,26 +1176,26 @@
                 }
             },
 
-        
+
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
 
-            
+
             keyboard: {
                 enabled: true,
                 onlyInViewport: true,
             },
 
-            
+
             mousewheel: {
                 invert: true,
                 sensitivity: 1,
                 eventsTarget: '.heroSwiper'
             },
 
-        
+
             on: {
                 init: function () {
 
@@ -1594,16 +1535,16 @@
             this.style.boxShadow = 'none';
         });
 
-            // force video to play on page
-        document.addEventListener('DOMContentLoaded', function() {
+        // force video to play on page
+        document.addEventListener('DOMContentLoaded', function () {
             const video = document.querySelector('.video-background video');
             if (video) {
                 // Ensure video is muted (required for autoplay on mobile)
                 video.muted = true;
-                
+
                 // Try to play the video
                 const playPromise = video.play();
-                
+
                 // If autoplay fails, add controls as fallback
                 if (playPromise !== undefined) {
                     playPromise.catch(e => {
@@ -1613,67 +1554,67 @@
                 }
             }
         });
-        
-    document.addEventListener('DOMContentLoaded', function() {
-        const videoBg = document.querySelector('.video-background');
-        const video = videoBg.querySelector('video');
 
-        // Check if mobile device
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        document.addEventListener('DOMContentLoaded', function () {
+            const videoBg = document.querySelector('.video-background');
+            const video = videoBg.querySelector('video');
 
-        if (isMobile) {
-            // First try to play the video
-            const playPromise = video.play();
+            // Check if mobile device
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-            if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    // If autoplay fails, show fallback
-                    videoBg.classList.add('fallback');
+            if (isMobile) {
+                // First try to play the video
+                const playPromise = video.play();
 
-                    // Try again after user interaction
-                    document.body.addEventListener('click', function tryPlay() {
-                        video.play()
-                            .then(() => {
-                                videoBg.classList.remove('fallback');
-                                document.body.removeEventListener('click', tryPlay);
-                            })
-                            .catch(e => {
-                                console.log("Video playback still prevented");
-                            });
-                    }, { once: true });
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        // If autoplay fails, show fallback
+                        videoBg.classList.add('fallback');
+
+                        // Try again after user interaction
+                        document.body.addEventListener('click', function tryPlay() {
+                            video.play()
+                                .then(() => {
+                                    videoBg.classList.remove('fallback');
+                                    document.body.removeEventListener('click', tryPlay);
+                                })
+                                .catch(e => {
+                                    console.log("Video playback still prevented");
+                                });
+                        }, { once: true });
+                    });
+                }
+            } else {
+                // For desktop, just try to play
+                video.play().catch(e => {
+                    console.log("Desktop video playback error:", e);
                 });
             }
-        } else {
-            // For desktop, just try to play
-            video.play().catch(e => {
-                console.log("Desktop video playback error:", e);
-            });
-        }
 
-        // Additional check for iOS specifically
-        if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-            // iOS often requires more explicit handling
-            video.setAttribute('playsinline', '');
-            video.setAttribute('webkit-playsinline', '');
-            video.setAttribute('muted', 'muted');
-        }
-
-        // Listen for visibility changes to restart video if needed
-        document.addEventListener('visibilitychange', function() {
-            if (document.visibilityState === 'visible' && video.paused) {
-                video.play().catch(e => console.log("Couldn't resume playback"));
+            // Additional check for iOS specifically
+            if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+                // iOS often requires more explicit handling
+                video.setAttribute('playsinline', '');
+                video.setAttribute('webkit-playsinline', '');
+                video.setAttribute('muted', 'muted');
             }
-        });
-    });
 
-    // Mobile menu toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            // Listen for visibility changes to restart video if needed
+            document.addEventListener('visibilitychange', function () {
+                if (document.visibilityState === 'visible' && video.paused) {
+                    video.play().catch(e => console.log("Couldn't resume playback"));
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function () {
             const nav = document.querySelector('.nav-links');
             nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
         });
 
         // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             if (!e.target.closest('.mobile-menu') && !e.target.closest('.nav-links')) {
                 document.querySelector('.nav-links').style.display = 'none';
             }
@@ -1681,7 +1622,7 @@
 
         // Better touch handling for dropdowns
         document.querySelectorAll('.dropdown > a').forEach(link => {
-            link.addEventListener('click', function(e) {
+            link.addEventListener('click', function (e) {
                 if (window.innerWidth < 768) {
                     e.preventDefault();
                     const dropdown = this.parentElement;
