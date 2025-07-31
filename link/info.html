@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzania Tourist Information Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Museo+Sans:wght@300;400;700&family=Consolas&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Museo Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+    
+        
+        h1, h2, h3 {
+            color: #d2691e;
+             font-family: "Kalam", cursive;
+            }
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: -9.96em;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+.logos img {
+    height: 49px;
+    margin-right: 1px;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Kalam", cursive;
+    margin-left: -5rem;
+    color: #e67e22;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 12px;
+    position: relative;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.nav-links a:hover {
+    color: #e67e22;
+}
+
+.quotes {
+    background-color: #e67e22;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-left: 8rem;
+}
+
+.quotes:hover {
+    background-color: #d35400;
+}
+
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: #e67e22;
+}
+
+/* Dropdown submenu styles */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-subcontent {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #fff;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown-submenu:hover .dropdown-subcontent {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    content: "▸";
+    float: right;
+    padding-left: 5px;
+}
+
+/* Language Dropdown */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.lang-btn {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.lang-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.lang-dropdown-content a {
+    color: var(--black);
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.lang-dropdown-content a:hover {
+    background-color: var(--light-gray);
+}
+
+.language-dropdown:hover .lang-dropdown-content {
+    display: block;
+}
+   /* Add this new CSS for active dropdown state */
+   .language-dropdown.active .lang-dropdown-content {
+    display: block;
+}
+
+/* Modify the existing hover rule to include active state */
+.language-dropdown:hover .lang-dropdown-content,
+.language-dropdown.active .lang-dropdown-content {
+    display: block;
+}
+
+
+        
+        
+
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            background-color: #fafafa;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        ul {
+            padding-left: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background-color: #fafafa;
+            margin-top: 2rem;
+        }
+        
+        .booking-policy {
+            background-color: #f5f5f5;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 3px solid #d2691e;
+        }
+        @media (max-width: 768px) {
+    header .container {
+        padding: 8px 15px;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        margin-left: 0;
+        font-size: 1rem;
+    }
+    
+    .quotes {
+        margin-left: 0;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .nav-links {
+        top: 70px;
+        padding: 15px;
+    }
+    
+    .nav-links li {
+        margin: 12px 0;
+    }
+    
+    .dropdown-content {
+        padding-left: 15px;
+    }
+    
+    .dropdown-subcontent {
+        padding-left: 20px;
+    }
+    
+    section {
+        padding: 1.2rem;
+        margin: 1.5rem 0;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+    
+    .logos img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .container {
+        padding: 8px 10px;
+    }
+    
+    .logo {
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+    
+    .quotes {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+    
+    section {
+        padding: 1rem;
+        margin: 1.2rem 0;
+    }
+    
+    .booking-policy {
+        padding: 0.8rem;
+    }
+    
+    ul {
+        padding-left: 1.2rem;
+    }
+    
+    li {
+        margin-bottom: 0.4rem;
+        font-size: 0.9rem;
+    }
+}
+        @media (max-width: 768px) {
+            section {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 992px) {
+
+    .welcome-container,
+    .map-container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        padding-left: 20px;
+        display: none;
+    }
+
+    .dropdown-subcontent {
+        position: static;
+        box-shadow: none;
+        padding-left: 30px;
+        display: none;
+    }
+
+    .dropdown-submenu>a:after {
+        content: "▼";
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .quotes {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+
+        <nav class="container">
+            <div class="logos">
+                <img src="./logo/true africa 1.png" alt="True Africa Logo">
+            </div>
+            <a href="#" class="logo">True Africa Escape</a>
+
+            <ul class="nav-links">
+                <li><a href="#">destination</a></li>
+                <li><a href="#zanzibar">Info</a></li>
+                <li><a href="#guide">About us</a></li>
+                <li><a href="#about">Contant</a></li>
+                <li><a href="#contact">FAQ</a></li>
+            </ul>
+
+            <button class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+    
+    
+    <main class="container">
+        <!-- General Information Sections -->
+        <section>
+            <h2>1. General Overview</h2>
+            <ul>
+                <li><strong>Location:</strong> East Africa, bordered by Kenya, Uganda, Rwanda, Burundi, DRC, Zambia, Malawi, Mozambique, and the Indian Ocean</li>
+                <li><strong>Capital:</strong> Dodoma (largest city Dar es Salaam)</li>
+                <li><strong>Official Languages:</strong> Swahili and English</li>
+                <li><strong>Currency:</strong> Tanzanian Shilling (TZS)</li>
+                <li><strong>Time Zone:</strong> East Africa Time (EAT), UTC +3</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>2. Top Tourist Attractions</h2>
+            <ul>
+                <li><strong>Serengeti National Park:</strong> Famous for the Great Migration and abundant wildlife</li>
+                <li><strong>Ngorongoro Crater:</strong> Unique volcanic crater with dense wildlife populations</li>
+                <li><strong>Mount Kilimanjaro:</strong> Africa's highest peak, popular trekking destination</li>
+                <li><strong>Zanzibar Archipelago:</strong> White sandy beaches, rich culture, and historic Stone Town</li>
+                <li><strong>Tarangire National Park:</strong> Known for large elephant herds and baobab trees</li>
+                <li><strong>Lake Manyara National Park:</strong> Famous for tree-climbing lions and flamingos</li>
+                <li><strong>Selous Game Reserve:</strong> One of the largest faunal reserves in the world</li>
+                <li><strong>Ruaha National Park:</strong> Untouched wilderness and large prides of lions</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>3. Best Time to Visit</h2>
+            <ul>
+                <li><strong>Dry Season (June to October):</strong> Best for safaris and trekking (cooler, less rain)</li>
+                <li><strong>Short Rainy Season (Nov-Dec):</strong> Wildlife viewing remains good</li>
+                <li><strong>Long Rainy Season (March-May):</strong> Less ideal for travel due to heavy rains</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>4. Visa Requirements</h2>
+            <ul>
+                <li>Most visitors require a visa (can be obtained on arrival or online e-visa)</li>
+                <li>Passport must be valid for at least 6 months from date of entry</li>
+                <li>Visa fees vary by nationality</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>5. Health & Safety</h2>
+            <ul>
+                <li><strong>Vaccinations:</strong> Yellow fever certificate required if arriving from endemic countries</li>
+                <li><strong>Recommended:</strong> Hepatitis A, Typhoid, Tetanus, Malaria prophylaxis</li>
+                <li>Use insect repellent and mosquito nets to prevent malaria</li>
+                <li>Drink bottled or purified water only</li>
+                <li>Basic medical facilities available in cities; carry travel insurance</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>6. Transportation</h2>
+            <ul>
+                <li><strong>Air:</strong> Kilimanjaro International Airport (KIA), Julius Nyerere International Airport (Dar es Salaam)</li>
+                <li><strong>Road:</strong> Well-connected by buses and private transfers; roads can be rough in rural areas</li>
+                <li><strong>Safari Vehicles:</strong> 4x4 vehicles common for game drives</li>
+                <li><strong>Boats:</strong> Used for Zanzibar and lake tours</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>7. Accommodation</h2>
+            <ul>
+                <li>Options range from budget hostels and campsites to luxury lodges and resorts</li>
+                <li>Popular safari lodges offer all-inclusive packages</li>
+                <li>Zanzibar has a wide range of beachfront resorts and boutique hotels</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>8. Currency & Payments</h2>
+            <ul>
+                <li>Tanzanian Shilling (TZS) is the local currency</li>
+                <li>US Dollars widely accepted, especially in tourism areas</li>
+                <li>Credit cards accepted in major hotels and lodges but carry cash in rural areas</li>
+                <li>ATMs available in major towns</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>9. Culture & Etiquette</h2>
+            <ul>
+                <li>Tanzania is culturally diverse with over 120 ethnic groups</li>
+                <li>Dress modestly, especially in rural areas and Zanzibar (predominantly Muslim)</li>
+                <li>Greetings are important—shake hands or use local greetings</li>
+                <li>Ask permission before photographing people, especially in villages</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>10. Useful Tips</h2>
+            <ul>
+                <li>Learn basic Swahili phrases like "Jambo" (Hello), "Asante" (Thank you)</li>
+                <li>Carry photocopies of passport and travel documents</li>
+                <li>Respect wildlife and follow park rules</li>
+                <li>Bargaining is common in markets and small shops</li>
+                <li>Tipping guides and drivers is customary</li>
+            </ul>
+        </section>
+
+        <!-- Detailed Guides Sections -->
+        <section>
+            <h2>Safari Planning Guide</h2>
+            <h3>Tanzania Best Parks to Visit:</h3>
+            <ul>
+                <li><strong>Serengeti National Park:</strong> Great Migration, Big Five</li>
+                <li><strong>Kilimanjaro Mountain</strong></li>
+                <li><strong>Ngorongoro Crater:</strong> High wildlife density in a unique ecosystem</li>
+                <li><strong>Tarangire National Park:</strong> Elephants, baobabs, fewer crowds</li>
+                <li><strong>Lake Manyara:</strong> Tree-climbing lions, flamingos</li>
+                <li><strong>Selous & Ruaha (Southern Circuit):</strong> Remote, untamed wilderness</li>
+            </ul>
+            
+            <h3>Recommended Safari Duration:</h3>
+            <ul>
+                <li><strong>4-5 days:</strong> Short safari</li>
+                <li><strong>7-10 days:</strong> Full Northern or Southern circuit</li>
+                <li><strong>12+ days:</strong> Luxury or photographic safaris</li>
+            </ul>
+            
+            <h3>Safari Types:</h3>
+            <ul>
+                <li>Budget Camping Safari</li>
+                <li>Mid-range Lodge Safari</li>
+                <li>Luxury Fly-in Safari</li>
+                <li>Private Family or Honeymoon Safari</li>
+                <li>VIP</li>
+                <li>Special Groups Convoys</li>
+            </ul>
+            
+            <h3>What to Pack:</h3>
+            <ul>
+                <li>Neutral-colored clothing</li>
+                <li>Hat, sunglasses, sunscreen</li>
+                <li>Binoculars, camera with zoom</li>
+                <li>Refillable water bottle</li>
+                <li>Insect repellent, travel insurance</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Cultural Tour Guide</h2>
+            <h3>Top Cultural Experiences:</h3>
+            <ul>
+                <li><strong>Maasai Village Visits (Arusha/Ngorongoro):</strong> Learn traditions, dance, crafts</li>
+                <li><strong>Hadzabe & Datoga Tribes (Lake Eyasi):</strong> Ancient hunting & blacksmithing</li>
+                <li><strong>Chagga Village Tour (Moshi):</strong> Coffee-making, caves, waterfalls</li>
+                <li><strong>Zanzibar Stone Town Tour:</strong> Swahili-Arabic culture, food, historic sites</li>
+                <li><strong>Bagamoyo & Kilwa Ruins:</strong> UNESCO heritage and old slave trade ports</li>
+            </ul>
+            
+            <h3>Tips for Cultural Tours:</h3>
+            <ul>
+                <li>Always ask before taking photos</li>
+                <li>Dress modestly in villages and religious areas</li>
+                <li>Support community-run initiatives and local guides</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Zanzibar Beach Holiday Guide</h2>
+            <h3>Best Beaches:</h3>
+            <ul>
+                <li><strong>Nungwi & Kendwa (North):</strong> Great for swimming, luxury resorts</li>
+                <li><strong>Paje & Jambiani (East):</strong> Kitesurfing, beach bars, relaxed vibe</li>
+                <li><strong>Kizimkazi (South):</strong> Dolphin tours, cultural experiences</li>
+                <li><strong>Stone Town (West):</strong> Cultural base, museums, and spice tours</li>
+            </ul>
+            
+            <h3>Activities:</h3>
+            <ul>
+                <li>Snorkeling & Diving (Mnemba Atoll)</li>
+                <li>Spice Farm Tours</li>
+                <li>Jozani Forest - Red Colobus Monkeys</li>
+                <li>Prison Island - Tortoises & snorkeling</li>
+                <li>Sunset Dhow Cruises</li>
+                <li>Sandbank Picnics</li>
+            </ul>
+            
+            <h3>Ideal Length of Stay:</h3>
+            <ul>
+                <li><strong>3-5 days:</strong> Stone Town & beach combo</li>
+                <li><strong>7+ days:</strong> Full relaxation, water sports, cultural tours</li>
+            </ul>
+        </section>
+        
+        <!-- True Africa Escape Sections -->
+        <section>
+            <h2>True Africa Escape Booking Policies</h2>
+            <p>We want your safari or holiday experience with True Africa Escape to be seamless and stress-free. Below is a summary of our booking policies to help you plan with confidence.</p>
+            
+            <div class="booking-policy">
+                <h3>1. Booking Confirmation</h3>
+                <ul>
+                    <li>A 30% non-refundable deposit is required at the time of booking to secure your trip.</li>
+                    <li>The balance (70%) is due 30 days prior to your arrival in Tanzania.</li>
+                    <li>For bookings made less than 45 days before the trip, full payment is required at the time of booking.</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>2. What's Included</h3>
+                <p>Our trip prices typically include:</p>
+                <ul>
+                    <li>Accommodation as outlined in your itinerary</li>
+                    <li>All park and conservation fees</li>
+                    <li>Game drives and transportation with a private 4x4 safari vehicle</li>
+                    <li>All meals during the safari</li>
+                    <li>English-speaking professional guide</li>
+                    <li>Airport transfers (if part of your package)</li>
+                    <li>Bottled drinking water on game drives</li>
+                </ul>
+                <p><strong>Note:</strong> Flights (international and domestic), visas, travel insurance, tips, and some optional activities are not included unless specified.</p>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>3. What's Not Included</h3>
+                <ul>
+                    <li>International and domestic flights (unless arranged by us)</li>
+                    <li>Visa fees and travel insurance</li>
+                    <li>Tips and gratuities for guides, drivers, and lodge staff</li>
+                    <li>Personal expenses (laundry, souvenirs, etc.)</li>
+                    <li>Alcoholic beverages and optional excursions</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>4. Booking Changes</h3>
+                <ul>
+                    <li>We allow one free itinerary change if made more than 30 days before your trip.</li>
+                    <li>Additional changes may incur administrative or third-party charges.</li>
+                    <li>We do our best to accommodate last-minute adjustments but availability cannot be guaranteed.</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>5. Cancellations & Refunds</h3>
+                <ul>
+                    <li><strong>More than 45 days before arrival:</strong> Deposit is non-refundable but the balance (if paid) will be refunded.</li>
+                    <li><strong>30-45 days before arrival:</strong> 50% of total trip cost will be refunded.</li>
+                    <li><strong>Less than 30 days before arrival:</strong> No refunds, but we may offer trip postponement or partial credit.</li>
+                    <li>No-shows or early departures are non-refundable.</li>
+                </ul>
+                <p>We strongly recommend purchasing travel insurance that covers cancellations, delays, or unforeseen emergencies.</p>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>6. Travel Insurance</h3>
+                <p>All guests are required to have valid travel insurance that covers:</p>
+                <ul>
+                    <li>Medical emergencies</li>
+                    <li>Trip cancellation or interruption</li>
+                    <li>Lost or delayed luggage</li>
+                    <li>Emergency evacuation</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>7. Children & Family Policy</h3>
+                <ul>
+                    <li>Children under 3 years: Free (on request)</li>
+                    <li>Children aged 3-12: Discounted rates available</li>
+                    <li>Children must be accompanied by an adult during game drives and activities</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>8. Payment Methods</h3>
+                <p>We accept:</p>
+                <ul>
+                    <li>Bank transfers (USD/EUR/TZS)</li>
+                    <li>Major credit cards (Visa, Mastercard - with a small processing fee)</li>
+                    <li>Mobile payment (M-Pesa for local bookings)</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>9. Private vs. Group Tours</h3>
+                <ul>
+                    <li>We offer both private tailor-made safaris and shared group departures (if available).</li>
+                    <li>Group tours are subject to minimum traveler numbers and fixed dates.</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>10. Need Help?</h3>
+                <p>Our team is always available to answer questions before or after you book. Reach out via:</p>
+                <ul>
+                    <li>Email: info@trueafricaescape.com</li>
+                    <li>WhatsApp: +255 784 084 200</li>
+                    <li>Website: www.trueafricaescape.com</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>True Africa Escape - Trip Cancellation Terms & Conditions</h2>
+            <p>These cancellation terms apply to all tours, safaris, and travel services booked with True Africa Escape. By confirming a booking, the client agrees to these conditions.</p>
+            
+            <div class="booking-policy">
+                <h3>1. Booking Confirmation & Deposits</h3>
+                <ul>
+                    <li>A 30% deposit is required to confirm your reservation.</li>
+                    <li>The remaining 70% balance must be paid at least 30 days before the start of the tour.</li>
+                    <li>For bookings made less than 30 days before departure, full payment is required at the time of booking.</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>2. Cancellation by the Client</h3>
+                <p>If the client cancels their booking, the following cancellation fees will apply:</p>
+                <ul>
+                    <li><strong>More than 60 days:</strong> Full refund minus 5% bank/processing fees</li>
+                    <li><strong>31-60 days:</strong> 70% refund of total tour cost</li>
+                    <li><strong>15-30 days:</strong> 50% refund of total tour cost</li>
+                    <li><strong>1-14 days:</strong> 25% refund of total tour cost</li>
+                    <li><strong>Less than 1 day:</strong> No refund</li>
+                </ul>
+                <p><strong>Note:</strong> The 30% deposit is generally non-refundable unless otherwise stated.</p>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>3. No-Shows & Early Departures</h3>
+                <ul>
+                    <li>No-shows (guests who do not arrive) are not eligible for any refund.</li>
+                    <li>If a traveler leaves the tour early, no partial refunds will be issued for unused services.</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>4. Cancellation by True Africa Escape</h3>
+                <p>We reserve the right to cancel a tour in the unlikely event of:</p>
+                <ul>
+                    <li>Natural disasters</li>
+                    <li>Political unrest</li>
+                    <li>Global health emergencies</li>
+                    <li>Force majeure (events beyond our control)</li>
+                </ul>
+                <p>If this occurs, clients will receive:</p>
+                <ul>
+                    <li>A full refund, or</li>
+                    <li>The option to reschedule or apply the payment as credit for a future trip</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>5. Date Changes & Rescheduling</h3>
+                <ul>
+                    <li>We allow one free date change if requested more than 30 days before departure.</li>
+                    <li>Changes requested within 30 days are subject to availability and may incur extra costs.</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>6. Travel Insurance</h3>
+                <p>We strongly recommend all clients purchase comprehensive travel insurance covering:</p>
+                <ul>
+                    <li>Medical emergencies</li>
+                    <li>Trip cancellations</li>
+                    <li>Delays</li>
+                    <li>Lost luggage</li>
+                </ul>
+                <p>True Africa Escape is not responsible for additional costs due to missed flights, illness, or other disruptions.</p>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>7. Refund Processing</h3>
+                <ul>
+                    <li>Refunds are processed within 15-30 business days.</li>
+                    <li>All refunds are made to the original payment method.</li>
+                    <li>Bank fees or exchange losses are the responsibility of the client.</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>8. Contact & Support</h3>
+                <p>If you need to cancel, reschedule, or discuss your booking, please contact us as early as possible:</p>
+                <ul>
+                    <li>E-Mail: info@trueafricaescape.com</li>
+                    <li>WhatsApp/Phone: +255 784 084 200</li>
+                    <li>Website: www.trueafricaescape.com</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>True Africa Escape's Safari Vehicles</h2>
+            <p>At True Africa Escape, your comfort, safety, and immersive safari experience are our top priorities. We use custom-built 4x4 safari vehicles specifically designed to handle the unique terrains of Tanzania while delivering panoramic views of the breathtaking landscapes and wildlife.</p>
+            
+            <h3>Our Safari Fleet Features:</h3>
+            
+            <div class="booking-policy">
+                <h3>1. 4x4 Land Cruisers - Safari Customized</h3>
+                <ul>
+                    <li>Pop-up Roof: For unobstructed game viewing and photography</li>
+                    <li>All-Terrain Tires & Suspension: Built to navigate rough roads and national park tracks</li>
+                    <li>Extended Body: Seats up to passengers comfortably with window access for all</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>2. Modern Comfort & Amenities</h3>
+                <ul>
+                    <li>Reclining Seats with Seatbelts</li>
+                    <li>Charging Ports (USB & Inverter) for phones, cameras, and devices</li>
+                    <li>Cooler/Fridge Box with bottled water and refreshments</li>
+                    <li>Onboard WiFi (on select vehicles)</li>
+                    <li>Reading Lights & Air Vents</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>3. Luggage Storage & Roof Racks</h3>
+                <ul>
+                    <li>Sufficient space for large safari duffels and gear</li>
+                    <li>Additional roof racks for tents or group travel items (on request)</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>4. Expert Drivers & Guides</h3>
+                <ul>
+                    <li>Trained, licensed, and multilingual safari guides</li>
+                    <li>Deep knowledge of wildlife, geography, and local cultures</li>
+                    <li>First aid certified and equipped with radios for real-time park communication</li>
+                </ul>
+            </div>
+            
+            <div class="booking-policy">
+                <h3>5. Special Vehicle Options Available</h3>
+                <ul>
+                    <li><strong>Luxury Upgrades:</strong> Fewer seats, premium interior, champagne onboard</li>
+                    <li><strong>Photography Vehicle:</strong> Open sides, beanbags, and swivel seats for pros</li>
+                    <li><strong>Family-Friendly Options:</strong> Child seat, booster seat, and private-use arrangements</li>
+                    <li><strong>Group Convoy Support:</strong> Coordinated multi-vehicle communication for large groups</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>Tanzania Tourist Information Guide. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            });
+        });
+    });
+</script>
+</body>
+</html>
