@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Kalam:wght@300;400;700&display=swap");
+
 :root {
     --header-color: #d2691e;
     --background: #fff;
@@ -111,6 +113,7 @@ header .container {
     background: linear-gradient(to bottom, #5d4037, #3e2723);
     overflow: hidden;
     position: relative;
+    height: 20vh;
 }
 
 /* Safari environment */
@@ -157,18 +160,6 @@ header .container {
     transform: rotate(-20deg);
 }
 
-.acacia-tree::after {
-    content: '';
-    position: absolute;
-    top: -120px;
-    right: -100px;
-    width: 230px;
-    height: 150px;
-    background: #388e3c;
-    border-radius: 50% 50% 50% 0;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    transform: rotate(20deg);
-}
 
 /* Particle background */
 #particles-js {
@@ -261,7 +252,7 @@ header .container {
     text-align: center;
     letter-spacing: 1px;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-    font-family: 'Courier New', monospace;
+    font-family: "Museo Sans", sans-serif;
 }
 
 /* Terminal body */
@@ -284,7 +275,7 @@ header .container {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 60%;
     background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, transparent 50%, rgba(139, 69, 19, 0.1) 100%);
     pointer-events: none;
 }
@@ -414,7 +405,7 @@ header .container {
     color: #fff;
     padding: 10px 20px 10px 25px;
     border-radius: 17px;
-    font-size: 1rem;
+    font-size: 0.5rem;
     font-weight: bold;
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -450,22 +441,7 @@ header .container {
     transform: translateX(5px);
 }
 
-.btn::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border: 2px solid #ffd700;
-    border-radius: 32px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
 
-.btn:hover::after {
-    opacity: 1;
-}
 
 /* Animal silhouettes */
 .animal-silhouette {
@@ -719,11 +695,11 @@ header .container {
     }
 
     .typed-text {
-        font-size: 2.4rem;
+        font-size: 2.1rem;
     }
 
     .cursor {
-        height: 2.7rem;
+        height: 2.4rem;
         top: 3px;
     }
 
@@ -734,7 +710,7 @@ header .container {
 
     .btn {
         padding: 14px 35px 14px 25px;
-        font-size: 1.1rem;
+        font-size: 0.8rem;
     }
 }
 
@@ -756,7 +732,7 @@ header .container {
 
     .btn {
         padding: 12px 25px 12px 20px;
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .prompt {
