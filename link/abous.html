@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - True Africa Escape</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Museo+Sans:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Kalam:wght@300;400;700&display=swap");
+
+        :root {
+            --header-color: #d2691e;
+            --background: #fff;
+            --section-bg: #fafafa;
+            --text-color: #333;
+            --accent-color: #5a3921;
+            --accent-light: rgba(218, 165, 32, 0.1);
+            --primary-color: #d2691e;
+            --secondary-color: #5a3921;
+            --light-text: #fff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: "Museo Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--black);
+            background-color: var(--white);
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+        font-family: 'Kalam', cursive;
+        font-weight: 700;
+        }
+
+        /* Fixed Navigation Bar */
+        .navbar {
+            background-color: var(--light-text);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logos {
+            display: flex;
+            align-items: center;
+        }
+
+        .logos img {
+            height: 40px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .logo {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            text-transform: capitalize;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero section */
+        .hero-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 330px;
+            position: relative;
+        }
+
+        .hero-title {
+            color: var(--header-color);
+            font-weight: 700;
+            font-size: 3rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-family: 'Kalam', cursive;
+
+        }
+
+        .tagline {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            max-width: 800px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .tagline span {
+            color: var(--header-color);
+            font-weight: bold;
+        }
+
+        /* Safari animal silhouette decoration */
+        .safari-silhouettes {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            padding: 0 20px;
+        }
+
+        .safari-silhouettes span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
+            opacity: 0.8;
+        }
+
+        /* New CSS illustrations and patterns */
+        .section {
+            padding: 5rem 10%;
+            background-color: var(--section-bg);
+            position: relative;
+        }
+
+        .section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 15px;
+            background: linear-gradient(90deg, var(--header-color), var(--accent-color), var(--header-color));
+            opacity: 0.2;
+        }
+
+        .section-dark {
+            background-color: var(--background);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--header-color);
+            font-size: 2.5rem;
+            position: relative;
+            font-family: 'Kalam', cursive;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: var(--header-color);
+            margin: 15px auto;
+        }
+
+        .african-pattern {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 80px;
+            height: 80px;
+            opacity: 0.1;
+            background:
+                radial-gradient(circle at 30% 30%, var(--header-color) 3px, transparent 3px),
+                radial-gradient(circle at 70% 30%, var(--header-color) 3px, transparent 3px),
+                radial-gradient(circle at 30% 70%, var(--header-color) 3px, transparent 3px),
+                radial-gradient(circle at 70% 70%, var(--header-color) 3px, transparent 3px);
+            background-size: 20px 20px;
+        }
+
+        /* Content blocks with new visuals */
+        .content-block {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            gap: 3rem;
+            position: relative;
+        }
+
+        .content-block.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .content-text {
+            flex: 1;
+            z-index: 2;
+        }
+
+        .content-visual {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 350px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* CSS Illustrations */
+        .sunset-scene {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #ff7e5f, #feb47b, #ffd26f);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mountain {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 150px;
+            background: var(--accent-color);
+            clip-path: polygon(0% 100%, 10% 70%, 20% 90%, 30% 60%, 40% 80%, 50% 50%, 60% 70%, 70% 40%, 80% 60%, 90% 30%, 100% 50%, 100% 100%);
+        }
+
+        .savannah-scene {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #ff7e5f, #feb47b, #ffd26f);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tree {
+            position: absolute;
+            bottom: 50px;
+            width: 15px;
+            height: 100px;
+            background: #5a3921;
+            border-radius: 2px;
+        }
+
+        .tree::before {
+            content: "";
+            position: absolute;
+            top: -40px;
+            left: -25px;
+            width: 60px;
+            height: 80px;
+            background: #2e8b57;
+            border-radius: 50%;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .tree:nth-child(1) {
+            left: 20%;
+        }
+
+        .tree:nth-child(2) {
+            left: 40%;
+            height: 120px;
+        }
+
+        .tree:nth-child(3) {
+            left: 60%;
+        }
+
+        .tree:nth-child(4) {
+            left: 80%;
+            height: 140px;
+        }
+
+        h3 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Kalam', cursive;
+
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .highlight-box {
+            background-color: var(--accent-light);
+            border-left: 4px solid var(--header-color);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 0 5px 5px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d2691e' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.1;
+        }
+
+        /* Mission & Vision */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .mission-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--header-color);
+        }
+
+        .mission-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .mission-card h4 {
+            color: var(--header-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .mission-card h4 i {
+            margin-right: 10px;
+            background: var(--accent-light);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        /* Core Values */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--header-color);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--header-color);
+            margin-bottom: 1rem;
+            background: var(--accent-light);
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+        }
+
+        /* Team Section */
+        .team-section {
+            text-align: center;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e67e22;
+            color: white;
+            font-size: 3.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .avatar::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 50%, rgba(243, 178, 117, 0.3) 50%);
+        }
+
+        .team-member h4 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            font-family: 'Kalam', cursive;
+        }
+
+        .team-member p.position {
+            color: var(--header-color);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial {
+            font-style: italic;
+            margin-top: 1rem;
+            position: relative;
+            padding: 1rem;
+            background: var(--accent-light);
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .testimonial:before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--header-color);
+            opacity: 0.3;
+            position: absolute;
+            top: -10px;
+            left: 5px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .community-partners {
+            background: var(--accent-light);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .tribes {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tribe {
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            min-width: 120px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 70px);
+                background: var(--light-text);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 30px;
+                transition: var(--transition);
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .content-block {
+                flex-direction: column;
+            }
+
+            .content-block.reverse {
+                flex-direction: column;
+            }
+
+            .content-visual {
+                width: 100%;
+                height: 250px;
+            }
+
+            .section {
+                padding: 3rem 5%;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 10px 0;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .logos {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logos img {
+                margin-right: 0;
+                margin-bottom: 5px;
+                height: 30px;
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <nav class="container">
+            <div class="logos">
+                <img src="./logo/true africa 1.png" alt="True Africa Logo">
+            </div>
+            <a href="#" class="logo">True Africa Escape</a>
+
+            <ul class="nav-links">
+                <li><a href="/index.html">home</a></li>
+                <li><a href="/destination1.html">destination</a></li>
+                <li><a href="/link/info.html">Info</a></li>
+                <li><a href="/abous.html">About us</a></li>
+                <li><a href="#abo">Contact</a></li>
+                <li><a href="#contact">FAQ</a></li>
+            </ul>
+
+            <button class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Hero Header Section -->
+    <header class="hero-header">
+        <div class="hero-title">True Africa Escape</div>
+        <h1 class="tagline">Moments that <span>Matter</span>, Memories that <span>Last</span>.</h1>
+        <div class="safari-silhouettes">
+            <span
+                style="background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%2050%22%3E%3Cpath%20d%3D%22M10%2040%20Q%2030%2010%2C%2050%2040%20Q%2070%2010%2C%2090%2040%22%20stroke%3D%22white%22%20stroke-width%3D%223%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E')"></span>
+            <span
+                style="background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%2050%22%3E%3Cpath%20d%3D%22M20%2035%20L%2030%2010%20L%2040%2035%22%20stroke%3D%22white%22%20stroke-width%3D%223%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2225%22%20cy%3D%2240%22%20r%3D%225%22%20fill%3D%22white%22%2F%3E%3Ccircle%20cx%3D%2235%22%20cy%3D%2240%22%20r%3D%225%22%20fill%3D%22white%22%2F%3E%3C%2Fsvg%3E')"></span>
+            <span
+                style="background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%2050%22%3E%3Cpath%20d%3D%22M15%2040%20C%2025%2020%2C%2035%2020%2C%2045%2040%22%20stroke%3D%22white%22%20stroke-width%3D%223%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M55%2040%20C%2065%2020%2C%2075%2020%2C%2085%2040%22%20stroke%3D%22white%22%20stroke-width%3D%223%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E')"></span>
+            <span
+                style="background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%2050%22%3E%3Cellipse%20cx%3D%2230%22%20cy%3D%2230%22%20rx%3D%2215%22%20ry%3D%2210%22%20stroke%3D%22white%22%20stroke-width%3D%223%22%20fill%3D%22none%22%2F%3E%3Cellipse%20cx%3D%2270%22%20cy%3D%2230%22%20rx%3D%2215%22%20ry%3D%2210%22%20stroke%3D%22white%22%20stroke-width%3D%223%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E')"></span>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="african-pattern"></div>
+        <h2 class="section-title">Our Philosophy</h2>
+        <div class="content-block animate">
+            <div class="content-text">
+                <p>At True Africa Escape, we believe travel is more than just seeing new places - it's about creating
+                    powerful, life-enriching experiences that stay with you forever.</p>
+
+                <h3>Moments that Matter</h3>
+                <p>These are the authentic, deeply personal experiences that define your journey:</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                    <li>Witnessing the golden sunrise over Mount Kilimanjaro</li>
+                    <li>Sharing stories around a fire with a Maasai elder</li>
+                    <li>Hearing the thundering hooves of wildebeest during the Great Migration</li>
+                    <li>Laughing with new friends on a spice tour in Zanzibar</li>
+                </ul>
+                <p>We curate each journey to include intentional, meaningful moments that connect you with culture,
+                    nature, and people - moments that move your heart and soul.</p>
+            </div>
+            
+        </div>
+
+        
+            <div class="content-text">
+                <h3>Memories that Last</h3>
+                <p>Long after your safari ends or your footprints fade from the beach, the memories remain!</p>
+                <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                    <li>That first breathless look over Ngorongoro Crater</li>
+                    <li>The feeling of accomplishment reaching Uhuru Peak</li>
+                    <li>The warmth of Tanzanian hospitality</li>
+                </ul>
+                <p>These memories become part of your story - and you'll carry them for a lifetime.</p>
+
+                <div class="highlight-box">
+                    <h3>Why It Matters</h3>
+                    <p>We don't just offer tours. We create transformative journeys that touch your spirit and leave you
+                        changed, enlightened, and inspired.</p>
+                    <p>At True Africa Escape, every itinerary is designed to ensure each traveler lives the adventure,
+                        feels the magic, and returns home with a heart full of unforgettable memories.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <div class="african-pattern"></div>
+        <h2 class="section-title">Vision & Mission</h2>
+
+        <div class="mission-vision">
+            <div class="mission-card animate">
+                <h4><i class="fas fa-binoculars"></i> Our Vision</h4>
+                <p>To be the most trusted and inspiring travel company in East Africa-offering authentic, sustainable,
+                    and life-changing safari experiences that connect people to the heart of Africa's wildlife,
+                    landscapes, and cultures.</p>
+            </div>
+
+            <div class="mission-card animate">
+                <h4><i class="fas fa-bullseye"></i> Mission Statement</h4>
+                <p>At True Africa Escape Safari, our mission is to:</p>
+                <ul style="margin-left: 1.5rem;">
+                    <li>Deliver unforgettable safari and cultural journeys across Tanzania and the greater East Africa
+                        region</li>
+                    <li>Create meaningful connections between guests and local communities</li>
+                    <li>Ensure personalized, seamless travel planning</li>
+                    <li>Lead by example in conservation, sustainability, and community development</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="african-pattern"></div>
+        <h2 class="section-title">Our Core Values</h2>
+
+        <div class="values-grid">
+            <div class="value-card animate">
+                <div class="value-icon"><i class="fas fa-certificate"></i></div>
+                <h3>Authenticity</h3>
+                <p>We provide real, immersive experiences that reflect the true spirit of Africa-its people, traditions,
+                    and untamed beauty.</p>
+            </div>
+
+            <div class="value-card animate">
+                <div class="value-icon"><i class="fas fa-star"></i></div>
+                <h3>Excellence</h3>
+                <p>We commit to the highest standards of service, professionalism, and attention to detail in every
+                    journey we organize.</p>
+            </div>
+
+            <div class="value-card animate">
+                <div class="value-icon"><i class="fas fa-leaf"></i></div>
+                <h3>Sustainability</h3>
+                <p>We promote eco-conscious travel practices that conserve wildlife, protect ecosystems, and minimize
+                    environmental impact.</p>
+            </div>
+
+            <div class="value-card animate">
+                <div class="value-icon"><i class="fas fa-hands-helping"></i></div>
+                <h3>Community Empowerment</h3>
+                <p>We work with local guides, artisans, and communities to ensure tourism benefits the people of
+                    Tanzania in meaningful ways.</p>
+            </div>
+
+            <div class="value-card animate">
+                <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Integrity</h3>
+                <p>We operate with transparency, honesty, and fairness-building trust with our guests, partners, and
+                    team.</p>
+            </div>
+
+            <div class="value-card animate">
+                <div class="value-icon"><i class="fas fa-users"></i></div>
+                <h3>Inclusivity</h3>
+                <p>We welcome all travelers regardless of background, age, budget, or travel style-ensuring accessible
+                    and enjoyable experiences for everyone.</p>
+            </div>
+
+            <div class="value-card animate">
+                <div class="value-icon"><i class="fas fa-heart"></i></div>
+                <h3>Passion for Africa</h3>
+                <p>We are proud ambassadors of Tanzania and East Africa, driven by a deep love for our land, wildlife,
+                    and culture.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark team-section">
+        <div class="african-pattern"></div>
+        <h2 class="section-title">Meet Our Team</h2>
+        <p>At True Africa Escape, our people are our greatest asset. We're not just guides and planners - we're
+            passionate storytellers, nature lovers, cultural ambassadors, and proud Tanzanians committed to giving you
+            an unforgettable experience in our homeland.</p>
+
+        <div class="team-grid">
+            <div class="team-member animate">
+                <div class="avatar"><i class="fas fa-binoculars"></i></div>
+                <h4>Safari Guides</h4>
+                <p class="position">Certified Wildlife Experts</p>
+                <p>Our certified guides are true safari experts with deep knowledge of Tanzania's wildlife, landscapes,
+                    and cultures. Fluent in English (and often French, Spanish, or German), they're not just
+                    drivers-they're wildlife spotters, history buffs, and your friendly companions on the road.</p>
+                <div class="testimonial">"Our guide knew the Serengeti like his own backyard!" - Guest Review from
+                    France</div>
+            </div>
+
+            <div class="team-member animate">
+                <div class="avatar"><i class="fas fa-utensils"></i></div>
+                <h4>Chefs & Camp Staff</h4>
+                <p class="position">Hospitality Professionals</p>
+                <p>Whether you're dining in a mobile tented camp or a luxury lodge, our chefs deliver delicious meals
+                    made from fresh, local ingredients. Our hospitality staff ensures your comfort and safety in every
+                    setting-always with a warm smile.</p>
+            </div>
+
+            <div class="team-member animate">
+                <div class="avatar"><i class="fas fa-map-marked-alt"></i></div>
+                <h4>Travel Planners</h4>
+                <p class="position">Logistics Experts</p>
+                <p>Based in Arusha, our operations and planning team works behind the scenes to tailor your itinerary,
+                    book the best lodges, coordinate transport, and handle every detail so your journey runs smoothly.
+                </p>
+            </div>
+
+            <div class="team-member animate">
+                <div class="avatar"><i class="fas fa-crown"></i></div>
+                <h4>Founders & Management</h4>
+                <p class="position">Industry Leaders</p>
+                <p>True Africa Escape was founded by passionate Tanzanian professionals who believe in sustainable
+                    tourism and authentic experiences. Our leadership team combines deep local knowledge with global
+                    travel standards to offer high-quality service with a personal touch.</p>
+            </div>
+        </div>
+
+        <div class="community-partners animate">
+            <h3>Local Community Partners</h3>
+            <p>We proudly collaborate with Maasai, Hadzabe, and local artisans to provide immersive cultural
+                experiences. These partnerships are built on mutual respect and fair benefits, ensuring tourism uplifts
+                the people of Tanzania.</p>
+            <div class="tribes">
+                <div class="tribe">Maasai Community</div>
+                <div class="tribe">Hadzabe Tribe</div>
+                <div class="tribe">Chagga Artisans</div>
+                <div class="tribe">Sukuma Craftsmen</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Animation for elements when they come into view
+        document.addEventListener('DOMContentLoaded', function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Observe all elements with the 'animate' class
+            const animateElements = document.querySelectorAll('.content-block, .mission-card, .value-card, .team-member, .community-partners');
+            animateElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // Add decorative elements dynamically
+            const safariHeader = document.querySelector('.hero-header');
+            if (safariHeader) {
+                const stars = document.createElement('div');
+                stars.style.position = 'absolute';
+                stars.style.top = '0';
+                stars.style.left = '0';
+                stars.style.width = '100%';
+                stars.style.height = '100%';
+                stars.style.background = 'radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8) 1px, transparent 1px), radial-gradient(circle at 40% 70%, rgba(255,255,255,0.8) 1px, transparent 1px), radial-gradient(circle at 60% 20%, rgba(255,255,255,0.8) 1px, transparent 1px), radial-gradient(circle at 80% 50%, rgba(255,255,255,0.8) 1px, transparent 1px)';
+                stars.style.backgroundSize = '100px 100px';
+                stars.style.opacity = '0.3';
+                safariHeader.appendChild(stars);
+            }
+        });
+    </script>
+</body>
+
+</html>
