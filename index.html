@@ -50,8 +50,21 @@
                 <li><a href="./link/abous.html">About us</a></li>
                 <li><a href="./link/contant.html">Contant</a></li>
                 <li><a href="./link/FAQ.html">FAQ</a></li>
+                <li>
+                    <div class="language-switcher">
+                        <button class="lang-btn">English <i class="fas fa-chevron-down"></i></button>
+                        <div class="lang-dropdown">
+                            <a href="#" data-lang="en">English</a>
+                            <a href="#" data-lang="sw">Swahili</a>
+                            <a href="#" data-lang="fr">French</a>
+                            <a href="#" data-lang="de">German</a>
+                            <a href="#" data-lang="es">Spanish</a>
+                        </div>
+                    </div>
+                </li>
             </ul>
             
+
 
             <button class="mobile-menu">
                 <i class="fas fa-bars"></i>
@@ -1062,7 +1075,8 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Tanzania Treasures</h3>
-                    <p>Your trusted guide to exploring the wonders of Tanzania. We provide comprehensive travel information to help you plan your perfect safari and beach adventure.</p>
+                    <p>Your trusted guide to exploring the wonders of Tanzania. We provide comprehensive travel
+                        information to help you plan your perfect safari and beach adventure.</p>
                     <div class="social-icons2">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1078,7 +1092,7 @@
                     <a href="#">about us</a>
                     <a href="#">FAQ</a>
                 </div>
-               
+
                 <div class="footer-column">
                     <h3>Contact Us</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Arusha, Tanzania</p>
@@ -1087,7 +1101,7 @@
                     <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 5PM EAT</p>
                 </div>
             </div>
-            
+
         </div>
     </footer>
 
@@ -1249,7 +1263,9 @@
 
             // Update language button
             const langBtn = document.querySelector('.lang-btn');
-            langBtn.innerHTML = langData[lang] + ' <i class="fas fa-chevron-down"></i>';
+            if (langBtn) {
+                langBtn.innerHTML = langData[lang] + ' <i class="fas fa-chevron-down"></i>';
+            }
 
             // Store selection in localStorage
             localStorage.setItem('selectedLanguage', lang);
@@ -1262,13 +1278,31 @@
             switchLanguage(savedLang);
 
             // Add click events to language dropdown
-            document.querySelectorAll('.lang-dropdown-content a').forEach(link => {
+            document.querySelectorAll('.lang-dropdown a').forEach(link => {
                 link.addEventListener('click', function (e) {
                     e.preventDefault();
                     const selectedLang = this.getAttribute('data-lang');
                     switchLanguage(selectedLang);
+                    // Close dropdown after selection
+                    document.querySelector('.lang-dropdown').classList.remove('active');
                 });
             });
+
+            // Toggle dropdown when button is clicked
+            const langBtn = document.querySelector('.lang-btn');
+            if (langBtn) {
+                langBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    document.querySelector('.lang-dropdown').classList.toggle('active');
+                });
+            }
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function () {
+                document.querySelector('.lang-dropdown').classList.remove('active');
+            });
+
+            // Mobile menu toggle
             const mobileMenu = document.querySelector('.mobile-menu');
             const navLinks = document.querySelector('.nav-links');
 
@@ -1277,24 +1311,7 @@
                     navLinks.classList.toggle('active');
                 });
             }
-
-            // Language dropdown toggle for mobile
-            const langBtn = document.querySelector('.lang-btn');
-            const langDropdown = document.querySelector('.language-dropdown');
-
-            if (langBtn && langDropdown) {
-                langBtn.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    langDropdown.classList.toggle('active');
-                });
-
-                // Close dropdown when clicking outside
-                document.addEventListener('click', function () {
-                    langDropdown.classList.remove('active');
-                });
-            }
         });
-
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1592,7 +1609,7 @@
                     e.preventDefault();
                     const dropdown = this.parentElement;
                     dropdown.classList.toggle('open');
-                }  
+                }
             });
         });
 
@@ -1605,6 +1622,7 @@
                 videoBg.classList.add('fallback');
             }
         }
+        
     </script>
 </body>
 
