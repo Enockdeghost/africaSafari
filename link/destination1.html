@@ -44,27 +44,26 @@
                 <li><a href="contant.htnl">Contact</a></li>
                 <li><a href="FAQ.html">FAQ</a></li>
             </ul>
-            <ul>
-
-                <div class="language-switcher">
-                    <button class="lang-btn">English <i class="fas fa-chevron-down"></i></button>
-                    <div class="lang-dropdown">
-                        <a href="#" data-lang="en">English</a>
-                        <a href="#" data-lang="sw">Swahili</a>
-                        <a href="#" data-lang="fr">French</a>
-                        <a href="#" data-lang="de">German</a>
-                        <a href="#" data-lang="es">Spanish</a>
-                    </div>
-                </div>
-
-            </ul>
 
             <button class="mobile-menu">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
     </header>
-  
+    <div class="translate-notification">
+        <i class="fas fa-language"></i>
+        <div class="text">Translate this page?</div>
+        <button class="translate-btn" id="showTranslateWidget">Translate</button>
+        <button class="close-btn" id="closeTranslateNotification">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <!-- Google Translate Widget Container -->
+    <div class="translate-widget-container" id="translateWidget">
+        <h3>Select Language</h3>
+        <div id="google_translate_element"></div>
+    </div>
 
     <section id="about">
         <div class="container">
@@ -3827,78 +3826,48 @@
 
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
         <script>
-            // Enhanced Destination Tabs Functionality
-            const langData = {
-            'en': 'English',
-            'sw': 'Swahili',
-            'fr': 'French',
-            'de': 'German',
-            'es': 'Spanish'
-        };
-
-        let currentLang = 'en';
-
-        // Function to switch language
-        function switchLanguage(lang) {
-            currentLang = lang;
-
-            // Update all elements with data attributes
-            document.querySelectorAll('[data-' + lang + ']').forEach(element => {
-                const text = element.getAttribute('data-' + lang);
-                if (text) {
-                    // Handle dropdown items that include icons
-                    if (element.querySelector('i.fa-chevron-down')) {
-                        element.innerHTML = text + ' <i class="fas fa-chevron-down"></i>';
-                    } else {
-                        element.textContent = text;
-                    }
-                }
-            });
-
-            // Update language button
-            const langBtn = document.querySelector('.lang-btn');
-            if (langBtn) {
-                langBtn.innerHTML = langData[lang] + ' <i class="fas fa-chevron-down"></i>';
-            }
-
-            // Store selection in localStorage
-            localStorage.setItem('selectedLanguage', lang);
+          // Initialize Google Translate
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+                'google_translate_element'
+            );
         }
 
-        // Initialize language switcher
+        // Load Google Translate script
+        function loadGoogleTranslate() {
+            const script = document.createElement('script');
+            script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            document.head.appendChild(script);
+        }
+
+        // Event listeners
         document.addEventListener('DOMContentLoaded', function () {
-            // Get saved language or default to English
-            const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-            switchLanguage(savedLang);
+            // Load Google Translate
+            loadGoogleTranslate();
 
-            // Add click events to language dropdown
-            document.querySelectorAll('.lang-dropdown a').forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const selectedLang = this.getAttribute('data-lang');
-                    switchLanguage(selectedLang);
-                    // Close dropdown after selection
-                    document.querySelector('.lang-dropdown').classList.remove('active');
-                });
+            // Show translate widget when button is clicked
+            document.getElementById('showTranslateWidget').addEventListener('click', function () {
+                document.getElementById('translateWidget').classList.add('active');
             });
 
-            // Toggle dropdown when button is clicked
-            const langBtn = document.querySelector('.lang-btn');
-            if (langBtn) {
-                langBtn.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    document.querySelector('.lang-dropdown').classList.toggle('active');
-                });
-            }
-
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function () {
-                document.querySelector('.lang-dropdown').classList.remove('active');
+            // Close notification
+            document.getElementById('closeTranslateNotification').addEventListener('click', function () {
+                document.querySelector('.translate-notification').style.display = 'none';
             });
 
-            // Mobile menu toggle
-
+            // Close widget when clicking outside
+            document.addEventListener('click', function (e) {
+                const widget = document.getElementById('translateWidget');
+                if (widget.classList.contains('active') &&
+                    !widget.contains(e.target) &&
+                    e.target.id !== 'showTranslateWidget') {
+                    widget.classList.remove('active');
+                }
+            });
         });
+
+      
             document.addEventListener('DOMContentLoaded', function () {
                 const tabBtns = document.querySelectorAll('.tab-btn');
                 const destinationCards = document.querySelectorAll('.destination-card');
