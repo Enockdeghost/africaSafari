@@ -55,6 +55,181 @@
         }
 
 
+        .top-bar {
+            background: linear-gradient(135deg, #1a2a3a 0%, #3a4a5a 100%);
+            padding: -10px 0;
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info span {
+            margin-right: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-icons a {
+            margin-left: 15px;
+            color: #fff;
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-3px);
+            color: #c19d56;
+        }
+
+        @media (max-width: 576px) {
+            .top-bar-content {
+                flex-direction: column;
+                padding-bottom: 23rem;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .social-icons {
+                display: none;
+            }
+        }
+
+        .language-switcher {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-btn i {
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: none;
+            min-width: 150px;
+        }
+
+        .lang-dropdown.active {
+            display: block;
+        }
+
+        .lang-dropdown a {
+            display: block;
+            padding: 8px 15px;
+            color: #333;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .lang-dropdown a:hover {
+            background: #f5f5f5;
+        }
+
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .lang-dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .lang-dropdown-content a {
+            color: var(--black);
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .lang-dropdown-content a:hover {
+            background-color: var(--light-gray);
+        }
+
+        .language-dropdown:hover .lang-dropdown-content {
+            display: block;
+        }
+
+        .language-dropdown.active .lang-dropdown-content {
+            display: block;
+        }
+
+        .language-dropdown:hover .lang-dropdown-content,
+        .language-dropdown.active .lang-dropdown-content {
+            display: block;
+        }
+
+
+        /* Adjust header styles for language switcher */
+
+
+        @media (max-width: 992px) {
+            .language-switcher {
+                margin-left: 0;
+                margin-top: 8px;
+            }
+
+            .lang-btn {
+                color: var(--primary-color);
+                border-color: var(--primary-color);
+            }
+        }
+
         img {
             max-width: 100%;
             height: auto;
@@ -95,12 +270,12 @@
         }
 
         .logos img {
-            height: 59px;
+            height: 49px;
             margin-right: 1px;
         }
 
         .logo {
-            font-size: 1.4em;
+            font-size: 1.1em;
             font-weight: bold;
             text-decoration: none;
             font-family: "Kalam", cursive;
@@ -196,7 +371,7 @@
             color: var(--primary-color);
             font-size: 2.5rem;
             margin-bottom: 50px;
-            margin-top: 2.9rem;
+            margin-top: 6rem;
             position: relative;
         }
 
@@ -326,13 +501,13 @@
             color: #d2691e;
         }
 
-        .social-icons {
+        .social-icons1 {
             display: flex;
             gap: 15px;
             margin-top: 15px;
         }
 
-        .social-icons a {
+        .social-icons1 a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -352,6 +527,9 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .logo {
+                margin-left: 0.4rem;
+            }
 
             .faq-question {
                 padding: 10px 45px 15px 20px;
@@ -368,18 +546,29 @@
         }
 
         /* Responsive design */
-        @media (max-width: 768px) {
+        @media (max-width: 1124px) {
+            .logo {
+                margin-left: 3rem;
+            }
+
+            .top-bar {
+                height: 2.6rem;
+            }
+        }
+
+        @media (max-width: 998px) {
             .nav-links {
                 position: fixed;
-                top: 70px;
+                top: 7rem;
                 left: -100%;
                 width: 80%;
                 height: calc(100vh - 70px);
                 background: var(--light-text);
                 flex-direction: column;
                 align-items: center;
-                justify-content: flex-start;
-                padding-top: 30px;
+
+                /* padding: 1rem; */
+                /* padding-top: 30px; */
                 transition: var(--transition);
                 gap: 0;
                 box-shadow: 0 10px 10px var(--header-color);
@@ -389,8 +578,21 @@
                 left: 0;
             }
 
+            .logo {
+                margin-left: 0.4rem;
+            }
+
+
             .nav-links li {
                 margin: 15px 0;
+            }
+
+            .top-bar {
+                height: 2rem;
+            }
+
+            .top-bar .container {
+                padding-top: 3px;
             }
 
             .nav-links a {
@@ -438,7 +640,8 @@
 
 
         }
-        .mobile-menu{
+
+        .mobile-menu {
             color: var(--primary-color);
         }
 
@@ -464,7 +667,21 @@
 <body>
     <header>
         <!-- Top Bar -->
-
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone-alt"></i> +255 784 084 200</span>
+                    <span><i class="fas fa-envelope"></i> info@trueafricaescape.com</span>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1EhkVSjmwq/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/trueafricaescape?igsh=MTZqMHBmbHl4N28ycw=="><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/255784084200"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
         <nav class="container">
             <div class="logos">
                 <img src="./logo/true africa 1.png" alt="True Africa Logo">
@@ -473,11 +690,25 @@
 
             <ul class="nav-links">
                 <li><a href="index.html">home</a></li>
-                <li><a href=".destination1.html">destination</a></li>
+                <li><a href="destination1.html">destination</a></li>
                 <li><a href="info.html">Info</a></li>
                 <li><a href="abous.html">About us</a></li>
                 <li><a href="contant.html">Contant</a></li>
                 <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+            <ul>
+
+                <div class="language-switcher">
+                    <button class="lang-btn">English <i class="fas fa-chevron-down"></i></button>
+                    <div class="lang-dropdown">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="sw">Swahili</a>
+                        <a href="#" data-lang="fr">French</a>
+                        <a href="#" data-lang="de">German</a>
+                        <a href="#" data-lang="es">Spanish</a>
+                    </div>
+                </div>
+
             </ul>
 
 
@@ -904,7 +1135,7 @@
                     <h3>Tanzania Treasures</h3>
                     <p>Your trusted guide to exploring the wonders of Tanzania. We provide comprehensive travel
                         information to help you plan your perfect safari and beach adventure.</p>
-                    <div class="social-icons2">
+                    <div class="social-icons1">
                         <a href="https://www.facebook.com/share/1EhkVSjmwq/"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/trueafricaescape?igsh=MTZqMHBmbHl4N28ycw=="><i
                                 class="fab fa-instagram"></i></a>
@@ -913,7 +1144,7 @@
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
-                    <a href="/index.html">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="destination1.html">destination</a>
                     <a href="info.html">info</a>
                     <a href="abous.html">about us</a>
@@ -933,6 +1164,79 @@
     </footer>
 
     <script>
+
+
+        const langData = {
+            'en': 'English',
+            'sw': 'Swahili',
+            'fr': 'French',
+            'de': 'German',
+            'es': 'Spanish'
+        };
+
+        let currentLang = 'en';
+
+        // Function to switch language
+        function switchLanguage(lang) {
+            currentLang = lang;
+
+            // Update all elements with data attributes
+            document.querySelectorAll('[data-' + lang + ']').forEach(element => {
+                const text = element.getAttribute('data-' + lang);
+                if (text) {
+                    // Handle dropdown items that include icons
+                    if (element.querySelector('i.fa-chevron-down')) {
+                        element.innerHTML = text + ' <i class="fas fa-chevron-down"></i>';
+                    } else {
+                        element.textContent = text;
+                    }
+                }
+            });
+
+            // Update language button
+            const langBtn = document.querySelector('.lang-btn');
+            if (langBtn) {
+                langBtn.innerHTML = langData[lang] + ' <i class="fas fa-chevron-down"></i>';
+            }
+
+            // Store selection in localStorage
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Initialize language switcher
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get saved language or default to English
+            const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+            switchLanguage(savedLang);
+
+            // Add click events to language dropdown
+            document.querySelectorAll('.lang-dropdown a').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const selectedLang = this.getAttribute('data-lang');
+                    switchLanguage(selectedLang);
+                    // Close dropdown after selection
+                    document.querySelector('.lang-dropdown').classList.remove('active');
+                });
+            });
+
+            // Toggle dropdown when button is clicked
+            const langBtn = document.querySelector('.lang-btn');
+            if (langBtn) {
+                langBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    document.querySelector('.lang-dropdown').classList.toggle('active');
+                });
+            }
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function () {
+                document.querySelector('.lang-dropdown').classList.remove('active');
+            });
+
+            // Mobile menu toggle
+
+        });
         // Accordion functionality
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
@@ -1006,4 +1310,3 @@
 </body>
 
 </html>
-
