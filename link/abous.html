@@ -7,7 +7,7 @@
     <title>About Us </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Museo+Sans:wght@300;400;700&family=Consolas&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Kalam:wght@300;400;700&display=swap");
 
@@ -73,6 +73,191 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
+        .top-bar {
+            background: linear-gradient(135deg, #1a2a3a 0%, #3a4a5a 100%);
+            padding: -10px 0;
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info span {
+            margin-right: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-icons1 a {
+            margin-left: 15px;
+            color: #fff;
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons1 a:hover {
+            transform: translateY(-3px);
+            color: #c19d56;
+        }
+
+        @media (max-width: 576px) {
+            .top-bar-content {
+                flex-direction: column;
+                padding-bottom: 23rem;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .social-icons {
+                display: none;
+            }
+        }
+
+        .language-switcher {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-btn i {
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: none;
+            min-width: 150px;
+        }
+
+        .lang-dropdown.active {
+            display: block;
+        }
+
+        .lang-dropdown a {
+            display: block;
+            padding: 8px 15px;
+            color: #333;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .lang-dropdown a:hover {
+            background: #f5f5f5;
+        }
+
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .lang-dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .lang-dropdown-content a {
+            color: var(--black);
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .lang-dropdown-content a:hover {
+            background-color: var(--light-gray);
+        }
+
+        .language-dropdown:hover .lang-dropdown-content {
+            display: block;
+        }
+
+        .language-dropdown.active .lang-dropdown-content {
+            display: block;
+        }
+
+        .language-dropdown:hover .lang-dropdown-content,
+        .language-dropdown.active .lang-dropdown-content {
+            display: block;
+        }
+
+
+        /* Adjust header styles for language switcher */
+
+
+        @media (max-width: 992px) {
+            .language-switcher {
+                margin-left: 0;
+                margin-top: 8px;
+            }
+
+            .lang-btn {
+                color: var(--primary-color);
+                border-color: var(--primary-color);
+            }
+        }
+
+        @media (max-width: 1124px) {
+            .logo {
+                margin-left: 3rem;
+            }
+
+            .top-bar {
+                height: 2.6rem;
+            }
+        }
+
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -135,20 +320,7 @@
             color: #e67e22;
         }
 
-        .quotes {
-            background-color: #e67e22;
-            color: white;
-            padding: 8px 18px;
-            border-radius: 9px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            margin-left: 8rem;
-        }
 
-        .quotes:hover {
-            background-color: #d35400;
-        }
 
         .mobile-menu {
             display: none;
@@ -168,7 +340,7 @@
             cursor: pointer;
         }
 
-        
+
         /* Safari animal silhouette decoration */
         .safari-silhouettes {
             position: absolute;
@@ -622,6 +794,7 @@
         .sticky-btn.phone {
             background-color: #d35400;
         }
+
         footer {
             background: linear-gradient(135deg, #1a2a3a 0%, #3a4a5a 100%);
             color: white;
@@ -690,8 +863,9 @@
             background: #3a4a5a;
             transform: translateY(-3px);
         }
+
         /* Responsive design */
-        @media (max-width: 768px) {
+        @media (max-width: 998px) {
             .nav-links {
                 position: fixed;
                 top: 70px;
@@ -705,6 +879,10 @@
                 padding-top: 30px;
                 transition: var(--transition);
                 box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .logo {
+                margin-left: 0.4rem;
             }
 
             .nav-links.active {
@@ -800,7 +978,21 @@
 <body>
     <header>
         <!-- Top Bar -->
-
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone-alt"></i> +255 784 084 200</span>
+                    <span><i class="fas fa-envelope"></i> info@trueafricaescape.com</span>
+                </div>
+                <div class="social-icons1">
+                    <a href="https://www.facebook.com/share/1EhkVSjmwq/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/trueafricaescape?igsh=MTZqMHBmbHl4N28ycw=="><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/255784084200"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
         <nav class="container">
             <div class="logos">
                 <img src="./logo/true africa 1.png" alt="True Africa Logo">
@@ -816,6 +1008,16 @@
                 <li><a href="FAQ.html">FAQ</a></li>
             </ul>
 
+            <div class="language-switcher">
+                <button class="lang-btn">English <i class="fas fa-chevron-down"></i></button>
+                <div class="lang-dropdown">
+                    <a href="#" data-lang="en">English</a>
+                    <a href="#" data-lang="sw">Swahili</a>
+                    <a href="#" data-lang="fr">French</a>
+                    <a href="#" data-lang="de">German</a>
+                    <a href="#" data-lang="es">Spanish</a>
+                </div>
+            </div>
 
             <button class="mobile-menu">
                 <i class="fas fa-bars"></i>
@@ -823,7 +1025,7 @@
         </nav>
     </header>
 
-  
+
     <section class="section">
         <div class="african-pattern"></div>
         <h2 class="section-title">Our Philosophy</h2>
@@ -1011,7 +1213,8 @@
             </div>
         </div>
     </section>
-     <div class="sticky-cta">
+
+    <div class="sticky-cta">
         <a href="https://wa.me/255784084200" class="sticky-btn whatsapp">
             <i class="fab fa-whatsapp"></i>
         </a>
@@ -1022,7 +1225,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-               <div class="footer-column">
+                <div class="footer-column">
                     <h3>Tanzania Treasures</h3>
                     <p>Your trusted guide to exploring the wonders of Tanzania. We provide comprehensive travel
                         information to help you plan your perfect safari and beach adventure.</p>
@@ -1035,7 +1238,7 @@
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
-                    <a href="/index.html">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="destination1.html">destination</a>
                     <a href="info.html">info</a>
                     <a href="abous.html">about us</a>
@@ -1044,7 +1247,7 @@
                 <div class="footer-column">
                     <h3>Contact Us</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Arusha, Tanzania</p>
-                    <p><i class="fas fa-phone"></i> +255 789 012 345</p>
+                    <p><i class="fas fa-phone"></i> +255 784 084 200</p>
                     <p><i class="fas fa-envelope"></i> info@trueafricaescape.com</p>
                     <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 5PM EAT</p>
                 </div>
@@ -1054,35 +1257,106 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', function () {
-                const mobileMenuBtn = document.querySelector('.mobile-menu');
-                const navLinks = document.querySelector('.nav-links');
+        const langData = {
+            'en': 'English',
+            'sw': 'Swahili',
+            'fr': 'French',
+            'de': 'German',
+            'es': 'Spanish'
+        };
 
-                mobileMenuBtn.addEventListener('click', function () {
-                    navLinks.classList.toggle('active');
+        let currentLang = 'en';
 
-                    // Change icon between hamburger and X
-                    const icon = this.querySelector('i');
-                    if (navLinks.classList.contains('active')) {
-                        icon.classList.remove('fa-bars');
-                        icon.classList.add('fa-times');
+        // Function to switch language
+        function switchLanguage(lang) {
+            currentLang = lang;
+
+            // Update all elements with data attributes
+            document.querySelectorAll('[data-' + lang + ']').forEach(element => {
+                const text = element.getAttribute('data-' + lang);
+                if (text) {
+                    // Handle dropdown items that include icons
+                    if (element.querySelector('i.fa-chevron-down')) {
+                        element.innerHTML = text + ' <i class="fas fa-chevron-down"></i>';
                     } else {
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
+                        element.textContent = text;
                     }
-                });
+                }
+            });
 
-                // Close menu when a link is clicked
-                document.querySelectorAll('.nav-links a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        navLinks.classList.remove('active');
-                        const icon = mobileMenuBtn.querySelector('i');
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    });
+            // Update language button
+            const langBtn = document.querySelector('.lang-btn');
+            if (langBtn) {
+                langBtn.innerHTML = langData[lang] + ' <i class="fas fa-chevron-down"></i>';
+            }
+
+            // Store selection in localStorage
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Initialize language switcher
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get saved language or default to English
+            const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+            switchLanguage(savedLang);
+
+            // Add click events to language dropdown
+            document.querySelectorAll('.lang-dropdown a').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const selectedLang = this.getAttribute('data-lang');
+                    switchLanguage(selectedLang);
+                    // Close dropdown after selection
+                    document.querySelector('.lang-dropdown').classList.remove('active');
                 });
             });
+
+            // Toggle dropdown when button is clicked
+            const langBtn = document.querySelector('.lang-btn');
+            if (langBtn) {
+                langBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    document.querySelector('.lang-dropdown').classList.toggle('active');
+                });
+            }
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function () {
+                document.querySelector('.lang-dropdown').classList.remove('active');
+            });
+
+            // Mobile menu toggle
+
+        });
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenuBtn.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+
+                // Change icon between hamburger and X
+                const icon = this.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        });
 
         // Animation for elements when they come into view
         document.addEventListener('DOMContentLoaded', function () {
@@ -1101,10 +1375,9 @@
             });
 
             // Add decorative elements dynamically
-          
+
         });
     </script>
 </body>
 
 </html>
-
