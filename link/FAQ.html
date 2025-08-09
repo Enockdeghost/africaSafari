@@ -355,23 +355,14 @@
         }
 
         .footer-column h3 {
-            color: #d2691e;
+        color: #d2691e;
             margin-bottom: 20px;
             font-size: 1.3rem;
             position: relative;
             padding-bottom: 10px;
         }
 
-        .footer-column h3:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: var(--savanna-gold);
-        }
-
+    
         .footer-column p,
         .footer-column a {
             color: #ffffff;
@@ -429,16 +420,20 @@
             }
         }
 
-        /* Responsive design */
         @media (max-width: 1124px) {
             .logo {
-                margin-left: 3rem;
+                margin-left: -2rem;
             }
 
             .top-bar {
                 height: 2.6rem;
             }
+
+            .lang-btn {
+                margin-right: 0.9rem;
+            }
         }
+
 
         @media (max-width: 998px) {
             .nav-links {
@@ -461,12 +456,17 @@
             .nav-links.active {
                 left: 0;
             }
-
-            .logo {
-                margin-left: 0.4rem;
+            header .logos img{
+                height: 5rem;
+                width: 5rem;
+            }
+            header {
+                padding-bottom: 1rem;
+            }
+            .logo{
+                font-size: 1.6rem;
             }
 
-           
             .nav-links li {
                 margin: 15px 0;
             }
@@ -545,6 +545,7 @@
         .animate {
             animation: fadeIn 0.8s ease forwards;
         }
+
         .translate-notification {
             position: fixed;
             bottom: 20px;
@@ -563,19 +564,19 @@
             max-width: 90%;
             backdrop-filter: blur(5px);
         }
-        
+
         .translate-notification i {
             margin-right: 12px;
             font-size: 20px;
             color: #d2691e;
         }
-        
+
         .translate-notification .text {
             font-family: 'Museo Sans', sans-serif;
             font-size: 15px;
             margin-right: 15px;
         }
-        
+
         .translate-notification .translate-btn {
             background: #d2691e;
             color: white;
@@ -588,12 +589,12 @@
             transition: all 0.3s;
             font-family: 'Museo Sans', sans-serif;
         }
-        
+
         .translate-notification .translate-btn:hover {
             background: #e67e22;
             transform: translateY(-2px);
         }
-        
+
         .translate-notification .close-btn {
             background: transparent;
             border: none;
@@ -603,23 +604,24 @@
             margin-left: 15px;
             transition: color 0.3s;
         }
-        
+
         .translate-notification .close-btn:hover {
             color: white;
         }
-        
+
         /* Animation */
         @keyframes slideUp {
             from {
                 bottom: -50px;
                 opacity: 0;
             }
+
             to {
                 bottom: 20px;
                 opacity: 1;
             }
         }
-        
+
         /* Google Translate Widget Styling */
         .goog-te-combo {
             padding: 10px 15px;
@@ -635,17 +637,18 @@
             max-width: 220px;
             margin: 15px 0;
         }
-        
+
         .goog-te-combo option {
             background: #1a2a3a;
             color: white;
         }
-        
+
         /* Hide Google branding */
-        .goog-logo-link, .goog-te-gadget span {
+        .goog-logo-link,
+        .goog-te-gadget span {
             display: none !important;
         }
-        
+
         /* Widget container */
         .translate-widget-container {
             position: fixed;
@@ -664,29 +667,40 @@
             animation: fadeIn 0.4s ease-out;
             text-align: center;
         }
-        
+
         .translate-widget-container.active {
             display: block;
         }
-        
+
         .translate-widget-container h3 {
             color: #d2691e;
             margin-bottom: 15px;
             font-family: 'Museo Sans', sans-serif;
             font-size: 18px;
         }
-        
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateX(-50%) translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(-50%) translateY(0);
             }
         }
-        
+        @media (max-width: 414px) {
+            .logo{
+                font-size: 1.3rem;
+            }
+            
+        }
+        @media (max-width: 430px) {
+            .logo{
+                font-size: 1.3rem;
+            }
+        }
     </style>
 </head>
 
@@ -722,12 +736,13 @@
                 <li><a href="contant.html">Contant</a></li>
                 <li><a href="FAQ.html">FAQ</a></li>
             </ul>
-         
+
             <button class="mobile-menu">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
     </header>
+
     <div class="translate-notification">
         <i class="fas fa-language"></i>
         <div class="text">Translate this page?</div>
@@ -736,7 +751,7 @@
             <i class="fas fa-times"></i>
         </button>
     </div>
-    
+
     <!-- Google Translate Widget Container -->
     <div class="translate-widget-container" id="translateWidget">
         <h3>Select Language</h3>
@@ -1157,7 +1172,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Tanzania Treasures</h3>
+                    <h3>True Africa Escape</h3>
                     <p>Your trusted guide to exploring the wonders of Tanzania. We provide comprehensive travel
                         information to help you plan your perfect safari and beach adventure.</p>
                     <div class="social-icons1">
@@ -1196,112 +1211,42 @@
                 'google_translate_element'
             );
         }
-        
+
         // Load Google Translate script
         function loadGoogleTranslate() {
             const script = document.createElement('script');
             script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
             document.head.appendChild(script);
         }
-        
+
         // Event listeners
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Load Google Translate
             loadGoogleTranslate();
-            
+
             // Show translate widget when button is clicked
-            document.getElementById('showTranslateWidget').addEventListener('click', function() {
+            document.getElementById('showTranslateWidget').addEventListener('click', function () {
                 document.getElementById('translateWidget').classList.add('active');
             });
-            
+
             // Close notification
-            document.getElementById('closeTranslateNotification').addEventListener('click', function() {
+            document.getElementById('closeTranslateNotification').addEventListener('click', function () {
                 document.querySelector('.translate-notification').style.display = 'none';
             });
-            
+
             // Close widget when clicking outside
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 const widget = document.getElementById('translateWidget');
-                if (widget.classList.contains('active') && 
-                    !widget.contains(e.target) && 
+                if (widget.classList.contains('active') &&
+                    !widget.contains(e.target) &&
                     e.target.id !== 'showTranslateWidget') {
                     widget.classList.remove('active');
                 }
             });
         });
 
-        const langData = {
-            'en': 'English',
-            'sw': 'Swahili',
-            'fr': 'French',
-            'de': 'German',
-            'es': 'Spanish'
-        };
-
-        let currentLang = 'en';
-
-        // Function to switch language
-        function switchLanguage(lang) {
-            currentLang = lang;
-
-            // Update all elements with data attributes
-            document.querySelectorAll('[data-' + lang + ']').forEach(element => {
-                const text = element.getAttribute('data-' + lang);
-                if (text) {
-                    // Handle dropdown items that include icons
-                    if (element.querySelector('i.fa-chevron-down')) {
-                        element.innerHTML = text + ' <i class="fas fa-chevron-down"></i>';
-                    } else {
-                        element.textContent = text;
-                    }
-                }
-            });
-
-            // Update language button
-            const langBtn = document.querySelector('.lang-btn');
-            if (langBtn) {
-                langBtn.innerHTML = langData[lang] + ' <i class="fas fa-chevron-down"></i>';
-            }
-
-            // Store selection in localStorage
-            localStorage.setItem('selectedLanguage', lang);
-        }
-
-        // Initialize language switcher
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get saved language or default to English
-            const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-            switchLanguage(savedLang);
-
-            // Add click events to language dropdown
-            document.querySelectorAll('.lang-dropdown a').forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const selectedLang = this.getAttribute('data-lang');
-                    switchLanguage(selectedLang);
-                    // Close dropdown after selection
-                    document.querySelector('.lang-dropdown').classList.remove('active');
-                });
-            });
-
-            // Toggle dropdown when button is clicked
-            const langBtn = document.querySelector('.lang-btn');
-            if (langBtn) {
-                langBtn.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    document.querySelector('.lang-dropdown').classList.toggle('active');
-                });
-            }
-
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function () {
-                document.querySelector('.lang-dropdown').classList.remove('active');
-            });
-
-            // Mobile menu toggle
-
-        });
-        // Accordion functionality
+      
+      
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const answer = question.nextElementSibling;
