@@ -226,13 +226,13 @@
             color: #d2691e;
         }
 
-        .social-icons {
+        .social-icons2 {
             display: flex;
             gap: 15px;
             margin-top: 15px;
         }
 
-        .social-icons a {
+        .social-icons2 a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -245,7 +245,7 @@
             transition: all 0.3s;
         }
 
-        .social-icons a:hover {
+        .social-icons2 a:hover {
             background: #3a4a5a;
             transform: translateY(-3px);
         }
@@ -464,7 +464,7 @@
 
         @media (max-width: 1124px) {
             .logo {
-                margin-left: 3rem;
+                margin-left: -2rem;
             }
 
             .top-bar {
@@ -476,11 +476,31 @@
             }
         }
 
+        @media (max-width: 768px) {
+            .logo {
+                margin-left: 0.4rem;
+            }
+
+
+        }
+
+        @media (max-width: 414px) {
+            .logo {
+                font-size: 1.3rem;
+            }
+
+        }
+
+        @media (max-width: 430px) {
+            .logo {
+                font-size: 1.3rem;
+            }
+        }
 
         @media (max-width: 998px) {
             .nav-links {
                 position: fixed;
-                top: 7rem;
+                top: 9rem;
                 left: -100%;
                 width: 80%;
                 height: calc(100vh - 70px);
@@ -491,6 +511,19 @@
                 padding-top: 30px;
                 transition: var(--transition);
                 box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            header .logos img {
+                height: 5rem;
+                width: 5rem;
+            }
+
+            header {
+                padding-bottom: 1rem;
+            }
+
+            .logo {
+                font-size: 1.6rem;
             }
 
             .nav-links.active {
@@ -563,6 +596,9 @@
                 font-size: 1.2rem;
             }
         }
+        .single{
+            padding-top: 8rem;
+        }
     </style>
 </head>
 
@@ -631,7 +667,7 @@
     </div>
     <main class="container">
         <!-- General Information Sections -->
-        <section>
+        <section class="single">
             <h2>General Overview</h2>
             <ul>
                 <li><strong>Location:</strong> East Africa, bordered by Kenya, Uganda, Rwanda, Burundi, DRC, Zambia,
@@ -1103,7 +1139,7 @@
                     <h3>True Africa Escape</h3>
                     <p>Your trusted guide to exploring the wonders of Tanzania. We provide comprehensive travel
                         information to help you plan your perfect safari and beach adventure.</p>
-                    <div class="social-icons">
+                    <div class="social-icons2">
                         <a href="https://www.facebook.com/share/1EhkVSjmwq/"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/trueafricaescape?igsh=MTZqMHBmbHl4N28ycw=="><i
                                 class="fab fa-instagram"></i></a>
@@ -1172,7 +1208,7 @@
         });
 
 
-        
+
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuBtn = document.querySelector('.mobile-menu');
             const navLinks = document.querySelector('.nav-links');
