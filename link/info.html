@@ -317,138 +317,7 @@
             margin: 1rem 0;
         }
 
-        .translate-notification {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(26, 42, 58, 0.95);
-            border: 2px solid #d2691e;
-            border-radius: 30px;
-            padding: 12px 25px;
-            color: white;
-            display: flex;
-            align-items: center;
-            z-index: 10000;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            animation: slideUp 0.5s ease-out;
-            max-width: 90%;
-            backdrop-filter: blur(5px);
-        }
 
-        .translate-notification i {
-            margin-right: 12px;
-            font-size: 20px;
-            color: #d2691e;
-        }
-
-        .translate-notification .text {
-            font-family: 'Museo Sans', sans-serif;
-            font-size: 15px;
-            margin-right: 15px;
-        }
-
-        .translate-notification .translate-btn {
-            background: #d2691e;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            padding: 8px 15px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'Museo Sans', sans-serif;
-        }
-
-        .translate-notification .translate-btn:hover {
-            background: #e67e22;
-            transform: translateY(-2px);
-        }
-
-        .translate-notification .close-btn {
-            background: transparent;
-            border: none;
-            color: #aaa;
-            font-size: 18px;
-            cursor: pointer;
-            margin-left: 15px;
-            transition: color 0.3s;
-        }
-
-        .translate-notification .close-btn:hover {
-            color: white;
-        }
-
-        /* Animation */
-        @keyframes slideUp {
-            from {
-                bottom: -50px;
-                opacity: 0;
-            }
-
-            to {
-                bottom: 20px;
-                opacity: 1;
-            }
-        }
-
-        /* Google Translate Widget Styling */
-        .goog-te-combo {
-            padding: 10px 15px;
-            border-radius: 30px;
-            border: 1px solid #d2691e;
-            background-color: rgba(26, 42, 58, 0.95);
-            color: white;
-            cursor: pointer;
-            font-size: 15px;
-            font-family: "Museo Sans", sans-serif;
-            outline: none;
-            width: 100%;
-            max-width: 220px;
-            margin: 15px 0;
-        }
-
-        .goog-te-combo option {
-            background: #1a2a3a;
-            color: white;
-        }
-
-        /* Hide Google branding */
-        .goog-logo-link,
-        .goog-te-gadget span {
-            display: none !important;
-        }
-
-        /* Widget container */
-        .translate-widget-container {
-            position: fixed;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(26, 42, 58, 0.95);
-            border-radius: 15px;
-            padding: 20px;
-            z-index: 10000;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-            display: none;
-            width: 90%;
-            max-width: 300px;
-            backdrop-filter: blur(10px);
-            animation: fadeIn 0.4s ease-out;
-            text-align: center;
-        }
-
-        .translate-widget-container.active {
-            display: block;
-        }
-
-        .translate-widget-container h3 {
-            color: #d2691e;
-            margin-bottom: 15px;
-            font-family: 'Museo Sans', sans-serif;
-            font-size: 18px;
-        }
 
         @keyframes fadeIn {
             from {
@@ -596,8 +465,145 @@
                 font-size: 1.2rem;
             }
         }
-        .single{
+
+        .single {
             padding-top: 8rem;
+        }
+
+        .language-switcher {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-btn i {
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: none;
+            min-width: 150px;
+        }
+
+        .lang-dropdown.active {
+            display: block;
+        }
+
+        .lang-dropdown a {
+            display: block;
+            padding: 8px 15px;
+            color: #333;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .lang-dropdown a:hover {
+            background: #f5f5f5;
+        }
+
+        /* Adjust header styles for language switcher */
+
+
+        @media (max-width: 992px) {
+            .language-switcher {
+                margin-left: 0;
+                margin-top: 8px;
+            }
+
+            .lang-btn {
+                color: #333;
+                border-color: #ddd;
+            }
+            .logo{
+                font-size: 1.2rem;
+            }
+            
+            .mobile-menu{
+                margin-right:  4rem;
+            }
+        }
+
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .lang-dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .lang-dropdown-content a {
+            color: var(--black);
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .lang-dropdown-content a:hover {
+            background-color: var(--light-gray);
+        }
+
+        .language-dropdown:hover .lang-dropdown-content {
+            display: block;
+        }
+
+        .language-dropdown.active .lang-dropdown-content {
+            display: block;
+        }
+
+        .language-dropdown:hover .lang-dropdown-content,
+        .language-dropdown.active .lang-dropdown-content {
+            display: block;
         }
     </style>
 </head>
@@ -634,6 +640,20 @@
                 <li><a href="contant.html">Contant</a></li>
                 <li><a href="FAQ.html">FAQ</a></li>
             </ul>
+            <ul>
+
+                <div class="language-switcher">
+                    <button class="lang-btn">English <i class="fas fa-chevron-down"></i></button>
+                    <div class="lang-dropdown">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="sw">Swahili</a>
+                        <a href="#" data-lang="fr">French</a>
+                        <a href="#" data-lang="de">German</a>
+                        <a href="#" data-lang="es">Spanish</a>
+                    </div>
+                </div>
+
+            </ul>
 
 
             <button class="mobile-menu">
@@ -643,489 +663,806 @@
 
 
     </header>
-    <div class="translate-notification">
-        <i class="fas fa-language"></i>
-        <div class="text">Translate this page?</div>
-        <button class="translate-btn" id="showTranslateWidget">Translate</button>
-        <button class="close-btn" id="closeTranslateNotification">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
 
-    <!-- Google Translate Widget Container -->
-    <div class="translate-widget-container" id="translateWidget">
-        <h3>Select Language</h3>
-        <div id="google_translate_element"></div>
-    </div>
+
     <div class="sticky-cta">
-        <a href="https://wa.me/255123456789" class="sticky-btn whatsapp">
+        <a href="https://wa.me/255784084200" class="sticky-btn whatsapp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="tel:+255123456789" class="sticky-btn phone">
+        <a href="tel:+255784084200" class="sticky-btn phone">
             <i class="fas fa-phone"></i>
         </a>
     </div>
     <main class="container">
         <!-- General Information Sections -->
         <section class="single">
-            <h2>General Overview</h2>
+            <h2 data-en="General Overview" data-sw="Muhtasari wa Jumla" data-fr="Aperçu général"
+                data-de="Allgemeine Übersicht" data-es="Visión general">
+                General Overview
+            </h2>
             <ul>
-                <li><strong>Location:</strong> East Africa, bordered by Kenya, Uganda, Rwanda, Burundi, DRC, Zambia,
-                    Malawi, Mozambique, and the Indian Ocean</li>
-                <li><strong>Capital:</strong> Dodoma (largest city Dar es Salaam)</li>
-                <li><strong>Official Languages:</strong> Swahili and English</li>
-                <li><strong>Currency:</strong> Tanzanian Shilling (TZS)</li>
-                <li><strong>Time Zone:</strong> East Africa Time (EAT), UTC +3</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Top Tourist Attractions</h2>
-            <ul>
-                <li><strong>Serengeti National Park:</strong> Famous for the Great Migration and abundant wildlife</li>
-                <li><strong>Ngorongoro Crater:</strong> Unique volcanic crater with dense wildlife populations</li>
-                <li><strong>Mount Kilimanjaro:</strong> Africa's highest peak, popular trekking destination</li>
-                <li><strong>Zanzibar Archipelago:</strong> White sandy beaches, rich culture, and historic Stone Town
+                <li><strong data-en="Location:" data-sw="Mahali:" data-fr="Emplacement:" data-de="Lage:"
+                        data-es="Ubicación:">Location:</strong>
+                    <span
+                        data-en="East Africa, bordered by Kenya, Uganda, Rwanda, Burundi, DRC, Zambia, Malawi, Mozambique, and the Indian Ocean"
+                        data-sw="Afrika Mashariki, inapakana na Kenya, Uganda, Rwanda, Burundi, DRC, Zambia, Malawi, Msumbiji, na Bahari ya Hindi"
+                        data-fr="Afrique de l'Est, bordée par le Kenya, l'Ouganda, le Rwanda, le Burundi, la RDC, la Zambie, le Malawi, le Mozambique et l'océan Indien"
+                        data-de="Ostafrika, grenzt an Kenia, Uganda, Ruanda, Burundi, DRK, Sambia, Malawi, Mosambik und den Indischen Ozean"
+                        data-es="África Oriental, limita con Kenia, Uganda, Ruanda, Burundi, RDC, Zambia, Malawi, Mozambique y el Océano Índico">
+                        East Africa, bordered by Kenya, Uganda, Rwanda, Burundi, DRC, Zambia, Malawi, Mozambique, and
+                        the Indian Ocean
+                    </span>
                 </li>
-                <li><strong>Tarangire National Park:</strong> Known for large elephant herds and baobab trees</li>
-                <li><strong>Lake Manyara National Park:</strong> Famous for tree-climbing lions and flamingos</li>
-                <li><strong>Selous Game Reserve:</strong> One of the largest faunal reserves in the world</li>
-                <li><strong>Ruaha National Park:</strong> Untouched wilderness and large prides of lions</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2> Best Time to Visit</h2>
-            <ul>
-                <li><strong>Dry Season (June to October):</strong> Best for safaris and trekking (cooler, less rain)
+                <li><strong data-en="Capital:" data-sw="Mji Mkuu:" data-fr="Capitale:" data-de="Hauptstadt:"
+                        data-es="Capital:">Capital:</strong>
+                    <span data-en="Dodoma (largest city Dar es Salaam)"
+                        data-sw="Dodoma (jiji kubwa zaidi Dar es Salaam)"
+                        data-fr="Dodoma (plus grande ville Dar es Salaam)" data-de="Dodoma (größte Stadt Dar es Salaam)"
+                        data-es="Dodoma (ciudad más grande Dar es Salaam)">
+                        Dodoma (largest city Dar es Salaam)
+                    </span>
                 </li>
-                <li><strong>Short Rainy Season (Nov-Dec):</strong> Wildlife viewing remains good</li>
-                <li><strong>Long Rainy Season (March-May):</strong> Less ideal for travel due to heavy rains</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2> Visa Requirements</h2>
-            <ul>
-                <li>Most visitors require a visa (can be obtained on arrival or online e-visa)</li>
-                <li>Passport must be valid for at least 6 months from date of entry</li>
-                <li>Visa fees vary by nationality</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Health & Safety</h2>
-            <ul>
-                <li><strong>Vaccinations:</strong> Yellow fever certificate required if arriving from endemic countries
+                <li><strong data-en="Official Languages:" data-sw="Lugha Rasmi:" data-fr="Langues officielles:"
+                        data-de="Amtssprachen:" data-es="Idiomas oficiales:">Official Languages:</strong>
+                    <span data-en="Swahili and English" data-sw="Kiswahili na Kiingereza" data-fr="Swahili et anglais"
+                        data-de="Suaheli und Englisch" data-es="Suajili e inglés">
+                        Swahili and English
+                    </span>
                 </li>
-                <li><strong>Recommended:</strong> Hepatitis A, Typhoid, Tetanus, Malaria prophylaxis</li>
-                <li>Use insect repellent and mosquito nets to prevent malaria</li>
-                <li>Drink bottled or purified water only</li>
-                <li>Basic medical facilities available in cities; carry travel insurance</li>
+                <li><strong data-en="Currency:" data-sw="Sarafu:" data-fr="Devise:" data-de="Währung:"
+                        data-es="Moneda:">Currency:</strong>
+                    <span data-en="Tanzanian Shilling (TZS)" data-sw="Shilingi ya Tanzania (TZS)"
+                        data-fr="Shilling tanzanien (TZS)" data-de="Tansania-Schilling (TZS)"
+                        data-es="Chelín tanzano (TZS)">
+                        Tanzanian Shilling (TZS)
+                    </span>
+                </li>
+                <li><strong data-en="Time Zone:" data-sw="Saa za Eneo:" data-fr="Fuseau horaire:" data-de="Zeitzone:"
+                        data-es="Zona horaria:">Time Zone:</strong>
+                    <span data-en="East Africa Time (EAT), UTC +3" data-sw="Saa za Afrika Mashariki (EAT), UTC +3"
+                        data-fr="Heure de l'Afrique de l'Est (EAT), UTC +3" data-de="Ostafrikanische Zeit (EAT), UTC +3"
+                        data-es="Hora de África Oriental (EAT), UTC +3">
+                        East Africa Time (EAT), UTC +3
+                    </span>
+                </li>
             </ul>
         </section>
 
         <section>
-            <h2>Transportation</h2>
+            <h2 data-en="Top Tourist Attractions" data-sw="Vivutio Vikuu vya Utalii"
+                data-fr="Principales attractions touristiques" data-de="Top-Touristenattraktionen"
+                data-es="Principales atracciones turísticas">
+                Top Tourist Attractions
+            </h2>
             <ul>
-                <li><strong>Air:</strong> Kilimanjaro International Airport (KIA), Julius Nyerere International Airport
-                    (Dar es Salaam)</li>
-                <li><strong>Road:</strong> Well-connected by buses and private transfers; roads can be rough in rural
-                    areas</li>
-                <li><strong>Safari Vehicles:</strong> 4x4 vehicles common for game drives</li>
-                <li><strong>Boats:</strong> Used for Zanzibar and lake tours</li>
+                <li><strong data-en="Serengeti National Park:" data-sw="Hifadhi ya Taifa ya Serengeti:"
+                        data-fr="Parc national du Serengeti:" data-de="Serengeti-Nationalpark:"
+                        data-es="Parque Nacional del Serengeti:">Serengeti National Park:</strong>
+                    <span data-en="Famous for the Great Migration and abundant wildlife"
+                        data-sw="Maarufu kwa Uhamiaji Mkuu na wanyamapori wengi"
+                        data-fr="Célèbre pour la Grande Migration et une faune abondante"
+                        data-de="Berühmt für die Große Migration und reiche Tierwelt"
+                        data-es="Famoso por la Gran Migración y la abundante vida silvestre">
+                        Famous for the Great Migration and abundant wildlife
+                    </span>
+                </li>
+                <li><strong data-en="Ngorongoro Crater:" data-sw="Kraters ya Ngorongoro:"
+                        data-fr="Cratère du Ngorongoro:" data-de="Ngorongoro-Krater:"
+                        data-es="Cráter del Ngorongoro:">Ngorongoro Crater:</strong>
+                    <span data-en="Unique volcanic crater with dense wildlife populations"
+                        data-sw="Kraters ya volkano ya kipekee yenye wanyama wengi"
+                        data-fr="Cratère volcanique unique avec des populations animales denses"
+                        data-de="Einzigartiger Vulkankrater mit dichter Tierpopulation"
+                        data-es="Cráter volcánico único con poblaciones densas de vida silvestre">
+                        Unique volcanic crater with dense wildlife populations
+                    </span>
+                </li>
+                <li><strong data-en="Mount Kilimanjaro:" data-sw="Mlima Kilimanjaro:" data-fr="Mont Kilimandjaro:"
+                        data-de="Mount Kilimanjaro:" data-es="Monte Kilimanjaro:">Mount Kilimanjaro:</strong>
+                    <span data-en="Africa's highest peak, popular trekking destination"
+                        data-sw="Kilele cha juu zaidi Afrika, maarufu kwa kupanda"
+                        data-fr="Plus haut sommet d'Afrique, destination de trekking populaire"
+                        data-de="Afrikas höchster Gipfel, beliebtes Trekkingziel"
+                        data-es="El pico más alto de África, destino popular de senderismo">
+                        Africa's highest peak, popular trekking destination
+                    </span>
+                </li>
+                <li><strong data-en="Zanzibar Archipelago:" data-sw="Visiwa vya Zanzibar:"
+                        data-fr="Archipel de Zanzibar:" data-de="Sansibar-Archipel:"
+                        data-es="Archipiélago de Zanzíbar:">Zanzibar Archipelago:</strong>
+                    <span data-en="White sandy beaches, rich culture, and historic Stone Town"
+                        data-sw="Fukwe za mchanga mweupe, utamaduni tajiri, na Mji Mkongwe wa kihistoria"
+                        data-fr="Plages de sable blanc, culture riche et ville historique de Stone Town"
+                        data-de="Weiße Sandstrände, reiche Kultur und historische Stein-Stadt"
+                        data-es="Playas de arena blanca, rica cultura y la histórica Ciudad de Piedra">
+                        White sandy beaches, rich culture, and historic Stone Town
+                    </span>
+                </li>
+                <li><strong data-en="Tarangire National Park:" data-sw="Hifadhi ya Taifa ya Tarangire:"
+                        data-fr="Parc national de Tarangire:" data-de="Tarangire-Nationalpark:"
+                        data-es="Parque Nacional de Tarangire:">Tarangire National Park:</strong>
+                    <span data-en="Known for large elephant herds and baobab trees"
+                        data-sw="Inajulikana kwa makundi makubwa ya tembo na miti ya mibuyu"
+                        data-fr="Connu pour ses grands troupeaux d'éléphants et ses baobabs"
+                        data-de="Bekannt für große Elefantenherden und Affenbrotbäume"
+                        data-es="Conocido por sus grandes manadas de elefantes y baobabs">
+                        Known for large elephant herds and baobab trees
+                    </span>
+                </li>
+                <li><strong data-en="Lake Manyara National Park:" data-sw="Hifadhi ya Taifa ya Ziwa Manyara:"
+                        data-fr="Parc national du lac Manyara:" data-de="Lake-Manyara-Nationalpark:"
+                        data-es="Parque Nacional del Lago Manyara:">Lake Manyara National Park:</strong>
+                    <span data-en="Famous for tree-climbing lions and flamingos"
+                        data-sw="Maarufu kwa simba wanaopanda miti na flamingo"
+                        data-fr="Célèbre pour ses lions grimpeurs d'arbres et ses flamants"
+                        data-de="Berühmt für baumkletternde Löwen und Flamingos"
+                        data-es="Famoso por los leones trepadores y los flamencos">
+                        Famous for tree-climbing lions and flamingos
+                    </span>
+                </li>
+                <li><strong data-en="Selous Game Reserve:" data-sw="Hifadhi ya Wanyamapori ya Selous:"
+                        data-fr="Réserve de gibier de Selous:" data-de="Selous-Wildreservat:"
+                        data-es="Reserva de caza de Selous:">Selous Game Reserve:</strong>
+                    <span data-en="One of the largest faunal reserves in the world"
+                        data-sw="Moja ya hifadhi kubwa zaidi za wanyamapori duniani"
+                        data-fr="L'une des plus grandes réserves fauniques du monde"
+                        data-de="Eines der größten Faunarezervate der Welt"
+                        data-es="Una de las mayores reservas de fauna del mundo">
+                        One of the largest faunal reserves in the world
+                    </span>
+                </li>
+                <li><strong data-en="Ruaha National Park:" data-sw="Hifadhi ya Taifa ya Ruaha:"
+                        data-fr="Parc national de Ruaha:" data-de="Ruaha-Nationalpark:"
+                        data-es="Parque Nacional de Ruaha:">Ruaha National Park:</strong>
+                    <span data-en="Untouched wilderness and large prides of lions"
+                        data-sw="Porini isiyoguswa na makundi makubwa ya simba"
+                        data-fr="Nature vierge et grandes hardes de lions"
+                        data-de="Unberührte Wildnis und große Löwenrudel"
+                        data-es="Naturaleza virgen y grandes manadas de leones">
+                        Untouched wilderness and large prides of lions
+                    </span>
+                </li>
             </ul>
         </section>
 
         <section>
-            <h2> Accommodation</h2>
+            <h2 data-en="Best Time to Visit" data-sw="Muda Bora wa Kutembelea" data-fr="Meilleure période pour visiter"
+                data-de="Beste Reisezeit" data-es="Mejor época para visitar">
+                Best Time to Visit
+            </h2>
             <ul>
-                <li>Options range from budget hostels and campsites to luxury lodges and resorts</li>
-                <li>Popular safari lodges offer all-inclusive packages</li>
-                <li>Zanzibar has a wide range of beachfront resorts and boutique hotels</li>
+                <li><strong data-en="Dry Season (June to October):" data-sw="Msimu wa Kiangazi (Juni hadi Oktoba):"
+                        data-fr="Saison sèche (juin à octobre):" data-de="Trockenzeit (Juni bis Oktober):"
+                        data-es="Estación seca (junio a octubre):">
+                        Dry Season (June to October):</strong>
+                    <span data-en="Best for safaris and trekking (cooler, less rain)"
+                        data-sw="Bora kwa safari na kupanda (baridi zaidi, mvua kidogo)"
+                        data-fr="Idéal pour les safaris et la randonnée (plus frais, moins de pluie)"
+                        data-de="Am besten für Safaris und Trekking (kühler, weniger Regen)"
+                        data-es="Mejor para safaris y senderismo (más fresco, menos lluvia)">
+                        Best for safaris and trekking (cooler, less rain)
+                    </span>
+                </li>
+                <li><strong data-en="Short Rainy Season (Nov-Dec):" data-sw="Msimu Mfupi wa Mvua (Novemba-Desemba):"
+                        data-fr="Courte saison des pluies (nov-déc):" data-de="Kurze Regenzeit (Nov-Dez):"
+                        data-es="Temporada corta de lluvias (nov-dic):">
+                        Short Rainy Season (Nov-Dec):</strong>
+                    <span data-en="Wildlife viewing remains good" data-sw="Kutazama wanyama bado ni vizuri"
+                        data-fr="L'observation de la faune reste bonne" data-de="Tierbeobachtung bleibt gut"
+                        data-es="La observación de vida silvestre sigue siendo buena">
+                        Wildlife viewing remains good
+                    </span>
+                </li>
+                <li><strong data-en="Long Rainy Season (March-May):" data-sw="Msimu Mrefu wa Mvua (Machi-Mei):"
+                        data-fr="Longue saison des pluies (mars-mai):" data-de="Lange Regenzeit (März-Mai):"
+                        data-es="Temporada larga de lluvias (marzo-mayo):">
+                        Long Rainy Season (March-May):</strong>
+                    <span data-en="Less ideal for travel due to heavy rains"
+                        data-sw="Sio bora sana kwa safari kutokana na mvua kubwa"
+                        data-fr="Moins idéal pour voyager en raison des fortes pluies"
+                        data-de="Weniger ideal für Reisen aufgrund starker Regenfälle"
+                        data-es="Menos ideal para viajar debido a las fuertes lluvias">
+                        Less ideal for travel due to heavy rains
+                    </span>
+                </li>
             </ul>
         </section>
 
         <section>
-            <h2> Currency & Payments</h2>
+            <h2 data-en="Visa Requirements" data-sw="Masharti ya Viza" data-fr="Conditions de visa"
+                data-de="Visabestimmungen" data-es="Requisitos de visa">
+                Visa Requirements
+            </h2>
             <ul>
-                <li>Tanzanian Shilling (TZS) is the local currency</li>
-                <li>US Dollars widely accepted, especially in tourism areas</li>
-                <li>Credit cards accepted in major hotels and lodges but carry cash in rural areas</li>
-                <li>ATMs available in major towns</li>
+                <li data-en="Most visitors require a visa (can be obtained on arrival or online e-visa)"
+                    data-sw="Wageni wengi wanahitaji viza (inaweza kupatikana uwanjani au mtandaoni e-visa)"
+                    data-fr="La plupart des visiteurs ont besoin d'un visa (disponible à l'arrivée ou en ligne e-visa)"
+                    data-de="Die meisten Besucher benötigen ein Visum (bei Ankunft oder online e-Visum erhältlich)"
+                    data-es="La mayoría de visitantes requieren visa (puede obtenerse a la llegada o en línea e-visa)">
+                    Most visitors require a visa (can be obtained on arrival or online e-visa)
+                </li>
+                <li data-en="Passport must be valid for at least 6 months from date of entry"
+                    data-sw="Pasipoti lazima iwe halali kwa angalau miezi 6 tangu tarehe ya kuingia"
+                    data-fr="Le passeport doit être valide au moins 6 mois à compter de la date d'entrée"
+                    data-de="Der Reisepass muss ab dem Einreisedatum mindestens 6 Monate gültig sein"
+                    data-es="El pasaporte debe ser válido por al menos 6 meses desde la fecha de entrada">
+                    Passport must be valid for at least 6 months from date of entry
+                </li>
+                <li data-en="Visa fees vary by nationality" data-sw="Ada za viza hutofautiana kulingana na utaifa"
+                    data-fr="Les frais de visa varient selon la nationalité"
+                    data-de="Visagebühren variieren je nach Nationalität"
+                    data-es="Las tarifas de visa varían según la nacionalidad">
+                    Visa fees vary by nationality
+                </li>
             </ul>
         </section>
 
         <section>
-            <h2> Culture & Etiquette</h2>
+            <h2 data-en="Health & Safety" data-sw="Afya na Usalama" data-fr="Santé et sécurité"
+                data-de="Gesundheit & Sicherheit" data-es="Salud y seguridad">
+                Health & Safety
+            </h2>
             <ul>
-                <li>Tanzania is culturally diverse with over 120 ethnic groups</li>
-                <li>Dress modestly, especially in rural areas and Zanzibar (predominantly Muslim)</li>
-                <li>Greetings are important—shake hands or use local greetings</li>
-                <li>Ask permission before photographing people, especially in villages</li>
+                <li><strong data-en="Vaccinations:" data-sw="Chanjo:" data-fr="Vaccinations:" data-de="Impfungen:"
+                        data-es="Vacunas:">Vaccinations:</strong>
+                    <span data-en="Yellow fever certificate required if arriving from endemic countries"
+                        data-sw="Cheti cha homa ya manjano kinahitajika ukitoka nchi zenye ugonjwa huo"
+                        data-fr="Certificat de fièvre jaune requis si vous arrivez de pays endémiques"
+                        data-de="Gelbfieberzertifikat erforderlich, wenn aus Endemieländern angereist"
+                        data-es="Se requiere certificado de fiebre amarilla si llega de países endémicos">
+                        Yellow fever certificate required if arriving from endemic countries
+                    </span>
+                </li>
+                <li><strong data-en="Recommended:" data-sw="Inapendekezwa:" data-fr="Recommandé:" data-de="Empfohlen:"
+                        data-es="Recomendado:">Recommended:</strong>
+                    <span data-en="Hepatitis A, Typhoid, Tetanus, Malaria prophylaxis"
+                        data-sw="Hepatitis A, Typhoid, Pepopunda, Kinga ya Malaria"
+                        data-fr="Hépatite A, Typhoïde, Tétanos, prophylaxie contre le paludisme"
+                        data-de="Hepatitis A, Typhus, Tetanus, Malariaprophylaxe"
+                        data-es="Hepatitis A, Tifoidea, Tétanos, profilaxis contra la malaria">
+                        Hepatitis A, Typhoid, Tetanus, Malaria prophylaxis
+                    </span>
+                </li>
+                <li data-en="Use insect repellent and mosquito nets to prevent malaria"
+                    data-sw="Tumia dawa ya kuua mbu na vyandarua kujikinga na malaria"
+                    data-fr="Utilisez un répulsif anti-insectes et des moustiquaires pour prévenir le paludisme"
+                    data-de="Verwenden Sie Insektenschutzmittel und Moskitonetze zur Malariavorbeugung"
+                    data-es="Use repelente de insectos y mosquiteros para prevenir la malaria">
+                    Use insect repellent and mosquito nets to prevent malaria
+                </li>
+                <li data-en="Drink bottled or purified water only"
+                    data-sw="Kunywa maji ya chupa au yaliyosafishwa pekee"
+                    data-fr="Ne buvez que de l'eau en bouteille ou purifiée"
+                    data-de="Trinken Sie nur abgefülltes oder gereinigtes Wasser"
+                    data-es="Beba solo agua embotellada o purificada">
+                    Drink bottled or purified water only
+                </li>
+                <li data-en="Basic medical facilities available in cities; carry travel insurance"
+                    data-sw="Huduma za msingi za afya zinapatikana mijini; kuwa na bima ya safari"
+                    data-fr="Installations médicales de base disponibles en ville; prenez une assurance voyage"
+                    data-de="Grundlegende medizinische Einrichtungen in Städten verfügbar; Reiseversicherung mitführen"
+                    data-es="Instalaciones médicas básicas disponibles en ciudades; lleve seguro de viaje">
+                    Basic medical facilities available in cities; carry travel insurance
+                </li>
             </ul>
         </section>
 
-        <section>
-            <h2> Useful Tips</h2>
-            <ul>
-                <li>Learn basic Swahili phrases like "Jambo" (Hello), "Asante" (Thank you)</li>
-                <li>Carry photocopies of passport and travel documents</li>
-                <li>Respect wildlife and follow park rules</li>
-                <li>Bargaining is common in markets and small shops</li>
-                <li>Tipping guides and drivers is customary</li>
-            </ul>
-        </section>
 
         <!-- Detailed Guides Sections -->
         <section>
-            <h2>Safari Planning Guide</h2>
-            <h3>Tanzania Best Parks to Visit:</h3>
+            <h2 data-en="Safari Planning Guide" data-sw="Mwongozo wa Kupanga Safari"
+                data-fr="Guide de planification de safari" data-de="Safari-Planungsleitfaden"
+                data-es="Guía de planificación de safari">
+                Safari Planning Guide
+            </h2>
+
+            <h3 data-en="Tanzania Best Parks to Visit:" data-sw="Hifadhi Bora za Tanzania Kutembelea:"
+                data-fr="Meilleurs parcs de Tanzanie à visiter :" data-de="Beste Parks in Tansania zu besuchen:"
+                data-es="Mejores parques de Tanzania para visitar:">
+                Tanzania Best Parks to Visit:
+            </h3>
             <ul>
-                <li><strong>Serengeti National Park:</strong> Great Migration, Big Five</li>
-                <li><strong>Kilimanjaro Mountain</strong></li>
-                <li><strong>Ngorongoro Crater:</strong> High wildlife density in a unique ecosystem</li>
-                <li><strong>Tarangire National Park:</strong> Elephants, baobabs, fewer crowds</li>
-                <li><strong>Lake Manyara:</strong> Tree-climbing lions, flamingos</li>
-                <li><strong>Selous & Ruaha (Southern Circuit):</strong> Remote, untamed wilderness</li>
+                <li><strong data-en="Serengeti National Park:" data-sw="Hifadhi ya Taifa ya Serengeti:"
+                        data-fr="Parc national du Serengeti:" data-de="Serengeti-Nationalpark:"
+                        data-es="Parque Nacional del Serengeti:">
+                        Serengeti National Park:</strong>
+                    <span data-en="Great Migration, Big Five" data-sw="Uhamiaji Mkuu, Wanyama Wakubwa Watano"
+                        data-fr="Grande Migration, Big Five" data-de="Große Migration, Big Five"
+                        data-es="Gran Migración, Los Cinco Grandes">
+                        Great Migration, Big Five
+                    </span>
+                </li>
+                <li><strong data-en="Kilimanjaro Mountain" data-sw="Mlima Kilimanjaro" data-fr="Mont Kilimandjaro"
+                        data-de="Berg Kilimandscharo" data-es="Monte Kilimanjaro">
+                        Kilimanjaro Mountain</strong></li>
+                <li><strong data-en="Ngorongoro Crater:" data-sw="Kraters ya Ngorongoro:"
+                        data-fr="Cratère du Ngorongoro:" data-de="Ngorongoro-Krater:" data-es="Cráter del Ngorongoro:">
+                        Ngorongoro Crater:</strong>
+                    <span data-en="High wildlife density in a unique ecosystem"
+                        data-sw="Msongamano mkubwa wa wanyama katika mfumo wa kipekee wa ikolojia"
+                        data-fr="Haute densité de faune dans un écosystème unique"
+                        data-de="Hohe Wildtierdichte in einem einzigartigen Ökosystem"
+                        data-es="Alta densidad de vida silvestre en un ecosistema único">
+                        High wildlife density in a unique ecosystem
+                    </span>
+                </li>
+                <li><strong data-en="Tarangire National Park:" data-sw="Hifadhi ya Taifa ya Tarangire:"
+                        data-fr="Parc national de Tarangire:" data-de="Tarangire-Nationalpark:"
+                        data-es="Parque Nacional de Tarangire:">
+                        Tarangire National Park:</strong>
+                    <span data-en="Elephants, baobabs, fewer crowds" data-sw="Tembo, mibuyu, watu wachache"
+                        data-fr="Éléphants, baobabs, moins de foules"
+                        data-de="Elefanten, Baobabs, weniger Menschenmengen"
+                        data-es="Elefantes, baobabs, menos multitudes">
+                        Elephants, baobabs, fewer crowds
+                    </span>
+                </li>
+                <li><strong data-en="Lake Manyara:" data-sw="Ziwa Manyara:" data-fr="Lac Manyara:"
+                        data-de="Lake Manyara:" data-es="Lago Manyara:">
+                        Lake Manyara:</strong>
+                    <span data-en="Tree-climbing lions, flamingos" data-sw="Simba wanaopanda miti, flamingo"
+                        data-fr="Lions grimpeurs d'arbres, flamants" data-de="Baumkletternde Löwen, Flamingos"
+                        data-es="Leones trepadores, flamencos">
+                        Tree-climbing lions, flamingos
+                    </span>
+                </li>
+                <li><strong data-en="Selous & Ruaha (Southern Circuit):" data-sw="Selous & Ruaha (Mzunguko wa Kusini):"
+                        data-fr="Selous & Ruaha (Circuit Sud):" data-de="Selous & Ruaha (Südlicher Rundkurs):"
+                        data-es="Selous y Ruaha (Circuito Sur):">
+                        Selous & Ruaha (Southern Circuit):</strong>
+                    <span data-en="Remote, untamed wilderness" data-sw="Porini ya mbali na isiyoguswa"
+                        data-fr="Sauvage et isolé" data-de="Abgelegene, ungezähmte Wildnis"
+                        data-es="Naturaleza remota e indómita">
+                        Remote, untamed wilderness
+                    </span>
+                </li>
             </ul>
 
-            <h3>Recommended Safari Duration:</h3>
+            <h3 data-en="Recommended Safari Duration:" data-sw="Muda Unaopendekezwa wa Safari:"
+                data-fr="Durée recommandée du safari :" data-de="Empfohlene Safaridauer:"
+                data-es="Duración recomendada del safari:">
+                Recommended Safari Duration:
+            </h3>
             <ul>
-                <li><strong>4-5 days:</strong> Short safari</li>
-                <li><strong>7-10 days:</strong> Full Northern or Southern circuit</li>
-                <li><strong>12+ days:</strong> Luxury or photographic safaris</li>
+                <li><strong data-en="4-5 days:" data-sw="Siku 4-5:" data-fr="4-5 jours:" data-de="4-5 Tage:"
+                        data-es="4-5 días:">4-5 days:</strong>
+                    <span data-en="Short safari" data-sw="Safari fupi" data-fr="Court safari" data-de="Kurze Safari"
+                        data-es="Safari corta">Short safari</span>
+                </li>
+                <li><strong data-en="7-10 days:" data-sw="Siku 7-10:" data-fr="7-10 jours:" data-de="7-10 Tage:"
+                        data-es="7-10 días:">7-10 days:</strong>
+                    <span data-en="Full Northern or Southern circuit" data-sw="Mzunguko kamili wa Kaskazini au Kusini"
+                        data-fr="Circuit complet nord ou sud" data-de="Voller Nord- oder Südkurs"
+                        data-es="Circuito completo del norte o sur">Full Northern or Southern circuit</span>
+                </li>
+                <li><strong data-en="12+ days:" data-sw="Siku 12+:" data-fr="12+ jours:" data-de="12+ Tage:"
+                        data-es="12+ días:">12+ days:</strong>
+                    <span data-en="Luxury or photographic safaris" data-sw="Safari za kifahari au za kupiga picha"
+                        data-fr="Safaris de luxe ou photographiques" data-de="Luxus- oder Fotosafaris"
+                        data-es="Safaris de lujo o fotográficos">Luxury or photographic safaris</span>
+                </li>
             </ul>
 
-            <h3>Safari Types:</h3>
+            <h3 data-en="Safari Types:" data-sw="Aina za Safari:" data-fr="Types de safari :" data-de="Safaritypen:"
+                data-es="Tipos de safari:">
+                Safari Types:
+            </h3>
             <ul>
-                <li>Budget Camping Safari</li>
-                <li>Mid-range Lodge Safari</li>
-                <li>Luxury Fly-in Safari</li>
-                <li>Private Family or Honeymoon Safari</li>
-                <li>VIP</li>
-                <li>Special Groups Convoys</li>
+                <li data-en="Budget Camping Safari" data-sw="Safari ya Kambi ya Bajeti"
+                    data-fr="Safari camping économique" data-de="Budget-Camping-Safari"
+                    data-es="Safari de camping económico">Budget Camping Safari</li>
+                <li data-en="Mid-range Lodge Safari" data-sw="Safari ya Kati ya Lodge"
+                    data-fr="Safari en lodge de milieu de gamme" data-de="Mittelklasse-Lodge-Safari"
+                    data-es="Safari de lodge de gama media">Mid-range Lodge Safari</li>
+                <li data-en="Luxury Fly-in Safari" data-sw="Safari ya Ndege ya Kifahari"
+                    data-fr="Safari de luxe en avion" data-de="Luxus-Flugsafari" data-es="Safari de lujo en avión">
+                    Luxury Fly-in Safari</li>
+                <li data-en="Private Family or Honeymoon Safari" data-sw="Safari ya Familia au Honeymoon ya Kibinafsi"
+                    data-fr="Safari privée en famille ou en lune de miel"
+                    data-de="Private Familien- oder Flitterwochen-Safari"
+                    data-es="Safari privada familiar o de luna de miel">Private Family or Honeymoon Safari</li>
+                <li data-en="VIP" data-sw="VIP" data-fr="VIP" data-de="VIP" data-es="VIP">VIP</li>
+                <li data-en="Special Groups Convoys" data-sw="Misafara ya Makundi Maalum"
+                    data-fr="Convois de groupes spéciaux" data-de="Sondergruppen-Konvois"
+                    data-es="Convoyes de grupos especiales">Special Groups Convoys</li>
             </ul>
 
-            <h3>What to Pack:</h3>
+            <h3 data-en="What to Pack:" data-sw="Nini cha Kubeba:" data-fr="Que mettre dans sa valise :"
+                data-de="Was einpacken:" data-es="Qué empacar:">
+                What to Pack:
+            </h3>
             <ul>
-                <li>Neutral-colored clothing</li>
-                <li>Hat, sunglasses, sunscreen</li>
-                <li>Binoculars, camera with zoom</li>
-                <li>Refillable water bottle</li>
-                <li>Insect repellent, travel insurance</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Cultural Tour Guide</h2>
-            <h3>Top Cultural Experiences:</h3>
-            <ul>
-                <li><strong>Maasai Village Visits (Arusha/Ngorongoro):</strong> Learn traditions, dance, crafts</li>
-                <li><strong>Hadzabe & Datoga Tribes (Lake Eyasi):</strong> Ancient hunting & blacksmithing</li>
-                <li><strong>Chagga Village Tour (Moshi):</strong> Coffee-making, caves, waterfalls</li>
-                <li><strong>Zanzibar Stone Town Tour:</strong> Swahili-Arabic culture, food, historic sites</li>
-                <li><strong>Bagamoyo & Kilwa Ruins:</strong> UNESCO heritage and old slave trade ports</li>
-            </ul>
-
-            <h3>Tips for Cultural Tours:</h3>
-            <ul>
-                <li>Always ask before taking photos</li>
-                <li>Dress modestly in villages and religious areas</li>
-                <li>Support community-run initiatives and local guides</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Zanzibar Beach Holiday Guide</h2>
-            <h3>Best Beaches:</h3>
-            <ul>
-                <li><strong>Nungwi & Kendwa (North):</strong> Great for swimming, luxury resorts</li>
-                <li><strong>Paje & Jambiani (East):</strong> Kitesurfing, beach bars, relaxed vibe</li>
-                <li><strong>Kizimkazi (South):</strong> Dolphin tours, cultural experiences</li>
-                <li><strong>Stone Town (West):</strong> Cultural base, museums, and spice tours</li>
-            </ul>
-
-            <h3>Activities:</h3>
-            <ul>
-                <li>Snorkeling & Diving (Mnemba Atoll)</li>
-                <li>Spice Farm Tours</li>
-                <li>Jozani Forest - Red Colobus Monkeys</li>
-                <li>Prison Island - Tortoises & snorkeling</li>
-                <li>Sunset Dhow Cruises</li>
-                <li>Sandbank Picnics</li>
-            </ul>
-
-            <h3>Ideal Length of Stay:</h3>
-            <ul>
-                <li><strong>3-5 days:</strong> Stone Town & beach combo</li>
-                <li><strong>7+ days:</strong> Full relaxation, water sports, cultural tours</li>
+                <li data-en="Neutral-colored clothing" data-sw="Mavazi yenye rangi zisizo kali"
+                    data-fr="Vêtements de couleur neutre" data-de="Neutralfarbene Kleidung"
+                    data-es="Ropa de colores neutros">Neutral-colored clothing</li>
+                <li data-en="Hat, sunglasses, sunscreen" data-sw="Kofia, miwani ya jua, krimu ya jua"
+                    data-fr="Chapeau, lunettes de soleil, crème solaire" data-de="Hut, Sonnenbrille, Sonnencreme"
+                    data-es="Sombrero, gafas de sol, protector solar">Hat, sunglasses, sunscreen</li>
+                <li data-en="Binoculars, camera with zoom" data-sw="Darubini ndogo, kamera yenye zoom"
+                    data-fr="Jumelles, appareil photo avec zoom" data-de="Fernglas, Kamera mit Zoom"
+                    data-es="Binoculares, cámara con zoom">Binoculars, camera with zoom</li>
+                <li data-en="Refillable water bottle" data-sw="Chupa ya maji inayoweza kujazwa tena"
+                    data-fr="Bouteille d'eau réutilisable" data-de="Nachfüllbare Wasserflasche"
+                    data-es="Botella de agua reutilizable">Refillable water bottle</li>
+                <li data-en="Insect repellent, travel insurance" data-sw="Dawa ya kuua mbu, bima ya safari"
+                    data-fr="Répulsif anti-insectes, assurance voyage" data-de="Insektenschutzmittel, Reiseversicherung"
+                    data-es="Repelente de insectos, seguro de viaje">Insect repellent, travel insurance</li>
             </ul>
         </section>
 
         <!-- True Africa Escape Sections -->
         <section>
-            <h2>True Africa Escape Booking Policies</h2>
-            <p>We want your safari or holiday experience with True Africa Escape to be seamless and stress-free. Below
-                is a summary of our booking policies to help you plan with confidence.</p>
+            <h2>
+                <p data-en="True Africa Escape Booking Policies"
+                    data-sw="Sera za Uhifadhi wa Nafasi za True Africa Escape"
+                    data-fr="Politiques de Réservation True Africa Escape"
+                    data-de="Buchungsrichtlinien von True Africa Escape"
+                    data-es="Políticas de Reservas de True Africa Escape">
+                    True Africa Escape Booking Policies
+                </p>
+            </h2>
+
+            <p data-en="We want your safari or holiday experience with True Africa Escape to be seamless and stress-free. Below is a summary of our booking policies to help you plan with confidence."
+                data-sw="Tunataka safari au likizo yako na True Africa Escape iwe rahisi na bila wasiwasi. Hapa chini kuna muhtasari wa sera zetu za uhifadhi ili kukusaidia kupanga kwa ujasiri."
+                data-fr="Nous voulons que votre safari ou vos vacances avec True Africa Escape soient fluides et sans stress. Ci-dessous un résumé de nos politiques de réservation pour vous aider à planifier en toute confiance."
+                data-de="Wir möchten, dass Ihre Safari oder Ihr Urlaub mit True Africa Escape reibungslos und stressfrei verläuft. Nachfolgend finden Sie eine Zusammenfassung unserer Buchungsrichtlinien, die Ihnen helfen sollen, mit Vertrauen zu planen."
+                data-es="Queremos que su safari o vacaciones con True Africa Escape sean fluidos y sin estrés. A continuación, un resumen de nuestras políticas de reserva para ayudarle a planificar con confianza.">
+                We want your safari or holiday experience with True Africa Escape to be seamless and stress-free. Below
+                is a summary of our booking policies to help you plan with confidence.
+            </p>
 
             <div class="booking-policy">
-                <h3>Booking Confirmation</h3>
+                <h3>
+                    <p data-en="Booking Confirmation" data-sw="Uthibitisho wa Uhifadhi"
+                        data-fr="Confirmation de Réservation" data-de="Buchungsbestätigung"
+                        data-es="Confirmación de Reserva">
+                        Booking Confirmation
+                    </p>
+                </h3>
                 <ul>
-                    <li>A 30% non-refundable deposit is required at the time of booking to secure your trip.</li>
-                    <li>The balance (70%) is due 30 days prior to your arrival in Tanzania.</li>
-                    <li>For bookings made less than 45 days before the trip, full payment is required at the time of
-                        booking.</li>
+                    <li>
+                        <p data-en="A 30% non-refundable deposit is required at the time of booking to secure your trip."
+                            data-sw="Amana ya 30% isiyoweza kurejeshwa inahitajika wakati wa kuhifadhi ili kuhakikisha safari yako."
+                            data-fr="Un acompte non remboursable de 30 % est requis au moment de la réservation pour garantir votre voyage."
+                            data-de="Eine nicht erstattungsfähige Anzahlung von 30 % ist zum Zeitpunkt der Buchung erforderlich, um Ihre Reise zu sichern."
+                            data-es="Se requiere un depósito no reembolsable del 30 % en el momento de la reserva para asegurar su viaje.">
+                            A 30% non-refundable deposit is required at the time of booking to secure your trip.
+                        </p>
+                    </li>
+                    <li>
+                        <p data-en="The balance (70%) is due 30 days prior to your arrival in Tanzania."
+                            data-sw="Salio (70%) linapaswa kulipwa siku 30 kabla ya kuwasili Tanzania."
+                            data-fr="Le solde (70 %) est dû 30 jours avant votre arrivée en Tanzanie."
+                            data-de="Der Restbetrag (70 %) ist 30 Tage vor Ihrer Ankunft in Tansania fällig."
+                            data-es="El saldo (70 %) vence 30 días antes de su llegada a Tanzania.">
+                            The balance (70%) is due 30 days prior to your arrival in Tanzania.
+                        </p>
+                    </li>
+                    <li>
+                        <p data-en="For bookings made less than 45 days before the trip, full payment is required at the time of booking."
+                            data-sw="Kwa uhifadhi uliofanywa chini ya siku 45 kabla ya safari, malipo kamili yanahitajika wakati wa kuhifadhi."
+                            data-fr="Pour les réservations effectuées moins de 45 jours avant le voyage, le paiement intégral est requis au moment de la réservation."
+                            data-de="Bei Buchungen weniger als 45 Tage vor der Reise ist die volle Zahlung zum Zeitpunkt der Buchung erforderlich."
+                            data-es="Para reservas realizadas con menos de 45 días de antelación al viaje, se requiere el pago completo en el momento de la reserva.">
+                            For bookings made less than 45 days before the trip, full payment is required at the time of
+                            booking.
+                        </p>
+                    </li>
                 </ul>
             </div>
+        </section>
+
+
+        <section>
+            <h2 data-en="True Africa Escape - Trip Cancellation Terms & Conditions"
+                data-sw="True Africa Escape - Masharti na Vigezo vya Kughairi Safari"
+                data-fr="True Africa Escape - Conditions d'annulation de voyage"
+                data-de="True Africa Escape - Stornierungsbedingungen"
+                data-es="True Africa Escape - Términos y Condiciones de Cancelación de Viajes">
+                True Africa Escape - Trip Cancellation Terms & Conditions
+            </h2>
+
+            <p data-en="These cancellation terms apply to all tours, safaris, and travel services booked with True Africa Escape. By confirming a booking, the client agrees to these conditions."
+                data-sw="Masharti haya ya kughairi yanatumika kwa ziara zote, safari, na huduma za usafiri zilizohifadhiwa na True Africa Escape. Kwa kuthibitisha uhifadhi, mteja anakubali masharti haya."
+                data-fr="Ces conditions d'annulation s'appliquent à tous les circuits, safaris et services de voyage réservés auprès de True Africa Escape. En confirmant une réservation, le client accepte ces conditions."
+                data-de="Diese Stornierungsbedingungen gelten für alle Touren, Safaris und Reisedienstleistungen, die bei True Africa Escape gebucht wurden. Mit der Bestätigung einer Buchung akzeptiert der Kunde diese Bedingungen."
+                data-es="Estos términos de cancelación se aplican a todos los tours, safaris y servicios de viaje reservados con True Africa Escape. Al confirmar una reserva, el cliente acepta estas condiciones.">
+                These cancellation terms apply to all tours, safaris, and travel services booked with True Africa
+                Escape. By confirming a booking, the client agrees to these conditions.
+            </p>
 
             <div class="booking-policy">
-                <h3> What's Included</h3>
-                <p>Our trip prices typically include:</p>
+                <h3 data-en="Booking Confirmation & Deposits" data-sw="Uthibitishaji wa Uhifadhi na Amana"
+                    data-fr="Confirmation de réservation et acomptes" data-de="Buchungsbestätigung & Anzahlungen"
+                    data-es="Confirmación de reserva y depósitos">
+                    Booking Confirmation & Deposits
+                </h3>
                 <ul>
-                    <li>Accommodation as outlined in your itinerary</li>
-                    <li>All park and conservation fees</li>
-                    <li>Game drives and transportation with a private 4x4 safari vehicle</li>
-                    <li>All meals during the safari</li>
-                    <li>English-speaking professional guide</li>
-                    <li>Airport transfers (if part of your package)</li>
-                    <li>Bottled drinking water on game drives</li>
-                </ul>
-                <p><strong>Note:</strong> Flights (international and domestic), visas, travel insurance, tips, and some
-                    optional activities are not included unless specified.</p>
-            </div>
-
-            <div class="booking-policy">
-                <h3> What's Not Included</h3>
-                <ul>
-                    <li>International and domestic flights (unless arranged by us)</li>
-                    <li>Visa fees and travel insurance</li>
-                    <li>Tips and gratuities for guides, drivers, and lodge staff</li>
-                    <li>Personal expenses (laundry, souvenirs, etc.)</li>
-                    <li>Alcoholic beverages and optional excursions</li>
-                </ul>
-            </div>
-
-            <div class="booking-policy">
-                <h3>Booking Changes</h3>
-                <ul>
-                    <li>We allow one free itinerary change if made more than 30 days before your trip.</li>
-                    <li>Additional changes may incur administrative or third-party charges.</li>
-                    <li>We do our best to accommodate last-minute adjustments but availability cannot be guaranteed.
+                    <li data-en="A 30% deposit is required to confirm your reservation."
+                        data-sw="Amana ya 30% inahitajika kudhibitisha uhifadhi wako."
+                        data-fr="Un acompte de 30% est requis pour confirmer votre réservation."
+                        data-de="Eine Anzahlung von 30% ist zur Bestätigung Ihrer Reservierung erforderlich."
+                        data-es="Se requiere un depósito del 30% para confirmar su reserva.">
+                        A 30% deposit is required to confirm your reservation.
+                    </li>
+                    <li data-en="The remaining 70% balance must be paid at least 30 days before the start of the tour."
+                        data-sw="Salio la 70% linalobaki lazima lipwe angalau siku 30 kabla ya kuanza kwa ziara."
+                        data-fr="Le solde restant de 70% doit être payé au moins 30 jours avant le début du circuit."
+                        data-de="Die verbleibenden 70% des Saldos müssen mindestens 30 Tage vor Tourbeginn gezahlt werden."
+                        data-es="El saldo restante del 70% debe pagarse al menos 30 días antes del inicio del tour.">
+                        The remaining 70% balance must be paid at least 30 days before the start of the tour.
+                    </li>
+                    <li data-en="For bookings made less than 30 days before departure, full payment is required at the time of booking."
+                        data-sw="Kwa ajili ya kuhifadhi kufanyika chini ya siku 30 kabla ya kuondoka, malipo kamili yanahitajika wakati wa kuhifadhi."
+                        data-fr="Pour les réservations effectuées moins de 30 jours avant le départ, le paiement intégral est requis au moment de la réservation."
+                        data-de="Bei Buchungen, die weniger als 30 Tage vor Abreise getätigt werden, ist der Gesamtbetrag zum Zeitpunkt der Buchung fällig."
+                        data-es="Para reservas realizadas con menos de 30 días de antelación a la salida, se requiere el pago completo al momento de la reserva.">
+                        For bookings made less than 30 days before departure, full payment is required at the time of
+                        booking.
                     </li>
                 </ul>
             </div>
 
             <div class="booking-policy">
-                <h3>Cancellations & Refunds</h3>
-                <ul>
-                    <li><strong>More than 45 days before arrival:</strong> Deposit is non-refundable but the balance (if
-                        paid) will be refunded.</li>
-                    <li><strong>30-45 days before arrival:</strong> 50% of total trip cost will be refunded.</li>
-                    <li><strong>Less than 30 days before arrival:</strong> No refunds, but we may offer trip
-                        postponement or partial credit.</li>
-                    <li>No-shows or early departures are non-refundable.</li>
-                </ul>
-                <p>We strongly recommend purchasing travel insurance that covers cancellations, delays, or unforeseen
-                    emergencies.</p>
-            </div>
-
-            <div class="booking-policy">
-                <h3> Travel Insurance</h3>
-                <p>All guests are required to have valid travel insurance that covers:</p>
-                <ul>
-                    <li>Medical emergencies</li>
-                    <li>Trip cancellation or interruption</li>
-                    <li>Lost or delayed luggage</li>
-                    <li>Emergency evacuation</li>
-                </ul>
-            </div>
-
-            <div class="booking-policy">
-                <h3>Children & Family Policy</h3>
-                <ul>
-                    <li>Children under 3 years: Free (on request)</li>
-                    <li>Children aged 3-12: Discounted rates available</li>
-                    <li>Children must be accompanied by an adult during game drives and activities</li>
-                </ul>
-            </div>
-
-            <div class="booking-policy">
-                <h3>Payment Methods</h3>
-                <p>We accept:</p>
-                <ul>
-                    <li>Bank transfers (USD/EUR/TZS)</li>
-                    <li>Major credit cards (Visa, Mastercard - with a small processing fee)</li>
-                    <li>Mobile payment (M-Pesa for local bookings)</li>
-                </ul>
-            </div>
-
-            <div class="booking-policy">
-                <h3>Private vs. Group Tours</h3>
-                <ul>
-                    <li>We offer both private tailor-made safaris and shared group departures (if available).</li>
-                    <li>Group tours are subject to minimum traveler numbers and fixed dates.</li>
-                </ul>
-            </div>
-
-            <div class="booking-policy">
-                <h3> Need Help?</h3>
-                <p>Our team is always available to answer questions before or after you book. Reach out via:</p>
-                <ul>
-                    <li>Email: info@trueafricaescape.com</li>
-                    <li>WhatsApp: +255 784 084 200</li>
-                    <li>Website: www.trueafricaescape.com</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>True Africa Escape - Trip Cancellation Terms & Conditions</h2>
-            <p>These cancellation terms apply to all tours, safaris, and travel services booked with True Africa Escape.
-                By confirming a booking, the client agrees to these conditions.</p>
-
-            <div class="booking-policy">
-                <h3> Booking Confirmation & Deposits</h3>
-                <ul>
-                    <li>A 30% deposit is required to confirm your reservation.</li>
-                    <li>The remaining 70% balance must be paid at least 30 days before the start of the tour.</li>
-                    <li>For bookings made less than 30 days before departure, full payment is required at the time of
-                        booking.</li>
-                </ul>
-            </div>
-
-            <div class="booking-policy">
-                <h3> Cancellation by the Client</h3>
-                <p>If the client cancels their booking, the following cancellation fees will apply:</p>
-                <ul>
-                    <li><strong>More than 60 days:</strong> Full refund minus 5% bank/processing fees</li>
-                    <li><strong>31-60 days:</strong> 70% refund of total tour cost</li>
-                    <li><strong>15-30 days:</strong> 50% refund of total tour cost</li>
-                    <li><strong>1-14 days:</strong> 25% refund of total tour cost</li>
-                    <li><strong>Less than 1 day:</strong> No refund</li>
-                </ul>
-                <p><strong>Note:</strong> The 30% deposit is generally non-refundable unless otherwise stated.</p>
-            </div>
-
-            <div class="booking-policy">
-                <h3> No-Shows & Early Departures</h3>
-                <ul>
-                    <li>No-shows (guests who do not arrive) are not eligible for any refund.</li>
-                    <li>If a traveler leaves the tour early, no partial refunds will be issued for unused services.</li>
-                </ul>
-            </div>
-
-            <div class="booking-policy">
-                <h3>Cancellation by True Africa Escape</h3>
-                <p>We reserve the right to cancel a tour in the unlikely event of:</p>
-                <ul>
-                    <li>Natural disasters</li>
-                    <li>Political unrest</li>
-                    <li>Global health emergencies</li>
-                    <li>Force majeure (events beyond our control)</li>
-                </ul>
-                <p>If this occurs, clients will receive:</p>
-                <ul>
-                    <li>A full refund, or</li>
-                    <li>The option to reschedule or apply the payment as credit for a future trip</li>
-                </ul>
-            </div>
-
-            <div class="booking-policy">
-                <h3> Date Changes & Rescheduling</h3>
-                <ul>
-                    <li>We allow one free date change if requested more than 30 days before departure.</li>
-                    <li>Changes requested within 30 days are subject to availability and may incur extra costs.</li>
-                </ul>
-            </div>
-
-            <div class="booking-policy">
-                <h3> Travel Insurance</h3>
-                <p>We strongly recommend all clients purchase comprehensive travel insurance covering:</p>
-                <ul>
-                    <li>Medical emergencies</li>
-                    <li>Trip cancellations</li>
-                    <li>Delays</li>
-                    <li>Lost luggage</li>
-                </ul>
-                <p>True Africa Escape is not responsible for additional costs due to missed flights, illness, or other
-                    disruptions.</p>
-            </div>
-
-            <div class="booking-policy">
-                <h3> Refund Processing</h3>
-                <ul>
-                    <li>Refunds are processed within 15-30 business days.</li>
-                    <li>All refunds are made to the original payment method.</li>
-                    <li>Bank fees or exchange losses are the responsibility of the client.</li>
-                </ul>
-            </div>
-
-            <div class="booking-policy">
-                <h3> Contact & Support</h3>
-                <p>If you need to cancel, reschedule, or discuss your booking, please contact us as early as possible:
+                <h3 data-en="Cancellation by the Client" data-sw="Kughairi na Mteja" data-fr="Annulation par le client"
+                    data-de="Stornierung durch den Kunden" data-es="Cancelación por parte del cliente">
+                    Cancellation by the Client
+                </h3>
+                <p data-en="If the client cancels their booking, the following cancellation fees will apply:"
+                    data-sw="Ikiwa mteja ataghausha uhifadhi wake, ada zifuatazo za kughairi zitatumika:"
+                    data-fr="Si le client annule sa réservation, les frais d'annulation suivants s'appliqueront :"
+                    data-de="Wenn der Kunde seine Buchung storniert, fallen folgende Stornierungsgebühren an:"
+                    data-es="Si el cliente cancela su reserva, se aplicarán las siguientes tarifas de cancelación:">
+                    If the client cancels their booking, the following cancellation fees will apply:
                 </p>
                 <ul>
-                    <li>E-Mail: info@trueafricaescape.com</li>
-                    <li>WhatsApp/Phone: +255 784 084 200</li>
-                    <li>Website: www.trueafricaescape.com</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>True Africa Escape's Safari Vehicles</h2>
-            <p>At True Africa Escape, your comfort, safety, and immersive safari experience are our top priorities. We
-                use custom-built 4x4 safari vehicles specifically designed to handle the unique terrains of Tanzania
-                while delivering panoramic views of the breathtaking landscapes and wildlife.</p>
-
-            <h3>Our Safari Fleet Features:</h3>
-
-            <div class="booking-policy">
-                <h3> 4x4 Land Cruisers - Safari Customized</h3>
-                <ul>
-                    <li>Pop-up Roof: For unobstructed game viewing and photography</li>
-                    <li>All-Terrain Tires & Suspension: Built to navigate rough roads and national park tracks</li>
-                    <li>Extended Body: Seats up to passengers comfortably with window access for all</li>
-                </ul>
-            </div>
-
-            <div class="booking-policy">
-                <h3>Modern Comfort & Amenities</h3>
-                <ul>
-                    <li>Reclining Seats with Seatbelts</li>
-                    <li>Charging Ports (USB & Inverter) for phones, cameras, and devices</li>
-                    <li>Cooler/Fridge Box with bottled water and refreshments</li>
-                    <li>Onboard WiFi (on select vehicles)</li>
-                    <li>Reading Lights & Air Vents</li>
-                </ul>
-            </div>
-
-            <div class="booking-policy">
-                <h3> Luggage Storage & Roof Racks</h3>
-                <ul>
-                    <li>Sufficient space for large safari duffels and gear</li>
-                    <li>Additional roof racks for tents or group travel items (on request)</li>
-                </ul>
-            </div>
-
-            <div class="booking-policy">
-                <h3> Expert Drivers & Guides</h3>
-                <ul>
-                    <li>Trained, licensed, and multilingual safari guides</li>
-                    <li>Deep knowledge of wildlife, geography, and local cultures</li>
-                    <li>First aid certified and equipped with radios for real-time park communication</li>
-                </ul>
-            </div>
-
-            <div class="booking-policy">
-                <h3>Special Vehicle Options Available</h3>
-                <ul>
-                    <li><strong>Luxury Upgrades:</strong> Fewer seats, premium interior, champagne onboard</li>
-                    <li><strong>Photography Vehicle:</strong> Open sides, beanbags, and swivel seats for pros</li>
-                    <li><strong>Family-Friendly Options:</strong> Child seat, booster seat, and private-use arrangements
+                    <li data-en="<strong>More than 60 days:</strong> Full refund minus 5% bank/processing fees"
+                        data-sw="<strong>Zaidi ya siku 60:</strong> Rudi pesa zote ukiondoa 5% ya ada za benki/usindikaji"
+                        data-fr="<strong>Plus de 60 jours:</strong> Remboursement intégral moins 5% de frais bancaires/de traitement"
+                        data-de="<strong>Mehr als 60 Tage:</strong> Vollständige Rückerstattung abzüglich 5% Bank-/Bearbeitungsgebühren"
+                        data-es="<strong>Más de 60 días:</strong> Reembolso total menos 5% de comisiones bancarias/de procesamiento">
+                        <strong>More than 60 days:</strong> Full refund minus 5% bank/processing fees
                     </li>
-                    <li><strong>Group Convoy Support:</strong> Coordinated multi-vehicle communication for large groups
+                    <li data-en="<strong>31-60 days:</strong> 70% refund of total tour cost"
+                        data-sw="<strong>Siku 31-60:</strong> Rudi 70% ya gharama ya ziara"
+                        data-fr="<strong>31-60 jours:</strong> Remboursement de 70% du coût total du circuit"
+                        data-de="<strong>31-60 Tage:</strong> 70% Rückerstattung der Gesamtreisekosten"
+                        data-es="<strong>31-60 días:</strong> 70% de reembolso del costo total del tour">
+                        <strong>31-60 days:</strong> 70% refund of total tour cost
+                    </li>
+                    <li data-en="<strong>15-30 days:</strong> 50% refund of total tour cost"
+                        data-sw="<strong>Siku 15-30:</strong> Rudi 50% ya gharama ya ziara"
+                        data-fr="<strong>15-30 jours:</strong> Remboursement de 50% du coût total du circuit"
+                        data-de="<strong>15-30 Tage:</strong> 50% Rückerstattung der Gesamtreisekosten"
+                        data-es="<strong>15-30 días:</strong> 50% de reembolso del costo total del tour">
+                        <strong>15-30 days:</strong> 50% refund of total tour cost
+                    </li>
+                    <li data-en="<strong>1-14 days:</strong> 25% refund of total tour cost"
+                        data-sw="<strong>Siku 1-14:</strong> Rudi 25% ya gharama ya ziara"
+                        data-fr="<strong>1-14 jours:</strong> Remboursement de 25% du coût total du circuit"
+                        data-de="<strong>1-14 Tage:</strong> 25% Rückerstattung der Gesamtreisekosten"
+                        data-es="<strong>1-14 días:</strong> 25% de reembolso del costo total del tour">
+                        <strong>1-14 days:</strong> 25% refund of total tour cost
+                    </li>
+                    <li data-en="<strong>Less than 1 day:</strong> No refund"
+                        data-sw="<strong>Chini ya siku 1:</strong> Hakuna rudisho la pesa"
+                        data-fr="<strong>Moins de 1 jour:</strong> Aucun remboursement"
+                        data-de="<strong>Weniger als 1 Tag:</strong> Keine Rückerstattung"
+                        data-es="<strong>Menos de 1 día:</strong> Sin reembolso">
+                        <strong>Less than 1 day:</strong> No refund
+                    </li>
+                </ul>
+                <p data-en="<strong>Note:</strong> The 30% deposit is generally non-refundable unless otherwise stated."
+                    data-sw="<strong>Kumbuka:</strong> Amana ya 30% kwa ujumla hairudishwi isipokuwa ikitajwa vinginevyo."
+                    data-fr="<strong>Remarque:</strong> L'acompte de 30% n'est généralement pas remboursable sauf indication contraire."
+                    data-de="<strong>Hinweis:</strong> Die 30% Anzahlung ist generell nicht erstattungsfähig, sofern nicht anders angegeben."
+                    data-es="<strong>Nota:</strong> El depósito del 30% generalmente no es reembolsable a menos que se indique lo contrario.">
+                    <strong>Note:</strong> The 30% deposit is generally non-refundable unless otherwise stated.
+                </p>
+            </div>
+
+            <div class="booking-policy">
+                <h3 data-en="No-Shows & Early Departures" data-sw="Kutokuja & Kuondoka Mapema"
+                    data-fr="Non-présentation & Départs anticipés" data-de="Nichterscheinen & Vorzeitige Abreise"
+                    data-es="No presentados y salidas anticipadas">
+                    No-Shows & Early Departures
+                </h3>
+                <ul>
+                    <li data-en="No-shows (guests who do not arrive) are not eligible for any refund."
+                        data-sw="Wageni wasiokuja hawastahili rudisho lolote la pesa."
+                        data-fr="Les non-présentations (invités qui ne se présentent pas) ne donnent droit à aucun remboursement."
+                        data-de="Nichterscheinen (Gäste, die nicht eintreffen) berechtigt nicht zur Rückerstattung."
+                        data-es="Los no presentados (huéspedes que no llegan) no son elegibles para ningún reembolso.">
+                        No-shows (guests who do not arrive) are not eligible for any refund.
+                    </li>
+                    <li data-en="If a traveler leaves the tour early, no partial refunds will be issued for unused services."
+                        data-sw="Ikiwa msafiri ataondoka mapema ziara, hakuna rudisho la sehemu kwa huduma zisizotumika."
+                        data-fr="Si un voyageur quitte le circuit prématurément, aucun remboursement partiel ne sera accordé pour les services non utilisés."
+                        data-de="Wenn ein Reisender die Tour vorzeitig verlässt, werden keine Teilrückerstattungen für nicht genutzte Leistungen gewährt."
+                        data-es="Si un viajero abandona el tour temprano, no se emitirán reembolsos parciales por servicios no utilizados.">
+                        If a traveler leaves the tour early, no partial refunds will be issued for unused services.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="booking-policy">
+                <h3 data-en="Cancellation by True Africa Escape" data-sw="Kughairi na True Africa Escape"
+                    data-fr="Annulation par True Africa Escape" data-de="Stornierung durch True Africa Escape"
+                    data-es="Cancelación por True Africa Escape">
+                    Cancellation by True Africa Escape
+                </h3>
+                <p data-en="We reserve the right to cancel a tour in the unlikely event of:"
+                    data-sw="Tuna haki ya kughairi ziara kwa tukio lisilotarajiwa la:"
+                    data-fr="Nous nous réservons le droit d'annuler un circuit en cas d'événement improbable :"
+                    data-de="Wir behalten uns das Recht vor, eine Tour im unwahrscheinlichen Fall von zu stornieren:"
+                    data-es="Nos reservamos el derecho de cancelar un tour en el improbable caso de:">
+                    We reserve the right to cancel a tour in the unlikely event of:
+                </p>
+                <ul>
+                    <li data-en="Natural disasters" data-sw="Maafa ya asili" data-fr="Catastrophes naturelles"
+                        data-de="Naturkatastrophen" data-es="Desastres naturales">
+                        Natural disasters
+                    </li>
+                    <li data-en="Political unrest" data-sw="Mivurugo ya kisiasa" data-fr="Troubles politiques"
+                        data-de="Politische Unruhen" data-es="Inestabilidad política">
+                        Political unrest
+                    </li>
+                    <li data-en="Global health emergencies" data-sw="Dharura za afya duniani"
+                        data-fr="Urgences sanitaires mondiales" data-de="Globale Gesundheitsnotfälle"
+                        data-es="Emergencias sanitarias globales">
+                        Global health emergencies
+                    </li>
+                    <li data-en="Force majeure (events beyond our control)"
+                        data-sw="Nguvu kubwa (matukio yasiyo na udhibiti wetu)"
+                        data-fr="Force majeure (événements indépendants de notre volonté)"
+                        data-de="Höhere Gewalt (Ereignisse außerhalb unserer Kontrolle)"
+                        data-es="Fuerza mayor (eventos fuera de nuestro control)">
+                        Force majeure (events beyond our control)
+                    </li>
+                </ul>
+                <p data-en="If this occurs, clients will receive:" data-sw="Ikiwa hii itatokea, wateja watapokea:"
+                    data-fr="Si cela se produit, les clients recevront :"
+                    data-de="Falls dies eintritt, erhalten Kunden:" data-es="Si esto ocurre, los clientes recibirán:">
+                    If this occurs, clients will receive:
+                </p>
+                <ul>
+                    <li data-en="A full refund, or" data-sw="Rudisho kamili la pesa, au"
+                        data-fr="Un remboursement intégral, ou" data-de="Eine volle Rückerstattung, oder"
+                        data-es="Un reembolso completo, o">
+                        A full refund, or
+                    </li>
+                    <li data-en="The option to reschedule or apply the payment as credit for a future trip"
+                        data-sw="Chaguo la kuahirisha au kutumia malipo kama mkopo kwa safari ya baadaye"
+                        data-fr="La possibilité de reporter ou d'appliquer le paiement comme crédit pour un futur voyage"
+                        data-de="Die Option, den Termin zu ändern oder die Zahlung als Guthaben für eine zukünftige Reise zu verwenden"
+                        data-es="La opción de reprogramar o aplicar el pago como crédito para un viaje futuro">
+                        The option to reschedule or apply the payment as credit for a future trip
+                    </li>
+                </ul>
+            </div>
+
+            <div class="booking-policy">
+                <h3 data-en="Date Changes & Rescheduling" data-sw="Mabadiliko ya Tarehe & Upangaji Upya"
+                    data-fr="Changements de date et report" data-de="Terminänderungen & Neubuchung"
+                    data-es="Cambios de fecha y reprogramación">
+                    Date Changes & Rescheduling
+                </h3>
+                <ul>
+                    <li data-en="We allow one free date change if requested more than 30 days before departure."
+                        data-sw="Tunaruhusu mabadiliko moja ya bure ya tarehe ikiwa ombi litatolewa zaidi ya siku 30 kabla ya kuondoka."
+                        data-fr="Nous autorisons un changement de date gratuit s'il est demandé plus de 30 jours avant le départ."
+                        data-de="Wir erlauben eine kostenlose Terminänderung, wenn diese mehr als 30 Tage vor Abreise beantragt wird."
+                        data-es="Permitimos un cambio de fecha gratuito si se solicita con más de 30 días de antelación a la salida.">
+                        We allow one free date change if requested more than 30 days before departure.
+                    </li>
+                    <li data-en="Changes requested within 30 days are subject to availability and may incur extra costs."
+                        data-sw="Mabadiliko yanayoombwa ndani ya siku 30 yanategemea upatikanaji na yanaweza kusababisha gharama za ziada."
+                        data-fr="Les changements demandés dans les 30 jours sont soumis à disponibilité et peuvent entraîner des frais supplémentaires."
+                        data-de="Änderungen, die innerhalb von 30 Tagen beantragt werden, unterliegen der Verfügbarkeit und können zusätzliche Kosten verursachen."
+                        data-es="Los cambios solicitados dentro de los 30 días están sujetos a disponibilidad y pueden incurrir en costos adicionales.">
+                        Changes requested within 30 days are subject to availability and may incur extra costs.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="booking-policy">
+                <h3 data-en="Travel Insurance" data-sw="Bima ya Safari" data-fr="Assurance voyage"
+                    data-de="Reiseversicherung" data-es="Seguro de viaje">
+                    Travel Insurance
+                </h3>
+                <p data-en="We strongly recommend all clients purchase comprehensive travel insurance covering:"
+                    data-sw="Tunapendekeza kwa nguvu wateja wote kununua bima kamili ya safari inayofunika:"
+                    data-fr="Nous recommandons vivement à tous les clients de souscrire une assurance voyage complète couvrant :"
+                    data-de="Wir empfehlen dringend allen Kunden, eine umfassende Reiseversicherung abzuschließen, die Folgendes abdeckt:"
+                    data-es="Recomendamos encarecidamente a todos los clientes que contraten un seguro de viaje integral que cubra:">
+                    We strongly recommend all clients purchase comprehensive travel insurance covering:
+                </p>
+                <ul>
+                    <li data-en="Medical emergencies" data-sw="Dharura za kimatibabu" data-fr="Urgences médicales"
+                        data-de="Medizinische Notfälle" data-es="Emergencias médicas">
+                        Medical emergencies
+                    </li>
+                    <li data-en="Trip cancellations" data-sw="Kughairi kwa safari" data-fr="Annulations de voyage"
+                        data-de="Reisestornierungen" data-es="Cancelaciones de viajes">
+                        Trip cancellations
+                    </li>
+                    <li data-en="Delays" data-sw="Ucheleweshaji" data-fr="Retards" data-de="Verzögerungen"
+                        data-es="Retrasos">
+                        Delays
+                    </li>
+                    <li data-en="Lost luggage" data-sw="Mizigo iliyopotea" data-fr="Bagages perdus"
+                        data-de="Verlorenes Gepäck" data-es="Equipaje perdido">
+                        Lost luggage
+                    </li>
+                </ul>
+                <p data-en="True Africa Escape is not responsible for additional costs due to missed flights, illness, or other disruptions."
+                    data-sw="True Africa Escape haiwajibiki kwa gharama za ziada kutokana na ndege zilizokosa, ugonjwa, au misukosuko mingine."
+                    data-fr="True Africa Escape n'est pas responsable des coûts supplémentaires dus à des vols manqués, des maladies ou d'autres perturbations."
+                    data-de="True Africa Escape ist nicht verantwortlich für zusätzliche Kosten aufgrund verpasster Flüge, Krankheiten oder anderer Störungen."
+                    data-es="True Africa Escape no es responsable de los costos adicionales debido a vuelos perdidos, enfermedades u otras interrupciones.">
+                    True Africa Escape is not responsible for additional costs due to missed flights, illness, or other
+                    disruptions.
+                </p>
+            </div>
+
+            <div class="booking-policy">
+                <h3 data-en="Refund Processing" data-sw="Uchakataji wa Kurudishwa Pesa"
+                    data-fr="Traitement des remboursements" data-de="Rückerstattungsbearbeitung"
+                    data-es="Procesamiento de reembolsos">
+                    Refund Processing
+                </h3>
+                <ul>
+                    <li data-en="Refunds are processed within 15-30 business days."
+                        data-sw="Kurudishwa kwa pesa huchakatwa ndani ya siku 15-30 za kazi."
+                        data-fr="Les remboursements sont traités dans un délai de 15 à 30 jours ouvrables."
+                        data-de="Rückerstattungen werden innerhalb von 15-30 Werktagen bearbeitet."
+                        data-es="Los reembolsos se procesan dentro de 15 a 30 días hábiles.">
+                        Refunds are processed within 15-30 business days.
+                    </li>
+                    <li data-en="All refunds are made to the original payment method."
+                        data-sw="Rudisho zote hufanywa kwa njia ya malipo ya asili."
+                        data-fr="Tous les remboursements sont effectués sur le mode de paiement d'origine."
+                        data-de="Alle Rückerstattungen erfolgen auf die ursprüngliche Zahlungsmethode."
+                        data-es="Todos los reembolsos se realizan al método de pago original.">
+                        All refunds are made to the original payment method.
+                    </li>
+                    <li data-en="Bank fees or exchange losses are the responsibility of the client."
+                        data-sw="Ada za benki au hasara za ubadilishaji pesa ni jukumu la mteja."
+                        data-fr="Les frais bancaires ou les pertes de change sont à la charge du client."
+                        data-de="Bankgebühren oder Wechselkursverluste gehen zu Lasten des Kunden."
+                        data-es="Las comisiones bancarias o las pérdidas por cambio son responsabilidad del cliente.">
+                        Bank fees or exchange losses are the responsibility of the client.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="booking-policy">
+                <h3 data-en="Contact & Support" data-sw="Mawasiliano & Msaada" data-fr="Contact & Support"
+                    data-de="Kontakt & Support" data-es="Contacto y soporte">
+                    Contact & Support
+                </h3>
+                <p data-en="If you need to cancel, reschedule, or discuss your booking, please contact us as early as possible:"
+                    data-sw="Ikiwa unahitaji kughairi, kupanga upya, au kujadili uhifadhi wako, tafadhali wasiliana nasi mapema iwezekanavyo:"
+                    data-fr="Si vous devez annuler, reporter ou discuter de votre réservation, veuillez nous contacter le plus tôt possible :"
+                    data-de="Wenn Sie stornieren, umbuchen oder Ihre Buchung besprechen müssen, kontaktieren Sie uns bitte so früh wie möglich:"
+                    data-es="Si necesita cancelar, reprogramar o discutir su reserva, contáctenos lo antes posible:">
+                    If you need to cancel, reschedule, or discuss your booking, please contact us as early as possible:
+                </p>
+                <ul>
+                    <li data-en="E-Mail: info@trueafricaescape.com" data-sw="Barua pepe: info@trueafricaescape.com"
+                        data-fr="E-mail : info@trueafricaescape.com" data-de="E-Mail: info@trueafricaescape.com"
+                        data-es="Correo electrónico: info@trueafricaescape.com">
+                        E-Mail: info@trueafricaescape.com
+                    </li>
+                    <li data-en="WhatsApp/Phone: +255 784 084 200" data-sw="WhatsApp/Simu: +255 784 084 200"
+                        data-fr="WhatsApp/Téléphone : +255 784 084 200" data-de="WhatsApp/Telefon: +255 784 084 200"
+                        data-es="WhatsApp/Teléfono: +255 784 084 200">
+                        WhatsApp/Phone: +255 784 084 200
+                    </li>
+                    <li data-en="Website: www.trueafricaescape.com" data-sw="Tovuti: www.trueafricaescape.com"
+                        data-fr="Site web : www.trueafricaescape.com" data-de="Webseite: www.trueafricaescape.com"
+                        data-es="Sitio web: www.trueafricaescape.com">
+                        Website: www.trueafricaescape.com
                     </li>
                 </ul>
             </div>
@@ -1167,46 +1504,78 @@
         </div>
     </footer>
     <script>
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-                { pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
-                'google_translate_element'
-            );
-        }
+        // Add this improved language switcher JavaScript
+        const langData = {
+            'en': 'English',
+            'sw': 'Swahili',
+            'fr': 'French',
+            'de': 'German',
+            'es': 'Spanish'
+        };
 
-        // Load Google Translate script
-        function loadGoogleTranslate() {
-            const script = document.createElement('script');
-            script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-            document.head.appendChild(script);
-        }
+        let currentLang = 'en';
 
-        // Event listeners
-        document.addEventListener('DOMContentLoaded', function () {
-            // Load Google Translate
-            loadGoogleTranslate();
+        // Function to switch language
+        function switchLanguage(lang) {
+            currentLang = lang;
 
-            // Show translate widget when button is clicked
-            document.getElementById('showTranslateWidget').addEventListener('click', function () {
-                document.getElementById('translateWidget').classList.add('active');
-            });
-
-            // Close notification
-            document.getElementById('closeTranslateNotification').addEventListener('click', function () {
-                document.querySelector('.translate-notification').style.display = 'none';
-            });
-
-            // Close widget when clicking outside
-            document.addEventListener('click', function (e) {
-                const widget = document.getElementById('translateWidget');
-                if (widget.classList.contains('active') &&
-                    !widget.contains(e.target) &&
-                    e.target.id !== 'showTranslateWidget') {
-                    widget.classList.remove('active');
+            // Update all elements with data attributes
+            document.querySelectorAll('[data-' + lang + ']').forEach(element => {
+                const text = element.getAttribute('data-' + lang);
+                if (text) {
+                    // Handle dropdown items that include icons
+                    if (element.querySelector('i.fa-chevron-down')) {
+                        element.innerHTML = text + ' <i class="fas fa-chevron-down"></i>';
+                    } else {
+                        element.textContent = text;
+                    }
                 }
             });
-        });
 
+            // Update language button
+            const langBtn = document.querySelector('.lang-btn');
+            if (langBtn) {
+                langBtn.innerHTML = langData[lang] + ' <i class="fas fa-chevron-down"></i>';
+            }
+
+            // Store selection in localStorage
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Initialize language switcher
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get saved language or default to English
+            const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+            switchLanguage(savedLang);
+
+            // Add click events to language dropdown
+            document.querySelectorAll('.lang-dropdown a').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const selectedLang = this.getAttribute('data-lang');
+                    switchLanguage(selectedLang);
+                    // Close dropdown after selection
+                    document.querySelector('.lang-dropdown').classList.remove('active');
+                });
+            });
+
+            // Toggle dropdown when button is clicked
+            const langBtn = document.querySelector('.lang-btn');
+            if (langBtn) {
+                langBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    document.querySelector('.lang-dropdown').classList.toggle('active');
+                });
+            }
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function () {
+                document.querySelector('.lang-dropdown').classList.remove('active');
+            });
+
+            // Mobile menu toggle
+
+        });
 
 
         document.addEventListener('DOMContentLoaded', function () {
