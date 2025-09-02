@@ -50,58 +50,82 @@
             </button>
         </nav>
     </header>
-    <div class="translate-notification">
-        <i class="fas fa-language"></i>
-        <div class="text">Translate this page?</div>
-        <button class="translate-btn" id="showTranslateWidget">Translate</button>
-        <button class="close-btn" id="closeTranslateNotification">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
 
-    <!-- Google Translate Widget Container -->
-    <div class="translate-widget-container" id="translateWidget">
-        <h3>Select Language</h3>
-        <div id="google_translate_element"></div>
-    </div>
 
     <section id="about">
         <div class="container">
-            <h2 class="section-title">About True Africa Escape</h2>
+            <h2 class="section-title" data-en="why True Africa Escape" data-sw="Kwa nini True Africa Escape"
+                data-fr="pourquoi True Africa Escape" data-de="warum True Africa Escape"
+                data-es="por qué True Africa Escape">why True Africa Escape</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>At True Africa Escape, we specialize in creating personalized safari experiences that go beyond
+                    <p data-en="At True Africa Escape, we specialize in creating personalized safari experiences that go beyond the ordinary. Born from a deep love for Tanzania's wilderness and culture, we're committed to responsible tourism that benefits both travelers and local communities."
+                        data-sw="Katika True Africa Escape, tunajihusisha na kuunda uzoefu wa safari maalum unaozidi kawaida. Tulizaliwa kutokana na upendo wa kina wa pori na tamaduni za Tanzania, tunaahidi utalii wenye uwajibikaji unaowafaidia watalii na jamii za wenyeji."
+                        data-fr="Chez True Africa Escape, nous nous spécialisons dans la création d'expériences de safari personnalisées qui dépassent l'ordinaire. Nés d'un profond amour pour la wilderness et la culture tanzanienne, nous nous engageons en faveur d'un tourisme responsable qui profite à la fois aux voyageurs et aux communautés locales."
+                        data-de="Bei True Africa Escape sind wir auf die Erstellung personalisierter Safari-Erlebnisse spezialisiert, die über das Übliche hinausgehen. Aus einer tiefen Liebe zur Wildnis und Kultur Tansanias entstanden, setzen wir uns für einen verantwortungsvollen Tourismus ein, der sowohl Reisenden als auch lokalen Gemeinschaften zugutekommt."
+                        data-es="En True Africa Escape, nos especializamos en crear experiencias de safari personalizadas que van más allá de lo ordinario. Nacidos de un profundo amor por la naturaleza y cultura de Tanzania, estamos comprometidos con el turismo responsable que beneficia tanto a los viajeros como a las comunidades locales.">
+                        At True Africa Escape, we specialize in creating personalized safari experiences that go beyond
                         the ordinary. Born from a deep love for Tanzania's wilderness and culture, we're committed to
                         responsible tourism that benefits both travelers and local communities.</p>
-                    <p>Our team of expert local guides combines decades of experience with genuine hospitality, ensuring
-                        every journey with us is safe, comfortable, and filled with unforgettable moments. From the
-                        endless plains of Serengeti to the turquoise waters of Zanzibar, we'll take you to the heart of
-                        Africa's most spectacular destinations.</p>
-                    <p>We believe travel should be transformative - not just for you, but for the places and people you
+                    <p data-en="Our team of expert local guides combines decades of experience with genuine hospitality, ensuring every journey with us is safe, comfortable, and filled with unforgettable moments. From the endless plains of Serengeti to the turquoise waters of Zanzibar, we'll take you to the heart of Africa's most spectacular destinations."
+                        data-sw="Timu yetu ya waongozaji wenyeji wenye ustadi inachanganya uzoefu wa miongo kadhaa na ukaribu wa kweli, na kuhakikisha safari yote nasi ni salama, ya starehe, na imejaa muda usiosahewa. Kutoka kwa nyanda za Serengeti hadi maji ya rangi ya aqua ya Zanzibar, tutakupeleka kwenye kiini cha maeneo ya kusisimua zaidi ya Afrika."
+                        data-fr="Notre équipe de guides locaux experts combine des décennies d'expérience à une hospitalité authentique, garantissant que chaque voyage avec nous est sûr, confortable et rempli de moments inoubliables. Des plaines infinies du Serengeti aux eaux turquoise de Zanzibar, nous vous emmenons au cœur des destinations les plus spectaculaires d'Afrique."
+                        data-de="Unser Team aus erfahrenen einheimischen Guides kombiniert jahrzehntelange Erfahrung mit echter Gastfreundschaft und sorgt dafür, dass jede Reise mit uns sicher, komfortabel und voll unvergesslicher Momente ist. Von den endlosen Ebenen der Serengeti bis zum türkisfarbenen Wasser Sansibars bringen wir Sie ins Herz der spektakulärsten Destinationen Afrikas."
+                        data-es="Nuestro equipo de guías locales expertos combina décadas de experiencia con hospitalidad genuina, asegurando que cada viaje con nosotros sea seguro, cómodo y lleno de momentos inolvidables. Desde las llanuras infinitas del Serengeti hasta las aguas turquesas de Zanzíbar, te llevaremos al corazón de los destinos más espectaculares de África.">
+                        Our team of expert local guides combines decades of experience with genuine hospitality,
+                        ensuring every journey with us is safe, comfortable, and filled with unforgettable moments. From
+                        the endless plains of Serengeti to the turquoise waters of Zanzibar, we'll take you to the heart
+                        of Africa's most spectacular destinations.</p>
+                    <p data-en="We believe travel should be transformative - not just for you, but for the places and people you visit. That's why we prioritize ethical practices, fair wages for our staff, and partnerships with conservation initiatives across Tanzania."
+                        data-sw="Tunaamini usafiri unapaswa kubadilisha - si wewe tu, bali maeneo na watu unaowatembelea. Ndiyo maana tunatia kipaumbele mazoea ya kiadili, ujira mwafaka kwa wafanyikazi wetu, na ushirikiano na mikakati ya uhifadhi Tanzania nzima."
+                        data-fr="Nous croyons que le voyage devrait être transformateur - pas seulement pour vous, mais pour les lieux et les personnes que vous visitez. C'est pourquoi nous priorisons les pratiques éthiques, des salaires équitables pour notre personnel et des partenariats avec des initiatives de conservation à travers la Tanzanie."
+                        data-de="Wir glauben, dass Reisen transformativ sein sollte - nicht nur für Sie, sondern auch für die Orte und Menschen, die Sie besuchen. Deshalb priorisieren wir ethische Praktiken, faire Löhne für unsere Mitarbeiter und Partnerschaften mit Naturschutzinitiativen in ganz Tansania."
+                        data-es="Creemos que los viajes deben ser transformadores, no solo para ti, sino también para los lugares y las personas que visitas. Por eso priorizamos prácticas éticas, salarios justos para nuestro personal y asociaciones con iniciativas de conservación en toda Tanzania.">
+                        We believe travel should be transformative - not just for you, but for the places and people you
                         visit. That's why we prioritize ethical practices, fair wages for our staff, and partnerships
                         with conservation initiatives across Tanzania.</p>
-                    <a href="/contant.html" class="btn btn-outline">Contact Us</a>
+                    <a href="/contant.html" class="btn btn-outline" data-en="Contact Us" data-sw="Wasiliana Nasi"
+                        data-fr="Contactez-nous" data-de="Kontaktieren Sie uns" data-es="Contáctenos">Contact Us</a>
                 </div>
                 <div class="about-image">
                     <img src="https://images.pexels.com/photos/1320434/pexels-photo-1320434.jpeg"
-                        alt="Safari guide with tourists in Tanzania">
+                        alt="Safari guide with tourists in Tanzania"
+                        data-alt-en="Safari guide with tourists in Tanzania"
+                        data-alt-sw="Mwelekezi wa safari na watalii Tanzania"
+                        data-alt-fr="Guide de safari avec des touristes en Tanzanie"
+                        data-alt-de="Safariführer mit Touristen in Tansania"
+                        data-alt-es="Guía de safari con turistas en Tanzania">
                 </div>
             </div>
         </div>
     </section>
-
     <section id="clients">
         <div class="container">
-            <h2 class="section-title">Who We Work With</h2>
-            <p class="section-subtitle">We proudly serve a diverse range of travelers seeking authentic experiences
-                across Tanzania and East Africa</p>
+            <h2 class="section-title" data-en="Who We Work With" data-sw="Tunafanya Kazi Nani"
+                data-fr="Avec Qui Nous Travaillons" data-de="Mit Wem Wir Arbeiten" data-es="Con Quién Trabajamos">Who We
+                Work With</h2>
+            <p class="section-subtitle"
+                data-en="We proudly serve a diverse range of travelers seeking authentic experiences across Tanzania and East Africa"
+                data-sw="Tunawahudumia kwa fahari anuwai ya wasafiri wanaotafuta uzoefu wa asili Tanzania na Afrika Mashariki kote"
+                data-fr="Nous servons fièrement une gamme diversifiée de voyageurs recherchant des expériences authentiques à travers la Tanzanie et l'Afrique de l'Est"
+                data-de="Wir bedienen stolz eine vielfältige Gruppe von Reisenden, die authentische Erfahrungen in Tansania und Ostafrika suchen"
+                data-es="Servimos con orgullo a una diversa gama de viajeros que buscan experiencias auténticas en Tanzania y África Oriental">
+                We proudly serve a diverse range of travelers seeking authentic experiences across Tanzania and East
+                Africa</p>
 
             <div class="clients-grid">
                 <div class="client-card">
                     <div class="client-content">
                         <div class="client-icon"><i class="fas fa-suitcase-rolling"></i></div>
-                        <h3>International Tourists</h3>
-                        <p>From Europe, USA, Asia, Middle East, and beyond looking for bucket-list adventures like
+                        <h3 data-en="International Tourists" data-sw="Watalii wa Kimataifa"
+                            data-fr="Touristes Internationaux" data-de="Internationale Touristen"
+                            data-es="Turistas Internacionales">International Tourists</h3>
+                        <p data-en="From Europe, USA, Asia, Middle East, and beyond looking for bucket-list adventures like Serengeti safaris, Kilimanjaro climbs, or Zanzibar beach escapes. They value comfort, expert guidance, and cultural immersion."
+                            data-sw="Kutoka Ulaya, USA, Asia, Mashariki ya Kati, na zaidi wakitafuta misafara ya orodha ya ndoo kama safari za Serengeti, kupanda Kilimanjaro, au kutoroka pwani za Zanzibar. Wanathamini faraja, uongozi mtaalam, na kuzama kitamaduni."
+                            data-fr="D'Europe, des États-Unis, d'Asie, du Moyen-Orient et au-delà, à la recherche d'aventures incontournables comme des safaris au Serengeti, l'ascension du Kilimandjaro ou des escapades sur les plages de Zanzibar. Ils valorisent le confort, les conseils d'experts et l'immersion culturelle."
+                            data-de="Aus Europa, USA, Asien, dem Nahen Osten und darüber hinaus, auf der Suche nach Abenteuern für die Bucket List wie Safaris in der Serengeti, Besteigungen des Kilimandscharo oder Strandurlaube in Sansibar. Sie schätzen Komfort, fachkundige Führung und kulturelles Eintauchen."
+                            data-es="Desde Europa, EE. UU., Asia, Medio Oriente y más allá, en busca de aventuras de la lista de deseos como safaris en Serengeti, ascensos al Kilimanjaro o escapes a las playas de Zanzíbar. Valoran la comodidad, la guía experta y la inmersión cultural.">
+                            From Europe, USA, Asia, Middle East, and beyond looking for bucket-list adventures like
                             Serengeti safaris, Kilimanjaro climbs, or Zanzibar beach escapes. They value comfort, expert
                             guidance, and cultural immersion.</p>
                     </div>
@@ -110,8 +134,14 @@
                 <div class="client-card">
                     <div class="client-content">
                         <div class="client-icon"><i class="fas fa-paw"></i></div>
-                        <h3>Safari Enthusiasts</h3>
-                        <p>Wildlife photographers, conservation lovers, and first-time explorers interested in national
+                        <h3 data-en="Safari Enthusiasts" data-sw="Wapenzi wa Safari" data-fr="Passionnés de Safari"
+                            data-de="Safari-Enthusiasten" data-es="Entusiastas del Safari">Safari Enthusiasts</h3>
+                        <p data-en="Wildlife photographers, conservation lovers, and first-time explorers interested in national parks like Serengeti, Ngorongoro, Tarangire, and Mikumi. They prefer customized, guided safari itineraries with ethical practices."
+                            data-sw="Wapiga picha wa wanyamapori, wapenda uhifadhi, na wachunguzi wa mara ya kwanza wanaovutiwa na mbuga za taifa kama Serengeti, Ngorongoro, Tarangire, na Mikumi. Wanapendelea ratiba za safari zilizobinafsishwa, zilizoongozwa na mazoea ya kiadili."
+                            data-fr="Photographes animaliers, amateurs de conservation et explorateurs pour la première fois intéressés par des parcs nationaux comme le Serengeti, le Ngorongoro, le Tarangire et le Mikumi. Ils préfèrent des itinéraires de safari personnalisés et guidés avec des pratiques éthiques."
+                            data-de="Wildtierfotografen, Naturschutzliebhaber und Erstentdecker, die an Nationalparks wie Serengeti, Ngorongoro, Tarangire und Mikumi interessiert sind. Sie bevorzugen maßgeschneiderte, geführte Safari-Itinerare mit ethischen Praktiken."
+                            data-es="Fotógrafos de vida silvestre, amantes de la conservación y exploradores primerizos interesados en parques nacionales como Serengeti, Ngorongoro, Tarangire y Mikumi. Prefieren itinerarios de safari personalizados y guiados con prácticas éticas.">
+                            Wildlife photographers, conservation lovers, and first-time explorers interested in national
                             parks like Serengeti, Ngorongoro, Tarangire, and Mikumi. They prefer customized, guided
                             safari itineraries with ethical practices.</p>
                     </div>
@@ -120,8 +150,16 @@
                 <div class="client-card">
                     <div class="client-content">
                         <div class="client-icon"><i class="fas fa-heart"></i></div>
-                        <h3>Honeymooners & Romantic Travelers</h3>
-                        <p>Couples seeking unique honeymoon destinations or anniversary getaways. They love Zanzibar's
+                        <h3 data-en="Honeymooners & Romantic Travelers" data-sw="Wachumba & Wasafiri wa Kimapenzi"
+                            data-fr="Lune de Miel & Voyageurs Romantiques"
+                            data-de="Flitterwochen & Romantische Reisende" data-es="Luna de Miel & Viajeros Románticos">
+                            Honeymooners & Romantic Travelers</h3>
+                        <p data-en="Couples seeking unique honeymoon destinations or anniversary getaways. They love Zanzibar's white-sand beaches, candlelit dinners, and luxury lodges, preferring private, personalized, and relaxing experiences."
+                            data-sw="Wenye wanaotafuta marudio ya kipekee ya honeymoon au kutoroka kwa mwaka. Wanapenda fuo za mchanga mweupe za Zanzibar, chakula cha jioni cha mshumaa, na nyumba za kulala za anasa, wakipendelea uzoefu wa kibinafsi, uliobinafsishwa, na wa kutuliza."
+                            data-fr="Couples à la recherche de destinations de lune de miel uniques ou d'évasion pour anniversaire. Ils adorent les plages de sable blanc de Zanzibar, les dîners aux chandelles et les lodges de luxe, préférant des expériences privées, personnalisées et relaxantes."
+                            data-de="Paare, die einzigartige Flitterwochenziele oder Ausflüge zum Jahrestag suchen. Sie lieben die weißen Sandstrände Sansibars, Kerzenlicht-Dinner und Luxus-Lodges und bevorzugen private, personalisierte und entspannende Erfahrungen."
+                            data-es="Parejas que buscan destinos únicos para luna de miel o escapadas de aniversario. Les encantan las playas de arena blanca de Zanzíbar, las cenas a la luz de las velas y los lodges de lujo, prefiriendo experiencias privadas, personalizadas y relajantes.">
+                            Couples seeking unique honeymoon destinations or anniversary getaways. They love Zanzibar's
                             white-sand beaches, candlelit dinners, and luxury lodges, preferring private, personalized,
                             and relaxing experiences.</p>
                     </div>
@@ -130,8 +168,15 @@
                 <div class="client-card">
                     <div class="client-content">
                         <div class="client-icon"><i class="fas fa-users"></i></div>
-                        <h3>Families & Group Travelers</h3>
-                        <p>Families with kids or multi-generational groups, school trips, church groups, or reunions
+                        <h3 data-en="Families & Group Travelers" data-sw="Familia & Wasafiri wa Kikundi"
+                            data-fr="Familles & Voyageurs en Groupe" data-de="Familien & Gruppenreisende"
+                            data-es="Familias & Viajeros en Grupo">Families & Group Travelers</h3>
+                        <p data-en="Families with kids or multi-generational groups, school trips, church groups, or reunions wanting safe, educational, and fun adventures. They appreciate detailed planning, safety, and family-friendly accommodations."
+                            data-sw="Familia zenye watoto au vikundi vya vizazi mbalimbali, safari za shule, vikundi vya kanisa, au makusanyo yanayotaka misafara salama, ya kielimu, na ya kufurahisha. Wanashukuru upangaji wa kina, usalama, na malazi rafiki kwa familia."
+                            data-fr="Familles avec enfants ou groupes multi-générationnels, voyages scolaires, groupes religieux ou réunions souhaitant des aventures sûres, éducatives et amusantes. Ils apprécient une planification détaillée, la sécurité et des hébergements adaptés aux familles."
+                            data-de="Familien mit Kindern oder mehrgenerationalen Gruppen, Schulausflüge, Kirchengruppen oder Wiedersehen, die sichere, lehrreiche und unterhaltsame Abenteuer wollen. Sie schätzen detaillierte Planung, Sicherheit und familienfreundliche Unterkünfte."
+                            data-es="Familias con niños o grupos multigeneracionales, viajes escolares, grupos religiosos o reuniones que desean aventuras seguras, educativas y divertidas. Aprecian la planificación detallada, la seguridad y alojamientos familiares.">
+                            Families with kids or multi-generational groups, school trips, church groups, or reunions
                             wanting safe, educational, and fun adventures. They appreciate detailed planning, safety,
                             and family-friendly accommodations.</p>
                     </div>
@@ -140,9 +185,16 @@
                 <div class="client-card">
                     <div class="client-content">
                         <div class="client-icon"><i class="fas fa-hiking"></i></div>
-                        <h3>Budget & Backpacker Travelers</h3>
-                        <p>Young travelers, students, or solo adventurers looking for authentic experiences on a budget.
-                            They enjoy local guesthouses, public transport, shared safaris, and walking tours,
+                        <h3 data-en="Budget & Backpacker Travelers" data-sw="Wasafiri wa Bajeti & Wadudu"
+                            data-fr="Voyageurs à Budget & Routards" data-de="Budget- & Rucksackreisende"
+                            data-es="Viajeros con Presupuesto & Mochileros">Budget & Backpacker Travelers</h3>
+                        <p data-en="Young travelers, students, or solo adventurers looking for authentic experiences on a budget. They enjoy local guesthouses, public transport, shared safaris, and walking tours, preferring transparent, honest advice and flexibility."
+                            data-sw="Wasafiri wachanga, wanafunzi, au mwongozaji wa pekee wanaotafuta uzoefu wa asili kwa bajeti. Wanafurahisha nyumba za wageni za kienyeji, usafiri wa umma, safari za kushiriki, na ziara za kutembea, wakipendelea ushauri wa uwazi, wa kweli, na msimamo."
+                            data-fr="Jeunes voyageurs, étudiants ou aventuriers en solo à la recherche d'expériences authentiques avec un budget limité. Ils aiment les maisons d'hôtes locales, les transports publics, les safaris partagés et les visites à pied, préférant des conseils transparents et honnêtes ainsi que de la flexibilité."
+                            data-de="Junge Reisende, Studenten oder Alleinreisende, die authentische Erlebnisse mit kleinem Budget suchen. Sie genießen lokale Gästehäuser, öffentliche Verkehrsmittel, geteilte Safaris und Wandertouren und bevorzugen transparente, ehrliche Beratung und Flexibilität."
+                            data-es="Viajeros jóvenes, estudiantes o aventureros solitarios que buscan experiencias auténticas con un presupuesto limitado. Disfrutan de casas de huéspedes locales, transporte público, safaris compartidos y tours a pie, prefiriendo consejos transparentes, honestos y flexibilidad.">
+                            Young travelers, students, or solo adventurers looking for authentic experiences on a
+                            budget. They enjoy local guesthouses, public transport, shared safaris, and walking tours,
                             preferring transparent, honest advice and flexibility.</p>
                     </div>
                 </div>
@@ -150,8 +202,15 @@
                 <div class="client-card">
                     <div class="client-content">
                         <div class="client-icon"><i class="fas fa-building"></i></div>
-                        <h3>Corporate & NGO Clients</h3>
-                        <p>Companies, NGOs, or institutions needing travel, team retreats, conferences, or logistical
+                        <h3 data-en="Corporate & NGO Clients" data-sw="Wateja wa Kifedha & NGO"
+                            data-fr="Clients d'Entreprise & ONG" data-de="Unternehmens- & NGO-Kunden"
+                            data-es="Clientes Corporativos y ONG">Corporate & NGO Clients</h3>
+                        <p data-en="Companies, NGOs, or institutions needing travel, team retreats, conferences, or logistical support in Tanzania. They require reliable transport, hotel reservations, permits, and professional coordination."
+                            data-sw="Kampuni, NGOs, au taasisi zinazohitaji usafiri, kutoroka kwa timu, mikutano, au msaada wa vifaa Tanzania. Wanahitaji usafiri unaotegemewa, uhifadhi wa hoteli, vibali, na uratibu wa kitaalamu."
+                            data-fr="Entreprises, ONG ou institutions ayant besoin de voyages, de retraites d'équipe, de conférences ou de soutien logistique en Tanzanie. Ils nécessitent des transports fiables, des réservations d'hôtel, des permis et une coordination professionnelle."
+                            data-de="Unternehmen, NGOs oder Institutionen, die Reisen, Teamevents, Konferenzen oder logistische Unterstützung in Tansania benötigen. Sie benötigen zuverlässigen Transport, Hotelreservierungen, Genehmigungen und professionelle Koordination."
+                            data-es="Empresas, ONG o instituciones que necesitan viajes, retiros de equipo, conferencias o apoyo logístico en Tanzania. Requieren transporte confiable, reservas de hotel, permisos y coordinación profesional.">
+                            Companies, NGOs, or institutions needing travel, team retreats, conferences, or logistical
                             support in Tanzania. They require reliable transport, hotel reservations, permits, and
                             professional coordination.</p>
                     </div>
@@ -160,10 +219,16 @@
                 <div class="client-card">
                     <div class="client-content">
                         <div class="client-icon"><i class="fas fa-mountain"></i></div>
-                        <h3>Adventure Seekers</h3>
-                        <p>Mountain climbers (Mount Kilimanjaro or Mount Meru), cyclists, hikers, and outdoor lovers who
-                            crave nature and adrenaline. They want detailed planning, fitness tips, porters, gear, and
-                            safe guiding.</p>
+                        <h3 data-en="Adventure Seekers" data-sw="Watafutaji wa Msisimko" data-fr="Chercheurs d'Aventure"
+                            data-de="Abenteuersuchende" data-es="Buscadores de Aventura">Adventure Seekers</h3>
+                        <p data-en="Mountain climbers (Mount Kilimanjaro or Mount Meru), cyclists, hikers, and outdoor lovers who crave nature and adrenaline. They want detailed planning, fitness tips, porters, gear, and safe guiding."
+                            data-sw="Wapanda milima (Mlima Kilimanjaro au Mlima Meru), wakwepa baiskeli, watembea kwa miguu, na wapenda nje wanao tamaa asili na adrenaline. Wanataka upangaji wa kina, vidokezo vya afya, wabebaji, vifaa, na uongozi salama."
+                            data-fr="Grimpeurs (mont Kilimandjaro ou mont Meru), cyclistes, randonneurs et amateurs de plein air qui aspirent à la nature et à l'adrénaline. Ils veulent une planification détaillée, des conseils de condition physique, des porteurs, de l'équipement et un guidage sécurisé."
+                            data-de="Bergsteiger (Mount Kilimanjaro oder Mount Meru), Radfahrer, Wanderer und Outdoor-Liebhaber, die Natur und Adrenalin suchen. Sie wollen detaillierte Planung, Fitness-Tipps, Träger, Ausrüstung und sichere Führung."
+                            data-es="Montañistas (Monte Kilimanjaro o Monte Meru), ciclistas, excursionistas y amantes del aire libre que anhelan naturaleza y adrenalina. Quieren planificación detallada, consejos de acondicionamiento físico, porteadores, equipo y guía segura.">
+                            Mountain climbers (Mount Kilimanjaro or Mount Meru), cyclists, hikers, and outdoor lovers
+                            who crave nature and adrenaline. They want detailed planning, fitness tips, porters, gear,
+                            and safe guiding.</p>
                     </div>
                 </div>
             </div>
@@ -172,37 +237,71 @@
 
     <section id="promise">
         <div class="container">
-            <h2 class="section-title">What We Promise All Our Guests</h2>
+            <h2 class="section-title" data-en="What We Promise All Our Guests"
+                data-sw="Tunaahidi Nini kwa Wageni Wetu Wote" data-fr="Ce Que Nous Promettons à Tous Nos Invités"
+                data-de="Was Wir Allen Unseren Gästen Versprechen"
+                data-es="Lo Que Prometemos a Todos Nuestros Huéspedes">What We Promise All Our Guests</h2>
 
             <div class="promise-grid">
                 <div class="promise-item">
                     <div class="promise-icon"><i class="fas fa-user-tie"></i></div>
-                    <h3>Expert Local Guides</h3>
-                    <p>Our guides combine deep knowledge with genuine passion for Tanzania's wildlife and culture.</p>
+                    <h3 data-en="Expert Local Guides" data-sw="Waongozaji Wenyeji Wataalamu"
+                        data-fr="Guides Locaux Experts" data-de="Experten Lokale Führer"
+                        data-es="Guías Locales Expertos">Expert Local Guides</h3>
+                    <p data-en="Our guides combine deep knowledge with genuine passion for Tanzania's wildlife and culture."
+                        data-sw="Waongozaji wetu wanachanganya ujuzi wa kina na shauku ya kweli kwa wanyamapori na tamaduni za Tanzania."
+                        data-fr="Nos guides allient une connaissance approfondie à une passion authentique pour la faune et la culture tanzaniennes."
+                        data-de="Unsere Führer kombinieren tiefes Wissen mit echter Leidenschaft für die Tierwelt und Kultur Tansanias."
+                        data-es="Nuestros guías combinan conocimiento profundo con pasión genuina por la vida silvestre y la cultura de Tanzania.">
+                        Our guides combine deep knowledge with genuine passion for Tanzania's wildlife and culture.</p>
                 </div>
 
                 <div class="promise-item">
                     <div class="promise-icon"><i class="fas fa-hands-helping"></i></div>
-                    <h3>Personalized Service</h3>
-                    <p>From your first inquiry to farewell, we tailor every detail to your preferences.</p>
+                    <h3 data-en="Personalized Service" data-sw="Huduma ya Kibinafsi" data-fr="Service Personnalisé"
+                        data-de="Personalisierter Service" data-es="Servicio Personalizado">Personalized Service</h3>
+                    <p data-en="From your first inquiry to farewell, we tailor every detail to your preferences."
+                        data-sw="Kuanzia ombi lako la kwanza hadi kwaheri, tunarekebisha kila kitu kulingana na mapendeleo yako."
+                        data-fr="De votre première demande à l'au revoir, nous adaptons chaque détail à vos préférences."
+                        data-de="Von Ihrer ersten Anfrage bis zum Abschied passen wir jedes Detail an Ihre Vorlieben an."
+                        data-es="Desde su primera consulta hasta la despedida, adaptamos cada detalle a sus preferencias.">
+                        From your first inquiry to farewell, we tailor every detail to your preferences.</p>
                 </div>
 
                 <div class="promise-item">
                     <div class="promise-icon"><i class="fas fa-leaf"></i></div>
-                    <h3>Responsible Tourism</h3>
-                    <p>We respect nature, wildlife, and local cultures while supporting communities.</p>
+                    <h3 data-en="Responsible Tourism" data-sw="Utalii Wenye Uwajibikaji" data-fr="Tourisme Responsable"
+                        data-de="Verantwortungsvoller Tourismus" data-es="Turismo Responsable">Responsible Tourism</h3>
+                    <p data-en="We respect nature, wildlife, and local cultures while supporting communities."
+                        data-sw="Tunaheshimu asili, wanyamapori, na tamaduni za kienyeji huku tukisaidia jamii."
+                        data-fr="Nous respectons la nature, la faune et les cultures locales tout en soutenant les communautés."
+                        data-de="Wir respektieren Natur, Tierwelt und lokale Kulturen und unterstützen gleichzeitig Gemeinschaften."
+                        data-es="Respetamos la naturaleza, la vida silvestre y las culturas locales mientras apoyamos a las comunidades.">
+                        We respect nature, wildlife, and local cultures while supporting communities.</p>
                 </div>
 
                 <div class="promise-item">
                     <div class="promise-icon"><i class="fas fa-tag"></i></div>
-                    <h3>Transparent Prices</h3>
-                    <p>No hidden fees - just honest communication about costs and value.</p>
+                    <h3 data-en="Transparent Prices" data-sw="Bei Zilizo Wazi" data-fr="Prix Transparents"
+                        data-de="Transparente Preise" data-es="Precios Transparentes">Transparent Prices</h3>
+                    <p data-en="No hidden fees - just honest communication about costs and value."
+                        data-sw="Hakuna malipo ya siri - mawasiliano ya kweli tu kuhusu gharama na thamani."
+                        data-fr="Pas de frais cachés - juste une communication honnête sur les coûts et la valeur."
+                        data-de="Keine versteckten Gebühren - nur ehrliche Kommunikation über Kosten und Wert."
+                        data-es="Sin tarifas ocultas, solo comunicación honesta sobre costos y valor.">No hidden fees -
+                        just honest communication about costs and value.</p>
                 </div>
 
                 <div class="promise-item">
                     <div class="promise-icon"><i class="fas fa-headset"></i></div>
-                    <h3>24/7 Support</h3>
-                    <p>Round-the-clock assistance throughout your safari for complete peace of mind.</p>
+                    <h3 data-en="24/7 Support" data-sw="Msaada 24/7" data-fr="Support 24/7" data-de="24/7 Unterstützung"
+                        data-es="Soporte 24/7">24/7 Support</h3>
+                    <p data-en="Round-the-clock assistance throughout your safari for complete peace of mind."
+                        data-sw="Usaidizi wa kila saa wakati wote wa safari yako kwa utulivu kamili wa akili."
+                        data-fr="Une assistance 24h/24 et 7j/7 tout au long de votre safari pour une tranquillité d'esprit totale."
+                        data-de="Rund um die Uhr Unterstützung während Ihrer Safari für vollkommene Ruhe."
+                        data-es="Asistencia las 24 horas durante su safari para una completa tranquilidad.">
+                        Round-the-clock assistance throughout your safari for complete peace of mind.</p>
                 </div>
             </div>
         </div>
@@ -210,9 +309,17 @@
 
     <section id="fleet">
         <div class="container">
-            <h2 class="section-title">How Are We Going to Take You There?</h2>
-            <p class="section-subtitle">At True Africa Escape, your journey is more than just travel — it's an
-                experience. We ensure every step is safe, smooth, and tailored just for you.</p>
+            <h2 class="section-title" data-en="How Are We Going to Take You There?" data-sw="Tutakuchukua Je Huko?"
+                data-fr="Comment Allons-Nous Vous Y Emmener?" data-de="Wie Werden Wir Sie Dorthin Bringen?"
+                data-es="¿Cómo Te Llevaremos Allá?">How Are We Going to Take You There?</h2>
+            <p class="section-subtitle"
+                data-en="At True Africa Escape, your journey is more than just travel — it's an experience. We ensure every step is safe, smooth, and tailored just for you."
+                data-sw="Katika True Africa Escape, safari yako ni zaidi ya usafiri tu - ni uzoefu. Tunahakikisha kila hatua ni salama, laini, na imebinafsishwa kwa ajili yako."
+                data-fr="Chez True Africa Escape, votre voyage est plus qu'un simple déplacement - c'est une expérience. Nous veillons à ce que chaque étape soit sûre, fluide et adaptée à vos besoins."
+                data-de="Bei True Africa Escape ist Ihre Reise mehr als nur Reisen - es ist ein Erlebnis. Wir stellen sicher, dass jeder Schritt sicher, reibungslos und auf Sie zugeschnitten ist."
+                data-es="En True Africa Escape, tu viaje es más que solo viajar: es una experiencia. Aseguramos que cada paso sea seguro, sin problemas y adaptado a tus necesidades.">
+                At True Africa Escape, your journey is more than just travel — it's an experience. We ensure every step
+                is safe, smooth, and tailored just for you.</p>
 
             <div class="fleet-grid">
                 <div class="fleet-card">
@@ -224,8 +331,14 @@
                         </svg>
                     </div>
                     <div class="fleet-info">
-                        <h3>Our Fleet</h3>
-                        <p>Comfortable 4x4 Safari Vehicles with pop-up roofs, modern mini-buses and vans for city &
+                        <h3 data-en="Our Fleet" data-sw="Kikosi Chetu" data-fr="Notre Flotte" data-de="Unsere Flotte"
+                            data-es="Nuestra Flota">Our Fleet</h3>
+                        <p data-en="Comfortable 4x4 Safari Vehicles with pop-up roofs, modern mini-buses and vans for city & cultural tours, private air-conditioned transfers, and luxury options available on request (Land Cruiser VX, VIP vans)."
+                            data-sw="Gari la Safari 4x4 Staha lenye paa zinazotulia, mabasi maderna na vani kwa ziara za jiji na kitamaduni, usafirishaji wa faragha wenye kiyoyozi, na chaguo za anasa zinazopatikana kwa ombi (Land Cruiser VX, vani za VIP)."
+                            data-fr="Véhicules Safari 4x4 confortables avec toits ouvrants, minibus et fourgonnettes modernes pour les visites urbaines et culturelles, transferts privés climatisés et options de luxe disponibles sur demande (Land Cruiser VX, fourgonnettes VIP)."
+                            data-de="Bequeme 4x4 Safari-Fahrzeuge mit Pop-up-Dächern, moderne Minibusse und Vans für Stadt- & Kulturtouren, private klimatisierte Transfers und Luxusoptionen auf Anfrage (Land Cruiser VX, VIP-Vans)."
+                            data-es="Vehículos Safari 4x4 cómodos con techos elevables, minibuses y furgonetas modernos para recorridos urbanos y culturales, traslados privados con aire acondicionado y opciones de lujo disponibles bajo pedido (Land Cruiser VX, furgonetas VIP).">
+                            Comfortable 4x4 Safari Vehicles with pop-up roofs, modern mini-buses and vans for city &
                             cultural tours, private air-conditioned transfers, and luxury options available on request
                             (Land Cruiser VX, VIP vans).</p>
                     </div>
@@ -240,8 +353,15 @@
                         </svg>
                     </div>
                     <div class="fleet-info">
-                        <h3>Customizable Routes</h3>
-                        <p>You choose your destination — we tailor the best route. Whether you want to start in Arusha,
+                        <h3 data-en="Customizable Routes" data-sw="Njia Zinazoweza Kubinafsishwa"
+                            data-fr="Itinéraires Personnalisables" data-de="Anpassbare Routen"
+                            data-es="Rutas Personalizables">Customizable Routes</h3>
+                        <p data-en="You choose your destination — we tailor the best route. Whether you want to start in Arusha, Dar es Salaam, Nairobi, or Zanzibar — we'll plan your adventure accordingly. Need multiple-country safari? We arrange cross-border permits and transfers."
+                            data-sw="Wewe chagua eneo lako la kuelekea - sisi tunarekebisha njia bora. Iwe unataka kuanzia Arusha, Dar es Salaam, Nairobi, au Zanzibar - tutapanga adventure yako ipasavyo. Unahitaji safari ya nchi nyingi? Tupanga vibali vya kuvuka mipaka na usafirishaji."
+                            data-fr="Vous choisissez votre destination - nous adaptons le meilleur itinéraire. Que vous souhaitiez commencer à Arusha, Dar es Salaam, Nairobi ou Zanzibar - nous planifierons votre aventure en conséquence. Besoin d'un safari multi-pays? Nous organisons les permis transfrontaliers et les transferts."
+                            data-de="Sie wählen Ihr Ziel - wir schneidern die beste Route zu. Ob Sie in Arusha, Dar es Salaam, Nairobi oder Sansibar starten möchten - wir planen Ihr Abenteuer entsprechend. Brauchen Sie eine Mehrländer-Safari? Wir organisieren grenzüberschreitende Genehmigungen und Transfers."
+                            data-es="Tú eliges tu destino, nosotros adaptamos la mejor ruta. Ya sea que quieras comenzar en Arusha, Dar es Salaam, Nairobi o Zanzíbar, planearemos tu aventura en consecuencia. ¿Necesitas un safari de varios países? Organizamos permisos transfronterizos y traslados.">
+                            You choose your destination — we tailor the best route. Whether you want to start in Arusha,
                             Dar es Salaam, Nairobi, or Zanzibar — we'll plan your adventure accordingly. Need
                             multiple-country safari? We arrange cross-border permits and transfers.</p>
                     </div>
@@ -256,8 +376,14 @@
                         </svg>
                     </div>
                     <div class="fleet-info">
-                        <h3>Professional Team</h3>
-                        <p>Experienced, certified safari driver-guides, multilingual guides (English, French, Spanish,
+                        <h3 data-en="Professional Team" data-sw="Timu ya Wataalamu" data-fr="Équipe Professionnelle"
+                            data-de="Professionelles Team" data-es="Equipo Profesional">Professional Team</h3>
+                        <p data-en="Experienced, certified safari driver-guides, multilingual guides (English, French, Spanish, Swahili), and friendly support team available 24/7 via phone or WhatsApp. Coordinated backup vehicles in case of emergencies."
+                            data-sw="Waongozaji wa madereva wa safari wenye uzoefu, waliosajiliwa, waongozaji wa lugha nyingi (Kiingereza, Kifaransa, Kihispania, Kiswahili), na timu ya msaada ya kirafiki inayopatikana 24/7 kupitia simu au WhatsApp. Gari za dharura zilizoratibiwa katika hatari."
+                            data-fr="Guides-chauffeurs de safari expérimentés et certifiés, guides multilingues (anglais, français, espagnol, swahili) et équipe d'assistance conviviale disponible 24h/24 et 7j/7 par téléphone ou WhatsApp. Véhicules de secours coordonnés en cas d'urgence."
+                            data-de="Erfahrene, zertifizierte Safari-Fahrerführer, mehrsprachige Führer (Englisch, Französisch, Spanisch, Swahili) und freundliches Support-Team, das 24/7 per Telefon oder WhatsApp erreichbar ist. Koordinierte Ersatzfahrzeuge für Notfälle."
+                            data-es="Guías-conductores de safari experimentados y certificados, guías multilingües (inglés, francés, español, suajili) y equipo de soporte amigable disponible 24/7 por teléfono o WhatsApp. Vehículos de respaldo coordinados en caso de emergencias.">
+                            Experienced, certified safari driver-guides, multilingual guides (English, French, Spanish,
                             Swahili), and friendly support team available 24/7 via phone or WhatsApp. Coordinated backup
                             vehicles in case of emergencies.</p>
                     </div>
@@ -272,8 +398,15 @@
                         </svg>
                     </div>
                     <div class="fleet-info">
-                        <h3>Airport & Hotel Pickups</h3>
-                        <p>Meet-and-greet at major airports: Kilimanjaro (JRO), Dar es Salaam (DAR), Zanzibar (ZNZ),
+                        <h3 data-en="Airport & Hotel Pickups" data-sw="Kukuchukua Uwanja wa Ndege na Hoteli"
+                            data-fr="Prise en Charge Aéroport & Hôtel" data-de="Flughafen- & Hotelabholung"
+                            data-es="Recogidas en Aeropuerto y Hotel">Airport & Hotel Pickups</h3>
+                        <p data-en="Meet-and-greet at major airports: Kilimanjaro (JRO), Dar es Salaam (DAR), Zanzibar (ZNZ), Nairobi (NBO). Smooth hotel transfers across all zones: North, South, Coastal, Islands."
+                            data-sw="Kukutana na kukusalimia kwenye viwanja vya ndege vikuu: Kilimanjaro (JRO), Dar es Salaam (DAR), Zanzibar (ZNZ), Nairobi (NBO). Usafirishaji mwepesi wa hoteli katika maeneo yote: Kaskazini, Kusini, Pwani, Visiwa."
+                            data-fr="Accueil et prise en charge dans les principaux aéroports : Kilimandjaro (JRO), Dar es Salaam (DAR), Zanzibar (ZNZ), Nairobi (NBO). Transferts d'hôtel fluides dans toutes les zones : Nord, Sud, Côtière, Îles."
+                            data-de="Meet-and-Greet an großen Flughäfen: Kilimanjaro (JRO), Dar es Salaam (DAR), Sansibar (ZNZ), Nairobi (NBO). Reibungslose Hoteltransfers in allen Zonen: Norden, Süden, Küste, Inseln."
+                            data-es="Encuentro y bienvenida en los principales aeropuertos: Kilimanjaro (JRO), Dar es Salaam (DAR), Zanzíbar (ZNZ), Nairobi (NBO). Traslados de hotel sin problemas en todas las zonas: Norte, Sur, Costera, Islas.">
+                            Meet-and-greet at major airports: Kilimanjaro (JRO), Dar es Salaam (DAR), Zanzibar (ZNZ),
                             Nairobi (NBO). Smooth hotel transfers across all zones: North, South, Coastal, Islands.</p>
                     </div>
                 </div>
@@ -287,8 +420,15 @@
                         </svg>
                     </div>
                     <div class="fleet-info">
-                        <h3>Flexible Itineraries</h3>
-                        <p>Book a pre-made package or tell us your dream trip — we'll design your custom route. Options
+                        <h3 data-en="Flexible Itineraries" data-sw="Ratiba Zenye Kubadilika"
+                            data-fr="Itinéraires Flexibles" data-de="Flexible Routenpläne"
+                            data-es="Itinerarios Flexibles">Flexible Itineraries</h3>
+                        <p data-en="Book a pre-made package or tell us your dream trip — we'll design your custom route. Options for solo travelers, couples, families, large groups & incentive tours."
+                            data-sw="Weka kifurushi kilichotengenezwa tayari au tuambie safari yako ya ndoto - tutaunda njia yako maalum. Chaguzi kwa wasafiri peke yao, wenye wenzao, familia, makundi makubwa na ziara za motisha."
+                            data-fr="Réservez un forfait préfait ou dites-nous votre voyage de rêve - nous concevrons votre itinéraire personnalisé. Options pour les voyageurs individuels, les couples, les familles, les grands groupes et les voyages d'incitation."
+                            data-de="Buchen Sie ein vorgefertigtes Paket oder erzählen Sie uns von Ihrer Traumreise - wir entwerfen Ihre individuelle Route. Optionen für Alleinreisende, Paare, Familien, große Gruppen & Incentive-Reisen."
+                            data-es="Reserva un paquetepredefinido o cuéntanos tu viaje soñado: diseñaremos tu ruta personalizada. Opciones para viajeros solos, parejas, familias, grupos grandes y viajes de incentivo.">
+                            Book a pre-made package or tell us your dream trip — we'll design your custom route. Options
                             for solo travelers, couples, families, large groups & incentive tours.</p>
                     </div>
                 </div>
@@ -302,8 +442,14 @@
                         </svg>
                     </div>
                     <div class="fleet-info">
-                        <h3>Safe and Secure</h3>
-                        <p>Well-maintained vehicles with seatbelts, first aid, GPS tracking. All drivers trained in
+                        <h3 data-en="Safe and Secure" data-sw="Salama na Imara" data-fr="Sécurité et Sûreté"
+                            data-de="Sicher und Geschützt" data-es="Seguro y Protegido">Safe and Secure</h3>
+                        <p data-en="Well-maintained vehicles with seatbelts, first aid, GPS tracking. All drivers trained in defensive driving and tourist safety. Insurance covered + optional travel insurance on request."
+                            data-sw="Magari yaliyotunzwa vyema yenye mikanda ya usalama, first aid, ufuatiliaji wa GPS. Madereva wote wamefunzwa uderevu wa ulinzi na usalama wa watalii. Bima imefunikwa + bima ya usafiri ya hiari kwa ombi."
+                            data-fr="Véhicules bien entretenus avec ceintures de sécurité, trousse de premiers soins, suivi GPS. Tous les conducteurs formés à la conduite défensive et à la sécurité des touristes. Assurance incluse + assurance voyage facultative sur demande."
+                            data-de="Gut gewartete Fahrzeuge mit Sicherheitsgurten, Erste-Hilfe-Ausrüstung, GPS-Tracking. Alle Fahrer in defensivem Fahren und Touristensicherheit geschult. Versicherung inklusive + optionale Reiseversicherung auf Anfrage."
+                            data-es="Vehículos bien mantenidos con cinturones de seguridad, primeros auxilios, seguimiento GPS. Todos los conductores capacitados en conducción defensiva y seguridad turística. Seguro incluido + seguro de viaje opcional bajo pedido.">
+                            Well-maintained vehicles with seatbelts, first aid, GPS tracking. All drivers trained in
                             defensive driving and tourist safety. Insurance covered + optional travel insurance on
                             request.</p>
                     </div>
@@ -316,286 +462,704 @@
 
     <title>Tanzania Safari Destinations | True Africa Escape</title>
 
-    </head>
+
 
     <body>
-        <section class="destinations" id="destinations">
-            <div class="container">
-                <h2 class="section-title">🇹🇿 Tanzania Destinations</h2>
-                <p class="section-subtitle">Explore the diverse landscapes and wildlife experiences across Tanzania's
-                    spectacular regions</p>
+       <section class="destinations" id="destinations">
+    <div class="container">
+        <h2 class="section-title" 
+            data-en="🇹🇿 Tanzania Destinations"
+            data-sw="🇹🇿 Vivutio vya Tanzania"
+            data-fr="🇹🇿 Destinations tanzaniennes"
+            data-de="🇹🇿 Tansanische Reiseziele"
+            data-es="🇹🇿 Destinos de Tanzania">🇹🇿 Tanzania Destinations</h2>
+        
+        <p class="section-subtitle"
+           data-en="Explore the diverse landscapes and wildlife experiences across Tanzania's spectacular regions"
+           data-sw="Gundua mandhari mbalimbali na uzoefu wa wanyamapori katika maeneo ya kusisimua ya Tanzania"
+           data-fr="Explorez les paysages divers et les expériences de faune à travers les régions spectaculaires de la Tanzanie"
+           data-de="Entdecken Sie die vielfältigen Landschaften und Wildtiererlebnisse in den spektakulären Regionen Tansanias"
+           data-es="Explora los diversos paisajes y experiencias de vida silvestre en las espectaculares regiones de Tanzania">Explore the diverse landscapes and wildlife experiences across Tanzania's spectacular regions</p>
 
-                <div class="destination-tabs">
-                    <button class="tab-btn active" data-tab="all">All Destinations</button>
-                    <button class="tab-btn" data-tab="northern">Northern Circuit</button>
-                    <button class="tab-btn" data-tab="southern">Southern Circuit</button>
-                    <button class="tab-btn" data-tab="coastal">Coastal Zone</button>
-                    <button class="tab-btn" data-tab="zanzibar">Zanzibar</button>
-                    <button class="tab-btn" data-tab="western">Western Circuit</button>
-                    <button class="tab-btn" data-tab="lake">Lake Zone</button>
-                    <button class="tab-btn" data-tab="central">Central Zone</button>
-                </div>
+        <div class="destination-tabs">
+            <button class="tab-btn active" data-tab="all"
+                    data-en="All Destinations"
+                    data-sw="Vivutio Vyote"
+                    data-fr="Toutes les Destinations"
+                    data-de="Alle Reiseziele"
+                    data-es="Todos los Destinos">All Destinations</button>
+            
+            <button class="tab-btn" data-tab="northern"
+                    data-en="Northern Circuit"
+                    data-sw="Mzunguko wa Kaskazini"
+                    data-fr="Circuit Nord"
+                    data-de="Nördliche Route"
+                    data-es="Circuito Norte">Northern Circuit</button>
+            
+            <button class="tab-btn" data-tab="southern"
+                    data-en="Southern Circuit"
+                    data-sw="Mzunguko wa Kusini"
+                    data-fr="Circuit Sud"
+                    data-de="Südliche Route"
+                    data-es="Circuito Sur">Southern Circuit</button>
+            
+            <button class="tab-btn" data-tab="coastal"
+                    data-en="Coastal Zone"
+                    data-sw="Eneo la Pwani"
+                    data-fr="Zone Côtière"
+                    data-de="Küstenzone"
+                    data-es="Zona Costera">Coastal Zone</button>
+            
+            <button class="tab-btn" data-tab="zanzibar"
+                    data-en="Zanzibar"
+                    data-sw="Zanzibar"
+                    data-fr="Zanzibar"
+                    data-de="Sansibar"
+                    data-es="Zanzíbar">Zanzibar</button>
+            
+            <button class="tab-btn" data-tab="western"
+                    data-en="Western Circuit"
+                    data-sw="Mzunguko wa Magharibi"
+                    data-fr="Circuit Ouest"
+                    data-de="Westliche Route"
+                    data-es="Circuito Occidental">Western Circuit</button>
+            
+            <button class="tab-btn" data-tab="lake"
+                    data-en="Lake Zone"
+                    data-sw="Eneo la Ziwa"
+                    data-fr="Zone Lacustre"
+                    data-de="Seenzone"
+                    data-es="Zona Lacustre">Lake Zone</button>
+            
+            <button class="tab-btn" data-tab="central"
+                    data-en="Central Zone"
+                    data-sw="Eneo la Kati"
+                    data-fr="Zone Centrale"
+                    data-de="Zentrale Zone"
+                    data-es="Zona Central">Central Zone</button>
+        </div>
 
-                <div class="destination-grid">
-                    <!-- Serengeti -->
-                    <div class="destination-card" data-destination="serengeti" data-region="northern">
-                        <div class="destination-image">
-                            <img src="https://images.pexels.com/photos/59840/elephant-baby-safari-elephants-africa-59840.jpeg"
-                                alt="Serengeti National Park" loading="lazy">
-                            <div class="image-overlay">
-                                <span class="view-details">View Details</span>
-                            </div>
-                        </div>
-                        <div class="destination-info">
-                            <h3>Serengeti National Park</h3>
-                            <p>The endless plains of Serengeti National Park - home to the Great Migration and Africa's
-                                most spectacular wildlife shows in northern Tanzania.</p>
-                            <span class="destination-badge">Northern Circuit</span>
-                            <button class="quick-view-btn" data-modal="serengetiModal">Quick View</button>
-                        </div>
-                    </div>
-
-                    <!-- Ngorongoro -->
-                    <div class="destination-card" data-destination="ngorongoro" data-region="northern">
-                        <div class="destination-image">
-                            <img src="https://images.pexels.com/photos/30705905/pexels-photo-30705905.jpeg"
-                                alt="Ngorongoro Crater" loading="lazy">
-                            <div class="image-overlay">
-                                <span class="view-details">View Details</span>
-                            </div>
-                        </div>
-                        <div class="destination-info">
-                            <h3>Ngorongoro Crater</h3>
-                            <p>The world's largest intact volcanic caldera in Tanzania with the densest population of
-                                large mammals in Africa.</p>
-                            <span class="destination-badge">Northern Circuit</span>
-                            <button class="quick-view-btn" data-modal="ngorongoroModal">Quick View</button>
-                        </div>
-                    </div>
-                    <!-- Saadani National Park -->
-                    <div class="destination-card" data-destination="saadani" data-region="coastal">
-                        <div class="destination-image">
-                            <img src="https://images.pexels.com/photos/4577147/pexels-photo-4577147.jpeg"
-                                alt="Saadani National Park" loading="lazy">
-                            <div class="image-overlay">
-                                <span class="view-details">View Details</span>
-                            </div>
-                        </div>
-                        <div class="destination-info">
-                            <h3>Saadani National Park</h3>
-                            <p>Tanzania's only coastal national park where beach meets bush - unique combination of
-                                marine and terrestrial ecosystems.</p>
-                            <span class="destination-badge">Coastal Zone</span>
-                            <button class="quick-view-btn" data-modal="saadaniModal">Quick View</button>
-                        </div>
-                    </div>
-
-                    <!-- Mafia Island -->
-                    <div class="destination-card" data-destination="mafia" data-region="coastal">
-                        <div class="destination-image">
-                            <img src="https://images.pexels.com/photos/14667378/pexels-photo-14667378.jpeg"
-                                alt="Mafia Island" loading="lazy">
-                            <div class="image-overlay">
-                                <span class="view-details">View Details</span>
-                            </div>
-                        </div>
-                        <div class="destination-info">
-                            <h3>Mafia Island</h3>
-                            <p>Pristine marine park with exceptional diving, whale sharks, and untouched beaches south
-                                of Zanzibar.</p>
-                            <span class="destination-badge">Coastal Zone</span>
-                            <button class="quick-view-btn" data-modal="mafiaModal">Quick View</button>
-                        </div>
-                    </div>
-
-                    <!-- Ruaha National Park -->
-                    <div class="destination-card" data-destination="ruaha" data-region="central">
-                        <div class="destination-image">
-                            <img src="https://www.africanmeccasafaris.com/wp-content/uploads/jabaliridge2.jpg"
-                                alt="Ruaha National Park" loading="lazy">
-                            <div class="image-overlay">
-                                <span class="view-details">View Details</span>
-                            </div>
-                        </div>
-                        <div class="destination-info">
-                            <h3>Ruaha National Park</h3>
-                            <p>Tanzania's largest national park with dramatic landscapes and excellent predator
-                                sightings.</p>
-                            <span class="destination-badge">Central Zone</span>
-                            <button class="quick-view-btn" data-modal="ruahaModal">Quick View</button>
-                        </div>
-                    </div>
-
-                    <!-- Udzungwa Mountains -->
-                    <div class="destination-card" data-destination="udzungwa" data-region="central">
-                        <div class="destination-image">
-                            <img src="https://images.pexels.com/photos/14667378/pexels-photo-14667378.jpeg"
-                                alt="Udzungwa Mountains" loading="lazy">
-                            <div class="image-overlay">
-                                <span class="view-details">View Details</span>
-                            </div>
-                        </div>
-                        <div class="destination-info">
-                            <h3>Udzungwa Mountains</h3>
-                            <p>Biodiversity hotspot with endemic species and spectacular waterfalls in Tanzania's
-                                Eastern Arc Mountains.</p>
-                            <span class="destination-badge">Central Zone</span>
-                            <button class="quick-view-btn" data-modal="udzungwaModal">Quick View</button>
-                        </div>
-                    </div>
-                    <!-- Lake Victoria -->
-                    <div class="destination-card" data-destination="victoria" data-region="lake">
-                        <div class="destination-image">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjAHo-9iV46EuQMVYoNTnDfGkdzlPzgXmoag&s"
-                                alt="Lake Victoria" loading="lazy">
-                            <div class="image-overlay">
-                                <span class="view-details">View Details</span>
-                            </div>
-                        </div>
-                        <div class="destination-info">
-                            <h3>Lake Victoria</h3>
-                            <p>Africa's largest lake with fishing communities, island retreats, and unique birdlife in
-                                northwestern Tanzania.</p>
-                            <span class="destination-badge">Lake Zone</span>
-                            <button class="quick-view-btn" data-modal="victoriaModal">Quick View</button>
-                        </div>
-                    </div>
-
-                    <!-- Lake Tanganyika -->
-                    <div class="destination-card" data-destination="tanganyika" data-region="lake">
-                        <div class="destination-image">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6cI3kbgwFoVMKkN6p-c3dP2KvEOvq1Tf-Rw&s"
-                                alt="Lake Tanganyika" loading="lazy">
-                            <div class="image-overlay">
-                                <span class="view-details">View Details</span>
-                            </div>
-                        </div>
-                        <div class="destination-info">
-                            <h3>Lake Tanganyika</h3>
-                            <p>The world's longest freshwater lake with stunning beaches and unique cichlid fish in
-                                western Tanzania.</p>
-                            <span class="destination-badge">Lake Zone</span>
-                            <button class="quick-view-btn" data-modal="tanganyikaModal">Quick View</button>
-                        </div>
-                    </div>
-
-                    <!-- Kilimanjaro -->
-                    <div class="destination-card" data-destination="kilimanjaro" data-region="northern">
-                        <div class="destination-image">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0fdAXebSn5vHJ7Z46VTxSFjtK0qOLJA7m0g&s
-                                alt=" Mount Kilimanjaro" loading="lazy">
-                            <div class="image-overlay">
-                                <span class="view-details">View Details</span>
-                            </div>
-                        </div>
-                        <div class="destination-info">
-                            <h3>Mount Kilimanjaro</h3>
-                            <p>Africa's highest peak in Tanzania and the world's tallest free-standing mountain - a
-                                life-changing climb.</p>
-                            <span class="destination-badge">Northern Circuit</span>
-                            <button class="quick-view-btn" data-modal="kilimanjaroModal">Quick View</button>
-                        </div>
-                    </div>
-
-                    <!-- Tarangire -->
-                    <div class="destination-card" data-destination="tarangire" data-region="northern">
-                        <div class="destination-image">
-                            <img
-                                src="https://images.unsplash.com/photo-1599422690883-9a5c0d63a8a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80">
-                            alt="Tarangire National Park" loading="lazy">
-                            <div class="image-overlay">
-                                <span class="view-details" data-modal="tarangireModal">View Details</span>
-                            </div>
-                        </div>
-                        <div class="destination-info">
-                            <h3>Tarangire National Park</h3>
-                            <p>Land of giants in northern Tanzania - famous for its massive elephant herds and ancient
-                                baobab trees.</p>
-                            <span class="destination-badge">Northern Circuit</span>
-                            <button class="quick-view-btn" data-modal="tarangireModal">Quick View</button>
-                        </div>
-                    </div>
-
-                    <!-- Zanzibar -->
-                    <div class="destination-card" data-destination="zanzibar" data-region="zanzibar">
-                        <div class="destination-image">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmPaBDo-Q5jgLJhCrjvYndOtCbUzevm6sAwg&s"
-                                alt="Zanzibar" loading="lazy">
-                            <div class="image-overlay">
-                                <span class="view-details" data-modal="">View Details</span>
-                            </div>
-                        </div>
-                        <div class="destination-info">
-                            <h3>Zanzibar</h3>
-                            <p>Tropical paradise island of Tanzania with white-sand beaches, turquoise waters, and rich
-                                cultural history.</p>
-                            <span class="destination-badge">Zanzibar Archipelago</span>
-                            <button class="quick-view-btn" data-modal="zanzibarModal">Quick View</button>
-                        </div>
-                    </div>
-
-                    <!-- Mikumi -->
-                    <div class="destination-card" data-destination="mikumi" data-region="southern">
-                        <div class="destination-image">
-                            <img src="https://www.leopard-tours.com/wp-content/uploads/2015/12/Mikumi-National-Park-4-1024x680.jpg"
-                                alt="Mikumi National Park" loading="lazy">
-                            <div class="image-overlay">
-                                <span class="view-details">View Details</span>
-                            </div>
-                        </div>
-                        <div class="destination-info">
-                            <h3>Mikumi National Park</h3>
-                            <p>Tanzania's hidden safari gem in the southern circuit with excellent wildlife viewing just
-                                hours from Dar es Salaam.</p>
-                            <span class="destination-badge">Southern Circuit</span>
-                            <button class="quick-view-btn" data-modal="mikumiModal">Quick View</button>
-                        </div>
-                    </div>
-
-                    <!-- Arusha -->
-                    <div class="destination-card" data-destination="arusha" data-region="northern">
-                        <div class="destination-image">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm_gRBTPqq2H4cdDnVCnDVTfSQXzjh-2lI9g&s"
-                                alt="Arusha National Park" loading="lazy">
-                            <div class="image-overlay">
-                                <span class="view-details">View Details</span>
-                            </div>
-                        </div>
-                        <div class="destination-info">
-                            <h3>Arusha National Park</h3>
-                            <p>Gateway to Tanzania's wild beauty in the northern circuit with Mount Meru, Ngurdoto
-                                Crater, and Momella Lakes.</p>
-                            <span class="destination-badge">Northern Circuit</span>
-                            <button class="quick-view-btn" data-modal="arushaModal">Quick View</button>
-                        </div>
-                    </div>
-
-                    <!-- Selous -->
-                    <div class="destination-card" data-destination="selous" data-region="southern">
-                        <div class="destination-image">
-                            <img src="https://imgix.brilliant-africa.com/roho-ya-selous-selous-game-reserve-tanzania-20.jpg?auto=format,enhance,compress&fit=crop&crop=entropy,faces,focalpoint&w=580&h=480&q=40"
-                                alt="Selous Game Reserve" loading="lazy">
-                            <div class="image-overlay">
-                                <span class="view-details">View Details</span>
-                            </div>
-                        </div>
-                        <div class="destination-info">
-                            <h3>Selous Game Reserve</h3>
-                            <p>Africa's wild soul in southern Tanzania - one of the largest protected areas with unique
-                                river safaris.</p>
-                            <span class="destination-badge">Southern Circuit</span>
-                            <button class="quick-view-btn" data-modal="selousModal">Quick View</button>
-                        </div>
+        <div class="destination-grid">
+            <!-- Serengeti -->
+            <div class="destination-card" data-destination="serengeti" data-region="northern">
+                <div class="destination-image">
+                    <img src="https://images.pexels.com/photos/59840/elephant-baby-safari-elephants-africa-59840.jpeg"
+                        alt="Serengeti National Park" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-details"
+                              data-en="View Details"
+                              data-sw="Angalia Maelezo"
+                              data-fr="Voir les détails"
+                              data-de="Details anzeigen"
+                              data-es="Ver detalles">View Details</span>
                     </div>
                 </div>
-
-                <div class="cta-container">
-                    <a href="#contact" class="btn btn-primary">Customize Your Safari Experience</a>
-                    <p class="cta-subtext">Let our experts craft your perfect Tanzanian adventure</p>
+                <div class="destination-info">
+                    <h3 data-en="Serengeti National Park"
+                        data-sw="Hifadhi ya Taifa ya Serengeti"
+                        data-fr="Parc national de Serengeti"
+                        data-de="Serengeti Nationalpark"
+                        data-es="Parque Nacional del Serengeti">Serengeti National Park</h3>
+                    
+                    <p data-en="The endless plains of Serengeti National Park - home to the Great Migration and Africa's most spectacular wildlife shows in northern Tanzania."
+                       data-sw="Tambarare zisizo na mwisho za Hifadhi ya Taifa ya Serengeti - nyumbani kwa Uhamiaji Mkuu na maonyesho ya wanyamapori ya kusisimua zaidi barani Afrika kaskazini mwa Tanzania."
+                       data-fr="Les plaines sans fin du parc national de Serengeti - abritant la Grande Migration et les spectacles de faune les plus spectaculaires d'Afrique dans le nord de la Tanzanie."
+                       data-de="Die endlosen Ebenen des Serengeti-Nationalparks - Heimat der Großen Migration und Afrikas spektakulärsten Wildtierschauen im Norden Tansanias."
+                       data-es="Las interminables llanuras del Parque Nacional Serengeti - hogar de la Gran Migración y los espectáculos de vida silvestre más espectaculares de África en el norte de Tanzania.">The endless plains of Serengeti National Park - home to the Great Migration and Africa's most spectacular wildlife shows in northern Tanzania.</p>
+                    
+                    <span class="destination-badge"
+                          data-en="Northern Circuit"
+                          data-sw="Mzunguko wa Kaskazini"
+                          data-fr="Circuit Nord"
+                          data-de="Nördliche Route"
+                          data-es="Circuito Norte">Northern Circuit</span>
+                    
+                    <button class="quick-view-btn" data-modal="serengetiModal"
+                            data-en="Quick View"
+                            data-sw="Angalia Haraka"
+                            data-fr="Vue Rapide"
+                            data-de="Schnellansicht"
+                            data-es="Vista Rápida">Quick View</button>
                 </div>
             </div>
-        </section>
 
+            <!-- Ngorongoro -->
+            <div class="destination-card" data-destination="ngorongoro" data-region="northern">
+                <div class="destination-image">
+                    <img src="https://images.pexels.com/photos/30705905/pexels-photo-30705905.jpeg"
+                        alt="Ngorongoro Crater" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-details"
+                              data-en="View Details"
+                              data-sw="Angalia Maelezo"
+                              data-fr="Voir les détails"
+                              data-de="Details anzeigen"
+                              data-es="Ver detalles">View Details</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <h3 data-en="Ngorongoro Crater"
+                        data-sw="Kreta la Ngorongoro"
+                        data-fr="Cratère du Ngorongoro"
+                        data-de="Ngorongoro-Krater"
+                        data-es="Crátor del Ngorongoro">Ngorongoro Crater</h3>
+                    
+                    <p data-en="The world's largest intact volcanic caldera in Tanzania with the densest population of large mammals in Africa."
+                       data-sw="Kreta kubwa zaidi la volkeno lililosimama duniani nchini Tanzania lenye idadi kubwa ya wanyama wakubwa walio na mamalia barani Afrika."
+                       data-fr="La plus grande caldeira volcanique intacte du monde en Tanzanie avec la population de grands mammifères la plus dense d'Afrique."
+                       data-de="Der größte intakte Vulkankrater der Welt in Tansania mit der dichtesten Population großer Säugetiere in Afrika."
+                       data-es="La caldera volcánica intacta más grande del mundo en Tanzania con la población más densa de grandes mamíferos en África.">The world's largest intact volcanic caldera in Tanzania with the densest population of large mammals in Africa.</p>
+                    
+                    <span class="destination-badge"
+                          data-en="Northern Circuit"
+                          data-sw="Mzunguko wa Kaskazini"
+                          data-fr="Circuit Nord"
+                          data-de="Nördliche Route"
+                          data-es="Circuito Norte">Northern Circuit</span>
+                    
+                    <button class="quick-view-btn" data-modal="ngorongoroModal"
+                            data-en="Quick View"
+                            data-sw="Angalia Haraka"
+                            data-fr="Vue Rapide"
+                            data-de="Schnellansicht"
+                            data-es="Vista Rápida">Quick View</button>
+                </div>
+            </div>
+            
+            <!-- Saadani National Park -->
+            <div class="destination-card" data-destination="saadani" data-region="coastal">
+                <div class="destination-image">
+                    <img src="https://images.pexels.com/photos/4577147/pexels-photo-4577147.jpeg"
+                        alt="Saadani National Park" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-details"
+                              data-en="View Details"
+                              data-sw="Angalia Maelezo"
+                              data-fr="Voir les détails"
+                              data-de="Details anzeigen"
+                              data-es="Ver detalles">View Details</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <h3 data-en="Saadani National Park"
+                        data-sw="Hifadhi ya Taifa ya Saadani"
+                        data-fr="Parc national de Saadani"
+                        data-de="Saadani Nationalpark"
+                        data-es="Parque Nacional de Saadani">Saadani National Park</h3>
+                    
+                    <p data-en="Tanzania's only coastal national park where beach meets bush - unique combination of marine and terrestrial ecosystems."
+                       data-sw="Hifadhi pekee ya Taifa ya pwani Tanzania ambapo pwani hukutana na msitu - mchanganyiko wa kipekee wa mfumo ikolojia wa baharini na nchi kavu."
+                       data-fr="Le seul parc national côtier de Tanzanie où la plage rencontre la brousse - combinaison unique d'écosystèmes marins et terrestres."
+                       data-de="Tansanias einziger Küstennationalpark, wo Strand auf Buschland trifft - einzigartige Kombination aus marinen und terrestrischen Ökosystemen."
+                       data-es="El único parque nacional costero de Tanzania donde la playa se encuentra con el monte: combinación única de ecosistemas marinos y terrestres.">Tanzania's only coastal national park where beach meets bush - unique combination of marine and terrestrial ecosystems.</p>
+                    
+                    <span class="destination-badge"
+                          data-en="Coastal Zone"
+                          data-sw="Eneo la Pwani"
+                          data-fr="Zone Côtière"
+                          data-de="Küstenzone"
+                          data-es="Zona Costera">Coastal Zone</span>
+                    
+                    <button class="quick-view-btn" data-modal="saadaniModal"
+                            data-en="Quick View"
+                            data-sw="Angalia Haraka"
+                            data-fr="Vue Rapide"
+                            data-de="Schnellansicht"
+                            data-es="Vista Rápida">Quick View</button>
+                </div>
+            </div>
+
+            <!-- Mafia Island -->
+            <div class="destination-card" data-destination="mafia" data-region="coastal">
+                <div class="destination-image">
+                    <img src="https://images.pexels.com/photos/14667378/pexels-photo-14667378.jpeg"
+                        alt="Mafia Island" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-details"
+                              data-en="View Details"
+                              data-sw="Angalia Maelezo"
+                              data-fr="Voir les détails"
+                              data-de="Details anzeigen"
+                              data-es="Ver detalles">View Details</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <h3 data-en="Mafia Island"
+                        data-sw="Kisiwa cha Mafia"
+                        data-fr="Île de Mafia"
+                        data-de="Mafia-Insel"
+                        data-es="Isla de Mafia">Mafia Island</h3>
+                    
+                    <p data-en="Pristine marine park with exceptional diving, whale sharks, and untouched beaches south of Zanzibar."
+                       data-sw="Hifadhi bahari bora yenye kupoa bora, papa wa nyangumi, na mabara yasiyoguswa kusini mwa Zanzibar."
+                       data-fr="Parc marin vierge avec plongée exceptionnelle, requins baleines et plages intactes au sud de Zanzibar."
+                       data-de="Ursprünglicher Meerespark mit außergewöhnlichem Tauchen, Walhaien und unberührten Stränden südlich von Sansibar."
+                       data-es="Parque marino prístino con buceo excepcional, tiburones ballena y playas vírgenes al sur de Zanzíbar.">Pristine marine park with exceptional diving, whale sharks, and untouched beaches south of Zanzibar.</p>
+                    
+                    <span class="destination-badge"
+                          data-en="Coastal Zone"
+                          data-sw="Eneo la Pwani"
+                          data-fr="Zone Côtière"
+                          data-de="Küstenzone"
+                          data-es="Zona Costera">Coastal Zone</span>
+                    
+                    <button class="quick-view-btn" data-modal="mafiaModal"
+                            data-en="Quick View"
+                            data-sw="Angalia Haraka"
+                            data-fr="Vue Rapide"
+                            data-de="Schnellansicht"
+                            data-es="Vista Rápida">Quick View</button>
+                </div>
+            </div>
+
+            <!-- Ruaha National Park -->
+            <div class="destination-card" data-destination="ruaha" data-region="central">
+                <div class="destination-image">
+                    <img src="https://www.africanmeccasafaris.com/wp-content/uploads/jabaliridge2.jpg"
+                        alt="Ruaha National Park" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-details"
+                              data-en="View Details"
+                              data-sw="Angalia Maelezo"
+                              data-fr="Voir les détails"
+                              data-de="Details anzeigen"
+                              data-es="Ver detalles">View Details</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <h3 data-en="Ruaha National Park"
+                        data-sw="Hifadhi ya Taifa ya Ruaha"
+                        data-fr="Parc national de Ruaha"
+                        data-de="Ruaha Nationalpark"
+                        data-es="Parque Nacional de Ruaha">Ruaha National Park</h3>
+                    
+                    <p data-en="Tanzania's largest national park with dramatic landscapes and excellent predator sightings."
+                       data-sw="Hifadhi kubwa zaidi ya Taifa nchini Tanzania yenye mandhari ya kusisimua na kuona wanyama wanaowinda bora."
+                       data-fr="Le plus grand parc national de Tanzanie avec des paysages dramatiques et d'excellentes observations de prédateurs."
+                       data-de="Tansanias größter Nationalpark mit dramatischen Landschaften und hervorragenden Raubtiersichtungen."
+                       data-es="El parque nacional más grande de Tanzania con paisajes dramáticos y avistamientos excelentes de depredadores.">Tanzania's largest national park with dramatic landscapes and excellent predator sightings.</p>
+                    
+                    <span class="destination-badge"
+                          data-en="Central Zone"
+                          data-sw="Eneo la Kati"
+                          data-fr="Zone Centrale"
+                          data-de="Zentrale Zone"
+                          data-es="Zona Central">Central Zone</span>
+                    
+                    <button class="quick-view-btn" data-modal="ruahaModal"
+                            data-en="Quick View"
+                            data-sw="Angalia Haraka"
+                            data-fr="Vue Rapide"
+                            data-de="Schnellansicht"
+                            data-es="Vista Rápida">Quick View</button>
+                </div>
+            </div>
+
+            <!-- Udzungwa Mountains -->
+            <div class="destination-card" data-destination="udzungwa" data-region="central">
+                <div class="destination-image">
+                    <img src="https://images.pexels.com/photos/14667378/pexels-photo-14667378.jpeg"
+                        alt="Udzungwa Mountains" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-details"
+                              data-en="View Details"
+                              data-sw="Angalia Maelezo"
+                              data-fr="Voir les détails"
+                              data-de="Details anzeigen"
+                              data-es="Ver detalles">View Details</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <h3 data-en="Udzungwa Mountains"
+                        data-sw="Milima ya Udzungwa"
+                        data-fr="Montagnes d'Udzungwa"
+                        data-de="Udzungwa-Berge"
+                        data-es="Montañas Udzungwa">Udzungwa Mountains</h3>
+                    
+                    <p data-en="Biodiversity hotspot with endemic species and spectacular waterfalls in Tanzania's Eastern Arc Mountains."
+                       data-sw="Eneo lenye utofauti wa bayolojia na spishi za asili na maporomoko ya maji mazuri katika Milima ya Arc Mashariki ya Tanzania."
+                       data-fr="Point chaud de biodiversité avec des espèces endémiques et des chutes d'eau spectaculaires dans les montagnes Eastern Arc de Tanzanie."
+                       data-de="Biodiversitäts-Hotspot mit endemischen Arten und spektakulären Wasserfällen in Tansanias Eastern Arc Mountains."
+                       data-es="Punto caliente de biodiversidad con especies endémicas y cascadas espectaculares en las Montañas del Arco Oriental de Tanzania.">Biodiversity hotspot with endemic species and spectacular waterfalls in Tanzania's Eastern Arc Mountains.</p>
+                    
+                    <span class="destination-badge"
+                          data-en="Central Zone"
+                          data-sw="Eneo la Kati"
+                          data-fr="Zone Centrale"
+                          data-de="Zentrale Zone"
+                          data-es="Zona Central">Central Zone</span>
+                    
+                    <button class="quick-view-btn" data-modal="udzungwaModal"
+                            data-en="Quick View"
+                            data-sw="Angalia Haraka"
+                            data-fr="Vue Rapide"
+                            data-de="Schnellansicht"
+                            data-es="Vista Rápida">Quick View</button>
+                </div>
+            </div>
+            
+            <!-- Lake Victoria -->
+            <div class="destination-card" data-destination="victoria" data-region="lake">
+                <div class="destination-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjAHo-9iV46EuQMVYoNTnDfGkdzlPzgXmoag&s"
+                        alt="Lake Victoria" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-details"
+                              data-en="View Details"
+                              data-sw="Angalia Maelezo"
+                              data-fr="Voir les détails"
+                              data-de="Details anzeigen"
+                              data-es="Ver detalles">View Details</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <h3 data-en="Lake Victoria"
+                        data-sw="Ziwa Victoria"
+                        data-fr="Lac Victoria"
+                        data-de="Victoriasee"
+                        data-es="Lago Victoria">Lake Victoria</h3>
+                    
+                    <p data-en="Africa's largest lake with fishing communities, island retreats, and unique birdlife in northwestern Tanzania."
+                       data-sw="Ziwa kubwa zaidi barani Afrika lenye jamii za uvuvi, makazi ya kisiwani, na ndege wa kipekee kaskazini magharibi mwa Tanzania."
+                       data-fr="Le plus grand lac d'Afrique avec des communautés de pêcheurs, des retraites insulaires et une avifaune unique dans le nord-ouest de la Tanzanie."
+                       data-de="Afrikas größter See mit Fischereigemeinschaften, Inselretreats und einzigartiger Vogelwelt im Nordwesten Tansanias."
+                       data-es="El lago más grande de África con comunidades pesqueras, retiros insulares y avifauna única en el noroeste de Tanzania.">Africa's largest lake with fishing communities, island retreats, and unique birdlife in northwestern Tanzania.</p>
+                    
+                    <span class="destination-badge"
+                          data-en="Lake Zone"
+                          data-sw="Eneo la Ziwa"
+                          data-fr="Zone Lacustre"
+                          data-de="Seenzone"
+                          data-es="Zona Lacustre">Lake Zone</span>
+                    
+                    <button class="quick-view-btn" data-modal="victoriaModal"
+                            data-en="Quick View"
+                            data-sw="Angalia Haraka"
+                            data-fr="Vue Rapide"
+                            data-de="Schnellansicht"
+                            data-es="Vista Rápida">Quick View</button>
+                </div>
+            </div>
+
+            <!-- Lake Tanganyika -->
+            <div class="destination-card" data-destination="tanganyika" data-region="lake">
+                <div class="destination-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6cI3kbgwFoVMKkN6p-c3dP2KvEOvq1Tf-Rw&s"
+                        alt="Lake Tanganyika" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-details"
+                              data-en="View Details"
+                              data-sw="Angalia Maelezo"
+                              data-fr="Voir les détails"
+                              data-de="Details anzeigen"
+                              data-es="Ver detalles">View Details</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <h3 data-en="Lake Tanganyika"
+                        data-sw="Ziwa Tanganyika"
+                        data-fr="Lac Tanganyika"
+                        data-de="Tanganjikasee"
+                        data-es="Lago Tanganica">Lake Tanganyika</h3>
+                    
+                    <p data-en="The world's longest freshwater lake with stunning beaches and unique cichlid fish in western Tanzania."
+                       data-sw="Ziwa refu zaidi la maji safi duniani lenye mabara mazuri na samaki wa kipekee wa cichlid magharibi mwa Tanzania."
+                       data-fr="Le plus long lac d'eau douce du monde avec des plages magnifiques et des poissons cichlidés uniques dans l'ouest de la Tanzanie."
+                       data-de="Der längste Süßwassersee der Welt mit atemberaubenden Stränden und einzigartigen Buntbarschen im Westen Tansanias."
+                       data-es="El lago de agua dulce más largo del mundo con playas impresionantes and peces cíclidos únicos en el oeste de Tanzania.">The world's longest freshwater lake with stunning beaches and unique cichlid fish in western Tanzania.</p>
+                    
+                    <span class="destination-badge"
+                          data-en="Lake Zone"
+                          data-sw="Eneo la Ziwa"
+                          data-fr="Zone Lacustre"
+                          data-de="Seenzone"
+                          data-es="Zona Lacustre">Lake Zone</span>
+                    
+                    <button class="quick-view-btn" data-modal="tanganyikaModal"
+                            data-en="Quick View"
+                            data-sw="Angalia Haraka"
+                            data-fr="Vue Rapide"
+                            data-de="Schnellansicht"
+                            data-es="Vista Rápida">Quick View</button>
+                </div>
+            </div>
+
+            <!-- Kilimanjaro -->
+            <div class="destination-card" data-destination="kilimanjaro" data-region="northern">
+                <div class="destination-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0fdAXebSn5vHJ7Z46VTxSFjtK0qOLJA7m0g&s"
+                        alt=" Mount Kilimanjaro" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-details"
+                              data-en="View Details"
+                              data-sw="Angalia Maelezo"
+                              data-fr="Voir les détails"
+                              data-de="Details anzeigen"
+                              data-es="Ver detalles">View Details</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <h3 data-en="Mount Kilimanjaro"
+                        data-sw="Mlima Kilimanjaro"
+                        data-fr="Mont Kilimandjaro"
+                        data-de="Kilimandscharo"
+                        data-es="Monte Kilimanjaro">Mount Kilimanjaro</h3>
+                    
+                    <p data-en="Africa's highest peak in Tanzania and the world's tallest free-standing mountain - a life-changing climb."
+                       data-sw="Kilele cha juu zaidi cha Afrika nchini Tanzania na mlima mrefu zaidi ulio peke yake duniani - kupanda kubadilisha maisha."
+                       data-fr="Le plus haut sommet d'Afrique en Tanzanie et la plus haute montagne free-standing du monde - une ascension qui change la vie."
+                       data-de="Afrikas höchster Gipfel in Tansania und der höchste freistehende Berg der Welt - eine lebensverändernde Besteigung."
+                       data-es="El pico más alto de África en Tanzania y la montaña independiente más alta del mundo: una escalada que cambia la vida.">Africa's highest peak in Tanzania and the world's tallest free-standing mountain - a life-changing climb.</p>
+                    
+                    <span class="destination-badge"
+                          data-en="Northern Circuit"
+                          data-sw="Mzunguko wa Kaskazini"
+                          data-fr="Circuit Nord"
+                          data-de="Nördliche Route"
+                          data-es="Circuito Norte">Northern Circuit</span>
+                    
+                    <button class="quick-view-btn" data-modal="kilimanjaroModal"
+                            data-en="Quick View"
+                            data-sw="Angalia Haraka"
+                            data-fr="Vue Rapide"
+                            data-de="Schnellansicht"
+                            data-es="Vista Rápida">Quick View</button>
+                </div>
+            </div>
+
+            <!-- Tarangire -->
+            <div class="destination-card" data-destination="tarangire" data-region="northern">
+                <div class="destination-image">
+                    <img src="https://images.unsplash.com/photo-1599422690883-9a5c0d63a8a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Tarangire National Park" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-details"
+                              data-en="View Details"
+                              data-sw="Angalia Maelezo"
+                              data-fr="Voir les détails"
+                              data-de="Details anzeigen"
+                              data-es="Ver detalles">View Details</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <h3 data-en="Tarangire National Park"
+                        data-sw="Hifadhi ya Taifa ya Tarangire"
+                        data-fr="Parc national de Tarangire"
+                        data-de="Tarangire Nationalpark"
+                        data-es="Parque Nacional de Tarangire">Tarangire National Park</h3>
+                    
+                    <p data-en="Land of giants in northern Tanzania - famous for its massive elephant herds and ancient baobab trees."
+                       data-sw="Nchi ya majitu kaskazini mwa Tanzania - maarufu kwa makundi yake makubwa ya tembo na miamba ya baobab ya kale."
+                       data-fr="Terre des géants dans le nord de la Tanzanie - célèbre pour ses immenses troupeaux d'éléphants et ses anciens baobabs."
+                       data-de="Land der Giganten im Norden Tansanias - berühmt für seine massiven Elefantenherden und uralten Baobab-Bäume."
+                       data-es="Tierra de gigantes en el norte de Tanzania: famosa por sus manadas masivas de elefantes y antiguos baobabs.">Land of giants in northern Tanzania - famous for its massive elephant herds and ancient baobab trees.</p>
+                    
+                    <span class="destination-badge"
+                          data-en="Northern Circuit"
+                          data-sw="Mzunguko wa Kaskazini"
+                          data-fr="Circuit Nord"
+                          data-de="Nördliche Route"
+                          data-es="Circuito Norte">Northern Circuit</span>
+                    
+                    <button class="quick-view-btn" data-modal="tarangireModal"
+                            data-en="Quick View"
+                            data-sw="Angalia Haraka"
+                            data-fr="Vue Rapide"
+                            data-de="Schnellansicht"
+                            data-es="Vista Rápida">Quick View</button>
+                </div>
+            </div>
+
+            <!-- Zanzibar -->
+            <div class="destination-card" data-destination="zanzibar" data-region="zanzibar">
+                <div class="destination-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmPaBDo-Q5jgLJhCrjvYndOtCbUzevm6sAwg&s"
+                        alt="Zanzibar" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-details"
+                              data-en="View Details"
+                              data-sw="Angalia Maelezo"
+                              data-fr="Voir les détails"
+                              data-de="Details anzeigen"
+                              data-es="Ver detalles">View Details</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <h3 data-en="Zanzibar"
+                        data-sw="Zanzibar"
+                        data-fr="Zanzibar"
+                        data-de="Sansibar"
+                        data-es="Zanzíbar">Zanzibar</h3>
+                    
+                    <p data-en="Tropical paradise island of Tanzania with white-sand beaches, turquoise waters, and rich cultural history."
+                       data-sw="Kisiwa cha paradiso la kitropiki la Tanzania chenye mabara ya mchanga mweupe, maji ya rangi ya bluu, na historia tajiri ya kitamaduni."
+                       data-fr="Île paradisiaque tropicale de la Tanzanie avec des plages de sable blanc, des eaux turquoises et une riche histoire culturelle."
+                       data-de="Tropische Paradiesinsel Tansanias mit weißsandigen Stränden, türkisfarbenem Wasser und reicher Kulturgeschichte."
+                       data-es="Isla paradisíaca tropical de Tanzania con playas de arena blanca, aguas turquesas y una rica historia cultural.">Tropical paradise island of Tanzania with white-sand beaches, turquoise waters, and rich cultural history.</p>
+                    
+                    <span class="destination-badge"
+                          data-en="Zanzibar Archipelago"
+                          data-sw="Funguvisiwa la Zanzibar"
+                          data-fr="Archipel de Zanzibar"
+                          data-de="Sansibar-Archipel"
+                          data-es="Archipiélago de Zanzíbar">Zanzibar Archipelago</span>
+                    
+                    <button class="quick-view-btn" data-modal="zanzibarModal"
+                            data-en="Quick View"
+                            data-sw="Angalia Haraka"
+                            data-fr="Vue Rapide"
+                            data-de="Schnellansicht"
+                            data-es="Vista Rápida">Quick View</button>
+                </div>
+            </div>
+
+            <!-- Mikumi -->
+            <div class="destination-card" data-destination="mikumi" data-region="southern">
+                <div class="destination-image">
+                    <img src="https://www.leopard-tours.com/wp-content/uploads/2015/12/Mikumi-National-Park-4-1024x680.jpg"
+                        alt="Mikumi National Park" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-details"
+                              data-en="View Details"
+                              data-sw="Angalia Maelezo"
+                              data-fr="Voir les détails"
+                              data-de="Details anzeigen"
+                              data-es="Ver detalles">View Details</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <h3 data-en="Mikumi National Park"
+                        data-sw="Hifadhi ya Taifa ya Mikumi"
+                        data-fr="Parc national de Mikumi"
+                        data-de="Mikumi Nationalpark"
+                        data-es="Parque Nacional de Mikumi">Mikumi National Park</h3>
+                    
+                    <p data-en="Tanzania's hidden safari gem in the southern circuit with excellent wildlife viewing just hours from Dar es Salaam."
+                       data-sw="Johari iliyofichika ya safari ya Tanzania katika mzunguko wa kusini yenye kuona wanyamapori bora masaa machache tu kutoka Dar es Salaam."
+                       data-fr="Le joyau safari caché de la Tanzanie dans le circuit sud avec une excellente observation de la faune à quelques heures de Dar es Salaam."
+                       data-de="Tansanias verstecktes Safari-Juwel im südlichen Circuit mit ausgezeichneter Wildtierbeobachtung nur wenige Stunden von Daressalam entfernt."
+                       data-es="Joyero safari oculto de Tanzania en el circuito sur con excelente avistamiento de vida silvestre a solo horas de Dar es Salaam.">Tanzania's hidden safari gem in the southern circuit with excellent wildlife viewing just hours from Dar es Salaam.</p>
+                    
+                    <span class="destination-badge"
+                          data-en="Southern Circuit"
+                          data-sw="Mzunguko wa Kusini"
+                          data-fr="Circuit Sud"
+                          data-de="Südliche Route"
+                          data-es="Circuito Sur">Southern Circuit</span>
+                    
+                    <button class="quick-view-btn" data-modal="mikumiModal"
+                            data-en="Quick View"
+                            data-sw="Angalia Haraka"
+                            data-fr="Vue Rapide"
+                            data-de="Schnellansicht"
+                            data-es="Vista Rápida">Quick View</button>
+                </div>
+            </div>
+
+            <!-- Arusha -->
+            <div class="destination-card" data-destination="arusha" data-region="northern">
+                <div class="destination-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm_gRBTPqq2H4cdDnVCnDVTfSQXzjh-2lI9g&s"
+                        alt="Arusha National Park" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-details"
+                              data-en="View Details"
+                              data-sw="Angalia Maelezo"
+                              data-fr="Voir les détails"
+                              data-de="Details anzeigen"
+                              data-es="Ver detalles">View Details</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <h3 data-en="Arusha National Park"
+                        data-sw="Hifadhi ya Taifa ya Arusha"
+                        data-fr="Parc national d'Arusha"
+                        data-de="Arusha Nationalpark"
+                        data-es="Parque Nacional de Arusha">Arusha National Park</h3>
+                    
+                    <p data-en="Gateway to Tanzania's wild beauty in the northern circuit with Mount Meru, Ngurdoto Crater, and Momella Lakes."
+                       data-sw="Lango la uzuri wa mwitu wa Tanzania katika mzunguko wa kaskazini na Mlima Meru, Kreta la Ngurdoto, na Maziwa ya Momella."
+                       data-fr="Porte d'entrée de la beauté sauvage de la Tanzanie dans le circuit nord avec le mont Meru, le cratère de Ngurdoto et les lacs Momella."
+                       data-de="Tor zur wilden Schönheit Tansanias im nördlichen Circuit mit dem Mount Meru, dem Ngurdoto-Krater und den Momella-Seen."
+                       data-es="Puerta de entrada a la belleza salvaje de Tanzania en el circuito norte con el Monte Meru, el Cráter Ngurdoto y los Lagos Momella.">Gateway to Tanzania's wild beauty in the northern circuit with Mount Meru, Ngurdoto Crater, and Momella Lakes.</p>
+                    
+                    <span class="destination-badge"
+                          data-en="Northern Circuit"
+                          data-sw="Mzunguko wa Kaskazini"
+                          data-fr="Circuit Nord"
+                          data-de="Nördliche Route"
+                          data-es="Circuito Norte">Northern Circuit</span>
+                    
+                    <button class="quick-view-btn" data-modal="arushaModal"
+                            data-en="Quick View"
+                            data-sw="Angalia Haraka"
+                            data-fr="Vue Rapide"
+                            data-de="Schnellansicht"
+                            data-es="Vista Rápida">Quick View</button>
+                </div>
+            </div>
+
+            <!-- Selous -->
+            <div class="destination-card" data-destination="selous" data-region="southern">
+                <div class="destination-image">
+                    <img src="https://imgix.brilliant-africa.com/roho-ya-selous-selous-game-reserve-tanzania-20.jpg?auto=format,enhance,compress&fit=crop&crop=entropy,faces,focalpoint&w=580&h=480&q=40"
+                        alt="Selous Game Reserve" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-details"
+                              data-en="View Details"
+                              data-sw="Angalia Maelezo"
+                              data-fr="Voir les détails"
+                              data-de="Details anzeigen"
+                              data-es="Ver detalles">View Details</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <h3 data-en="Selous Game Reserve"
+                        data-sw="Hifadhi ya Wanyama ya Selous"
+                        data-fr="Réserve de gibier de Selous"
+                        data-de="Selous Wildreservat"
+                        data-es="Reserva de Caza Selous">Selous Game Reserve</h3>
+                    
+                    <p data-en="Africa's wild soul in southern Tanzania - one of the largest protected areas with unique river safaris."
+                       data-sw="Roho ya mwitu wa Afrika kusini mwa Tanzania - moja ya maeneo makubwa yaliyolindwa na safari za mto za kipekee."
+                       data-fr="L'âme sauvage de l'Afrique dans le sud de la Tanzanie - l'une des plus grandes zones protégées avec des safaris fluviaux uniques."
+                       data-de="Afrikas wilde Seele im Süden Tansanias - eines der größten Schutzgebiete mit einzigartigen Flusssafaris."
+                       data-es="El alma salvaje de África en el sur de Tanzania: una de las áreas protegidas más grandes con safaris fluviales únicos.">Africa's wild soul in southern Tanzania - one of the largest protected areas with unique river safaris.</p>
+                    
+                    <span class="destination-badge"
+                          data-en="Southern Circuit"
+                          data-sw="Mzunguko wa Kusini"
+                          data-fr="Circuit Sud"
+                          data-de="Südliche Route"
+                          data-es="Circuito Sur">Southern Circuit</span>
+                    
+                    <button class="quick-view-btn" data-modal="selousModal"
+                            data-en="Quick View"
+                            data-sw="Angalia Haraka"
+                            data-fr="Vue Rapide"
+                            data-de="Schnellansicht"
+                            data-es="Vista Rápida">Quick View</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <a href="#contact" class="btn btn-primary"
+               data-en="Customize Your Safari Experience"
+               data-sw="Binafsiri Safari Yako"
+               data-fr="Personnalisez votre expérience safari"
+               data-de="Passen Sie Ihr Safari-Erlebnis an"
+               data-es="Personaliza tu experiencia safari">Customize Your Safari Experience</a>
+            
+            <p class="cta-subtext"
+               data-en="Let our experts craft your perfect Tanzanian adventure"
+               data-sw="Wacha wataalamu wetu waundie adventure yako kamili ya Kitanzania"
+               data-fr="Laissez nos experts créer votre aventure tanzanienne parfaite"
+               data-de="Lassen Sie unsere Experten Ihr perfektes tansanisches Abenteuer gestalten"
+               data-es="Deja que nuestros expertos creen tu aventura tanzana perfecta">Let our experts craft your perfect Tanzanian adventure</p>
+        </div>
+    </div>
+</section>
         <!-- Destination Modals -->
         <div class="modal" id="mafiaModal">
             <div class="modal-content">
@@ -3826,48 +4390,48 @@
 
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
         <script>
-          // Initialize Google Translate
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-                { pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
-                'google_translate_element'
-            );
-        }
+            // Initialize Google Translate
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    { pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+                    'google_translate_element'
+                );
+            }
 
-        // Load Google Translate script
-        function loadGoogleTranslate() {
-            const script = document.createElement('script');
-            script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-            document.head.appendChild(script);
-        }
+            // Load Google Translate script
+            function loadGoogleTranslate() {
+                const script = document.createElement('script');
+                script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+                document.head.appendChild(script);
+            }
 
-        // Event listeners
-        document.addEventListener('DOMContentLoaded', function () {
-            // Load Google Translate
-            loadGoogleTranslate();
+            // Event listeners
+            document.addEventListener('DOMContentLoaded', function () {
+                // Load Google Translate
+                loadGoogleTranslate();
 
-            // Show translate widget when button is clicked
-            document.getElementById('showTranslateWidget').addEventListener('click', function () {
-                document.getElementById('translateWidget').classList.add('active');
+                // Show translate widget when button is clicked
+                document.getElementById('showTranslateWidget').addEventListener('click', function () {
+                    document.getElementById('translateWidget').classList.add('active');
+                });
+
+                // Close notification
+                document.getElementById('closeTranslateNotification').addEventListener('click', function () {
+                    document.querySelector('.translate-notification').style.display = 'none';
+                });
+
+                // Close widget when clicking outside
+                document.addEventListener('click', function (e) {
+                    const widget = document.getElementById('translateWidget');
+                    if (widget.classList.contains('active') &&
+                        !widget.contains(e.target) &&
+                        e.target.id !== 'showTranslateWidget') {
+                        widget.classList.remove('active');
+                    }
+                });
             });
 
-            // Close notification
-            document.getElementById('closeTranslateNotification').addEventListener('click', function () {
-                document.querySelector('.translate-notification').style.display = 'none';
-            });
 
-            // Close widget when clicking outside
-            document.addEventListener('click', function (e) {
-                const widget = document.getElementById('translateWidget');
-                if (widget.classList.contains('active') &&
-                    !widget.contains(e.target) &&
-                    e.target.id !== 'showTranslateWidget') {
-                    widget.classList.remove('active');
-                }
-            });
-        });
-
-      
             document.addEventListener('DOMContentLoaded', function () {
                 const tabBtns = document.querySelectorAll('.tab-btn');
                 const destinationCards = document.querySelectorAll('.destination-card');
@@ -4072,29 +4636,8 @@
                 });
 
 
-
-
-                // Observe all elements with the 'animate' class
-                const animateElements = document.querySelectorAll('.content-block, .mission-card, .value-card, .team-member, .community-partners');
-                animateElements.forEach(el => {
-                    observer.observe(el);
-                });
-
-                // Add decorative elements dynamically
-                const safariHeader = document.querySelector('.hero-header');
-                if (safariHeader) {
-                    const stars = document.createElement('div');
-                    stars.style.position = 'absolute';
-                    stars.style.top = '0';
-                    stars.style.left = '0';
-                    stars.style.width = '100%';
-                    stars.style.height = '100%';
-                    stars.style.background = 'radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8) 1px, transparent 1px), radial-gradient(circle at 40% 70%, rgba(255,255,255,0.8) 1px, transparent 1px), radial-gradient(circle at 60% 20%, rgba(255,255,255,0.8) 1px, transparent 1px), radial-gradient(circle at 80% 50%, rgba(255,255,255,0.8) 1px, transparent 1px)';
-                    stars.style.backgroundSize = '100px 100px';
-                    stars.style.opacity = '0.95';
-                    safariHeader.appendChild(stars);
-                }
             });
+
             document.addEventListener('DOMContentLoaded', function () {
                 const mobileMenuBtn = document.querySelector('.mobile-menu');
                 const navLinks = document.querySelector('.nav-links');
